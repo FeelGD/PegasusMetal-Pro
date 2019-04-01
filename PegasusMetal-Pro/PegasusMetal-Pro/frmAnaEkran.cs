@@ -14,6 +14,9 @@ namespace PegasusMetal_Pro
     {
         public frmAnaEkran()
         {
+            frmLogin login = new frmLogin();
+            login.ShowDialog();
+
             InitializeComponent();
         }
 
@@ -84,6 +87,11 @@ namespace PegasusMetal_Pro
             userVeriler1.BackColor = colorPickEdit1.Color;
             userAyarlar1.BackColor = colorPickEdit1.Color;
             userRaporlar1.BackColor = colorPickEdit1.Color;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

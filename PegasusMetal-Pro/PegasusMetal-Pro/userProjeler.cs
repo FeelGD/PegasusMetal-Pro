@@ -16,5 +16,16 @@ namespace PegasusMetal_Pro
         {
             InitializeComponent();
         }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmDevamEdenProjeler devamEdenProjeler = new frmDevamEdenProjeler();
+            devamEdenProjeler.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmOnaydaBekleyenProjeler onaydaBekleyenProjeler = new frmOnaydaBekleyenProjeler();
+            onaydaBekleyenProjeler.Show();
+        }
     }
 }
