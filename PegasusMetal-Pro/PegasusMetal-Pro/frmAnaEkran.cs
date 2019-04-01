@@ -43,8 +43,10 @@ namespace PegasusMetal_Pro
 
         private void colorPickEdit1_ColorChanged(object sender, EventArgs e)
         {
-            string color = colorPickEdit1.Color;
-            this.BackColor = colorPickEdit1.BackColor;
+            
+            this.BackColor = colorPickEdit1.Color;
+            userProjeler1.BackColor = colorPickEdit1.Color;
+            userTeklifler1.BackColor = colorPickEdit1.Color;
         }
     }
 }

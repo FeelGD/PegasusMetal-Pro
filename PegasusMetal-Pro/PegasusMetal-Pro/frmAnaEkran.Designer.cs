@@ -40,6 +40,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.colorPickEdit1 = new DevExpress.XtraEditors.ColorPickEdit();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -47,17 +48,16 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.userProjeler1 = new PegasusMetal_Pro.userProjeler();
             this.userTeklifler1 = new PegasusMetal_Pro.userTeklifler();
-            this.colorPickEdit1 = new DevExpress.XtraEditors.ColorPickEdit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.colorPickEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.colorPickEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -221,6 +221,21 @@
             this.panel2.Size = new System.Drawing.Size(888, 41);
             this.panel2.TabIndex = 1;
             // 
+            // colorPickEdit1
+            // 
+            this.colorPickEdit1.EditValue = System.Drawing.Color.Empty;
+            this.colorPickEdit1.Location = new System.Drawing.Point(6, 12);
+            this.colorPickEdit1.Name = "colorPickEdit1";
+            this.colorPickEdit1.Properties.AutomaticColor = System.Drawing.Color.Black;
+            this.colorPickEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.colorPickEdit1.Properties.ShowSystemColors = false;
+            this.colorPickEdit1.Properties.ShowWebColors = false;
+            this.colorPickEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.colorPickEdit1.Size = new System.Drawing.Size(28, 18);
+            this.colorPickEdit1.TabIndex = 6;
+            this.colorPickEdit1.ColorChanged += new System.EventHandler(this.colorPickEdit1_ColorChanged);
+            // 
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
@@ -290,21 +305,6 @@
             this.userTeklifler1.TabIndex = 3;
             this.userTeklifler1.Visible = false;
             // 
-            // colorPickEdit1
-            // 
-            this.colorPickEdit1.EditValue = System.Drawing.Color.Empty;
-            this.colorPickEdit1.Location = new System.Drawing.Point(6, 12);
-            this.colorPickEdit1.Name = "colorPickEdit1";
-            this.colorPickEdit1.Properties.AutomaticColor = System.Drawing.Color.Black;
-            this.colorPickEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.colorPickEdit1.Properties.ShowSystemColors = false;
-            this.colorPickEdit1.Properties.ShowWebColors = false;
-            this.colorPickEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.colorPickEdit1.Size = new System.Drawing.Size(28, 20);
-            this.colorPickEdit1.TabIndex = 6;
-            this.colorPickEdit1.ColorChanged += new System.EventHandler(this.colorPickEdit1_ColorChanged);
-            // 
             // frmAnaEkran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,12 +326,12 @@
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.colorPickEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.colorPickEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

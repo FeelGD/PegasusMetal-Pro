@@ -73,6 +73,12 @@
     <Compile Include="userTeklifler.Designer.cs">
       <DependentUpon>userTeklifler.cs</DependentUpon>
     </Compile>
+    <Compile Include="userVeriler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userVeriler.Designer.cs">
+      <DependentUpon>userVeriler.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmAnaEkran.resx">
       <DependentUpon>frmAnaEkran.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="userTeklifler.resx">
       <DependentUpon>userTeklifler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userVeriler.resx">
+      <DependentUpon>userVeriler.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
