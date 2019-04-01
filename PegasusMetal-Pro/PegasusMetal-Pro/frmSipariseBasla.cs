@@ -38,5 +38,10 @@ namespace PegasusMetal_Pro
         {
             this.Close();
         }
+
+        private void dateEdit10_EditValueChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
