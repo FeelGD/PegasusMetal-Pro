@@ -24,6 +24,7 @@ namespace PegasusMetal_Pro
             userTeklifler1.Visible = false;
             userVeriler1.Visible = false;
             userAyarlar1.Visible = false;
+            userRaporlar1.Visible = false;
 
         }
         void yanPanel()
@@ -65,12 +66,24 @@ namespace PegasusMetal_Pro
             userDelete();
             userAyarlar1.Visible = true;
         }
+
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = button4.Height;
+            SidePanel.Top = button4.Top;
+            userDelete();
+            userRaporlar1.Visible = true;
+        }
         private void colorPickEdit1_ColorChanged(object sender, EventArgs e)
         {
 
             this.BackColor = colorPickEdit1.Color;
             userProjeler1.BackColor = colorPickEdit1.Color;
             userTeklifler1.BackColor = colorPickEdit1.Color;
+            userVeriler1.BackColor = colorPickEdit1.Color;
+            userAyarlar1.BackColor = colorPickEdit1.Color;
+            userRaporlar1.BackColor = colorPickEdit1.Color;
         }
     }
 }

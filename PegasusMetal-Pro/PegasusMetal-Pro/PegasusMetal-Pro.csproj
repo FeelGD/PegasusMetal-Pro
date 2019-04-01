@@ -73,6 +73,12 @@
     <Compile Include="userProjeler.Designer.cs">
       <DependentUpon>userProjeler.cs</DependentUpon>
     </Compile>
+    <Compile Include="userRaporlar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userRaporlar.Designer.cs">
+      <DependentUpon>userRaporlar.cs</DependentUpon>
+    </Compile>
     <Compile Include="userTeklifler.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="userProjeler.resx">
       <DependentUpon>userProjeler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userRaporlar.resx">
+      <DependentUpon>userRaporlar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userTeklifler.resx">
       <DependentUpon>userTeklifler.cs</DependentUpon>

@@ -46,10 +46,11 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.userAyarlar1 = new PegasusMetal_Pro.userAyarlar();
             this.userVeriler1 = new PegasusMetal_Pro.userVeriler();
             this.userTeklifler1 = new PegasusMetal_Pro.userTeklifler();
             this.userProjeler1 = new PegasusMetal_Pro.userProjeler();
-            this.userAyarlar1 = new PegasusMetal_Pro.userAyarlar();
+            this.userRaporlar1 = new PegasusMetal_Pro.userRaporlar();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -134,6 +135,7 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "       Raporlar";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -236,7 +238,7 @@
             this.colorPickEdit1.Properties.ShowSystemColors = false;
             this.colorPickEdit1.Properties.ShowWebColors = false;
             this.colorPickEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.colorPickEdit1.Size = new System.Drawing.Size(28, 20);
+            this.colorPickEdit1.Size = new System.Drawing.Size(28, 18);
             this.colorPickEdit1.TabIndex = 6;
             this.colorPickEdit1.ColorChanged += new System.EventHandler(this.colorPickEdit1_ColorChanged);
             // 
@@ -291,6 +293,15 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // userAyarlar1
+            // 
+            this.userAyarlar1.BackColor = System.Drawing.Color.Transparent;
+            this.userAyarlar1.Location = new System.Drawing.Point(233, 41);
+            this.userAyarlar1.Name = "userAyarlar1";
+            this.userAyarlar1.Size = new System.Drawing.Size(888, 619);
+            this.userAyarlar1.TabIndex = 5;
+            this.userAyarlar1.Visible = false;
+            // 
             // userVeriler1
             // 
             this.userVeriler1.BackColor = System.Drawing.Color.Transparent;
@@ -318,14 +329,14 @@
             this.userProjeler1.TabIndex = 2;
             this.userProjeler1.Visible = false;
             // 
-            // userAyarlar1
+            // userRaporlar1
             // 
-            this.userAyarlar1.BackColor = System.Drawing.Color.Transparent;
-            this.userAyarlar1.Location = new System.Drawing.Point(233, 41);
-            this.userAyarlar1.Name = "userAyarlar1";
-            this.userAyarlar1.Size = new System.Drawing.Size(888, 619);
-            this.userAyarlar1.TabIndex = 5;
-            this.userAyarlar1.Visible = false;
+            this.userRaporlar1.BackColor = System.Drawing.Color.Transparent;
+            this.userRaporlar1.Location = new System.Drawing.Point(233, 41);
+            this.userRaporlar1.Name = "userRaporlar1";
+            this.userRaporlar1.Size = new System.Drawing.Size(888, 619);
+            this.userRaporlar1.TabIndex = 6;
+            this.userRaporlar1.Visible = false;
             // 
             // frmAnaEkran
             // 
@@ -335,6 +346,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1121, 660);
+            this.Controls.Add(this.userRaporlar1);
             this.Controls.Add(this.userAyarlar1);
             this.Controls.Add(this.userVeriler1);
             this.Controls.Add(this.userTeklifler1);
@@ -383,6 +395,7 @@
         private DevExpress.XtraEditors.ColorPickEdit colorPickEdit1;
         private userVeriler userVeriler1;
         private userAyarlar userAyarlar1;
+        private userRaporlar userRaporlar1;
     }
 }
 

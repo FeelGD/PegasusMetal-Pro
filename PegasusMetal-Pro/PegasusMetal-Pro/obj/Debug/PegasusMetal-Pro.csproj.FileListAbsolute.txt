@@ -49,3 +49,4 @@ D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro
 D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal-Pro.csproj.CopyComplete
 D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal_Pro.userVeriler.resources
 D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal_Pro.userAyarlar.resources
+D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal_Pro.userRaporlar.resources
