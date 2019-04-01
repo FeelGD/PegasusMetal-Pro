@@ -628,7 +628,7 @@
         QmCC
 </value>
   </data>
-  <data name="panel4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="SidePanel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAaAAAADXCAYAAABcZoWUAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAANQFJREFUeF7tmmfbbFl1Xcs2CgZb2AIBkpEAyTJZhCaILAQNIuecQ5O6yaEJ3dDk

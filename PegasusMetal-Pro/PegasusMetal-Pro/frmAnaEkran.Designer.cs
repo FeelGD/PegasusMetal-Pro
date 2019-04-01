@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAnaEkran));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.SidePanel = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -46,8 +46,10 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.userProjeler1 = new PegasusMetal_Pro.userProjeler();
+            this.userVeriler1 = new PegasusMetal_Pro.userVeriler();
             this.userTeklifler1 = new PegasusMetal_Pro.userTeklifler();
+            this.userProjeler1 = new PegasusMetal_Pro.userProjeler();
+            this.userAyarlar1 = new PegasusMetal_Pro.userAyarlar();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -65,7 +67,7 @@
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.SidePanel);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
@@ -90,13 +92,13 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "PEGASUS METAL PRO";
             // 
-            // panel4
+            // SidePanel
             // 
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
-            this.panel4.Location = new System.Drawing.Point(0, 210);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(20, 75);
-            this.panel4.TabIndex = 5;
+            this.SidePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SidePanel.BackgroundImage")));
+            this.SidePanel.Location = new System.Drawing.Point(0, 210);
+            this.SidePanel.Name = "SidePanel";
+            this.SidePanel.Size = new System.Drawing.Size(20, 75);
+            this.SidePanel.TabIndex = 5;
             // 
             // button5
             // 
@@ -114,6 +116,7 @@
             this.button5.TabIndex = 4;
             this.button5.Text = "    Ayarlar";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -148,6 +151,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "    Veriler";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -232,7 +236,7 @@
             this.colorPickEdit1.Properties.ShowSystemColors = false;
             this.colorPickEdit1.Properties.ShowWebColors = false;
             this.colorPickEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.colorPickEdit1.Size = new System.Drawing.Size(28, 18);
+            this.colorPickEdit1.Size = new System.Drawing.Size(28, 20);
             this.colorPickEdit1.TabIndex = 6;
             this.colorPickEdit1.ColorChanged += new System.EventHandler(this.colorPickEdit1_ColorChanged);
             // 
@@ -287,14 +291,14 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // userProjeler1
+            // userVeriler1
             // 
-            this.userProjeler1.BackColor = System.Drawing.Color.Transparent;
-            this.userProjeler1.Location = new System.Drawing.Point(233, 41);
-            this.userProjeler1.Name = "userProjeler1";
-            this.userProjeler1.Size = new System.Drawing.Size(888, 619);
-            this.userProjeler1.TabIndex = 2;
-            this.userProjeler1.Visible = false;
+            this.userVeriler1.BackColor = System.Drawing.Color.Transparent;
+            this.userVeriler1.Location = new System.Drawing.Point(233, 41);
+            this.userVeriler1.Name = "userVeriler1";
+            this.userVeriler1.Size = new System.Drawing.Size(888, 619);
+            this.userVeriler1.TabIndex = 4;
+            this.userVeriler1.Visible = false;
             // 
             // userTeklifler1
             // 
@@ -305,6 +309,24 @@
             this.userTeklifler1.TabIndex = 3;
             this.userTeklifler1.Visible = false;
             // 
+            // userProjeler1
+            // 
+            this.userProjeler1.BackColor = System.Drawing.Color.Transparent;
+            this.userProjeler1.Location = new System.Drawing.Point(233, 41);
+            this.userProjeler1.Name = "userProjeler1";
+            this.userProjeler1.Size = new System.Drawing.Size(888, 619);
+            this.userProjeler1.TabIndex = 2;
+            this.userProjeler1.Visible = false;
+            // 
+            // userAyarlar1
+            // 
+            this.userAyarlar1.BackColor = System.Drawing.Color.Transparent;
+            this.userAyarlar1.Location = new System.Drawing.Point(233, 41);
+            this.userAyarlar1.Name = "userAyarlar1";
+            this.userAyarlar1.Size = new System.Drawing.Size(888, 619);
+            this.userAyarlar1.TabIndex = 5;
+            this.userAyarlar1.Visible = false;
+            // 
             // frmAnaEkran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -313,6 +335,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1121, 660);
+            this.Controls.Add(this.userAyarlar1);
+            this.Controls.Add(this.userVeriler1);
             this.Controls.Add(this.userTeklifler1);
             this.Controls.Add(this.userProjeler1);
             this.Controls.Add(this.panel2);
@@ -343,7 +367,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel SidePanel;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
@@ -357,6 +381,8 @@
         private userProjeler userProjeler1;
         private userTeklifler userTeklifler1;
         private DevExpress.XtraEditors.ColorPickEdit colorPickEdit1;
+        private userVeriler userVeriler1;
+        private userAyarlar userAyarlar1;
     }
 }
 

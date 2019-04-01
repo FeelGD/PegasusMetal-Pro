@@ -61,6 +61,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="userAyarlar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userAyarlar.Designer.cs">
+      <DependentUpon>userAyarlar.cs</DependentUpon>
+    </Compile>
     <Compile Include="userProjeler.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -91,6 +97,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="userAyarlar.resx">
+      <DependentUpon>userAyarlar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="userProjeler.resx">
       <DependentUpon>userProjeler.cs</DependentUpon>
     </EmbeddedResource>
