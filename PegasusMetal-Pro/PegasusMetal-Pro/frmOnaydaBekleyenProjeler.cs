@@ -16,5 +16,16 @@ namespace PegasusMetal_Pro
         {
             InitializeComponent();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmSipariseBasla sipariseBasla = new frmSipariseBasla();
+            sipariseBasla.Show();
+        }
     }
 }
