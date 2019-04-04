@@ -46,11 +46,11 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.userRaporlar1 = new PegasusMetal_Pro.userRaporlar();
             this.userAyarlar1 = new PegasusMetal_Pro.userAyarlar();
             this.userVeriler1 = new PegasusMetal_Pro.userVeriler();
             this.userTeklifler1 = new PegasusMetal_Pro.userTeklifler();
             this.userProjeler1 = new PegasusMetal_Pro.userProjeler();
-            this.userRaporlar1 = new PegasusMetal_Pro.userRaporlar();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -238,7 +238,7 @@
             this.colorPickEdit1.Properties.ShowSystemColors = false;
             this.colorPickEdit1.Properties.ShowWebColors = false;
             this.colorPickEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.colorPickEdit1.Size = new System.Drawing.Size(28, 18);
+            this.colorPickEdit1.Size = new System.Drawing.Size(28, 20);
             this.colorPickEdit1.TabIndex = 6;
             this.colorPickEdit1.ColorChanged += new System.EventHandler(this.colorPickEdit1_ColorChanged);
             // 
@@ -271,6 +271,7 @@
             this.pictureBox4.Size = new System.Drawing.Size(35, 35);
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox3
             // 
@@ -293,6 +294,15 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // userRaporlar1
+            // 
+            this.userRaporlar1.BackColor = System.Drawing.Color.Transparent;
+            this.userRaporlar1.Location = new System.Drawing.Point(233, 41);
+            this.userRaporlar1.Name = "userRaporlar1";
+            this.userRaporlar1.Size = new System.Drawing.Size(888, 619);
+            this.userRaporlar1.TabIndex = 6;
+            this.userRaporlar1.Visible = false;
             // 
             // userAyarlar1
             // 
@@ -329,15 +339,6 @@
             this.userProjeler1.Size = new System.Drawing.Size(888, 619);
             this.userProjeler1.TabIndex = 2;
             this.userProjeler1.Visible = false;
-            // 
-            // userRaporlar1
-            // 
-            this.userRaporlar1.BackColor = System.Drawing.Color.Transparent;
-            this.userRaporlar1.Location = new System.Drawing.Point(233, 41);
-            this.userRaporlar1.Name = "userRaporlar1";
-            this.userRaporlar1.Size = new System.Drawing.Size(888, 619);
-            this.userRaporlar1.TabIndex = 6;
-            this.userRaporlar1.Visible = false;
             // 
             // frmAnaEkran
             // 

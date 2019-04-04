@@ -55,3 +55,6 @@ D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro
 D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal-Pro.exe.licenses
 D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal_Pro.frmOnaydaBekleyenProjeler.resources
 D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal_Pro.frmSipariseBasla.resources
+D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal_Pro.frmYeniProjeGuncelle.resources
+D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal_Pro.frmYeniProjeler.resources
+D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal_Pro.frmYeniProjeOlustur.resources

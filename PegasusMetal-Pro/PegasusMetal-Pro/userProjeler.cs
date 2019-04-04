@@ -27,5 +27,11 @@ namespace PegasusMetal_Pro
             frmOnaydaBekleyenProjeler onaydaBekleyenProjeler = new frmOnaydaBekleyenProjeler();
             onaydaBekleyenProjeler.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmYeniProjeler yeniProjeler = new frmYeniProjeler();
+            yeniProjeler.Show();
+        }
     }
 }
