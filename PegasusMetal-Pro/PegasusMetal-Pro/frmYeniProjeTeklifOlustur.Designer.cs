@@ -125,7 +125,6 @@
             this.textEditBukumSuresi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl65 = new DevExpress.XtraEditors.LabelControl();
             this.textEditKaynakKar = new DevExpress.XtraEditors.TextEdit();
             this.labelControlKaynakTl = new DevExpress.XtraEditors.LabelControl();
             this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
@@ -215,7 +214,9 @@
             this.T2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Somun = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Montaj = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ParcaMaliyet = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ParcaTotal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button1 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -1306,7 +1307,6 @@
             // 
             // groupBoxKaynak
             // 
-            this.groupBoxKaynak.Controls.Add(this.labelControl65);
             this.groupBoxKaynak.Controls.Add(this.textEditKaynakKar);
             this.groupBoxKaynak.Controls.Add(this.labelControlKaynakTl);
             this.groupBoxKaynak.Controls.Add(this.labelControl19);
@@ -1503,16 +1503,6 @@
             this.labelControl14.Size = new System.Drawing.Size(85, 17);
             this.labelControl14.TabIndex = 10;
             this.labelControl14.Text = "Büküm Süresi:";
-            // 
-            // labelControl65
-            // 
-            this.labelControl65.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.labelControl65.Appearance.Options.UseFont = true;
-            this.labelControl65.Location = new System.Drawing.Point(215, 48);
-            this.labelControl65.Name = "labelControl65";
-            this.labelControl65.Size = new System.Drawing.Size(17, 17);
-            this.labelControl65.TabIndex = 17;
-            this.labelControl65.Text = "Dk";
             // 
             // textEditKaynakKar
             // 
@@ -2409,6 +2399,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Transparent;
+            this.panel6.Controls.Add(this.button1);
             this.panel6.Controls.Add(this.listView2);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel6.Location = new System.Drawing.Point(0, 713);
@@ -2433,12 +2424,13 @@
             this.T2,
             this.Somun,
             this.Montaj,
+            this.ParcaMaliyet,
             this.ParcaTotal});
-            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView2.Dock = System.Windows.Forms.DockStyle.Left;
             this.listView2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.listView2.Location = new System.Drawing.Point(0, 0);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(1456, 270);
+            this.listView2.Size = new System.Drawing.Size(1269, 270);
             this.listView2.TabIndex = 37;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -2484,7 +2476,7 @@
             // Maskeleme
             // 
             this.Maskeleme.Text = "Maskeleme Bandı";
-            this.Maskeleme.Width = 138;
+            this.Maskeleme.Width = 107;
             // 
             // T1
             // 
@@ -2497,16 +2489,40 @@
             // Somun
             // 
             this.Somun.Text = "Somun Sıkma";
-            this.Somun.Width = 98;
+            this.Somun.Width = 91;
             // 
             // Montaj
             // 
             this.Montaj.Text = "Montaj";
             // 
+            // ParcaMaliyet
+            // 
+            this.ParcaMaliyet.Text = "Parçanın Total Ücreti";
+            this.ParcaMaliyet.Width = 112;
+            // 
             // ParcaTotal
             // 
-            this.ParcaTotal.Text = "Parçanın Total Ücreti";
-            this.ParcaTotal.Width = 135;
+            this.ParcaTotal.Text = "Parçanın Ücreti";
+            this.ParcaTotal.Width = 94;
+            // 
+            // button1
+            // 
+            this.button1.AutoEllipsis = true;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(1269, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(181, 145);
+            this.button1.TabIndex = 38;
+            this.button1.Text = "Parçayı Düzenle\r\n\r\n\r\n";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // frmYeniProjeTeklifOlustur
             // 
@@ -2785,7 +2801,6 @@
         private DevExpress.XtraEditors.LabelControl labelControlKaplamaTl;
         private DevExpress.XtraEditors.TextEdit textEditKaplanacakMalzeme;
         private DevExpress.XtraEditors.LabelControl labelControl23;
-        private DevExpress.XtraEditors.LabelControl labelControl65;
         private DevExpress.XtraEditors.TextEdit textEditKaynakKar;
         private DevExpress.XtraEditors.LabelControl labelControlKaynakTl;
         private DevExpress.XtraEditors.LabelControl labelControl19;
@@ -2813,6 +2828,8 @@
         private System.Windows.Forms.ColumnHeader T2;
         private System.Windows.Forms.ColumnHeader Somun;
         private System.Windows.Forms.ColumnHeader Montaj;
+        private System.Windows.Forms.ColumnHeader ParcaMaliyet;
         private System.Windows.Forms.ColumnHeader ParcaTotal;
+        private System.Windows.Forms.Button button1;
     }
 }
