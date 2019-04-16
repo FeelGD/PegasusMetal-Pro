@@ -33,5 +33,11 @@ namespace PegasusMetal_Pro
             frmYeniProjeGuncelle yeniProjeGuncelle = new frmYeniProjeGuncelle();
             yeniProjeGuncelle.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmYeniProjeTeklifOlustur projeyeTeklifOlustur = new frmYeniProjeTeklifOlustur();
+            projeyeTeklifOlustur.ShowDialog();
+        }
     }
 }

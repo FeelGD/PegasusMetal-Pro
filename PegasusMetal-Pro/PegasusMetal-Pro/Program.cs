@@ -16,7 +16,7 @@ namespace PegasusMetal_Pro
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmYeniProjeTeklifOlustur());
+            Application.Run(new frmAnaEkran());
         }
     }
 }
