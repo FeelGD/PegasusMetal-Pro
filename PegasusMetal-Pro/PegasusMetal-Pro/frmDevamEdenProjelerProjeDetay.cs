@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PegasusMetal_Pro
 {
-    public partial class frmDevamEdenProjeler : Form
+    public partial class frmDevamEdenProjelerProjeDetay : Form
     {
-        public frmDevamEdenProjeler()
+        public frmDevamEdenProjelerProjeDetay()
         {
             InitializeComponent();
         }
@@ -20,13 +20,8 @@ namespace PegasusMetal_Pro
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
-            
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            frmDevamEdenProjelerProjeDetay devamProjelerProjeDetay = new frmDevamEdenProjelerProjeDetay();
-            devamProjelerProjeDetay.ShowDialog();
-        }
+       
     }
 }

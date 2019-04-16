@@ -41,7 +41,7 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit2 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -208,15 +208,9 @@
             // 
             // textEdit3
             // 
-            this.textEdit3.EditValue = "Parça";
+            this.textEdit3.EditValue = "";
             this.textEdit3.Location = new System.Drawing.Point(129, 127);
             this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textEdit3.Properties.Items.AddRange(new object[] {
-            "Parça",
-            "Set"});
-            this.textEdit3.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.textEdit3.Size = new System.Drawing.Size(166, 20);
             this.textEdit3.TabIndex = 2;
             // 
@@ -262,6 +256,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.ComboBoxEdit textEdit2;
-        private DevExpress.XtraEditors.ComboBoxEdit textEdit3;
+        private DevExpress.XtraEditors.TextEdit textEdit3;
     }
 }

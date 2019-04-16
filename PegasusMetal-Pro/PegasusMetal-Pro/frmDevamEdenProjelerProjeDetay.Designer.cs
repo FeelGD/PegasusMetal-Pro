@@ -1,6 +1,6 @@
 ﻿namespace PegasusMetal_Pro
 {
-    partial class frmSipariseBasla
+    partial class frmDevamEdenProjelerProjeDetay
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSipariseBasla));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDevamEdenProjelerProjeDetay));
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.richTextBox13 = new System.Windows.Forms.RichTextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.ProjeTermin = new DevExpress.XtraEditors.LabelControl();
             this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
-            this.button1 = new System.Windows.Forms.Button();
-            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
-            this.richTextBox13 = new System.Windows.Forms.RichTextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.dateEditMontaj = new DevExpress.XtraEditors.DateEdit();
@@ -101,13 +99,13 @@
             this.richTextBoxLazer = new System.Windows.Forms.RichTextBox();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditMontaj.Properties.CalendarTimeProperties)).BeginInit();
@@ -157,7 +155,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1426, 41);
-            this.panel3.TabIndex = 3;
+            this.panel3.TabIndex = 4;
             // 
             // pictureBox3
             // 
@@ -182,102 +180,70 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // panel1
+            // panel2
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.richTextBox13);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(829, 41);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(597, 638);
-            this.panel1.TabIndex = 4;
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.richTextBox13);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(829, 41);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(597, 522);
+            this.panel2.TabIndex = 6;
+            // 
+            // richTextBox13
+            // 
+            this.richTextBox13.BackColor = System.Drawing.Color.DimGray;
+            this.richTextBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.richTextBox13.ForeColor = System.Drawing.SystemColors.Window;
+            this.richTextBox13.Location = new System.Drawing.Point(0, 0);
+            this.richTextBox13.Name = "richTextBox13";
+            this.richTextBox13.Size = new System.Drawing.Size(597, 522);
+            this.richTextBox13.TabIndex = 1;
+            this.richTextBox13.Text = "Burada Burak beyin gireceği up uzun sipariş açıklaması yer alacak";
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.Controls.Add(this.button1);
             this.panel4.Controls.Add(this.ProjeTermin);
             this.panel4.Controls.Add(this.labelControl25);
-            this.panel4.Controls.Add(this.button1);
-            this.panel4.Controls.Add(this.checkEdit1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 523);
+            this.panel4.Location = new System.Drawing.Point(829, 565);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(597, 115);
-            this.panel4.TabIndex = 4;
+            this.panel4.Size = new System.Drawing.Size(597, 114);
+            this.panel4.TabIndex = 7;
             // 
             // ProjeTermin
             // 
             this.ProjeTermin.Appearance.ForeColor = System.Drawing.SystemColors.Control;
             this.ProjeTermin.Appearance.Options.UseForeColor = true;
-            this.ProjeTermin.Location = new System.Drawing.Point(105, 4);
+            this.ProjeTermin.Location = new System.Drawing.Point(102, 4);
             this.ProjeTermin.Name = "ProjeTermin";
             this.ProjeTermin.Size = new System.Drawing.Size(66, 13);
-            this.ProjeTermin.TabIndex = 5;
+            this.ProjeTermin.TabIndex = 9;
             this.ProjeTermin.Text = "deneme.Tarih";
             // 
             // labelControl25
             // 
             this.labelControl25.Appearance.ForeColor = System.Drawing.SystemColors.Control;
             this.labelControl25.Appearance.Options.UseForeColor = true;
-            this.labelControl25.Location = new System.Drawing.Point(6, 3);
+            this.labelControl25.Location = new System.Drawing.Point(3, 3);
             this.labelControl25.Name = "labelControl25";
             this.labelControl25.Size = new System.Drawing.Size(93, 13);
-            this.labelControl25.TabIndex = 4;
+            this.labelControl25.TabIndex = 8;
             this.labelControl25.Text = "Proje Termin Tarihi:";
             // 
-            // button1
+            // panel1
             // 
-            this.button1.AutoEllipsis = true;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(343, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(254, 115);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "\r\n\r\nProjeye Başla";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            // 
-            // checkEdit1
-            // 
-            this.checkEdit1.Location = new System.Drawing.Point(6, 23);
-            this.checkEdit1.Name = "checkEdit1";
-            this.checkEdit1.Properties.Appearance.ForeColor = System.Drawing.SystemColors.Control;
-            this.checkEdit1.Properties.Appearance.Options.UseForeColor = true;
-            this.checkEdit1.Properties.Caption = "Okudum Anladım Kabul Ediyorum.";
-            this.checkEdit1.Size = new System.Drawing.Size(289, 19);
-            this.checkEdit1.TabIndex = 1;
-            this.checkEdit1.CheckedChanged += new System.EventHandler(this.checkEdit1_CheckedChanged);
-            // 
-            // richTextBox13
-            // 
-            this.richTextBox13.BackColor = System.Drawing.Color.DimGray;
-            this.richTextBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.richTextBox13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.richTextBox13.ForeColor = System.Drawing.SystemColors.Window;
-            this.richTextBox13.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox13.Name = "richTextBox13";
-            this.richTextBox13.Size = new System.Drawing.Size(597, 517);
-            this.richTextBox13.TabIndex = 0;
-            this.richTextBox13.Text = "Burada Burak beyin gireceği up uzun sipariş açıklaması yer alacak";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 41);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(829, 638);
-            this.panel2.TabIndex = 5;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 41);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(829, 638);
+            this.panel1.TabIndex = 5;
             // 
             // groupBox1
             // 
@@ -299,7 +265,7 @@
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(829, 638);
-            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "İşlem Kontrolü";
             // 
@@ -320,6 +286,7 @@
             // dateEditMontaj
             // 
             this.dateEditMontaj.EditValue = null;
+            this.dateEditMontaj.Enabled = false;
             this.dateEditMontaj.Location = new System.Drawing.Point(84, 26);
             this.dateEditMontaj.Name = "dateEditMontaj";
             this.dateEditMontaj.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -400,6 +367,7 @@
             // dateEditSomunSikma
             // 
             this.dateEditSomunSikma.EditValue = null;
+            this.dateEditSomunSikma.Enabled = false;
             this.dateEditSomunSikma.Location = new System.Drawing.Point(84, 25);
             this.dateEditSomunSikma.Name = "dateEditSomunSikma";
             this.dateEditSomunSikma.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -414,7 +382,6 @@
             this.dateEditSomunSikma.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
             this.dateEditSomunSikma.Size = new System.Drawing.Size(174, 20);
             this.dateEditSomunSikma.TabIndex = 2;
-            this.dateEditSomunSikma.EditValueChanged += new System.EventHandler(this.dateEdit10_EditValueChanged);
             // 
             // groupBox13
             // 
@@ -433,6 +400,7 @@
             // dateEditTalasli2
             // 
             this.dateEditTalasli2.EditValue = null;
+            this.dateEditTalasli2.Enabled = false;
             this.dateEditTalasli2.Location = new System.Drawing.Point(84, 26);
             this.dateEditTalasli2.Name = "dateEditTalasli2";
             this.dateEditTalasli2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -489,6 +457,7 @@
             // dateEditTalasli1
             // 
             this.dateEditTalasli1.EditValue = null;
+            this.dateEditTalasli1.Enabled = false;
             this.dateEditTalasli1.Location = new System.Drawing.Point(84, 26);
             this.dateEditTalasli1.Name = "dateEditTalasli1";
             this.dateEditTalasli1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -545,6 +514,7 @@
             // dateEditBoya
             // 
             this.dateEditBoya.EditValue = null;
+            this.dateEditBoya.Enabled = false;
             this.dateEditBoya.Location = new System.Drawing.Point(84, 26);
             this.dateEditBoya.Name = "dateEditBoya";
             this.dateEditBoya.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -601,6 +571,7 @@
             // dateEditMaskeleme
             // 
             this.dateEditMaskeleme.EditValue = null;
+            this.dateEditMaskeleme.Enabled = false;
             this.dateEditMaskeleme.Location = new System.Drawing.Point(84, 26);
             this.dateEditMaskeleme.Name = "dateEditMaskeleme";
             this.dateEditMaskeleme.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -657,6 +628,7 @@
             // dateEditDisAcma
             // 
             this.dateEditDisAcma.EditValue = null;
+            this.dateEditDisAcma.Enabled = false;
             this.dateEditDisAcma.Location = new System.Drawing.Point(84, 26);
             this.dateEditDisAcma.Name = "dateEditDisAcma";
             this.dateEditDisAcma.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -713,6 +685,7 @@
             // dateEditHavsaAcma
             // 
             this.dateEditHavsaAcma.EditValue = null;
+            this.dateEditHavsaAcma.Enabled = false;
             this.dateEditHavsaAcma.Location = new System.Drawing.Point(84, 26);
             this.dateEditHavsaAcma.Name = "dateEditHavsaAcma";
             this.dateEditHavsaAcma.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -769,6 +742,7 @@
             // dateEditKaplama
             // 
             this.dateEditKaplama.EditValue = null;
+            this.dateEditKaplama.Enabled = false;
             this.dateEditKaplama.Location = new System.Drawing.Point(84, 25);
             this.dateEditKaplama.Name = "dateEditKaplama";
             this.dateEditKaplama.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -825,6 +799,7 @@
             // dateEditKaynak
             // 
             this.dateEditKaynak.EditValue = null;
+            this.dateEditKaynak.Enabled = false;
             this.dateEditKaynak.Location = new System.Drawing.Point(84, 25);
             this.dateEditKaynak.Name = "dateEditKaynak";
             this.dateEditKaynak.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -881,6 +856,7 @@
             // dateEditBukum
             // 
             this.dateEditBukum.EditValue = null;
+            this.dateEditBukum.Enabled = false;
             this.dateEditBukum.Location = new System.Drawing.Point(84, 26);
             this.dateEditBukum.Name = "dateEditBukum";
             this.dateEditBukum.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -933,11 +909,11 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Lazer Kesim";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // dateEditLazeer
             // 
             this.dateEditLazeer.EditValue = null;
+            this.dateEditLazeer.Enabled = false;
             this.dateEditLazeer.Location = new System.Drawing.Point(84, 26);
             this.dateEditLazeer.Name = "dateEditLazeer";
             this.dateEditLazeer.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -977,28 +953,49 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "İşlemin Tahmini\r\nBitirilme Tarihi:";
             // 
-            // frmSipariseBasla
+            // button1
+            // 
+            this.button1.AutoEllipsis = true;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(343, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(254, 114);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "\r\n\r\nDeğişiklikleri Kaydet";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            // 
+            // frmDevamEdenProjelerProjeDetay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1426, 679);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmSipariseBasla";
-            this.Text = "frmSipariseBasla";
+            this.Name = "frmDevamEdenProjelerProjeDetay";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "frmDevamEdenProjelerProjeDetayı";
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
@@ -1053,45 +1050,16 @@
         }
 
         #endregion
+
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RichTextBox richTextBoxLazer;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.RichTextBox richTextBoxTalasli1;
-        private DevExpress.XtraEditors.LabelControl labelControl17;
-        private DevExpress.XtraEditors.LabelControl labelControl18;
-        private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.RichTextBox richTextBoxBoya;
-        private DevExpress.XtraEditors.LabelControl labelControl15;
-        private DevExpress.XtraEditors.LabelControl labelControl16;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.RichTextBox richTextBoxMaskeleme;
-        private DevExpress.XtraEditors.LabelControl labelControl13;
-        private DevExpress.XtraEditors.LabelControl labelControl14;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.RichTextBox richTextBoxDisAcma;
-        private DevExpress.XtraEditors.LabelControl labelControl11;
-        private DevExpress.XtraEditors.LabelControl labelControl12;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.RichTextBox richTextBoxHavsaAcma;
-        private DevExpress.XtraEditors.LabelControl labelControl9;
-        private DevExpress.XtraEditors.LabelControl labelControl10;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.RichTextBox richTextBoxKaynak;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RichTextBox richTextBoxBukum;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
         private System.Windows.Forms.GroupBox groupBox11;
+        private DevExpress.XtraEditors.DateEdit dateEditMontaj;
         private System.Windows.Forms.RichTextBox richTextBoxMontaj;
         private DevExpress.XtraEditors.LabelControl labelControl19;
         private DevExpress.XtraEditors.LabelControl labelControl20;
@@ -1101,29 +1069,58 @@
         private DevExpress.XtraEditors.LabelControl labelControl22;
         private DevExpress.XtraEditors.DateEdit dateEditSomunSikma;
         private System.Windows.Forms.GroupBox groupBox13;
+        private DevExpress.XtraEditors.DateEdit dateEditTalasli2;
         private System.Windows.Forms.RichTextBox richTextBoxTalasli2;
         private DevExpress.XtraEditors.LabelControl labelControl23;
         private DevExpress.XtraEditors.LabelControl labelControl24;
-        private System.Windows.Forms.RichTextBox richTextBox13;
-        private DevExpress.XtraEditors.CheckEdit checkEdit1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button1;
-        private DevExpress.XtraEditors.LabelControl ProjeTermin;
-        private DevExpress.XtraEditors.LabelControl labelControl25;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private DevExpress.XtraEditors.DateEdit dateEditTalasli1;
+        private System.Windows.Forms.RichTextBox richTextBoxTalasli1;
+        private DevExpress.XtraEditors.LabelControl labelControl17;
+        private DevExpress.XtraEditors.LabelControl labelControl18;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private DevExpress.XtraEditors.DateEdit dateEditBoya;
+        private System.Windows.Forms.RichTextBox richTextBoxBoya;
+        private DevExpress.XtraEditors.LabelControl labelControl15;
+        private DevExpress.XtraEditors.LabelControl labelControl16;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private DevExpress.XtraEditors.DateEdit dateEditMaskeleme;
+        private System.Windows.Forms.RichTextBox richTextBoxMaskeleme;
+        private DevExpress.XtraEditors.LabelControl labelControl13;
+        private DevExpress.XtraEditors.LabelControl labelControl14;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private DevExpress.XtraEditors.DateEdit dateEditDisAcma;
+        private System.Windows.Forms.RichTextBox richTextBoxDisAcma;
+        private DevExpress.XtraEditors.LabelControl labelControl11;
+        private DevExpress.XtraEditors.LabelControl labelControl12;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private DevExpress.XtraEditors.DateEdit dateEditHavsaAcma;
+        private System.Windows.Forms.RichTextBox richTextBoxHavsaAcma;
+        private DevExpress.XtraEditors.LabelControl labelControl9;
+        private DevExpress.XtraEditors.LabelControl labelControl10;
         private System.Windows.Forms.GroupBox groupBox5;
+        private DevExpress.XtraEditors.DateEdit dateEditKaplama;
         private System.Windows.Forms.RichTextBox richTextBoxKaplama;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl8;
-        private DevExpress.XtraEditors.DateEdit dateEditMontaj;
-        private DevExpress.XtraEditors.DateEdit dateEditTalasli2;
-        private DevExpress.XtraEditors.DateEdit dateEditTalasli1;
-        private DevExpress.XtraEditors.DateEdit dateEditBoya;
-        private DevExpress.XtraEditors.DateEdit dateEditMaskeleme;
-        private DevExpress.XtraEditors.DateEdit dateEditDisAcma;
-        private DevExpress.XtraEditors.DateEdit dateEditHavsaAcma;
+        private System.Windows.Forms.GroupBox groupBox4;
         private DevExpress.XtraEditors.DateEdit dateEditKaynak;
+        private System.Windows.Forms.RichTextBox richTextBoxKaynak;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private System.Windows.Forms.GroupBox groupBox3;
         private DevExpress.XtraEditors.DateEdit dateEditBukum;
+        private System.Windows.Forms.RichTextBox richTextBoxBukum;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private System.Windows.Forms.GroupBox groupBox2;
         private DevExpress.XtraEditors.DateEdit dateEditLazeer;
-        private DevExpress.XtraEditors.DateEdit dateEditKaplama;
+        private System.Windows.Forms.RichTextBox richTextBoxLazer;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private System.Windows.Forms.RichTextBox richTextBox13;
+        private DevExpress.XtraEditors.LabelControl ProjeTermin;
+        private DevExpress.XtraEditors.LabelControl labelControl25;
+        private System.Windows.Forms.Button button1;
     }
 }
