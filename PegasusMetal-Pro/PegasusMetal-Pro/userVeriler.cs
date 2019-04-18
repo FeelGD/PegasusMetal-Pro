@@ -16,5 +16,17 @@ namespace PegasusMetal_Pro
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmVerilerPersoneller frmVerilerPersoneller = new frmVerilerPersoneller();
+            frmVerilerPersoneller.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmVerilerFirmalar frmVerilerFirmalar = new frmVerilerFirmalar();
+            frmVerilerFirmalar.ShowDialog();
+        }
     }
 }

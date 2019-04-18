@@ -89,6 +89,18 @@
     <Compile Include="frmSipariseBasla.Designer.cs">
       <DependentUpon>frmSipariseBasla.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTeklifler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeklifler.Designer.cs">
+      <DependentUpon>frmTeklifler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTekliflerPersonelAta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTekliflerPersonelAta.Designer.cs">
+      <DependentUpon>frmTekliflerPersonelAta.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmYeniProjeGuncelle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +174,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSipariseBasla.resx">
       <DependentUpon>frmSipariseBasla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeklifler.resx">
+      <DependentUpon>frmTeklifler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTekliflerPersonelAta.resx">
+      <DependentUpon>frmTekliflerPersonelAta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmYeniProjeGuncelle.resx">
       <DependentUpon>frmYeniProjeGuncelle.cs</DependentUpon>
