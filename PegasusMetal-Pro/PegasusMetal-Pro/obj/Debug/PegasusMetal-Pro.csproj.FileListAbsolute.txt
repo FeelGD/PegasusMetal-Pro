@@ -62,3 +62,9 @@ D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro
 D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal_Pro.frmYeniProjeTeklifOlustur.resources
 D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal_Pro.frmTeklifler.resources
 D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal_Pro.frmTekliflerPersonelAta.resources
+D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal_Pro.frmVerilerFirmalar.resources
+D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal_Pro.frmVerilerPersoneller.resources
+D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal_Pro.frmParcaKoduEkle.resources
+D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal_Pro.frmVerilerMalzemeUcretleri.resources
+D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal_Pro.frmVerilerParcaKodlari.resources
+D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal_Pro.frmVerilerStok.resources

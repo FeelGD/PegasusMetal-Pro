@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PegasusMetal_Pro
 {
-    public partial class frmVerilerStok : Form
+    public partial class frmParcaKoduEkle : Form
     {
-        public frmVerilerStok()
+        public frmParcaKoduEkle()
         {
             InitializeComponent();
         }

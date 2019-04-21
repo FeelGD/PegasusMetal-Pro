@@ -83,6 +83,12 @@
     <Compile Include="frmOnaydaBekleyenProjeler.Designer.cs">
       <DependentUpon>frmOnaydaBekleyenProjeler.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmParcaKoduEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmParcaKoduEkle.Designer.cs">
+      <DependentUpon>frmParcaKoduEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSipariseBasla.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,36 @@
     </Compile>
     <Compile Include="frmTekliflerPersonelAta.Designer.cs">
       <DependentUpon>frmTekliflerPersonelAta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerilerFirmalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerilerFirmalar.Designer.cs">
+      <DependentUpon>frmVerilerFirmalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerilerMalzemeUcretleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerilerMalzemeUcretleri.Designer.cs">
+      <DependentUpon>frmVerilerMalzemeUcretleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerilerParcaKodlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerilerParcaKodlari.Designer.cs">
+      <DependentUpon>frmVerilerParcaKodlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerilerPersoneller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerilerPersoneller.Designer.cs">
+      <DependentUpon>frmVerilerPersoneller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerilerStok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerilerStok.Designer.cs">
+      <DependentUpon>frmVerilerStok.cs</DependentUpon>
     </Compile>
     <Compile Include="frmYeniProjeGuncelle.cs">
       <SubType>Form</SubType>
@@ -172,6 +208,9 @@
     <EmbeddedResource Include="frmOnaydaBekleyenProjeler.resx">
       <DependentUpon>frmOnaydaBekleyenProjeler.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmParcaKoduEkle.resx">
+      <DependentUpon>frmParcaKoduEkle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSipariseBasla.resx">
       <DependentUpon>frmSipariseBasla.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +219,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTekliflerPersonelAta.resx">
       <DependentUpon>frmTekliflerPersonelAta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerilerFirmalar.resx">
+      <DependentUpon>frmVerilerFirmalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerilerMalzemeUcretleri.resx">
+      <DependentUpon>frmVerilerMalzemeUcretleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerilerParcaKodlari.resx">
+      <DependentUpon>frmVerilerParcaKodlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerilerPersoneller.resx">
+      <DependentUpon>frmVerilerPersoneller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerilerStok.resx">
+      <DependentUpon>frmVerilerStok.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmYeniProjeGuncelle.resx">
       <DependentUpon>frmYeniProjeGuncelle.cs</DependentUpon>

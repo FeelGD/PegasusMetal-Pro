@@ -42,6 +42,8 @@
             this.Mail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Adres = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.simpleButtonGuncelle = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButtonKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.textEditFirmaKodu = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.textEditId = new DevExpress.XtraEditors.TextEdit();
@@ -56,8 +58,6 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.textEditAdres = new DevExpress.XtraEditors.MemoEdit();
-            this.simpleButtonGuncelle = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButtonKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -105,6 +105,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(35, 41);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // panel2
             // 
@@ -195,6 +196,28 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(333, 540);
             this.panel3.TabIndex = 4;
+            // 
+            // simpleButtonGuncelle
+            // 
+            this.simpleButtonGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.simpleButtonGuncelle.Appearance.Options.UseFont = true;
+            this.simpleButtonGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonGuncelle.ImageOptions.Image")));
+            this.simpleButtonGuncelle.Location = new System.Drawing.Point(3, 475);
+            this.simpleButtonGuncelle.Name = "simpleButtonGuncelle";
+            this.simpleButtonGuncelle.Size = new System.Drawing.Size(327, 53);
+            this.simpleButtonGuncelle.TabIndex = 44;
+            this.simpleButtonGuncelle.Text = "FİRMAYI GÜNCELLE";
+            // 
+            // simpleButtonKaydet
+            // 
+            this.simpleButtonKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.simpleButtonKaydet.Appearance.Options.UseFont = true;
+            this.simpleButtonKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonKaydet.ImageOptions.Image")));
+            this.simpleButtonKaydet.Location = new System.Drawing.Point(3, 415);
+            this.simpleButtonKaydet.Name = "simpleButtonKaydet";
+            this.simpleButtonKaydet.Size = new System.Drawing.Size(327, 54);
+            this.simpleButtonKaydet.TabIndex = 43;
+            this.simpleButtonKaydet.Text = "FİRMAYI KAYDET";
             // 
             // textEditFirmaKodu
             // 
@@ -333,28 +356,6 @@
             this.textEditAdres.Size = new System.Drawing.Size(186, 94);
             this.textEditAdres.TabIndex = 37;
             // 
-            // simpleButtonGuncelle
-            // 
-            this.simpleButtonGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.simpleButtonGuncelle.Appearance.Options.UseFont = true;
-            this.simpleButtonGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonGuncelle.ImageOptions.Image")));
-            this.simpleButtonGuncelle.Location = new System.Drawing.Point(3, 475);
-            this.simpleButtonGuncelle.Name = "simpleButtonGuncelle";
-            this.simpleButtonGuncelle.Size = new System.Drawing.Size(327, 53);
-            this.simpleButtonGuncelle.TabIndex = 44;
-            this.simpleButtonGuncelle.Text = "FİRMAYI GÜNCELLE";
-            // 
-            // simpleButtonKaydet
-            // 
-            this.simpleButtonKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.simpleButtonKaydet.Appearance.Options.UseFont = true;
-            this.simpleButtonKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonKaydet.ImageOptions.Image")));
-            this.simpleButtonKaydet.Location = new System.Drawing.Point(3, 415);
-            this.simpleButtonKaydet.Name = "simpleButtonKaydet";
-            this.simpleButtonKaydet.Size = new System.Drawing.Size(327, 54);
-            this.simpleButtonKaydet.TabIndex = 43;
-            this.simpleButtonKaydet.Text = "FİRMAYI KAYDET";
-            // 
             // frmVerilerFirmalar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,6 +367,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmVerilerFirmalar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

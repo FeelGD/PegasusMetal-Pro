@@ -28,5 +28,23 @@ namespace PegasusMetal_Pro
             frmVerilerFirmalar frmVerilerFirmalar = new frmVerilerFirmalar();
             frmVerilerFirmalar.ShowDialog();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            frmVerilerStok frmVerilerStok = new frmVerilerStok();
+            frmVerilerStok.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            frmVerilerMalzemeUcretleri frmVerilerMalzemeUcretleri = new frmVerilerMalzemeUcretleri();
+            frmVerilerMalzemeUcretleri.ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            frmVerilerParcaKodlari frmVerilerParcaKodlari = new frmVerilerParcaKodlari();
+            frmVerilerParcaKodlari.ShowDialog();
+        }
     }
 }
