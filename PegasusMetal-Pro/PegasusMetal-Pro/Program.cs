@@ -14,6 +14,7 @@ namespace PegasusMetal_Pro
         [STAThread]
         static void Main()
         {
+            WebSocketService.getInstance();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmAnaEkran());
