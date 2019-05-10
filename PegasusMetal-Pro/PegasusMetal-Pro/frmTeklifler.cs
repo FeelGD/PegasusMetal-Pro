@@ -27,5 +27,11 @@ namespace PegasusMetal_Pro
             frmTekliflerPersonelAta frmTekliflerPersonelAta = new frmTekliflerPersonelAta();
             frmTekliflerPersonelAta.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmTekliflerTeklifGuncelle frmTekliflerTeklifGuncelle = new frmTekliflerTeklifGuncelle();
+            frmTekliflerTeklifGuncelle.ShowDialog();
+        }
     }
 }

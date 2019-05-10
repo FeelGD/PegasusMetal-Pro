@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+
 
 namespace PegasusMetal_Pro
 {
@@ -37,7 +39,7 @@ namespace PegasusMetal_Pro
 
         private void button1_Click(object sender, EventArgs e)
         {  //login check 
-            simpleButtonGiris.Enabled = false;
+            button1.Enabled = false;
             List<string> packetData = new List<string>();
             packetData.Add(OPCodes.LOGIN);
             packetData.Add(JsonConvert.SerializeObject(new User() { Username = textEdit1.Text, Password = textEdit2.Text }));
@@ -53,7 +55,7 @@ namespace PegasusMetal_Pro
         public void LoginFail(string message)
         {
             MessageBox.Show(message, "Hata!");
-            simpleButtonGiris.Enabled = true;
+            button1.Enabled = true;
         }
     }
 }
