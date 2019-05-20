@@ -29,34 +29,34 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(userAyarlar));
-            this.barButtonItemRoller = new System.Windows.Forms.Button();
+            this.ARollerBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // barButtonItemRoller
+            // ARollerBtn
             // 
-            this.barButtonItemRoller.AutoEllipsis = true;
-            this.barButtonItemRoller.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemRoller.BackgroundImage")));
-            this.barButtonItemRoller.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.barButtonItemRoller.FlatAppearance.BorderSize = 0;
-            this.barButtonItemRoller.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.barButtonItemRoller.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.barButtonItemRoller.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.barButtonItemRoller.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemRoller.Image")));
-            this.barButtonItemRoller.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.barButtonItemRoller.Location = new System.Drawing.Point(287, 237);
-            this.barButtonItemRoller.Name = "barButtonItemRoller";
-            this.barButtonItemRoller.Size = new System.Drawing.Size(314, 145);
-            this.barButtonItemRoller.TabIndex = 6;
-            this.barButtonItemRoller.Text = "Roller\r\n\r\n";
-            this.barButtonItemRoller.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.barButtonItemRoller.UseVisualStyleBackColor = true;
+            this.ARollerBtn.AutoEllipsis = true;
+            this.ARollerBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ARollerBtn.BackgroundImage")));
+            this.ARollerBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ARollerBtn.FlatAppearance.BorderSize = 0;
+            this.ARollerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ARollerBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ARollerBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ARollerBtn.Image = ((System.Drawing.Image)(resources.GetObject("ARollerBtn.Image")));
+            this.ARollerBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ARollerBtn.Location = new System.Drawing.Point(287, 237);
+            this.ARollerBtn.Name = "ARollerBtn";
+            this.ARollerBtn.Size = new System.Drawing.Size(314, 145);
+            this.ARollerBtn.TabIndex = 6;
+            this.ARollerBtn.Text = "Roller\r\n\r\n";
+            this.ARollerBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ARollerBtn.UseVisualStyleBackColor = true;
             // 
             // userAyarlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.barButtonItemRoller);
+            this.Controls.Add(this.ARollerBtn);
             this.Name = "userAyarlar";
             this.Size = new System.Drawing.Size(888, 619);
             this.ResumeLayout(false);
@@ -65,6 +65,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button barButtonItemRoller;
+        private System.Windows.Forms.Button ARollerBtn;
     }
 }
