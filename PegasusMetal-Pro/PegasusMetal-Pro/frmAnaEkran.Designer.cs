@@ -32,11 +32,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.SidePanel = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.MainAyarlarBtn = new System.Windows.Forms.Button();
+            this.MainRaporlarBtn = new System.Windows.Forms.Button();
+            this.MainVerilerBtn = new System.Windows.Forms.Button();
+            this.MainTekliflerBtn = new System.Windows.Forms.Button();
+            this.MainProjelerBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -69,11 +69,11 @@
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.SidePanel);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.MainAyarlarBtn);
+            this.panel1.Controls.Add(this.MainRaporlarBtn);
+            this.panel1.Controls.Add(this.MainVerilerBtn);
+            this.panel1.Controls.Add(this.MainTekliflerBtn);
+            this.panel1.Controls.Add(this.MainProjelerBtn);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -101,95 +101,95 @@
             this.SidePanel.Size = new System.Drawing.Size(20, 75);
             this.SidePanel.TabIndex = 5;
             // 
-            // button5
+            // MainAyarlarBtn
             // 
-            this.button5.AutoEllipsis = true;
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(12, 534);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(221, 75);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "    Ayarlar";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.MainAyarlarBtn.AutoEllipsis = true;
+            this.MainAyarlarBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainAyarlarBtn.BackgroundImage")));
+            this.MainAyarlarBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MainAyarlarBtn.FlatAppearance.BorderSize = 0;
+            this.MainAyarlarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MainAyarlarBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainAyarlarBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MainAyarlarBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MainAyarlarBtn.Location = new System.Drawing.Point(12, 534);
+            this.MainAyarlarBtn.Name = "MainAyarlarBtn";
+            this.MainAyarlarBtn.Size = new System.Drawing.Size(221, 75);
+            this.MainAyarlarBtn.TabIndex = 4;
+            this.MainAyarlarBtn.Text = "    Ayarlar";
+            this.MainAyarlarBtn.UseVisualStyleBackColor = true;
+            this.MainAyarlarBtn.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button4
+            // MainRaporlarBtn
             // 
-            this.button4.AutoEllipsis = true;
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(12, 453);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(221, 75);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "       Raporlar";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.MainRaporlarBtn.AutoEllipsis = true;
+            this.MainRaporlarBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainRaporlarBtn.BackgroundImage")));
+            this.MainRaporlarBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MainRaporlarBtn.FlatAppearance.BorderSize = 0;
+            this.MainRaporlarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MainRaporlarBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainRaporlarBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MainRaporlarBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MainRaporlarBtn.Location = new System.Drawing.Point(12, 453);
+            this.MainRaporlarBtn.Name = "MainRaporlarBtn";
+            this.MainRaporlarBtn.Size = new System.Drawing.Size(221, 75);
+            this.MainRaporlarBtn.TabIndex = 3;
+            this.MainRaporlarBtn.Text = "       Raporlar";
+            this.MainRaporlarBtn.UseVisualStyleBackColor = true;
+            this.MainRaporlarBtn.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
+            // MainVerilerBtn
             // 
-            this.button3.AutoEllipsis = true;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(12, 372);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(221, 75);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "    Veriler";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.MainVerilerBtn.AutoEllipsis = true;
+            this.MainVerilerBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainVerilerBtn.BackgroundImage")));
+            this.MainVerilerBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MainVerilerBtn.FlatAppearance.BorderSize = 0;
+            this.MainVerilerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MainVerilerBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainVerilerBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MainVerilerBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MainVerilerBtn.Location = new System.Drawing.Point(12, 372);
+            this.MainVerilerBtn.Name = "MainVerilerBtn";
+            this.MainVerilerBtn.Size = new System.Drawing.Size(221, 75);
+            this.MainVerilerBtn.TabIndex = 2;
+            this.MainVerilerBtn.Text = "    Veriler";
+            this.MainVerilerBtn.UseVisualStyleBackColor = true;
+            this.MainVerilerBtn.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // MainTekliflerBtn
             // 
-            this.button2.AutoEllipsis = true;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(12, 291);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(221, 75);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "   Teklifler";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.MainTekliflerBtn.AutoEllipsis = true;
+            this.MainTekliflerBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainTekliflerBtn.BackgroundImage")));
+            this.MainTekliflerBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MainTekliflerBtn.FlatAppearance.BorderSize = 0;
+            this.MainTekliflerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MainTekliflerBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainTekliflerBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MainTekliflerBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MainTekliflerBtn.Location = new System.Drawing.Point(12, 291);
+            this.MainTekliflerBtn.Name = "MainTekliflerBtn";
+            this.MainTekliflerBtn.Size = new System.Drawing.Size(221, 75);
+            this.MainTekliflerBtn.TabIndex = 1;
+            this.MainTekliflerBtn.Text = "   Teklifler";
+            this.MainTekliflerBtn.UseVisualStyleBackColor = true;
+            this.MainTekliflerBtn.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // MainProjelerBtn
             // 
-            this.button1.AutoEllipsis = true;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(12, 210);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(221, 75);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "    Projeler";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.MainProjelerBtn.AutoEllipsis = true;
+            this.MainProjelerBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainProjelerBtn.BackgroundImage")));
+            this.MainProjelerBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MainProjelerBtn.FlatAppearance.BorderSize = 0;
+            this.MainProjelerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MainProjelerBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainProjelerBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MainProjelerBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MainProjelerBtn.Location = new System.Drawing.Point(12, 210);
+            this.MainProjelerBtn.Name = "MainProjelerBtn";
+            this.MainProjelerBtn.Size = new System.Drawing.Size(221, 75);
+            this.MainProjelerBtn.TabIndex = 0;
+            this.MainProjelerBtn.Text = "    Projeler";
+            this.MainProjelerBtn.UseVisualStyleBackColor = true;
+            this.MainProjelerBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel3
             // 
@@ -238,7 +238,7 @@
             this.colorPickEdit1.Properties.ShowSystemColors = false;
             this.colorPickEdit1.Properties.ShowWebColors = false;
             this.colorPickEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.colorPickEdit1.Size = new System.Drawing.Size(28, 20);
+            this.colorPickEdit1.Size = new System.Drawing.Size(28, 18);
             this.colorPickEdit1.TabIndex = 6;
             this.colorPickEdit1.ColorChanged += new System.EventHandler(this.colorPickEdit1_ColorChanged);
             // 
@@ -383,11 +383,11 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel SidePanel;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button MainAyarlarBtn;
+        private System.Windows.Forms.Button MainRaporlarBtn;
+        private System.Windows.Forms.Button MainVerilerBtn;
+        private System.Windows.Forms.Button MainTekliflerBtn;
+        private System.Windows.Forms.Button MainProjelerBtn;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;

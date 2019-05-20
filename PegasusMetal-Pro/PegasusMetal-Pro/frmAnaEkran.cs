@@ -40,23 +40,23 @@ namespace PegasusMetal_Pro
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = button1.Height;
-            SidePanel.Top = button1.Top;
+            SidePanel.Height = MainProjelerBtn.Height;
+            SidePanel.Top = MainProjelerBtn.Top;
             userDelete();
             userProjeler1.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = button2.Height;
-            SidePanel.Top = button2.Top;
+            SidePanel.Height = MainTekliflerBtn.Height;
+            SidePanel.Top = MainTekliflerBtn.Top;
             userDelete();
             userTeklifler1.Visible = true;
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = button3.Height;
-            SidePanel.Top = button3.Top;
+            SidePanel.Height = MainVerilerBtn.Height;
+            SidePanel.Top = MainVerilerBtn.Top;
             userDelete();
             userVeriler1.Visible = true;
         }
@@ -64,8 +64,8 @@ namespace PegasusMetal_Pro
 
         private void button5_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = button5.Height;
-            SidePanel.Top = button5.Top;
+            SidePanel.Height = MainAyarlarBtn.Height;
+            SidePanel.Top = MainAyarlarBtn.Top;
             userDelete();
             userAyarlar1.Visible = true;
         }
@@ -73,8 +73,8 @@ namespace PegasusMetal_Pro
 
         private void button4_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = button4.Height;
-            SidePanel.Top = button4.Top;
+            SidePanel.Height = MainRaporlarBtn.Height;
+            SidePanel.Top = MainRaporlarBtn.Top;
             userDelete();
             userRaporlar1.Visible = true;
         }
