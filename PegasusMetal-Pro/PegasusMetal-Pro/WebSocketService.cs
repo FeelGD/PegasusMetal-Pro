@@ -15,10 +15,10 @@ namespace PegasusMetal_Pro
    public class WebSocketService : ISocketService
     {
         const string LOG_TYPE = "WebSocket";
-        //  WebSocket websocket;
+        WebSocket websocket;
         public bool isLogin = false;
         static WebSocketService service;
-    /*    private WebSocketService()
+        private WebSocketService()
         {
             websocket = new WebSocket("ws://" + Constants.IP_ADDRESS + ":" + Constants.PORT.ToString() + "/");
             websocket.Opened += new EventHandler(websocket_Opened);
@@ -26,7 +26,7 @@ namespace PegasusMetal_Pro
             websocket.Closed += new EventHandler(websocket_Closed);
             websocket.MessageReceived += new EventHandler<MessageReceivedEventArgs>(websocket_MessageReceived);
             websocket.Open();
-        }*/
+        }
 
         public static WebSocketService getInstance()
         {
@@ -61,11 +61,11 @@ namespace PegasusMetal_Pro
                 }
                 message = message + packetData[i] + Constants.SPLITTER;
             }
-            //  websocket.Send(message);
+            websocket.Send(message);
             Utilities.WriteLog(LOG_TYPE, message + " sent to server.", ConsoleColor.Yellow);
         }
 
-   /*     private void websocket_MessageReceived(object sender, MessageReceivedEventArgs e)
+        private void websocket_MessageReceived(object sender, MessageReceivedEventArgs e)
         {
             Utilities.WriteLog(LOG_TYPE, e.Message + " received from server.", ConsoleColor.Gray);
             string[] packets = e.Message.Split(new string[] { Constants.SPLITTER }, StringSplitOptions.None);
@@ -82,9 +82,9 @@ namespace PegasusMetal_Pro
                     GetForm<frmLogin>().LoginFail(temp.Explanation);
                     break;
             }
-}*/
+        }
 
-private void websocket_Opened(object sender, EventArgs e)
+        private void websocket_Opened(object sender, EventArgs e)
         {
             Utilities.WriteLog(LOG_TYPE, "Connection opened.", ConsoleColor.Green);
             Utilities.WriteLog(LOG_TYPE, "IP Address : " + Constants.IP_ADDRESS.ToString(), ConsoleColor.Yellow);
