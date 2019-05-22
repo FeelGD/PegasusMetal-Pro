@@ -33,6 +33,14 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.simpleButtonGuncelle = new DevExpress.XtraEditors.SimpleButton();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.textEditSoyad = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.textEditId = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.textEditAd = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.listView1 = new System.Windows.Forms.ListView();
             this.Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -40,23 +48,14 @@
             this.Soyad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.KullaniciAdi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Sifre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.textEditSoyad = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.textEditId = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.textEditAd = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.simpleButtonGuncelle = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButtonKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEditSoyad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditAd.Properties)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -98,7 +97,6 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.simpleButtonGuncelle);
-            this.panel3.Controls.Add(this.simpleButtonKaydet);
             this.panel3.Controls.Add(this.checkedListBox1);
             this.panel3.Controls.Add(this.textEditSoyad);
             this.panel3.Controls.Add(this.labelControl7);
@@ -112,6 +110,95 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(375, 522);
             this.panel3.TabIndex = 4;
+            // 
+            // simpleButtonGuncelle
+            // 
+            this.simpleButtonGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.simpleButtonGuncelle.Appearance.Options.UseFont = true;
+            this.simpleButtonGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonGuncelle.ImageOptions.Image")));
+            this.simpleButtonGuncelle.Location = new System.Drawing.Point(22, 457);
+            this.simpleButtonGuncelle.Name = "simpleButtonGuncelle";
+            this.simpleButtonGuncelle.Size = new System.Drawing.Size(327, 53);
+            this.simpleButtonGuncelle.TabIndex = 48;
+            this.simpleButtonGuncelle.Text = "YETKİLERİ GÜNCELLE";
+            this.simpleButtonGuncelle.Click += new System.EventHandler(this.SimpleButtonGuncelle_Click);
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(123, 154);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(226, 289);
+            this.checkedListBox1.TabIndex = 46;
+            // 
+            // textEditSoyad
+            // 
+            this.textEditSoyad.EditValue = "";
+            this.textEditSoyad.Location = new System.Drawing.Point(123, 106);
+            this.textEditSoyad.Name = "textEditSoyad";
+            // 
+            // 
+            // 
+            this.textEditSoyad.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
+            this.textEditSoyad.Properties.Appearance.Options.UseFont = true;
+            this.textEditSoyad.Size = new System.Drawing.Size(226, 26);
+            this.textEditSoyad.TabIndex = 45;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.labelControl7.Appearance.Options.UseFont = true;
+            this.labelControl7.Location = new System.Drawing.Point(70, 109);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(45, 23);
+            this.labelControl7.TabIndex = 44;
+            this.labelControl7.Text = "Şifre:";
+            // 
+            // textEditId
+            // 
+            this.textEditId.Enabled = false;
+            this.textEditId.Location = new System.Drawing.Point(123, 19);
+            this.textEditId.Name = "textEditId";
+            // 
+            // 
+            // 
+            this.textEditId.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
+            this.textEditId.Properties.Appearance.Options.UseFont = true;
+            this.textEditId.Size = new System.Drawing.Size(226, 26);
+            this.textEditId.TabIndex = 43;
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Appearance.Options.UseFont = true;
+            this.labelControl6.Location = new System.Drawing.Point(88, 22);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(27, 23);
+            this.labelControl6.TabIndex = 42;
+            this.labelControl6.Text = "ID:";
+            // 
+            // textEditAd
+            // 
+            this.textEditAd.EditValue = "";
+            this.textEditAd.Location = new System.Drawing.Point(123, 60);
+            this.textEditAd.Name = "textEditAd";
+            // 
+            // 
+            // 
+            this.textEditAd.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
+            this.textEditAd.Properties.Appearance.Options.UseFont = true;
+            this.textEditAd.Size = new System.Drawing.Size(226, 26);
+            this.textEditAd.TabIndex = 41;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(8, 63);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(107, 23);
+            this.labelControl1.TabIndex = 40;
+            this.labelControl1.Text = "Kullanıcı Adı:";
             // 
             // panel2
             // 
@@ -141,6 +228,7 @@
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.ListView1_SelectedIndexChanged);
             // 
             // Id
             // 
@@ -167,94 +255,6 @@
             this.Sifre.Text = "Şifresi";
             this.Sifre.Width = 95;
             // 
-            // textEditSoyad
-            // 
-            this.textEditSoyad.Location = new System.Drawing.Point(123, 106);
-            this.textEditSoyad.Name = "textEditSoyad";
-            this.textEditSoyad.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
-            this.textEditSoyad.Properties.Appearance.Options.UseFont = true;
-            this.textEditSoyad.Size = new System.Drawing.Size(226, 26);
-            this.textEditSoyad.TabIndex = 45;
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(70, 109);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(45, 23);
-            this.labelControl7.TabIndex = 44;
-            this.labelControl7.Text = "Şifre:";
-            // 
-            // textEditId
-            // 
-            this.textEditId.Enabled = false;
-            this.textEditId.Location = new System.Drawing.Point(123, 19);
-            this.textEditId.Name = "textEditId";
-            this.textEditId.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
-            this.textEditId.Properties.Appearance.Options.UseFont = true;
-            this.textEditId.Size = new System.Drawing.Size(226, 26);
-            this.textEditId.TabIndex = 43;
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(88, 22);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(27, 23);
-            this.labelControl6.TabIndex = 42;
-            this.labelControl6.Text = "ID:";
-            // 
-            // textEditAd
-            // 
-            this.textEditAd.Location = new System.Drawing.Point(123, 60);
-            this.textEditAd.Name = "textEditAd";
-            this.textEditAd.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
-            this.textEditAd.Properties.Appearance.Options.UseFont = true;
-            this.textEditAd.Size = new System.Drawing.Size(226, 26);
-            this.textEditAd.TabIndex = 41;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(8, 63);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(107, 23);
-            this.labelControl1.TabIndex = 40;
-            this.labelControl1.Text = "Kullanıcı Adı:";
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(123, 154);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(226, 229);
-            this.checkedListBox1.TabIndex = 46;
-            // 
-            // simpleButtonGuncelle
-            // 
-            this.simpleButtonGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.simpleButtonGuncelle.Appearance.Options.UseFont = true;
-            this.simpleButtonGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonGuncelle.ImageOptions.Image")));
-            this.simpleButtonGuncelle.Location = new System.Drawing.Point(22, 457);
-            this.simpleButtonGuncelle.Name = "simpleButtonGuncelle";
-            this.simpleButtonGuncelle.Size = new System.Drawing.Size(327, 53);
-            this.simpleButtonGuncelle.TabIndex = 48;
-            this.simpleButtonGuncelle.Text = "YETKİLERİ GÜNCELLE";
-            // 
-            // simpleButtonKaydet
-            // 
-            this.simpleButtonKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.simpleButtonKaydet.Appearance.Options.UseFont = true;
-            this.simpleButtonKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonKaydet.ImageOptions.Image")));
-            this.simpleButtonKaydet.Location = new System.Drawing.Point(22, 397);
-            this.simpleButtonKaydet.Name = "simpleButtonKaydet";
-            this.simpleButtonKaydet.Size = new System.Drawing.Size(327, 54);
-            this.simpleButtonKaydet.TabIndex = 47;
-            this.simpleButtonKaydet.Text = "YETKİLERİ KAYDET";
-            // 
             // frmRoller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -275,10 +275,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.textEditSoyad.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditAd.Properties)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -304,6 +304,5 @@
         private DevExpress.XtraEditors.TextEdit textEditAd;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SimpleButton simpleButtonGuncelle;
-        private DevExpress.XtraEditors.SimpleButton simpleButtonKaydet;
     }
 }

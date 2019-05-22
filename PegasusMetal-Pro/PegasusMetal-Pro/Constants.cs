@@ -74,12 +74,14 @@ namespace PegasusMetal_Pro
     public static class Lists
     {
         public static ObservableCollection<Staff> staffs = new ObservableCollection<Staff>();
-        public static List<User> users = new List<User>();
-        public static List<Company> companies = new List<Company>();
-        public static List<ProjectContinuing> projectContinuings = new List<ProjectContinuing>();
-        public static List<Project> projects = new List<Project>();
-        public static List<Stock> stocks = new List<Stock>();
-        public static List<StockCategory> stockCategories = new List<StockCategory>();
+        public static ObservableCollection<User> users = new ObservableCollection<User>();
+        public static ObservableCollection<Company> companies = new ObservableCollection<Company>();
+        public static ObservableCollection<ProjectContinuing> projectContinuings = new ObservableCollection<ProjectContinuing>();
+        public static ObservableCollection<Project> projects = new ObservableCollection<Project>();
+        public static ObservableCollection<Stock> stocks = new ObservableCollection<Stock>();
+        public static ObservableCollection<StockCategory> stockCategories = new ObservableCollection<StockCategory>();
+        public static ObservableCollection<Roles> roles = new ObservableCollection<Roles>();
+        public static ObservableCollection<UserRole> userRoles = new ObservableCollection<UserRole>();
     }
     public static class OPCodes
     {
@@ -104,6 +106,10 @@ namespace PegasusMetal_Pro
         public const string USER = "User";
         public const string USER_ROLE = "UserRole";
         public const string GET_PERSONAL_LIST = "GetPersonalList";
+        public const string GET_ROLE_LIST = "GetRoleList";
+        public const string GET_USER_ROLE_LIST = "GetUserRoleList";
+        public const string GET_USER_LIST = "GetUserList";
+        public const string DELETE_USER_ROLE = "DeleteUserRole";
     }
     public class Reason
     {
