@@ -200,9 +200,6 @@
             this.textEditId.Enabled = false;
             this.textEditId.Location = new System.Drawing.Point(173, 5);
             this.textEditId.Name = "textEditId";
-            // 
-            // 
-            // 
             this.textEditId.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditId.Properties.Appearance.Options.UseFont = true;
             this.textEditId.Size = new System.Drawing.Size(183, 26);
@@ -235,12 +232,9 @@
             this.textEditFiyat.EditValue = "";
             this.textEditFiyat.Location = new System.Drawing.Point(173, 191);
             this.textEditFiyat.Name = "textEditFiyat";
-            // 
-            // 
-            // 
             this.textEditFiyat.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditFiyat.Properties.Appearance.Options.UseFont = true;
-            this.textEditFiyat.Properties.Mask.EditMask = "f2";
+            this.textEditFiyat.Properties.Mask.EditMask = "n2";
             this.textEditFiyat.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.textEditFiyat.Size = new System.Drawing.Size(183, 26);
             this.textEditFiyat.TabIndex = 32;
@@ -249,9 +243,6 @@
             // 
             this.textEditMiktar.Location = new System.Drawing.Point(173, 148);
             this.textEditMiktar.Name = "textEditMiktar";
-            // 
-            // 
-            // 
             this.textEditMiktar.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditMiktar.Properties.Appearance.Options.UseFont = true;
             this.textEditMiktar.Size = new System.Drawing.Size(183, 26);
@@ -261,9 +252,6 @@
             // 
             this.textEditUrunAdi.Location = new System.Drawing.Point(173, 102);
             this.textEditUrunAdi.Name = "textEditUrunAdi";
-            // 
-            // 
-            // 
             this.textEditUrunAdi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditUrunAdi.Properties.Appearance.Options.UseFont = true;
             this.textEditUrunAdi.Size = new System.Drawing.Size(183, 26);
@@ -313,9 +301,6 @@
             // 
             this.textEditKategori.Location = new System.Drawing.Point(173, 55);
             this.textEditKategori.Name = "textEditKategori";
-            // 
-            // 
-            // 
             this.textEditKategori.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditKategori.Properties.Appearance.Options.UseFont = true;
             this.textEditKategori.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -359,9 +344,6 @@
             // 
             this.textEditUrunAdiGoruntule.Location = new System.Drawing.Point(163, 33);
             this.textEditUrunAdiGoruntule.Name = "textEditUrunAdiGoruntule";
-            // 
-            // 
-            // 
             this.textEditUrunAdiGoruntule.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditUrunAdiGoruntule.Properties.Appearance.Options.UseFont = true;
             this.textEditUrunAdiGoruntule.Size = new System.Drawing.Size(187, 26);
