@@ -96,6 +96,10 @@ namespace PegasusMetal_Pro
                     var user = JsonConvert.DeserializeObject<User>(body);
                     Lists.users.Add(user);
                     break;
+                case OPCodes.COMPANY:
+                    var company = JsonConvert.DeserializeObject<Company>(body);
+                    Lists.companies.Add(company);
+                    break;
             }
         }
 

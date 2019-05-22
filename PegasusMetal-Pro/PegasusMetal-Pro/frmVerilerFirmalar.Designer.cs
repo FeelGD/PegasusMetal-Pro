@@ -137,6 +137,7 @@
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.ListView1_SelectedIndexChanged);
             // 
             // Id
             // 
@@ -220,11 +221,15 @@
             this.simpleButtonKaydet.Size = new System.Drawing.Size(327, 54);
             this.simpleButtonKaydet.TabIndex = 43;
             this.simpleButtonKaydet.Text = "FİRMAYI KAYDET";
+            this.simpleButtonKaydet.Click += new System.EventHandler(this.SimpleButtonKaydet_Click);
             // 
             // textEditFirmaKodu
             // 
             this.textEditFirmaKodu.Location = new System.Drawing.Point(143, 102);
             this.textEditFirmaKodu.Name = "textEditFirmaKodu";
+            // 
+            // 
+            // 
             this.textEditFirmaKodu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditFirmaKodu.Properties.Appearance.Options.UseFont = true;
             this.textEditFirmaKodu.Size = new System.Drawing.Size(187, 26);
@@ -245,6 +250,9 @@
             this.textEditId.Enabled = false;
             this.textEditId.Location = new System.Drawing.Point(143, 15);
             this.textEditId.Name = "textEditId";
+            // 
+            // 
+            // 
             this.textEditId.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditId.Properties.Appearance.Options.UseFont = true;
             this.textEditId.Size = new System.Drawing.Size(187, 26);
@@ -265,6 +273,9 @@
             this.textEditMail.EditValue = "";
             this.textEditMail.Location = new System.Drawing.Point(143, 235);
             this.textEditMail.Name = "textEditMail";
+            // 
+            // 
+            // 
             this.textEditMail.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditMail.Properties.Appearance.Options.UseFont = true;
             this.textEditMail.Properties.Mask.EditMask = "(\\d?\\d?\\d?) \\d\\d\\d-\\d\\d\\d\\d";
@@ -276,6 +287,9 @@
             // 
             this.textEditVergiDairesi.Location = new System.Drawing.Point(143, 187);
             this.textEditVergiDairesi.Name = "textEditVergiDairesi";
+            // 
+            // 
+            // 
             this.textEditVergiDairesi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditVergiDairesi.Properties.Appearance.Options.UseFont = true;
             this.textEditVergiDairesi.Size = new System.Drawing.Size(187, 26);
@@ -285,6 +299,9 @@
             // 
             this.textEditVergiNo.Location = new System.Drawing.Point(143, 144);
             this.textEditVergiNo.Name = "textEditVergiNo";
+            // 
+            // 
+            // 
             this.textEditVergiNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditVergiNo.Properties.Appearance.Options.UseFont = true;
             this.textEditVergiNo.Size = new System.Drawing.Size(187, 26);
@@ -294,6 +311,9 @@
             // 
             this.textEditFirmaIsmi.Location = new System.Drawing.Point(143, 58);
             this.textEditFirmaIsmi.Name = "textEditFirmaIsmi";
+            // 
+            // 
+            // 
             this.textEditFirmaIsmi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditFirmaIsmi.Properties.Appearance.Options.UseFont = true;
             this.textEditFirmaIsmi.Size = new System.Drawing.Size(187, 26);
@@ -353,6 +373,9 @@
             // 
             this.textEditAdres.Location = new System.Drawing.Point(144, 284);
             this.textEditAdres.Name = "textEditAdres";
+            // 
+            // 
+            // 
             this.textEditAdres.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditAdres.Properties.Appearance.Options.UseFont = true;
             this.textEditAdres.Size = new System.Drawing.Size(186, 94);
