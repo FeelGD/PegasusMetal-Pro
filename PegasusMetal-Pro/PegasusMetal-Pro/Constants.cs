@@ -9,7 +9,7 @@ namespace PegasusMetal_Pro
     public class Info
     {
         static Info info;
-        public Staff staff;
+        //public Staff staff;
         //public ProjectContinuing projectContinuing;
         private Info()
         {
@@ -48,37 +48,37 @@ namespace PegasusMetal_Pro
             public const string BAR_BUTTON_ITEM_EXPENSES = "barButtonItemGiderler";
             public const string BAR_BUTTON_ITEM_PIECE_CODES = "barButtonItemParcaKodları";
         }
-        public static DataTable ToDataTable<T>(this IList<T> data)
-        {
-            PropertyDescriptorCollection props =
-            TypeDescriptor.GetProperties(typeof(T));
-            DataTable table = new DataTable();
-            for (int i = 0; i < props.Count; i++)
-            {
-                PropertyDescriptor prop = props[i];
-                table.Columns.Add(prop.Name, prop.PropertyType);
-            }
-            object[] values = new object[props.Count];
-            foreach (T item in data)
-            {
-                for (int i = 0; i < values.Length; i++)
-                {
-                    values[i] = props[i].GetValue(item);
-                }
-                table.Rows.Add(values);
-            }
-            return table;
-        }
+        //public static DataTable ToDataTable<T>(this IList<T> data)
+        //{
+        //    PropertyDescriptorCollection props =
+        //    TypeDescriptor.GetProperties(typeof(T));
+        //    DataTable table = new DataTable();
+        //    for (int i = 0; i < props.Count; i++)
+        //    {
+        //        PropertyDescriptor prop = props[i];
+        //        table.Columns.Add(prop.Name, prop.PropertyType);
+        //    }
+        //    object[] values = new object[props.Count];
+        //    foreach (T item in data)
+        //    {
+        //        for (int i = 0; i < values.Length; i++)
+        //        {
+        //            values[i] = props[i].GetValue(item);
+        //        }
+        //        table.Rows.Add(values);
+        //    }
+        //    return table;
+        //}
     }
-    public static class Lists
-    {
-        public static List<Staff> staffs = new List<Staff>();
-        public static List<Company> companies = new List<Company>();
-        public static List<ProjectContinuing> projectContinuings = new List<ProjectContinuing>();
-        public static List<Project> projects = new List<Project>();
-        public static List<Stock> stocks = new List<Stock>();
-        public static List<StockCategory> stockCategories = new List<StockCategory>();
-    }
+    //public static class Lists
+    //{
+    //    public static List<Staff> staffs = new List<Staff>();
+    //    public static List<Company> companies = new List<Company>();
+    //    public static List<ProjectContinuing> projectContinuings = new List<ProjectContinuing>();
+    //    public static List<Project> projects = new List<Project>();
+    //    public static List<Stock> stocks = new List<Stock>();
+    //    public static List<StockCategory> stockCategories = new List<StockCategory>();
+    //}
     public static class OPCodes
     {
         public const string LOGIN = "Login";

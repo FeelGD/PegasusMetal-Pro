@@ -39,12 +39,12 @@ namespace PegasusMetal_Pro
 
         private void button1_Click(object sender, EventArgs e)
         {  //login check 
-            button1.Enabled = false;
-            List<string> packetData = new List<string>();
-            packetData.Add(OPCodes.LOGIN);
-            packetData.Add(JsonConvert.SerializeObject(new User() { Username = textEdit1.Text, Password = textEdit2.Text }));
-            WebSocketService.getInstance().Send(packetData);
-            //this.Close();
+            //button1.Enabled = false;
+            //List<string> packetData = new List<string>();
+            //packetData.Add(OPCodes.LOGIN);
+            //packetData.Add(JsonConvert.SerializeObject(new User() { Username = textEdit1.Text, Password = textEdit2.Text }));
+            //WebSocketService.getInstance().Send(packetData);
+            this.Close();
         }
         public void LoginSuccess(string Name, string Surname)
         {
