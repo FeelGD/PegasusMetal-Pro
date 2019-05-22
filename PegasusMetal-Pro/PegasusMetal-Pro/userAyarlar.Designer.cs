@@ -39,7 +39,7 @@
             this.ARollerBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ARollerBtn.FlatAppearance.BorderSize = 0;
             this.ARollerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ARollerBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ARollerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ARollerBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.ARollerBtn.Image = ((System.Drawing.Image)(resources.GetObject("ARollerBtn.Image")));
             this.ARollerBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -50,6 +50,7 @@
             this.ARollerBtn.Text = "Roller\r\n\r\n";
             this.ARollerBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ARollerBtn.UseVisualStyleBackColor = true;
+            this.ARollerBtn.Click += new System.EventHandler(this.ARollerBtn_Click);
             // 
             // userAyarlar
             // 
