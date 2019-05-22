@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="64050ce6c8fa4c2185b7fdb0dfb4f89a" Name="Diagram1">
+        <EntityTypeShape EntityType="PegasusYazilimModel.AcceptedOffer" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PegasusYazilimModel.Company" Width="1.5" PointX="1.5" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PegasusYazilimModel.InOutput" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PegasusYazilimModel.Material" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PegasusYazilimModel.Offer" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PegasusYazilimModel.Piece" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PegasusYazilimModel.Process" Width="1.5" PointX="1.5" PointY="21.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PegasusYazilimModel.Project" Width="1.5" PointX="1.5" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PegasusYazilimModel.ProjectContinuing" Width="1.5" PointX="3.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PegasusYazilimModel.ProjectFiles" Width="1.5" PointX="3.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PegasusYazilimModel.Roles" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PegasusYazilimModel.Staff" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PegasusYazilimModel.Stock" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PegasusYazilimModel.StockCategory" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PegasusYazilimModel.User" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="PegasusYazilimModel.UserRole" Width="1.5" PointX="6" PointY="3.5" IsExpanded="true" />
+        <AssociationConnector Association="PegasusYazilimModel.FK_AcceptedOffer_Offer" ManuallyRouted="false" />
+        <AssociationConnector Association="PegasusYazilimModel.FK_AcceptedOffer_Staff" ManuallyRouted="false" />
+        <AssociationConnector Association="PegasusYazilimModel.FK_Project_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="PegasusYazilimModel.FK_Offer_Project" ManuallyRouted="false" />
+        <AssociationConnector Association="PegasusYazilimModel.FK_ProjectContinuing_Process" ManuallyRouted="false" />
+        <AssociationConnector Association="PegasusYazilimModel.FK_ProjectContinuing_Project" ManuallyRouted="false" />
+        <AssociationConnector Association="PegasusYazilimModel.FK_ProjectFiles_Project" ManuallyRouted="false" />
+        <AssociationConnector Association="PegasusYazilimModel.FK_UserRole_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="PegasusYazilimModel.FK_StockCategory_Staff" ManuallyRouted="false" />
+        <AssociationConnector Association="PegasusYazilimModel.FK_User_Staff" ManuallyRouted="false" />
+        <AssociationConnector Association="PegasusYazilimModel.FK_UserRole_Staff" ManuallyRouted="false" />
+        <AssociationConnector Association="PegasusYazilimModel.FK_Stock_StockCategory" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -9,8 +9,8 @@ namespace PegasusMetal_Pro
     public class Info
     {
         static Info info;
-        //public Staff staff;
-        //public ProjectContinuing projectContinuing;
+        public Staff staff;
+        public ProjectContinuing projectContinuing;
         private Info()
         {
 
@@ -70,15 +70,15 @@ namespace PegasusMetal_Pro
         //    return table;
         //}
     }
-    //public static class Lists
-    //{
-    //    public static List<Staff> staffs = new List<Staff>();
-    //    public static List<Company> companies = new List<Company>();
-    //    public static List<ProjectContinuing> projectContinuings = new List<ProjectContinuing>();
-    //    public static List<Project> projects = new List<Project>();
-    //    public static List<Stock> stocks = new List<Stock>();
-    //    public static List<StockCategory> stockCategories = new List<StockCategory>();
-    //}
+    public static class Lists
+    {
+        public static List<Staff> staffs = new List<Staff>();
+        public static List<Company> companies = new List<Company>();
+        public static List<ProjectContinuing> projectContinuings = new List<ProjectContinuing>();
+        public static List<Project> projects = new List<Project>();
+        public static List<Stock> stocks = new List<Stock>();
+        public static List<StockCategory> stockCategories = new List<StockCategory>();
+    }
     public static class OPCodes
     {
         public const string LOGIN = "Login";

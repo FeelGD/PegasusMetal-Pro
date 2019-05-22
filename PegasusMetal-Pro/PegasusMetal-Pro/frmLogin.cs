@@ -17,6 +17,7 @@ namespace PegasusMetal_Pro
         public frmLogin()
         {
             InitializeComponent();
+            CheckForIllegalCrossThreadCalls = false;
         }
 
         private void textEdit2_KeyDown(object sender, KeyEventArgs e)
@@ -25,8 +26,7 @@ namespace PegasusMetal_Pro
             {
                 //enter' a basıldığında buraya girer.
                 //login check 
-                button1.Enabled = false;
-                this.Close();
+                Login();
                 
                 //this.Close();
             }
@@ -39,12 +39,17 @@ namespace PegasusMetal_Pro
 
         private void button1_Click(object sender, EventArgs e)
         {  //login check 
-            //button1.Enabled = false;
-            //List<string> packetData = new List<string>();
-            //packetData.Add(OPCodes.LOGIN);
-            //packetData.Add(JsonConvert.SerializeObject(new User() { Username = textEdit1.Text, Password = textEdit2.Text }));
-            //WebSocketService.getInstance().Send(packetData);
-            this.Close();
+
+            Login();
+        }
+
+        private void Login()
+        {
+            button1.Enabled = false;
+            List<string> packetData = new List<string>();
+            packetData.Add(OPCodes.LOGIN);
+            packetData.Add(JsonConvert.SerializeObject(new User() { Username = textEdit1.Text, Password = textEdit2.Text }));
+            WebSocketService.getInstance().Send(packetData);
         }
         public void LoginSuccess(string Name, string Surname)
         {

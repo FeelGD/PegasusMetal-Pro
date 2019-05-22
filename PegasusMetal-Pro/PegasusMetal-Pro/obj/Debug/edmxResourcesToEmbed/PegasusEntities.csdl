@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PegasusYazilimModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AcceptedOffer">
+    <Key>
+      <PropertyRef Name="OfferId" />
+    </Key>
+    <Property Name="OfferId" Type="Int32" Nullable="false" />
+    <Property Name="StaffId" Type="Int32" Nullable="false" />
+    <Property Name="Deadline" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Offer" Relationship="Self.FK_AcceptedOffer_Offer" FromRole="AcceptedOffer" ToRole="Offer" />
+    <NavigationProperty Name="Staff" Relationship="Self.FK_AcceptedOffer_Staff" FromRole="AcceptedOffer" ToRole="Staff" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TaxNumber" Type="String" MaxLength="13" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="TaxOffice" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MailAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Project" Relationship="Self.FK_Project_Company" FromRole="Company" ToRole="Project" />
+  </EntityType>
+  <EntityType Name="InOutput">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Count" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Explanation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Material">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Offer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectId" Type="Int32" Nullable="false" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="OfferPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ProfitPercentage" Type="Decimal" Precision="3" Scale="2" Nullable="false" />
+    <Property Name="DiscountPercentage" Type="Decimal" Precision="3" Scale="2" Nullable="false" />
+    <Property Name="LastPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ProjectPreparation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AcceptedOffer" Relationship="Self.FK_AcceptedOffer_Offer" FromRole="Offer" ToRole="AcceptedOffer" />
+    <NavigationProperty Name="Project" Relationship="Self.FK_Offer_Project" FromRole="Offer" ToRole="Project" />
+  </EntityType>
+  <EntityType Name="Piece">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Quality" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Width" Type="Int32" />
+    <Property Name="Height" Type="Int32" />
+    <Property Name="Thickness" Type="Decimal" Precision="1" Scale="1" />
+    <Property Name="Type" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="WasteRate" Type="Decimal" Precision="3" Scale="2" />
+  </EntityType>
+  <EntityType Name="Process">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Property" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="HourPrice" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MinutePrice" Type="Decimal" Precision="18" Scale="2" />
+    <NavigationProperty Name="ProjectContinuing" Relationship="Self.FK_ProjectContinuing_Process" FromRole="Process" ToRole="ProjectContinuing" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PType" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Company" Relationship="Self.FK_Project_Company" FromRole="Project" ToRole="Company" />
+    <NavigationProperty Name="Offer" Relationship="Self.FK_Offer_Project" FromRole="Project" ToRole="Offer" />
+    <NavigationProperty Name="ProjectContinuing" Relationship="Self.FK_ProjectContinuing_Project" FromRole="Project" ToRole="ProjectContinuing" />
+    <NavigationProperty Name="ProjectFiles" Relationship="Self.FK_ProjectFiles_Project" FromRole="Project" ToRole="ProjectFiles" />
+  </EntityType>
+  <EntityType Name="ProjectContinuing">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectId" Type="Int32" Nullable="false" />
+    <Property Name="ProcessId" Type="Int32" Nullable="false" />
+    <Property Name="Deadline" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Process" Relationship="Self.FK_ProjectContinuing_Process" FromRole="ProjectContinuing" ToRole="Process" />
+    <NavigationProperty Name="Project" Relationship="Self.FK_ProjectContinuing_Project" FromRole="ProjectContinuing" ToRole="Project" />
+  </EntityType>
+  <EntityType Name="ProjectFiles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Size" Type="Int32" Nullable="false" />
+    <Property Name="Explanation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Project" Relationship="Self.FK_ProjectFiles_Project" FromRole="ProjectFiles" ToRole="Project" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Explanation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="UserRole" Relationship="Self.FK_UserRole_Roles" FromRole="Roles" ToRole="UserRole" />
+  </EntityType>
+  <EntityType Name="Staff">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Job" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AcceptedOffer" Relationship="Self.FK_AcceptedOffer_Staff" FromRole="Staff" ToRole="AcceptedOffer" />
+    <NavigationProperty Name="StockCategory" Relationship="Self.FK_StockCategory_Staff" FromRole="Staff" ToRole="StockCategory" />
+    <NavigationProperty Name="User" Relationship="Self.FK_User_Staff" FromRole="Staff" ToRole="User" />
+    <NavigationProperty Name="UserRole" Relationship="Self.FK_UserRole_Staff" FromRole="Staff" ToRole="UserRole" />
+  </EntityType>
+  <EntityType Name="Stock">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Amount" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <NavigationProperty Name="StockCategory" Relationship="Self.FK_Stock_StockCategory" FromRole="Stock" ToRole="StockCategory" />
+  </EntityType>
+  <EntityType Name="StockCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedAt" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Staff" Relationship="Self.FK_StockCategory_Staff" FromRole="StockCategory" ToRole="Staff" />
+    <NavigationProperty Name="Stock" Relationship="Self.FK_Stock_StockCategory" FromRole="StockCategory" ToRole="Stock" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="StaffId" />
+    </Key>
+    <Property Name="StaffId" Type="Int32" Nullable="false" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Staff" Relationship="Self.FK_User_Staff" FromRole="User" ToRole="Staff" />
+  </EntityType>
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StaffId" Type="Int32" Nullable="false" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Roles" Relationship="Self.FK_UserRole_Roles" FromRole="UserRole" ToRole="Roles" />
+    <NavigationProperty Name="Staff" Relationship="Self.FK_UserRole_Staff" FromRole="UserRole" ToRole="Staff" />
+  </EntityType>
+  <Association Name="FK_AcceptedOffer_Offer">
+    <End Role="Offer" Type="Self.Offer" Multiplicity="1" />
+    <End Role="AcceptedOffer" Type="Self.AcceptedOffer" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Offer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AcceptedOffer">
+        <PropertyRef Name="OfferId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AcceptedOffer_Staff">
+    <End Role="Staff" Type="Self.Staff" Multiplicity="1" />
+    <End Role="AcceptedOffer" Type="Self.AcceptedOffer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Staff">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AcceptedOffer">
+        <PropertyRef Name="StaffId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Company">
+    <End Role="Company" Type="Self.Company" Multiplicity="1" />
+    <End Role="Project" Type="Self.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="CompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Offer_Project">
+    <End Role="Project" Type="Self.Project" Multiplicity="1" />
+    <End Role="Offer" Type="Self.Offer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Offer">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectContinuing_Process">
+    <End Role="Process" Type="Self.Process" Multiplicity="1" />
+    <End Role="ProjectContinuing" Type="Self.ProjectContinuing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Process">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProjectContinuing">
+        <PropertyRef Name="ProcessId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectContinuing_Project">
+    <End Role="Project" Type="Self.Project" Multiplicity="1" />
+    <End Role="ProjectContinuing" Type="Self.ProjectContinuing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProjectContinuing">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectFiles_Project">
+    <End Role="Project" Type="Self.Project" Multiplicity="1" />
+    <End Role="ProjectFiles" Type="Self.ProjectFiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProjectFiles">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRole_Roles">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+    <End Role="UserRole" Type="Self.UserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserRole">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockCategory_Staff">
+    <End Role="Staff" Type="Self.Staff" Multiplicity="1" />
+    <End Role="StockCategory" Type="Self.StockCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Staff">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="StockCategory">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Staff">
+    <End Role="Staff" Type="Self.Staff" Multiplicity="1" />
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Staff">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="StaffId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRole_Staff">
+    <End Role="Staff" Type="Self.Staff" Multiplicity="1" />
+    <End Role="UserRole" Type="Self.UserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Staff">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserRole">
+        <PropertyRef Name="StaffId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stock_StockCategory">
+    <End Role="StockCategory" Type="Self.StockCategory" Multiplicity="1" />
+    <End Role="Stock" Type="Self.Stock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StockCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Stock">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PegasusYazilimEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AcceptedOffer" EntityType="Self.AcceptedOffer" />
+    <EntitySet Name="Company" EntityType="Self.Company" />
+    <EntitySet Name="InOutput" EntityType="Self.InOutput" />
+    <EntitySet Name="Material" EntityType="Self.Material" />
+    <EntitySet Name="Offer" EntityType="Self.Offer" />
+    <EntitySet Name="Piece" EntityType="Self.Piece" />
+    <EntitySet Name="Process" EntityType="Self.Process" />
+    <EntitySet Name="Project" EntityType="Self.Project" />
+    <EntitySet Name="ProjectContinuing" EntityType="Self.ProjectContinuing" />
+    <EntitySet Name="ProjectFiles" EntityType="Self.ProjectFiles" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" />
+    <EntitySet Name="Staff" EntityType="Self.Staff" />
+    <EntitySet Name="Stock" EntityType="Self.Stock" />
+    <EntitySet Name="StockCategory" EntityType="Self.StockCategory" />
+    <EntitySet Name="User" EntityType="Self.User" />
+    <EntitySet Name="UserRole" EntityType="Self.UserRole" />
+    <AssociationSet Name="FK_AcceptedOffer_Offer" Association="Self.FK_AcceptedOffer_Offer">
+      <End Role="Offer" EntitySet="Offer" />
+      <End Role="AcceptedOffer" EntitySet="AcceptedOffer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AcceptedOffer_Staff" Association="Self.FK_AcceptedOffer_Staff">
+      <End Role="Staff" EntitySet="Staff" />
+      <End Role="AcceptedOffer" EntitySet="AcceptedOffer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Company" Association="Self.FK_Project_Company">
+      <End Role="Company" EntitySet="Company" />
+      <End Role="Project" EntitySet="Project" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Offer_Project" Association="Self.FK_Offer_Project">
+      <End Role="Project" EntitySet="Project" />
+      <End Role="Offer" EntitySet="Offer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectContinuing_Process" Association="Self.FK_ProjectContinuing_Process">
+      <End Role="Process" EntitySet="Process" />
+      <End Role="ProjectContinuing" EntitySet="ProjectContinuing" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectContinuing_Project" Association="Self.FK_ProjectContinuing_Project">
+      <End Role="Project" EntitySet="Project" />
+      <End Role="ProjectContinuing" EntitySet="ProjectContinuing" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectFiles_Project" Association="Self.FK_ProjectFiles_Project">
+      <End Role="Project" EntitySet="Project" />
+      <End Role="ProjectFiles" EntitySet="ProjectFiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRole_Roles" Association="Self.FK_UserRole_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="UserRole" EntitySet="UserRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockCategory_Staff" Association="Self.FK_StockCategory_Staff">
+      <End Role="Staff" EntitySet="Staff" />
+      <End Role="StockCategory" EntitySet="StockCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Staff" Association="Self.FK_User_Staff">
+      <End Role="Staff" EntitySet="Staff" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRole_Staff" Association="Self.FK_UserRole_Staff">
+      <End Role="Staff" EntitySet="Staff" />
+      <End Role="UserRole" EntitySet="UserRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stock_StockCategory" Association="Self.FK_Stock_StockCategory">
+      <End Role="StockCategory" EntitySet="StockCategory" />
+      <End Role="Stock" EntitySet="Stock" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
