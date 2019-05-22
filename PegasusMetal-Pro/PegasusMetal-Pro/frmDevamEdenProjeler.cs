@@ -28,5 +28,10 @@ namespace PegasusMetal_Pro
             frmDevamEdenProjelerProjeDetay devamProjelerProjeDetay = new frmDevamEdenProjelerProjeDetay();
             devamProjelerProjeDetay.ShowDialog();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

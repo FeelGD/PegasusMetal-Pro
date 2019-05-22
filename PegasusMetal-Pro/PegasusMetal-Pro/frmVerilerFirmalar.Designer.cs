@@ -94,6 +94,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(35, 41);
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
@@ -207,6 +208,7 @@
             this.simpleButtonGuncelle.Size = new System.Drawing.Size(327, 53);
             this.simpleButtonGuncelle.TabIndex = 44;
             this.simpleButtonGuncelle.Text = "FİRMAYI GÜNCELLE";
+            this.simpleButtonGuncelle.Click += new System.EventHandler(this.simpleButtonGuncelle_Click);
             // 
             // simpleButtonKaydet
             // 

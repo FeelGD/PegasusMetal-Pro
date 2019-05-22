@@ -37,10 +37,9 @@
             this.Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Kategori = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Ad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Tutar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Miktar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Tutar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.simpleButtonGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.textEditId = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
@@ -53,6 +52,7 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.textEditKategori = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.simpleButtonArttir = new DevExpress.XtraEditors.SimpleButton();
             this.textEditUrunAdiGoruntule = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
@@ -61,12 +61,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEditId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditFiyat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditMiktar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditUrunAdi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditKategori.Properties)).BeginInit();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEditUrunAdiGoruntule.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,6 +92,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(35, 41);
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
@@ -147,17 +148,17 @@
             this.Ad.Text = "Ürün Adı";
             this.Ad.Width = 134;
             // 
-            // Tutar
-            // 
-            this.Tutar.DisplayIndex = 3;
-            this.Tutar.Text = "Ürün Fiyatı";
-            this.Tutar.Width = 113;
-            // 
             // Miktar
             // 
             this.Miktar.DisplayIndex = 4;
             this.Miktar.Text = "Ürünün Miktarı";
             this.Miktar.Width = 144;
+            // 
+            // Tutar
+            // 
+            this.Tutar.DisplayIndex = 3;
+            this.Tutar.Text = "Ürün Fiyatı";
+            this.Tutar.Width = 113;
             // 
             // panel3
             // 
@@ -182,20 +183,6 @@
             this.panel3.Size = new System.Drawing.Size(386, 337);
             this.panel3.TabIndex = 4;
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.simpleButtonArttir);
-            this.panel4.Controls.Add(this.textEditUrunAdiGoruntule);
-            this.panel4.Controls.Add(this.labelControl7);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(585, 378);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(386, 190);
-            this.panel4.TabIndex = 5;
-            // 
             // simpleButtonGuncelle
             // 
             this.simpleButtonGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
@@ -206,6 +193,7 @@
             this.simpleButtonGuncelle.Size = new System.Drawing.Size(323, 46);
             this.simpleButtonGuncelle.TabIndex = 36;
             this.simpleButtonGuncelle.Text = "STOK GÜNCELLE";
+            this.simpleButtonGuncelle.Click += new System.EventHandler(this.simpleButtonGuncelle_Click);
             // 
             // textEditId
             // 
@@ -324,6 +312,20 @@
             this.textEditKategori.Size = new System.Drawing.Size(183, 26);
             this.textEditKategori.TabIndex = 29;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.simpleButtonArttir);
+            this.panel4.Controls.Add(this.textEditUrunAdiGoruntule);
+            this.panel4.Controls.Add(this.labelControl7);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(585, 378);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(386, 190);
+            this.panel4.TabIndex = 5;
+            // 
             // simpleButtonArttir
             // 
             this.simpleButtonArttir.Appearance.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -377,13 +379,13 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEditId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditFiyat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditMiktar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditUrunAdi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditKategori.Properties)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEditUrunAdiGoruntule.Properties)).EndInit();
             this.ResumeLayout(false);
 

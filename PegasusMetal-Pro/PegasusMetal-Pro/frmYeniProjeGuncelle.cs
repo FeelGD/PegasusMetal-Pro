@@ -21,5 +21,10 @@ namespace PegasusMetal_Pro
         {
             this.Close();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

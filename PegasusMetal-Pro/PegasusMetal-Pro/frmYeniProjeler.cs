@@ -39,5 +39,10 @@ namespace PegasusMetal_Pro
             frmYeniProjeTeklifOlustur projeyeTeklifOlustur = new frmYeniProjeTeklifOlustur();
             projeyeTeklifOlustur.ShowDialog();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

@@ -110,6 +110,7 @@
             this.MainAyarlarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MainAyarlarBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainAyarlarBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MainAyarlarBtn.Image = ((System.Drawing.Image)(resources.GetObject("MainAyarlarBtn.Image")));
             this.MainAyarlarBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.MainAyarlarBtn.Location = new System.Drawing.Point(12, 534);
             this.MainAyarlarBtn.Name = "MainAyarlarBtn";
@@ -128,6 +129,7 @@
             this.MainRaporlarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MainRaporlarBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainRaporlarBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MainRaporlarBtn.Image = ((System.Drawing.Image)(resources.GetObject("MainRaporlarBtn.Image")));
             this.MainRaporlarBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.MainRaporlarBtn.Location = new System.Drawing.Point(12, 453);
             this.MainRaporlarBtn.Name = "MainRaporlarBtn";
@@ -146,6 +148,7 @@
             this.MainVerilerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MainVerilerBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainVerilerBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MainVerilerBtn.Image = ((System.Drawing.Image)(resources.GetObject("MainVerilerBtn.Image")));
             this.MainVerilerBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.MainVerilerBtn.Location = new System.Drawing.Point(12, 372);
             this.MainVerilerBtn.Name = "MainVerilerBtn";
@@ -164,6 +167,7 @@
             this.MainTekliflerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MainTekliflerBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainTekliflerBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MainTekliflerBtn.Image = ((System.Drawing.Image)(resources.GetObject("MainTekliflerBtn.Image")));
             this.MainTekliflerBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.MainTekliflerBtn.Location = new System.Drawing.Point(12, 291);
             this.MainTekliflerBtn.Name = "MainTekliflerBtn";
@@ -182,6 +186,7 @@
             this.MainProjelerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MainProjelerBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainProjelerBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MainProjelerBtn.Image = ((System.Drawing.Image)(resources.GetObject("MainProjelerBtn.Image")));
             this.MainProjelerBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.MainProjelerBtn.Location = new System.Drawing.Point(12, 210);
             this.MainProjelerBtn.Name = "MainProjelerBtn";

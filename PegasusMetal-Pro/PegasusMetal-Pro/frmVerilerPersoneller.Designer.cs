@@ -91,6 +91,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(35, 41);
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
@@ -228,9 +229,6 @@
             // 
             this.textEditSoyad.Location = new System.Drawing.Point(142, 93);
             this.textEditSoyad.Name = "textEditSoyad";
-            // 
-            // 
-            // 
             this.textEditSoyad.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditSoyad.Properties.Appearance.Options.UseFont = true;
             this.textEditSoyad.Size = new System.Drawing.Size(205, 26);
@@ -251,9 +249,6 @@
             this.textEditId.Enabled = false;
             this.textEditId.Location = new System.Drawing.Point(142, 6);
             this.textEditId.Name = "textEditId";
-            // 
-            // 
-            // 
             this.textEditId.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditId.Properties.Appearance.Options.UseFont = true;
             this.textEditId.Size = new System.Drawing.Size(205, 26);
@@ -274,9 +269,6 @@
             this.textEditTel.EditValue = "";
             this.textEditTel.Location = new System.Drawing.Point(142, 231);
             this.textEditTel.Name = "textEditTel";
-            // 
-            // 
-            // 
             this.textEditTel.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditTel.Properties.Appearance.Options.UseFont = true;
             this.textEditTel.Properties.Mask.EditMask = "(\\d?\\d?\\d?) \\d\\d\\d-\\d\\d\\d\\d";
@@ -288,9 +280,6 @@
             // 
             this.textEditMail.Location = new System.Drawing.Point(142, 184);
             this.textEditMail.Name = "textEditMail";
-            // 
-            // 
-            // 
             this.textEditMail.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditMail.Properties.Appearance.Options.UseFont = true;
             this.textEditMail.Size = new System.Drawing.Size(205, 26);
@@ -300,9 +289,6 @@
             // 
             this.textEditGorevi.Location = new System.Drawing.Point(142, 139);
             this.textEditGorevi.Name = "textEditGorevi";
-            // 
-            // 
-            // 
             this.textEditGorevi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditGorevi.Properties.Appearance.Options.UseFont = true;
             this.textEditGorevi.Size = new System.Drawing.Size(205, 26);
@@ -312,9 +298,6 @@
             // 
             this.textEditAd.Location = new System.Drawing.Point(142, 47);
             this.textEditAd.Name = "textEditAd";
-            // 
-            // 
-            // 
             this.textEditAd.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditAd.Properties.Appearance.Options.UseFont = true;
             this.textEditAd.Size = new System.Drawing.Size(205, 26);

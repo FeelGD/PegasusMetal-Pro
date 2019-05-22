@@ -21,5 +21,23 @@ namespace PegasusMetal_Pro
         {
             this.Close();
         }
+
+        private void simpleButtonGuncelle_Click(object sender, EventArgs e)
+        {
+            if (textEditId.Text != "")
+            {
+                //todo
+            }
+
+            else
+            {
+                MessageBox.Show("Lütfen Boş Veri Bırakmayınız");
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

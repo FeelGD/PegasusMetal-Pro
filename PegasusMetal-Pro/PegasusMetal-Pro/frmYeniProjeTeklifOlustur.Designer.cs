@@ -200,6 +200,12 @@
             this.textEditKesimSuresi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.textEditIndirimOran = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.textEditKarOran = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.button1 = new System.Windows.Forms.Button();
             this.listView2 = new System.Windows.Forms.ListView();
             this.Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -217,12 +223,6 @@
             this.Montaj = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ParcaMaliyet = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ParcaTotal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.textEditKarOran = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.textEditIndirimOran = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -304,8 +304,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEditKesimSuresi.Properties)).BeginInit();
             this.panel6.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditKarOran.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditIndirimOran.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditKarOran.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -330,6 +330,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(35, 41);
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
@@ -2417,6 +2418,84 @@
             this.panel6.Size = new System.Drawing.Size(1456, 270);
             this.panel6.TabIndex = 8;
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.simpleButton2);
+            this.groupBox6.Controls.Add(this.textEditIndirimOran);
+            this.groupBox6.Controls.Add(this.labelControl13);
+            this.groupBox6.Controls.Add(this.textEditKarOran);
+            this.groupBox6.Controls.Add(this.labelControl4);
+            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox6.Location = new System.Drawing.Point(1269, 0);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(187, 129);
+            this.groupBox6.TabIndex = 39;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Kar / İndirim Oranları";
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Location = new System.Drawing.Point(15, 89);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(166, 34);
+            this.simpleButton2.TabIndex = 42;
+            this.simpleButton2.Text = "Projeye Kar/İndirim Uygula";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // textEditIndirimOran
+            // 
+            this.textEditIndirimOran.EditValue = "0";
+            this.textEditIndirimOran.Location = new System.Drawing.Point(85, 59);
+            this.textEditIndirimOran.Name = "textEditIndirimOran";
+            this.textEditIndirimOran.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
+            this.textEditIndirimOran.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.textEditIndirimOran.Properties.Appearance.Options.UseBackColor = true;
+            this.textEditIndirimOran.Properties.Appearance.Options.UseFont = true;
+            this.textEditIndirimOran.Properties.Mask.EditMask = "d";
+            this.textEditIndirimOran.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.textEditIndirimOran.Size = new System.Drawing.Size(60, 24);
+            this.textEditIndirimOran.TabIndex = 41;
+            // 
+            // labelControl13
+            // 
+            this.labelControl13.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl13.Appearance.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelControl13.Appearance.Options.UseFont = true;
+            this.labelControl13.Appearance.Options.UseForeColor = true;
+            this.labelControl13.Location = new System.Drawing.Point(15, 66);
+            this.labelControl13.Name = "labelControl13";
+            this.labelControl13.Size = new System.Drawing.Size(47, 17);
+            this.labelControl13.TabIndex = 40;
+            this.labelControl13.Text = "İndirim:";
+            // 
+            // textEditKarOran
+            // 
+            this.textEditKarOran.EditValue = "10";
+            this.textEditKarOran.Location = new System.Drawing.Point(85, 29);
+            this.textEditKarOran.Name = "textEditKarOran";
+            this.textEditKarOran.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
+            this.textEditKarOran.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.textEditKarOran.Properties.Appearance.Options.UseBackColor = true;
+            this.textEditKarOran.Properties.Appearance.Options.UseFont = true;
+            this.textEditKarOran.Properties.Mask.EditMask = "d";
+            this.textEditKarOran.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.textEditKarOran.Size = new System.Drawing.Size(60, 24);
+            this.textEditKarOran.TabIndex = 39;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Appearance.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelControl4.Appearance.Options.UseFont = true;
+            this.labelControl4.Appearance.Options.UseForeColor = true;
+            this.labelControl4.Location = new System.Drawing.Point(37, 32);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(25, 17);
+            this.labelControl4.TabIndex = 38;
+            this.labelControl4.Text = "Kar:";
+            // 
             // button1
             // 
             this.button1.AutoEllipsis = true;
@@ -2535,84 +2614,6 @@
             this.ParcaTotal.Text = "Parçanın Ücreti";
             this.ParcaTotal.Width = 94;
             // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.simpleButton2);
-            this.groupBox6.Controls.Add(this.textEditIndirimOran);
-            this.groupBox6.Controls.Add(this.labelControl13);
-            this.groupBox6.Controls.Add(this.textEditKarOran);
-            this.groupBox6.Controls.Add(this.labelControl4);
-            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox6.Location = new System.Drawing.Point(1269, 0);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(187, 129);
-            this.groupBox6.TabIndex = 39;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Kar / İndirim Oranları";
-            // 
-            // textEditKarOran
-            // 
-            this.textEditKarOran.EditValue = "10";
-            this.textEditKarOran.Location = new System.Drawing.Point(85, 29);
-            this.textEditKarOran.Name = "textEditKarOran";
-            this.textEditKarOran.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
-            this.textEditKarOran.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.textEditKarOran.Properties.Appearance.Options.UseBackColor = true;
-            this.textEditKarOran.Properties.Appearance.Options.UseFont = true;
-            this.textEditKarOran.Properties.Mask.EditMask = "d";
-            this.textEditKarOran.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.textEditKarOran.Size = new System.Drawing.Size(60, 24);
-            this.textEditKarOran.TabIndex = 39;
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl4.Appearance.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(37, 32);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(25, 17);
-            this.labelControl4.TabIndex = 38;
-            this.labelControl4.Text = "Kar:";
-            // 
-            // textEditIndirimOran
-            // 
-            this.textEditIndirimOran.EditValue = "0";
-            this.textEditIndirimOran.Location = new System.Drawing.Point(85, 59);
-            this.textEditIndirimOran.Name = "textEditIndirimOran";
-            this.textEditIndirimOran.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
-            this.textEditIndirimOran.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.textEditIndirimOran.Properties.Appearance.Options.UseBackColor = true;
-            this.textEditIndirimOran.Properties.Appearance.Options.UseFont = true;
-            this.textEditIndirimOran.Properties.Mask.EditMask = "d";
-            this.textEditIndirimOran.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.textEditIndirimOran.Size = new System.Drawing.Size(60, 24);
-            this.textEditIndirimOran.TabIndex = 41;
-            // 
-            // labelControl13
-            // 
-            this.labelControl13.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl13.Appearance.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelControl13.Appearance.Options.UseFont = true;
-            this.labelControl13.Appearance.Options.UseForeColor = true;
-            this.labelControl13.Location = new System.Drawing.Point(15, 66);
-            this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(47, 17);
-            this.labelControl13.TabIndex = 40;
-            this.labelControl13.Text = "İndirim:";
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Location = new System.Drawing.Point(15, 89);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(166, 34);
-            this.simpleButton2.TabIndex = 42;
-            this.simpleButton2.Text = "Projeye Kar/İndirim Uygula";
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
-            // 
             // frmYeniProjeTeklifOlustur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2729,8 +2730,8 @@
             this.panel6.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditKarOran.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditIndirimOran.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditKarOran.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
