@@ -233,8 +233,8 @@
             this.textEditFiyat.Name = "textEditFiyat";
             this.textEditFiyat.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditFiyat.Properties.Appearance.Options.UseFont = true;
-            this.textEditFiyat.Properties.Mask.EditMask = "(\\d?\\d?\\d?) \\d\\d\\d-\\d\\d\\d\\d";
-            this.textEditFiyat.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
+            this.textEditFiyat.Properties.Mask.EditMask = "f2";
+            this.textEditFiyat.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.textEditFiyat.Size = new System.Drawing.Size(183, 26);
             this.textEditFiyat.TabIndex = 32;
             // 
