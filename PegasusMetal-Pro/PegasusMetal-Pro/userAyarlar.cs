@@ -19,8 +19,8 @@ namespace PegasusMetal_Pro
 
         private void ARollerBtn_Click(object sender, EventArgs e)
         {
-            frmRoller frmRoller = new frmRoller();
-            frmRoller.ShowDialog();
+            frmRoller roles = new frmRoller();
+            roles.ShowDialog();
         }
     }
 }
