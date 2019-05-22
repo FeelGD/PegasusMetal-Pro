@@ -34,7 +34,9 @@ namespace PegasusMetal_Pro
         {
             foreach (var item in Lists.stocks.Where(s => !SearchInListView(s.Id.ToString())))
             {
-                string[] array = { item.Id.ToString(), Lists.stockCategories.Where(i=>i.Id == item.CategoryId).SingleOrDefault().Name, item.Name, item.Price.ToString(), item.Amount.ToString() };
+                string[] array = { item.Id.ToString(), Lists.stockCategories.Where(i=>i.Id == item.CategoryId).SingleOrDefault().Name, item.Name, item.Amount.ToString(), item.Price.ToString() };
+                Console.WriteLine(item.Price);
+                Console.WriteLine(item.Amount);
                 ListViewItem listViewItem = new ListViewItem(array);
                 if (item.Id < listView1.Items.Count)
                 {
@@ -93,7 +95,7 @@ namespace PegasusMetal_Pro
                     Id = int.Parse(textEditId.Text),
                     Name = textEditUrunAdi.Text,
                     Amount = int.Parse(textEditMiktar.Text),
-                    Price = Convert.ToDecimal(textEditFiyat),
+                    Price = Convert.ToDecimal(textEditFiyat.Text),
                     CategoryId = Lists.stockCategories.Where(i => i.Name.Equals(textEditKategori.Text)).SingleOrDefault().Id
                 };
                 listView1.SelectedItems[0].SubItems[1].Text = textEditKategori.Text;
