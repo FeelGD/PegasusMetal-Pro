@@ -50,6 +50,7 @@
             this.ARollerBtn.Text = "Roller\r\n\r\n";
             this.ARollerBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ARollerBtn.UseVisualStyleBackColor = true;
+            this.ARollerBtn.Click += new System.EventHandler(this.ARollerBtn_Click);
             // 
             // userAyarlar
             // 
