@@ -89,6 +89,10 @@ namespace PegasusMetal_Pro
         //SimpleButtonGuncelle_Click
         private void SimpleButtonGuncelle_Click(object sender, EventArgs e)
         {
+            if (textEditId.Text != "")
+            {
+
+            
             //TODO : Guncelle
             Staff staff = new Staff
             {
@@ -118,10 +122,16 @@ namespace PegasusMetal_Pro
             data.Add(JsonConvert.SerializeObject(staff));
             WebSocketService.getInstance().Send(data);
             RefreshBoxes();
+            }
+            else
+            {
+                MessageBox.Show("Lütfen Güncellemek İçin Bir Kullanıcı Seçiniz");
+            }
         }
         //SimpleButtonSil_Click
         private void SimpleButtonSil_Click(object sender, EventArgs e)
         {
+            if (textEditId.Text != "") {     
             //TODO : Sil
             foreach(ListViewItem item in listView1.SelectedItems)
             {
@@ -140,6 +150,11 @@ namespace PegasusMetal_Pro
                 RefreshBoxes();
             }
         }
+            else
+            {
+                MessageBox.Show("Lütfen Silmek İçin Bir Kullanıcı Seçiniz");
+            }
+}
 
 
         private void ListView1_SelectedIndexChanged(object sender, EventArgs e)

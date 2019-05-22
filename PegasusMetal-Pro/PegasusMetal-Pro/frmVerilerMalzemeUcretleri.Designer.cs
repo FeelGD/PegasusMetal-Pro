@@ -159,6 +159,7 @@
             this.simpleButtonGuncelle.Size = new System.Drawing.Size(287, 53);
             this.simpleButtonGuncelle.TabIndex = 43;
             this.simpleButtonGuncelle.Text = "MALZEMEYİ GÜNCELLE";
+            this.simpleButtonGuncelle.Click += new System.EventHandler(this.simpleButtonGuncelle_Click);
             // 
             // simpleButtonKaydet
             // 

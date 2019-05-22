@@ -207,6 +207,7 @@
             this.simpleButtonGuncelle.Size = new System.Drawing.Size(327, 53);
             this.simpleButtonGuncelle.TabIndex = 44;
             this.simpleButtonGuncelle.Text = "FİRMAYI GÜNCELLE";
+            this.simpleButtonGuncelle.Click += new System.EventHandler(this.simpleButtonGuncelle_Click);
             // 
             // simpleButtonKaydet
             // 

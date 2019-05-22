@@ -434,6 +434,7 @@
             this.simpleButtonGuncelle.Size = new System.Drawing.Size(317, 53);
             this.simpleButtonGuncelle.TabIndex = 65;
             this.simpleButtonGuncelle.Text = "PARÇAYI GÜNCELLE";
+            this.simpleButtonGuncelle.Click += new System.EventHandler(this.simpleButtonGuncelle_Click);
             // 
             // simpleButtonKaydet
             // 
