@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -72,7 +73,8 @@ namespace PegasusMetal_Pro
     }
     public static class Lists
     {
-        public static List<Staff> staffs = new List<Staff>();
+        public static ObservableCollection<Staff> staffs = new ObservableCollection<Staff>();
+        public static List<User> users = new List<User>();
         public static List<Company> companies = new List<Company>();
         public static List<ProjectContinuing> projectContinuings = new List<ProjectContinuing>();
         public static List<Project> projects = new List<Project>();
@@ -96,10 +98,12 @@ namespace PegasusMetal_Pro
         public const string PROJECT_FILES = "ProjectFiles";
         public const string ROLES = "Roles";
         public const string STAFF = "Staff";
+        public const string DELETE_STAFF = "DeleteStaff";
         public const string STOCK = "Stock";
         public const string STOCK_CATEGORY = "StockCategory";
         public const string USER = "User";
         public const string USER_ROLE = "UserRole";
+        public const string GET_PERSONAL_LIST = "GetPersonalList";
     }
     public class Reason
     {

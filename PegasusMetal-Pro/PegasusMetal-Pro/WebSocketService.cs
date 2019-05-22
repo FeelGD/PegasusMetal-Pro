@@ -80,6 +80,10 @@ namespace PegasusMetal_Pro
                     Reason temp = JsonConvert.DeserializeObject<Reason>(body);
                     GetForm<frmLogin>().LoginFail(temp.Explanation);
                     break;
+                case OPCodes.STAFF:
+                    var staff = JsonConvert.DeserializeObject<Staff>(body);
+                    Lists.staffs.Add(staff);
+                    break;
             }
         }
 
