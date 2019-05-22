@@ -126,6 +126,8 @@ namespace PegasusMetal_Pro
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Lists.staffs.CollectionChanged += null;
+            Lists.roles.CollectionChanged += null;
+            Lists.users.CollectionChanged += null;
             this.Close();
         }
 
