@@ -118,7 +118,7 @@ namespace PegasusMetal_Pro
                 Id = -1,
                 Name = textEditUrunAdi.Text,
                 Amount = int.Parse(textEditMiktar.Text),
-                Price = Convert.ToDecimal(textEditFiyat),
+                Price = Convert.ToDecimal(textEditFiyat.Text),
                 CategoryId = Lists.stockCategories.Where(i => i.Name.Equals(textEditKategori.Text)).SingleOrDefault().Id
             };
             List<string> data = new List<string>();
