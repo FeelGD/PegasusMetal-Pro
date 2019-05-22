@@ -132,6 +132,7 @@
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.ListView1_SelectedIndexChanged);
             // 
             // Id
             // 
@@ -197,6 +198,7 @@
             this.simpleButtonSil.Size = new System.Drawing.Size(327, 53);
             this.simpleButtonSil.TabIndex = 42;
             this.simpleButtonSil.Text = "PERSONELİ SİL";
+            this.simpleButtonSil.Click += new System.EventHandler(this.SimpleButtonSil_Click);
             // 
             // simpleButtonGuncelle
             // 
@@ -208,6 +210,7 @@
             this.simpleButtonGuncelle.Size = new System.Drawing.Size(327, 53);
             this.simpleButtonGuncelle.TabIndex = 41;
             this.simpleButtonGuncelle.Text = "PERSONELİ GÜNCELLE";
+            this.simpleButtonGuncelle.Click += new System.EventHandler(this.SimpleButtonGuncelle_Click);
             // 
             // simpleButtonKaydet
             // 
@@ -219,11 +222,15 @@
             this.simpleButtonKaydet.Size = new System.Drawing.Size(327, 54);
             this.simpleButtonKaydet.TabIndex = 40;
             this.simpleButtonKaydet.Text = "PERSONELİ KAYDET";
+            this.simpleButtonKaydet.Click += new System.EventHandler(this.SimpleButtonKaydet_Click);
             // 
             // textEditSoyad
             // 
             this.textEditSoyad.Location = new System.Drawing.Point(142, 93);
             this.textEditSoyad.Name = "textEditSoyad";
+            // 
+            // 
+            // 
             this.textEditSoyad.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditSoyad.Properties.Appearance.Options.UseFont = true;
             this.textEditSoyad.Size = new System.Drawing.Size(205, 26);
@@ -244,6 +251,9 @@
             this.textEditId.Enabled = false;
             this.textEditId.Location = new System.Drawing.Point(142, 6);
             this.textEditId.Name = "textEditId";
+            // 
+            // 
+            // 
             this.textEditId.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditId.Properties.Appearance.Options.UseFont = true;
             this.textEditId.Size = new System.Drawing.Size(205, 26);
@@ -264,6 +274,9 @@
             this.textEditTel.EditValue = "";
             this.textEditTel.Location = new System.Drawing.Point(142, 231);
             this.textEditTel.Name = "textEditTel";
+            // 
+            // 
+            // 
             this.textEditTel.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditTel.Properties.Appearance.Options.UseFont = true;
             this.textEditTel.Properties.Mask.EditMask = "(\\d?\\d?\\d?) \\d\\d\\d-\\d\\d\\d\\d";
@@ -275,6 +288,9 @@
             // 
             this.textEditMail.Location = new System.Drawing.Point(142, 184);
             this.textEditMail.Name = "textEditMail";
+            // 
+            // 
+            // 
             this.textEditMail.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditMail.Properties.Appearance.Options.UseFont = true;
             this.textEditMail.Size = new System.Drawing.Size(205, 26);
@@ -284,6 +300,9 @@
             // 
             this.textEditGorevi.Location = new System.Drawing.Point(142, 139);
             this.textEditGorevi.Name = "textEditGorevi";
+            // 
+            // 
+            // 
             this.textEditGorevi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditGorevi.Properties.Appearance.Options.UseFont = true;
             this.textEditGorevi.Size = new System.Drawing.Size(205, 26);
@@ -293,6 +312,9 @@
             // 
             this.textEditAd.Location = new System.Drawing.Point(142, 47);
             this.textEditAd.Name = "textEditAd";
+            // 
+            // 
+            // 
             this.textEditAd.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditAd.Properties.Appearance.Options.UseFont = true;
             this.textEditAd.Size = new System.Drawing.Size(205, 26);
