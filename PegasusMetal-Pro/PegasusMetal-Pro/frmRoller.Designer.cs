@@ -33,6 +33,15 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.simpleButtonGuncelle = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButtonKaydet = new DevExpress.XtraEditors.SimpleButton();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.textEditSoyad = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.textEditId = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.textEditAd = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.listView1 = new System.Windows.Forms.ListView();
             this.Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -40,23 +49,14 @@
             this.Soyad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.KullaniciAdi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Sifre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.textEditSoyad = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.textEditId = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.textEditAd = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.simpleButtonGuncelle = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButtonKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEditSoyad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditAd.Properties)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -81,6 +81,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(35, 41);
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
@@ -113,59 +114,35 @@
             this.panel3.Size = new System.Drawing.Size(375, 522);
             this.panel3.TabIndex = 4;
             // 
-            // panel2
+            // simpleButtonGuncelle
             // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.listView1);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 41);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(919, 522);
-            this.panel2.TabIndex = 5;
+            this.simpleButtonGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.simpleButtonGuncelle.Appearance.Options.UseFont = true;
+            this.simpleButtonGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonGuncelle.ImageOptions.Image")));
+            this.simpleButtonGuncelle.Location = new System.Drawing.Point(22, 457);
+            this.simpleButtonGuncelle.Name = "simpleButtonGuncelle";
+            this.simpleButtonGuncelle.Size = new System.Drawing.Size(327, 53);
+            this.simpleButtonGuncelle.TabIndex = 48;
+            this.simpleButtonGuncelle.Text = "YETKİLERİ GÜNCELLE";
             // 
-            // listView1
+            // simpleButtonKaydet
             // 
-            this.listView1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Id,
-            this.Ad,
-            this.Soyad,
-            this.KullaniciAdi,
-            this.Sifre});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(544, 522);
-            this.listView1.TabIndex = 2;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.simpleButtonKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.simpleButtonKaydet.Appearance.Options.UseFont = true;
+            this.simpleButtonKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonKaydet.ImageOptions.Image")));
+            this.simpleButtonKaydet.Location = new System.Drawing.Point(22, 397);
+            this.simpleButtonKaydet.Name = "simpleButtonKaydet";
+            this.simpleButtonKaydet.Size = new System.Drawing.Size(327, 54);
+            this.simpleButtonKaydet.TabIndex = 47;
+            this.simpleButtonKaydet.Text = "YETKİLERİ KAYDET";
             // 
-            // Id
+            // checkedListBox1
             // 
-            this.Id.Text = "id";
-            this.Id.Width = 36;
-            // 
-            // Ad
-            // 
-            this.Ad.Text = "Personelin Adı";
-            this.Ad.Width = 91;
-            // 
-            // Soyad
-            // 
-            this.Soyad.Text = "Personelin Soyadı";
-            this.Soyad.Width = 107;
-            // 
-            // KullaniciAdi
-            // 
-            this.KullaniciAdi.Text = "Kullanıci Adı";
-            this.KullaniciAdi.Width = 113;
-            // 
-            // Sifre
-            // 
-            this.Sifre.Text = "Şifresi";
-            this.Sifre.Width = 95;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(123, 154);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(226, 229);
+            this.checkedListBox1.TabIndex = 46;
             // 
             // textEditSoyad
             // 
@@ -225,35 +202,59 @@
             this.labelControl1.TabIndex = 40;
             this.labelControl1.Text = "Kullanıcı Adı:";
             // 
-            // checkedListBox1
+            // panel2
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(123, 154);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(226, 229);
-            this.checkedListBox1.TabIndex = 46;
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.listView1);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 41);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(919, 522);
+            this.panel2.TabIndex = 5;
             // 
-            // simpleButtonGuncelle
+            // listView1
             // 
-            this.simpleButtonGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.simpleButtonGuncelle.Appearance.Options.UseFont = true;
-            this.simpleButtonGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonGuncelle.ImageOptions.Image")));
-            this.simpleButtonGuncelle.Location = new System.Drawing.Point(22, 457);
-            this.simpleButtonGuncelle.Name = "simpleButtonGuncelle";
-            this.simpleButtonGuncelle.Size = new System.Drawing.Size(327, 53);
-            this.simpleButtonGuncelle.TabIndex = 48;
-            this.simpleButtonGuncelle.Text = "YETKİLERİ GÜNCELLE";
+            this.listView1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Id,
+            this.Ad,
+            this.Soyad,
+            this.KullaniciAdi,
+            this.Sifre});
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.listView1.Location = new System.Drawing.Point(0, 0);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(544, 522);
+            this.listView1.TabIndex = 2;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
-            // simpleButtonKaydet
+            // Id
             // 
-            this.simpleButtonKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.simpleButtonKaydet.Appearance.Options.UseFont = true;
-            this.simpleButtonKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonKaydet.ImageOptions.Image")));
-            this.simpleButtonKaydet.Location = new System.Drawing.Point(22, 397);
-            this.simpleButtonKaydet.Name = "simpleButtonKaydet";
-            this.simpleButtonKaydet.Size = new System.Drawing.Size(327, 54);
-            this.simpleButtonKaydet.TabIndex = 47;
-            this.simpleButtonKaydet.Text = "YETKİLERİ KAYDET";
+            this.Id.Text = "id";
+            this.Id.Width = 36;
+            // 
+            // Ad
+            // 
+            this.Ad.Text = "Personelin Adı";
+            this.Ad.Width = 91;
+            // 
+            // Soyad
+            // 
+            this.Soyad.Text = "Personelin Soyadı";
+            this.Soyad.Width = 107;
+            // 
+            // KullaniciAdi
+            // 
+            this.KullaniciAdi.Text = "Kullanıci Adı";
+            this.KullaniciAdi.Width = 113;
+            // 
+            // Sifre
+            // 
+            this.Sifre.Text = "Şifresi";
+            this.Sifre.Width = 95;
             // 
             // frmRoller
             // 
@@ -275,10 +276,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.textEditSoyad.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditAd.Properties)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

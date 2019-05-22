@@ -33,5 +33,10 @@ namespace PegasusMetal_Pro
             frmTekliflerTeklifGuncelle frmTekliflerTeklifGuncelle = new frmTekliflerTeklifGuncelle();
             frmTekliflerTeklifGuncelle.ShowDialog();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

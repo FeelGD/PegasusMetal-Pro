@@ -27,5 +27,10 @@ namespace PegasusMetal_Pro
             frmSipariseBasla sipariseBasla = new frmSipariseBasla();
             sipariseBasla.Show();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

@@ -169,5 +169,10 @@ namespace PegasusMetal_Pro
                 textEditGorevi.Text = listView1.Items[item].SubItems[3].Text;//2
             }
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
