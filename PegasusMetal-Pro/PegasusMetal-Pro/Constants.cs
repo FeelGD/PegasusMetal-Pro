@@ -111,6 +111,8 @@ namespace PegasusMetal_Pro
         public const string GET_USER_LIST = "GetUserList";
         public const string DELETE_USER_ROLE = "DeleteUserRole";
         public const string GET_COMPANIES = "GetCompany";
+        public const string GET_STOCK_CATEGORIES = "GetStockCategory";
+        public const string GET_STOCKS = "GetStock";
     }
     public class Reason
     {

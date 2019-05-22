@@ -200,6 +200,9 @@
             this.textEditId.Enabled = false;
             this.textEditId.Location = new System.Drawing.Point(173, 5);
             this.textEditId.Name = "textEditId";
+            // 
+            // 
+            // 
             this.textEditId.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditId.Properties.Appearance.Options.UseFont = true;
             this.textEditId.Size = new System.Drawing.Size(183, 26);
@@ -225,12 +228,16 @@
             this.simpleButtonKaydet.Size = new System.Drawing.Size(323, 47);
             this.simpleButtonKaydet.TabIndex = 33;
             this.simpleButtonKaydet.Text = "STOK KAYDET";
+            this.simpleButtonKaydet.Click += new System.EventHandler(this.simpleButtonKaydet_Click);
             // 
             // textEditFiyat
             // 
             this.textEditFiyat.EditValue = "";
             this.textEditFiyat.Location = new System.Drawing.Point(173, 191);
             this.textEditFiyat.Name = "textEditFiyat";
+            // 
+            // 
+            // 
             this.textEditFiyat.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditFiyat.Properties.Appearance.Options.UseFont = true;
             this.textEditFiyat.Properties.Mask.EditMask = "(\\d?\\d?\\d?) \\d\\d\\d-\\d\\d\\d\\d";
@@ -242,6 +249,9 @@
             // 
             this.textEditMiktar.Location = new System.Drawing.Point(173, 148);
             this.textEditMiktar.Name = "textEditMiktar";
+            // 
+            // 
+            // 
             this.textEditMiktar.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditMiktar.Properties.Appearance.Options.UseFont = true;
             this.textEditMiktar.Size = new System.Drawing.Size(183, 26);
@@ -251,6 +261,9 @@
             // 
             this.textEditUrunAdi.Location = new System.Drawing.Point(173, 102);
             this.textEditUrunAdi.Name = "textEditUrunAdi";
+            // 
+            // 
+            // 
             this.textEditUrunAdi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditUrunAdi.Properties.Appearance.Options.UseFont = true;
             this.textEditUrunAdi.Size = new System.Drawing.Size(183, 26);
@@ -300,15 +313,19 @@
             // 
             this.textEditKategori.Location = new System.Drawing.Point(173, 55);
             this.textEditKategori.Name = "textEditKategori";
+            // 
+            // 
+            // 
             this.textEditKategori.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditKategori.Properties.Appearance.Options.UseFont = true;
             this.textEditKategori.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton()});
             this.textEditKategori.Properties.DropDownRows = 2;
             this.textEditKategori.Properties.Items.AddRange(new object[] {
             "Sarf Malzeme",
             "Hazır Malzeme",
             "Bağlantı Elemanı"});
+            this.textEditKategori.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.textEditKategori.Size = new System.Drawing.Size(183, 26);
             this.textEditKategori.TabIndex = 29;
             // 
@@ -328,7 +345,7 @@
             // 
             // simpleButtonArttir
             // 
-            this.simpleButtonArttir.Appearance.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButtonArttir.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButtonArttir.Appearance.Options.UseFont = true;
             this.simpleButtonArttir.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonArttir.ImageOptions.Image")));
             this.simpleButtonArttir.Location = new System.Drawing.Point(117, 110);
@@ -336,12 +353,15 @@
             this.simpleButtonArttir.Size = new System.Drawing.Size(197, 67);
             this.simpleButtonArttir.TabIndex = 26;
             this.simpleButtonArttir.Text = "KATEGORİ EKLE";
+            this.simpleButtonArttir.Click += new System.EventHandler(this.SimpleButtonArttir_Click);
             // 
             // textEditUrunAdiGoruntule
             // 
-            this.textEditUrunAdiGoruntule.Enabled = false;
             this.textEditUrunAdiGoruntule.Location = new System.Drawing.Point(163, 33);
             this.textEditUrunAdiGoruntule.Name = "textEditUrunAdiGoruntule";
+            // 
+            // 
+            // 
             this.textEditUrunAdiGoruntule.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditUrunAdiGoruntule.Properties.Appearance.Options.UseFont = true;
             this.textEditUrunAdiGoruntule.Size = new System.Drawing.Size(187, 26);
