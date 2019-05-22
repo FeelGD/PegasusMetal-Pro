@@ -31,8 +31,7 @@ namespace PegasusMetal_Pro
 
         private void button8_Click(object sender, EventArgs e)
         {
-            frmVerilerStok frmVerilerStok = new frmVerilerStok();
-            frmVerilerStok.ShowDialog();
+            new frmVerilerStok().ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)

@@ -149,5 +149,18 @@ namespace PegasusMetal_Pro
             WebSocketService.getInstance().Send(data);
             textEditUrunAdiGoruntule.Text = "";
         }
+
+        private void ListView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (ListViewItem item in listView1.SelectedItems)
+            {
+                textEditId.Text = item.SubItems[0].Text;
+                textEditKategori.Text = item.SubItems[1].Text;
+                textEditUrunAdi.Text = item.SubItems[2].Text;
+                textEditMiktar.Text = item.SubItems[3].Text;
+                textEditFiyat.Text = item.SubItems[4].Text;
+            }
+            
+        }
     }
 }
