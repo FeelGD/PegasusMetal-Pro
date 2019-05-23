@@ -14,12 +14,6 @@ namespace PegasusMetal_Pro
     
     public partial class Company
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Company()
-        {
-            this.Project = new HashSet<Project>();
-        }
-    
         public int Id { get; set; }
         public string Code { get; set; }
         public string Name { get; set; }
@@ -28,8 +22,5 @@ namespace PegasusMetal_Pro
         public string MailAddress { get; set; }
         public string Address { get; set; }
         public string Note { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Project> Project { get; set; }
     }
 }

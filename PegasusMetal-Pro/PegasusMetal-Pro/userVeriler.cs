@@ -12,37 +12,43 @@ namespace PegasusMetal_Pro
 {
     public partial class userVeriler : UserControl
     {
+        frmVerilerFirmalar frmVerilerFirmalar;
+        frmVerilerPersoneller frmVerilerPersoneller;
+        frmVerilerStok frmVerilerStok;
+        frmVerilerMalzemeUcretleri frmVerilerMalzemeUcretleri;
+        frmVerilerParcaKodlari frmVerilerParcaKodlari;
         public userVeriler()
         {
             InitializeComponent();
+            frmVerilerFirmalar = new frmVerilerFirmalar();
+            frmVerilerPersoneller = new frmVerilerPersoneller();
+            frmVerilerStok = new frmVerilerStok();
+            frmVerilerMalzemeUcretleri = new frmVerilerMalzemeUcretleri();
+            frmVerilerParcaKodlari = new frmVerilerParcaKodlari();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            frmVerilerPersoneller frmVerilerPersoneller = new frmVerilerPersoneller();
             frmVerilerPersoneller.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmVerilerFirmalar frmVerilerFirmalar = new frmVerilerFirmalar();
             frmVerilerFirmalar.ShowDialog();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            new frmVerilerStok().ShowDialog();
+            frmVerilerStok.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            frmVerilerMalzemeUcretleri frmVerilerMalzemeUcretleri = new frmVerilerMalzemeUcretleri();
             frmVerilerMalzemeUcretleri.ShowDialog();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            frmVerilerParcaKodlari frmVerilerParcaKodlari = new frmVerilerParcaKodlari();
             frmVerilerParcaKodlari.ShowDialog();
         }
     }

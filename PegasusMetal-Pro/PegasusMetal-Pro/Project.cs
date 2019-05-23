@@ -14,26 +14,10 @@ namespace PegasusMetal_Pro
     
     public partial class Project
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Project()
-        {
-            this.Offer = new HashSet<Offer>();
-            this.ProjectContinuing = new HashSet<ProjectContinuing>();
-            this.ProjectFiles = new HashSet<ProjectFiles>();
-        }
-    
         public int Id { get; set; }
         public int CompanyId { get; set; }
         public string Name { get; set; }
-        public string PType { get; set; }
+        public bool PType { get; set; }
         public string Status { get; set; }
-    
-        public virtual Company Company { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Offer> Offer { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProjectContinuing> ProjectContinuing { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProjectFiles> ProjectFiles { get; set; }
     }
 }

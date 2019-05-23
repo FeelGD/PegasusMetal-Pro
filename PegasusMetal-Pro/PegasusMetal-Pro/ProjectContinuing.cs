@@ -20,8 +20,5 @@ namespace PegasusMetal_Pro
         public System.DateTime Deadline { get; set; }
         public string Note { get; set; }
         public bool Status { get; set; }
-    
-        public virtual Process Process { get; set; }
-        public virtual Project Project { get; set; }
     }
 }

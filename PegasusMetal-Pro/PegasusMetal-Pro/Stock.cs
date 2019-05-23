@@ -19,7 +19,5 @@ namespace PegasusMetal_Pro
         public string Name { get; set; }
         public int Amount { get; set; }
         public decimal Price { get; set; }
-    
-        public virtual StockCategory StockCategory { get; set; }
     }
 }

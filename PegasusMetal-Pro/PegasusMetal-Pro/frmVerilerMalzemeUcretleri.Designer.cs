@@ -116,6 +116,7 @@
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.ListView1_SelectedIndexChanged);
             // 
             // Id
             // 
@@ -178,6 +179,9 @@
             this.textEditId.Enabled = false;
             this.textEditId.Location = new System.Drawing.Point(160, 41);
             this.textEditId.Name = "textEditId";
+            // 
+            // 
+            // 
             this.textEditId.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditId.Properties.Appearance.Options.UseFont = true;
             this.textEditId.Size = new System.Drawing.Size(147, 26);
@@ -197,6 +201,9 @@
             // 
             this.textEditBirimFiyat.Location = new System.Drawing.Point(160, 130);
             this.textEditBirimFiyat.Name = "textEditBirimFiyat";
+            // 
+            // 
+            // 
             this.textEditBirimFiyat.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditBirimFiyat.Properties.Appearance.Options.UseFont = true;
             this.textEditBirimFiyat.Properties.Mask.EditMask = "n2";
@@ -208,6 +215,9 @@
             // 
             this.textEditMalzemeOzelligi.Location = new System.Drawing.Point(160, 87);
             this.textEditMalzemeOzelligi.Name = "textEditMalzemeOzelligi";
+            // 
+            // 
+            // 
             this.textEditMalzemeOzelligi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditMalzemeOzelligi.Properties.Appearance.Options.UseFont = true;
             this.textEditMalzemeOzelligi.Size = new System.Drawing.Size(147, 26);

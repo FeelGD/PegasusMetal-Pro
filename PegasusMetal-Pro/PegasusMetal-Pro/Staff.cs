@@ -14,14 +14,6 @@ namespace PegasusMetal_Pro
     
     public partial class Staff
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Staff()
-        {
-            this.AcceptedOffer = new HashSet<AcceptedOffer>();
-            this.StockCategory = new HashSet<StockCategory>();
-            this.UserRole = new HashSet<UserRole>();
-        }
-    
         public int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
@@ -29,13 +21,5 @@ namespace PegasusMetal_Pro
         public string PhoneNumber { get; set; }
         public string MailAddress { get; set; }
         public string Address { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AcceptedOffer> AcceptedOffer { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StockCategory> StockCategory { get; set; }
-        public virtual User User { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UserRole> UserRole { get; set; }
     }
 }

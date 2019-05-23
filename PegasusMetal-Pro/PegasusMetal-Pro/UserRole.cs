@@ -17,8 +17,5 @@ namespace PegasusMetal_Pro
         public int Id { get; set; }
         public int StaffId { get; set; }
         public int RoleId { get; set; }
-    
-        public virtual Roles Roles { get; set; }
-        public virtual Staff Staff { get; set; }
     }
 }

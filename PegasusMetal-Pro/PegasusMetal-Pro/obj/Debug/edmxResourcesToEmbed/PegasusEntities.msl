@@ -62,7 +62,9 @@
       <EntityTypeMapping TypeName="PegasusYazilimModel.Piece">
         <MappingFragment StoreEntitySet="Piece">
           <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PMCode" ColumnName="PMCode" />
           <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Quality" ColumnName="Quality" />
           <ScalarProperty Name="Width" ColumnName="Width" />
           <ScalarProperty Name="Height" ColumnName="Height" />

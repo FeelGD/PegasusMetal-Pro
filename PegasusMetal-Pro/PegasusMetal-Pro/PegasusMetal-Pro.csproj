@@ -321,8 +321,8 @@
       <DependentUpon>PegasusEntities.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="PegasusEntities.cs">
-      <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
       <DependentUpon>PegasusEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="PegasusEntities.Designer.cs">

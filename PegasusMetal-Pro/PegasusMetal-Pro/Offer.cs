@@ -22,8 +22,5 @@ namespace PegasusMetal_Pro
         public decimal DiscountPercentage { get; set; }
         public decimal LastPrice { get; set; }
         public string ProjectPreparation { get; set; }
-    
-        public virtual AcceptedOffer AcceptedOffer { get; set; }
-        public virtual Project Project { get; set; }
     }
 }

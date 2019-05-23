@@ -18,8 +18,5 @@ namespace PegasusMetal_Pro
         public int StaffId { get; set; }
         public System.DateTime Deadline { get; set; }
         public string Note { get; set; }
-    
-        public virtual Offer Offer { get; set; }
-        public virtual Staff Staff { get; set; }
     }
 }

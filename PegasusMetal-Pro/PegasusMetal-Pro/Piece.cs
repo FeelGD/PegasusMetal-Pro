@@ -15,7 +15,9 @@ namespace PegasusMetal_Pro
     public partial class Piece
     {
         public int Id { get; set; }
+        public int PMCode { get; set; }
         public string Code { get; set; }
+        public string Name { get; set; }
         public string Quality { get; set; }
         public Nullable<int> Width { get; set; }
         public Nullable<int> Height { get; set; }

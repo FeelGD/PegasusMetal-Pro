@@ -17,7 +17,5 @@ namespace PegasusMetal_Pro
         public int StaffId { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-    
-        public virtual Staff Staff { get; set; }
     }
 }

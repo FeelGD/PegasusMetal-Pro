@@ -19,7 +19,5 @@ namespace PegasusMetal_Pro
         public string Name { get; set; }
         public int Size { get; set; }
         public string Explanation { get; set; }
-    
-        public virtual Project Project { get; set; }
     }
 }

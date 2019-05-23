@@ -152,6 +152,7 @@
             this.listView1.TabIndex = 3;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.ListView1_SelectedIndexChanged);
             // 
             // Id
             // 
@@ -236,9 +237,13 @@
             // 
             // textEdit9
             // 
+            this.textEdit9.EditValue = "9";
             this.textEdit9.Enabled = false;
             this.textEdit9.Location = new System.Drawing.Point(115, 33);
             this.textEdit9.Name = "textEdit9";
+            // 
+            // 
+            // 
             this.textEdit9.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEdit9.Properties.Appearance.Options.UseFont = true;
             this.textEdit9.Size = new System.Drawing.Size(187, 26);
@@ -266,8 +271,12 @@
             // 
             // textEdit8
             // 
+            this.textEdit8.EditValue = "8";
             this.textEdit8.Location = new System.Drawing.Point(115, 260);
             this.textEdit8.Name = "textEdit8";
+            // 
+            // 
+            // 
             this.textEdit8.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEdit8.Properties.Appearance.Options.UseFont = true;
             this.textEdit8.Size = new System.Drawing.Size(187, 26);
@@ -275,8 +284,12 @@
             // 
             // textEdit7
             // 
+            this.textEdit7.EditValue = "7";
             this.textEdit7.Location = new System.Drawing.Point(243, 228);
             this.textEdit7.Name = "textEdit7";
+            // 
+            // 
+            // 
             this.textEdit7.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEdit7.Properties.Appearance.Options.UseFont = true;
             this.textEdit7.Size = new System.Drawing.Size(59, 26);
@@ -284,8 +297,12 @@
             // 
             // textEdit6
             // 
+            this.textEdit6.EditValue = "6";
             this.textEdit6.Location = new System.Drawing.Point(115, 196);
             this.textEdit6.Name = "textEdit6";
+            // 
+            // 
+            // 
             this.textEdit6.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEdit6.Properties.Appearance.Options.UseFont = true;
             this.textEdit6.Size = new System.Drawing.Size(62, 26);
@@ -293,8 +310,12 @@
             // 
             // textEdit5
             // 
+            this.textEdit5.EditValue = "5";
             this.textEdit5.Location = new System.Drawing.Point(243, 193);
             this.textEdit5.Name = "textEdit5";
+            // 
+            // 
+            // 
             this.textEdit5.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEdit5.Properties.Appearance.Options.UseFont = true;
             this.textEdit5.Size = new System.Drawing.Size(59, 26);
@@ -302,8 +323,12 @@
             // 
             // textEdit4
             // 
+            this.textEdit4.EditValue = "4";
             this.textEdit4.Location = new System.Drawing.Point(115, 164);
             this.textEdit4.Name = "textEdit4";
+            // 
+            // 
+            // 
             this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEdit4.Properties.Appearance.Options.UseFont = true;
             this.textEdit4.Size = new System.Drawing.Size(62, 26);
@@ -311,8 +336,12 @@
             // 
             // textEdit3
             // 
+            this.textEdit3.EditValue = "3";
             this.textEdit3.Location = new System.Drawing.Point(243, 161);
             this.textEdit3.Name = "textEdit3";
+            // 
+            // 
+            // 
             this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEdit3.Properties.Appearance.Options.UseFont = true;
             this.textEdit3.Size = new System.Drawing.Size(59, 26);
@@ -320,8 +349,12 @@
             // 
             // textEdit2
             // 
+            this.textEdit2.EditValue = "2";
             this.textEdit2.Location = new System.Drawing.Point(115, 129);
             this.textEdit2.Name = "textEdit2";
+            // 
+            // 
+            // 
             this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEdit2.Properties.Appearance.Options.UseFont = true;
             this.textEdit2.Size = new System.Drawing.Size(187, 26);
@@ -329,8 +362,12 @@
             // 
             // textEdit1
             // 
+            this.textEdit1.EditValue = "1";
             this.textEdit1.Location = new System.Drawing.Point(115, 97);
             this.textEdit1.Name = "textEdit1";
+            // 
+            // 
+            // 
             this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEdit1.Properties.Appearance.Options.UseFont = true;
             this.textEdit1.Size = new System.Drawing.Size(187, 26);
@@ -338,8 +375,12 @@
             // 
             // textEditId
             // 
+            this.textEditId.EditValue = "Id";
             this.textEditId.Location = new System.Drawing.Point(115, 65);
             this.textEditId.Name = "textEditId";
+            // 
+            // 
+            // 
             this.textEditId.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditId.Properties.Appearance.Options.UseFont = true;
             this.textEditId.Size = new System.Drawing.Size(187, 26);
@@ -447,6 +488,7 @@
             this.simpleButtonKaydet.Size = new System.Drawing.Size(317, 54);
             this.simpleButtonKaydet.TabIndex = 64;
             this.simpleButtonKaydet.Text = "PARÇAYI KAYDET";
+            this.simpleButtonKaydet.Click += new System.EventHandler(this.simpleButtonKaydet_Click);
             // 
             // frmVerilerParcaKodlari
             // 

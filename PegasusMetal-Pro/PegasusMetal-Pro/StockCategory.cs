@@ -14,19 +14,9 @@ namespace PegasusMetal_Pro
     
     public partial class StockCategory
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public StockCategory()
-        {
-            this.Stock = new HashSet<Stock>();
-        }
-    
         public int Id { get; set; }
         public string Name { get; set; }
         public byte[] CreatedAt { get; set; }
         public int CreatedBy { get; set; }
-    
-        public virtual Staff Staff { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Stock> Stock { get; set; }
     }
 }

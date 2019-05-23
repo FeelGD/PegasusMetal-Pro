@@ -108,6 +108,20 @@ namespace PegasusMetal_Pro
                     var stockCategory = JsonConvert.DeserializeObject<StockCategory>(body);
                     Lists.stockCategories.Add(stockCategory);
                     break;
+                case OPCodes.MATERIAL:
+                    var material = JsonConvert.DeserializeObject<Material>(body);
+                    Lists.materials.Add(material);
+                    break;
+                case OPCodes.PIECE:
+                    var piece = JsonConvert.DeserializeObject<Piece>(body);
+                    Lists.pieces.Add(piece);
+                    break;
+                case OPCodes.PROJECT:
+                    var project = JsonConvert.DeserializeObject<Project>(body);
+                    Lists.projects.Add(project);
+                    break;
+                default:
+                    break;
             }
         }
 

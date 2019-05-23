@@ -14,20 +14,11 @@ namespace PegasusMetal_Pro
     
     public partial class Process
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Process()
-        {
-            this.ProjectContinuing = new HashSet<ProjectContinuing>();
-        }
-    
         public int Id { get; set; }
         public string Name { get; set; }
         public string Property { get; set; }
         public Nullable<decimal> UnitPrice { get; set; }
         public Nullable<decimal> HourPrice { get; set; }
         public Nullable<decimal> MinutePrice { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProjectContinuing> ProjectContinuing { get; set; }
     }
 }
