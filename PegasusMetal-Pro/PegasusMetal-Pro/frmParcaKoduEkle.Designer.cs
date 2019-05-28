@@ -38,7 +38,6 @@
             this.labelControl51 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl52 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButtonParcaKoduEkle = new DevExpress.XtraEditors.SimpleButton();
-            this.textEditKalite = new DevExpress.XtraEditors.TextEdit();
             this.texteditKalinlik = new DevExpress.XtraEditors.TextEdit();
             this.textEditBoy = new DevExpress.XtraEditors.TextEdit();
             this.textEditEn = new DevExpress.XtraEditors.TextEdit();
@@ -47,16 +46,17 @@
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.textEditParcaKodu = new DevExpress.XtraEditors.TextEdit();
+            this.textEditKalite = new DevExpress.XtraEditors.ComboBoxEdit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditParcaAdi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditKalite.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.texteditKalinlik.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditBoy.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditEn.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditParcaKodu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditKalite.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -156,15 +156,6 @@
             this.simpleButtonParcaKoduEkle.Text = "Parça Kodu Ekle";
             this.simpleButtonParcaKoduEkle.Click += new System.EventHandler(this.simpleButtonParcaKoduEkle_Click);
             // 
-            // textEditKalite
-            // 
-            this.textEditKalite.Location = new System.Drawing.Point(312, 146);
-            this.textEditKalite.Name = "textEditKalite";
-            this.textEditKalite.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textEditKalite.Properties.Appearance.Options.UseFont = true;
-            this.textEditKalite.Size = new System.Drawing.Size(88, 28);
-            this.textEditKalite.TabIndex = 30;
-            // 
             // texteditKalinlik
             // 
             this.texteditKalinlik.Location = new System.Drawing.Point(112, 146);
@@ -241,6 +232,25 @@
             this.textEditParcaKodu.Size = new System.Drawing.Size(75, 28);
             this.textEditParcaKodu.TabIndex = 35;
             // 
+            // textEditKalite
+            // 
+            this.textEditKalite.EditValue = "";
+            this.textEditKalite.Location = new System.Drawing.Point(312, 151);
+            this.textEditKalite.Name = "textEditKalite";
+            this.textEditKalite.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
+            this.textEditKalite.Properties.Appearance.Options.UseFont = true;
+            this.textEditKalite.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textEditKalite.Properties.DropDownRows = 5;
+            this.textEditKalite.Properties.Items.AddRange(new object[] {
+            "DKP",
+            "HRP",
+            "SYH",
+            "PSL",
+            "ALÜ"});
+            this.textEditKalite.Size = new System.Drawing.Size(88, 26);
+            this.textEditKalite.TabIndex = 77;
+            // 
             // frmParcaKoduEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -249,13 +259,13 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(425, 314);
+            this.Controls.Add(this.textEditKalite);
             this.Controls.Add(this.textEdit2);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.textEditParcaAdi);
             this.Controls.Add(this.labelControl51);
             this.Controls.Add(this.labelControl52);
             this.Controls.Add(this.simpleButtonParcaKoduEkle);
-            this.Controls.Add(this.textEditKalite);
             this.Controls.Add(this.texteditKalinlik);
             this.Controls.Add(this.textEditBoy);
             this.Controls.Add(this.textEditEn);
@@ -275,11 +285,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditParcaAdi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditKalite.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.texteditKalinlik.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditBoy.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditEn.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditParcaKodu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditKalite.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,7 +306,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl51;
         private DevExpress.XtraEditors.LabelControl labelControl52;
         private DevExpress.XtraEditors.SimpleButton simpleButtonParcaKoduEkle;
-        private DevExpress.XtraEditors.TextEdit textEditKalite;
         private DevExpress.XtraEditors.TextEdit texteditKalinlik;
         private DevExpress.XtraEditors.TextEdit textEditBoy;
         private DevExpress.XtraEditors.TextEdit textEditEn;
@@ -305,5 +314,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.TextEdit textEditParcaKodu;
+        private DevExpress.XtraEditors.ComboBoxEdit textEditKalite;
     }
 }
