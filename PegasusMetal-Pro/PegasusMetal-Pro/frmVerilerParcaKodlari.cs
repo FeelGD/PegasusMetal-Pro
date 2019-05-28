@@ -111,7 +111,6 @@ namespace PegasusMetal_Pro
             textEdit6.Text = "";
             textEdit7.Text = "";
             textEdit8.Text = "";
-            textEdit9.Text = "";
             textEditId.Text = "";
         }
 

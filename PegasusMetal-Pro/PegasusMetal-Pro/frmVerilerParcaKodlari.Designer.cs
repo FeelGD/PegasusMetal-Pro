@@ -41,7 +41,6 @@
             this.En = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Boy = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Kalınlık = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Cins = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Fire = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PegasusKod = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3 = new System.Windows.Forms.Panel();
@@ -138,7 +137,6 @@
             this.En,
             this.Boy,
             this.Kalınlık,
-            this.Cins,
             this.Fire,
             this.PegasusKod});
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -185,11 +183,6 @@
             // 
             this.Kalınlık.Text = "Kalınlık";
             this.Kalınlık.Width = 49;
-            // 
-            // Cins
-            // 
-            this.Cins.Text = "Cinsi";
-            this.Cins.Width = 75;
             // 
             // Fire
             // 
@@ -494,7 +487,6 @@
         private System.Windows.Forms.ColumnHeader En;
         private System.Windows.Forms.ColumnHeader Boy;
         private System.Windows.Forms.ColumnHeader Kalınlık;
-        private System.Windows.Forms.ColumnHeader Cins;
         private System.Windows.Forms.ColumnHeader Fire;
         private System.Windows.Forms.ColumnHeader PegasusKod;
         private System.Windows.Forms.Panel panel3;

@@ -57,9 +57,9 @@ namespace PegasusMetal_Pro
             data.Add(OPCodes.PIECE);
             data.Add(JsonConvert.SerializeObject(piece));
             WebSocketService.getInstance().Send(data);
-            RefreshBoxes()
-        {
-            }
+            RefreshBoxes();
+                   }
+            
     }
 }
 
