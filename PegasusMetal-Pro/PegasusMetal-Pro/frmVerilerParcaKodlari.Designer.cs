@@ -51,10 +51,8 @@
             this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.textEditId = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -62,11 +60,11 @@
             this.labelControl51 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl52 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButtonGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButtonKaydet = new DevExpress.XtraEditors.SimpleButton();
+            this.textEdit2 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -76,12 +74,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditId.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -213,10 +210,8 @@
             this.panel3.Controls.Add(this.textEdit8);
             this.panel3.Controls.Add(this.textEdit7);
             this.panel3.Controls.Add(this.textEdit6);
-            this.panel3.Controls.Add(this.textEdit5);
             this.panel3.Controls.Add(this.textEdit4);
             this.panel3.Controls.Add(this.textEdit3);
-            this.panel3.Controls.Add(this.textEdit2);
             this.panel3.Controls.Add(this.textEdit1);
             this.panel3.Controls.Add(this.textEditId);
             this.panel3.Controls.Add(this.labelControl5);
@@ -224,11 +219,11 @@
             this.panel3.Controls.Add(this.labelControl51);
             this.panel3.Controls.Add(this.labelControl52);
             this.panel3.Controls.Add(this.labelControl9);
-            this.panel3.Controls.Add(this.labelControl8);
             this.panel3.Controls.Add(this.labelControl7);
             this.panel3.Controls.Add(this.labelControl6);
             this.panel3.Controls.Add(this.simpleButtonGuncelle);
             this.panel3.Controls.Add(this.simpleButtonKaydet);
+            this.panel3.Controls.Add(this.textEdit2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(865, 41);
             this.panel3.Name = "panel3";
@@ -237,16 +232,13 @@
             // 
             // textEdit9
             // 
-            this.textEdit9.EditValue = "9";
+            this.textEdit9.EditValue = "";
             this.textEdit9.Enabled = false;
             this.textEdit9.Location = new System.Drawing.Point(115, 33);
             this.textEdit9.Name = "textEdit9";
-            // 
-            // 
-            // 
             this.textEdit9.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEdit9.Properties.Appearance.Options.UseFont = true;
-            this.textEdit9.Size = new System.Drawing.Size(187, 26);
+            this.textEdit9.Size = new System.Drawing.Size(203, 26);
             this.textEdit9.TabIndex = 85;
             // 
             // labelControl2
@@ -271,64 +263,40 @@
             // 
             // textEdit8
             // 
-            this.textEdit8.EditValue = "8";
+            this.textEdit8.EditValue = "";
+            this.textEdit8.Enabled = false;
             this.textEdit8.Location = new System.Drawing.Point(115, 260);
             this.textEdit8.Name = "textEdit8";
-            // 
-            // 
-            // 
             this.textEdit8.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEdit8.Properties.Appearance.Options.UseFont = true;
-            this.textEdit8.Size = new System.Drawing.Size(187, 26);
+            this.textEdit8.Size = new System.Drawing.Size(203, 26);
             this.textEdit8.TabIndex = 82;
             // 
             // textEdit7
             // 
-            this.textEdit7.EditValue = "7";
-            this.textEdit7.Location = new System.Drawing.Point(243, 228);
+            this.textEdit7.EditValue = "";
+            this.textEdit7.Location = new System.Drawing.Point(268, 201);
             this.textEdit7.Name = "textEdit7";
-            // 
-            // 
-            // 
             this.textEdit7.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEdit7.Properties.Appearance.Options.UseFont = true;
-            this.textEdit7.Size = new System.Drawing.Size(59, 26);
+            this.textEdit7.Size = new System.Drawing.Size(50, 26);
             this.textEdit7.TabIndex = 81;
             // 
             // textEdit6
             // 
-            this.textEdit6.EditValue = "6";
-            this.textEdit6.Location = new System.Drawing.Point(115, 196);
+            this.textEdit6.EditValue = "";
+            this.textEdit6.Location = new System.Drawing.Point(268, 164);
             this.textEdit6.Name = "textEdit6";
-            // 
-            // 
-            // 
             this.textEdit6.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEdit6.Properties.Appearance.Options.UseFont = true;
-            this.textEdit6.Size = new System.Drawing.Size(62, 26);
+            this.textEdit6.Size = new System.Drawing.Size(50, 26);
             this.textEdit6.TabIndex = 80;
-            // 
-            // textEdit5
-            // 
-            this.textEdit5.EditValue = "5";
-            this.textEdit5.Location = new System.Drawing.Point(243, 193);
-            this.textEdit5.Name = "textEdit5";
-            // 
-            // 
-            // 
-            this.textEdit5.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
-            this.textEdit5.Properties.Appearance.Options.UseFont = true;
-            this.textEdit5.Size = new System.Drawing.Size(59, 26);
-            this.textEdit5.TabIndex = 79;
             // 
             // textEdit4
             // 
-            this.textEdit4.EditValue = "4";
+            this.textEdit4.EditValue = "";
             this.textEdit4.Location = new System.Drawing.Point(115, 164);
             this.textEdit4.Name = "textEdit4";
-            // 
-            // 
-            // 
             this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEdit4.Properties.Appearance.Options.UseFont = true;
             this.textEdit4.Size = new System.Drawing.Size(62, 26);
@@ -336,54 +304,32 @@
             // 
             // textEdit3
             // 
-            this.textEdit3.EditValue = "3";
-            this.textEdit3.Location = new System.Drawing.Point(243, 161);
+            this.textEdit3.EditValue = "";
+            this.textEdit3.Location = new System.Drawing.Point(115, 201);
             this.textEdit3.Name = "textEdit3";
-            // 
-            // 
-            // 
             this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEdit3.Properties.Appearance.Options.UseFont = true;
-            this.textEdit3.Size = new System.Drawing.Size(59, 26);
+            this.textEdit3.Size = new System.Drawing.Size(62, 26);
             this.textEdit3.TabIndex = 77;
-            // 
-            // textEdit2
-            // 
-            this.textEdit2.EditValue = "2";
-            this.textEdit2.Location = new System.Drawing.Point(115, 129);
-            this.textEdit2.Name = "textEdit2";
-            // 
-            // 
-            // 
-            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
-            this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Size = new System.Drawing.Size(187, 26);
-            this.textEdit2.TabIndex = 76;
             // 
             // textEdit1
             // 
-            this.textEdit1.EditValue = "1";
+            this.textEdit1.EditValue = "";
             this.textEdit1.Location = new System.Drawing.Point(115, 97);
             this.textEdit1.Name = "textEdit1";
-            // 
-            // 
-            // 
             this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(187, 26);
+            this.textEdit1.Size = new System.Drawing.Size(203, 26);
             this.textEdit1.TabIndex = 75;
             // 
             // textEditId
             // 
-            this.textEditId.EditValue = "Id";
+            this.textEditId.EditValue = "";
             this.textEditId.Location = new System.Drawing.Point(115, 65);
             this.textEditId.Name = "textEditId";
-            // 
-            // 
-            // 
             this.textEditId.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditId.Properties.Appearance.Options.UseFont = true;
-            this.textEditId.Size = new System.Drawing.Size(187, 26);
+            this.textEditId.Size = new System.Drawing.Size(203, 26);
             this.textEditId.TabIndex = 74;
             // 
             // labelControl5
@@ -400,7 +346,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(158, 233);
+            this.labelControl3.Location = new System.Drawing.Point(183, 206);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(79, 21);
             this.labelControl3.TabIndex = 72;
@@ -436,21 +382,11 @@
             this.labelControl9.TabIndex = 69;
             this.labelControl9.Text = "Kalite:";
             // 
-            // labelControl8
-            // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
-            this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(200, 196);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(37, 21);
-            this.labelControl8.TabIndex = 68;
-            this.labelControl8.Text = "Cins:";
-            // 
             // labelControl7
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(51, 201);
+            this.labelControl7.Location = new System.Drawing.Point(204, 169);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(58, 21);
             this.labelControl7.TabIndex = 67;
@@ -460,7 +396,7 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(204, 166);
+            this.labelControl6.Location = new System.Drawing.Point(76, 206);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(33, 21);
             this.labelControl6.TabIndex = 66;
@@ -490,6 +426,25 @@
             this.simpleButtonKaydet.Text = "PARÇAYI KAYDET";
             this.simpleButtonKaydet.Click += new System.EventHandler(this.simpleButtonKaydet_Click);
             // 
+            // textEdit2
+            // 
+            this.textEdit2.EditValue = "";
+            this.textEdit2.Location = new System.Drawing.Point(115, 129);
+            this.textEdit2.Name = "textEdit2";
+            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
+            this.textEdit2.Properties.Appearance.Options.UseFont = true;
+            this.textEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textEdit2.Properties.DropDownRows = 5;
+            this.textEdit2.Properties.Items.AddRange(new object[] {
+            "DKP",
+            "HRP",
+            "SYH",
+            "PSL",
+            "ALÜ"});
+            this.textEdit2.Size = new System.Drawing.Size(203, 26);
+            this.textEdit2.TabIndex = 76;
+            // 
             // frmVerilerParcaKodlari
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -516,12 +471,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditId.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -550,10 +504,8 @@
         private DevExpress.XtraEditors.TextEdit textEdit8;
         private DevExpress.XtraEditors.TextEdit textEdit7;
         private DevExpress.XtraEditors.TextEdit textEdit6;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
         private DevExpress.XtraEditors.TextEdit textEdit4;
         private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.TextEdit textEditId;
         private DevExpress.XtraEditors.LabelControl labelControl5;
@@ -561,10 +513,10 @@
         private DevExpress.XtraEditors.LabelControl labelControl51;
         private DevExpress.XtraEditors.LabelControl labelControl52;
         private DevExpress.XtraEditors.LabelControl labelControl9;
-        private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.SimpleButton simpleButtonGuncelle;
         private DevExpress.XtraEditors.SimpleButton simpleButtonKaydet;
+        private DevExpress.XtraEditors.ComboBoxEdit textEdit2;
     }
 }
