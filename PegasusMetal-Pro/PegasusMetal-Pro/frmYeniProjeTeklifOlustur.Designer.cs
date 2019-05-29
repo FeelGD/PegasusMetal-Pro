@@ -177,7 +177,6 @@
             this.labelControl51 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
             this.labelControlKaplamaTl = new DevExpress.XtraEditors.LabelControl();
-            this.textEditKaplanacakMalzeme = new DevExpress.XtraEditors.TextEdit();
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.groupBoxKaynak = new System.Windows.Forms.GroupBox();
             this.textEditKaynakKar = new DevExpress.XtraEditors.TextEdit();
@@ -223,6 +222,7 @@
             this.Montaj = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ParcaMaliyet = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ParcaTotal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.textEditKaplanacakMalzeme = new DevExpress.XtraEditors.ComboBoxEdit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -291,7 +291,6 @@
             this.groupBoxKaplama.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEditKaplamaKar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditKaplamaParcaAgirligi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditKaplanacakMalzeme.Properties)).BeginInit();
             this.groupBoxKaynak.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEditKaynakKar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditKaynakSuresi.Properties)).BeginInit();
@@ -306,6 +305,7 @@
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEditIndirimOran.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditKarOran.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditKaplanacakMalzeme.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -2052,8 +2052,8 @@
             this.groupBoxKaplama.Controls.Add(this.labelControl51);
             this.groupBoxKaplama.Controls.Add(this.labelControl22);
             this.groupBoxKaplama.Controls.Add(this.labelControlKaplamaTl);
-            this.groupBoxKaplama.Controls.Add(this.textEditKaplanacakMalzeme);
             this.groupBoxKaplama.Controls.Add(this.labelControl23);
+            this.groupBoxKaplama.Controls.Add(this.textEditKaplanacakMalzeme);
             this.groupBoxKaplama.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBoxKaplama.Location = new System.Drawing.Point(720, 0);
             this.groupBoxKaplama.Name = "groupBoxKaplama";
@@ -2122,18 +2122,6 @@
             this.labelControlKaplamaTl.Size = new System.Drawing.Size(35, 17);
             this.labelControlKaplamaTl.TabIndex = 15;
             this.labelControlKaplamaTl.Text = "..... TL";
-            // 
-            // textEditKaplanacakMalzeme
-            // 
-            this.textEditKaplanacakMalzeme.EditValue = "";
-            this.textEditKaplanacakMalzeme.Location = new System.Drawing.Point(117, 43);
-            this.textEditKaplanacakMalzeme.Name = "textEditKaplanacakMalzeme";
-            this.textEditKaplanacakMalzeme.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
-            this.textEditKaplanacakMalzeme.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.textEditKaplanacakMalzeme.Properties.Appearance.Options.UseBackColor = true;
-            this.textEditKaplanacakMalzeme.Properties.Appearance.Options.UseFont = true;
-            this.textEditKaplanacakMalzeme.Size = new System.Drawing.Size(100, 24);
-            this.textEditKaplanacakMalzeme.TabIndex = 14;
             // 
             // labelControl23
             // 
@@ -2614,6 +2602,20 @@
             this.ParcaTotal.Text = "Parçanın Ücreti";
             this.ParcaTotal.Width = 94;
             // 
+            // textEditKaplanacakMalzeme
+            // 
+            this.textEditKaplanacakMalzeme.EditValue = "dbden çekicez";
+            this.textEditKaplanacakMalzeme.Location = new System.Drawing.Point(117, 43);
+            this.textEditKaplanacakMalzeme.Name = "textEditKaplanacakMalzeme";
+            this.textEditKaplanacakMalzeme.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
+            this.textEditKaplanacakMalzeme.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.textEditKaplanacakMalzeme.Properties.Appearance.Options.UseBackColor = true;
+            this.textEditKaplanacakMalzeme.Properties.Appearance.Options.UseFont = true;
+            this.textEditKaplanacakMalzeme.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textEditKaplanacakMalzeme.Size = new System.Drawing.Size(100, 24);
+            this.textEditKaplanacakMalzeme.TabIndex = 14;
+            // 
             // frmYeniProjeTeklifOlustur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2713,7 +2715,6 @@
             this.groupBoxKaplama.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEditKaplamaKar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditKaplamaParcaAgirligi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditKaplanacakMalzeme.Properties)).EndInit();
             this.groupBoxKaynak.ResumeLayout(false);
             this.groupBoxKaynak.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEditKaynakKar.Properties)).EndInit();
@@ -2732,6 +2733,7 @@
             this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEditIndirimOran.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditKarOran.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditKaplanacakMalzeme.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2894,7 +2896,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl51;
         private DevExpress.XtraEditors.LabelControl labelControl22;
         private DevExpress.XtraEditors.LabelControl labelControlKaplamaTl;
-        private DevExpress.XtraEditors.TextEdit textEditKaplanacakMalzeme;
         private DevExpress.XtraEditors.LabelControl labelControl23;
         private DevExpress.XtraEditors.TextEdit textEditKaynakKar;
         private DevExpress.XtraEditors.LabelControl labelControlKaynakTl;
@@ -2932,5 +2933,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.TextEdit textEditKarOran;
         private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.ComboBoxEdit textEditKaplanacakMalzeme;
     }
 }
