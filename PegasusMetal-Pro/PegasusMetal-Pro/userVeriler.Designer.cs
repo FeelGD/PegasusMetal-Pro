@@ -56,6 +56,7 @@
             this.VGiderlerBtn.Text = "Giderler\r\n\r\n";
             this.VGiderlerBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.VGiderlerBtn.UseVisualStyleBackColor = true;
+            this.VGiderlerBtn.Click += new System.EventHandler(this.VGiderlerBtn_Click);
             // 
             // VFirmalarBtn
             // 
