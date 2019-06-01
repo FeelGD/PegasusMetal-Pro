@@ -802,13 +802,13 @@
             // textEditParcaAdi
             // 
             this.textEditParcaAdi.EditValue = "";
-            this.textEditParcaAdi.Enabled = false;
             this.textEditParcaAdi.Location = new System.Drawing.Point(113, 59);
             this.textEditParcaAdi.Name = "textEditParcaAdi";
             this.textEditParcaAdi.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditParcaAdi.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.textEditParcaAdi.Properties.Appearance.Options.UseBackColor = true;
             this.textEditParcaAdi.Properties.Appearance.Options.UseFont = true;
+            this.textEditParcaAdi.Properties.ReadOnly = true;
             this.textEditParcaAdi.Size = new System.Drawing.Size(145, 24);
             this.textEditParcaAdi.TabIndex = 63;
             // 
@@ -1215,7 +1215,7 @@
             // 
             // textEditDisAcmaKar
             // 
-            this.textEditDisAcmaKar.EditValue = "";
+            this.textEditDisAcmaKar.EditValue = "0";
             this.textEditDisAcmaKar.Location = new System.Drawing.Point(56, 148);
             this.textEditDisAcmaKar.Name = "textEditDisAcmaKar";
             this.textEditDisAcmaKar.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
@@ -1271,7 +1271,7 @@
             // 
             // textEditSomunSikmaKar
             // 
-            this.textEditSomunSikmaKar.EditValue = "";
+            this.textEditSomunSikmaKar.EditValue = "0";
             this.textEditSomunSikmaKar.Location = new System.Drawing.Point(62, 147);
             this.textEditSomunSikmaKar.Name = "textEditSomunSikmaKar";
             this.textEditSomunSikmaKar.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
@@ -1402,7 +1402,7 @@
             // 
             // textEditTalasli2Kar
             // 
-            this.textEditTalasli2Kar.EditValue = "";
+            this.textEditTalasli2Kar.EditValue = "0";
             this.textEditTalasli2Kar.Location = new System.Drawing.Point(53, 144);
             this.textEditTalasli2Kar.Name = "textEditTalasli2Kar";
             this.textEditTalasli2Kar.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
@@ -1529,7 +1529,7 @@
             // 
             // textEditTalasli1Kar
             // 
-            this.textEditTalasli1Kar.EditValue = "";
+            this.textEditTalasli1Kar.EditValue = "0";
             this.textEditTalasli1Kar.Location = new System.Drawing.Point(50, 144);
             this.textEditTalasli1Kar.Name = "textEditTalasli1Kar";
             this.textEditTalasli1Kar.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
@@ -1630,7 +1630,7 @@
             // 
             // textEditBoyaKar
             // 
-            this.textEditBoyaKar.EditValue = "";
+            this.textEditBoyaKar.EditValue = "0";
             this.textEditBoyaKar.Location = new System.Drawing.Point(56, 145);
             this.textEditBoyaKar.Name = "textEditBoyaKar";
             this.textEditBoyaKar.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
@@ -1712,7 +1712,7 @@
             // 
             // textEditMaskelemeKar
             // 
-            this.textEditMaskelemeKar.EditValue = "";
+            this.textEditMaskelemeKar.EditValue = "0";
             this.textEditMaskelemeKar.Location = new System.Drawing.Point(52, 149);
             this.textEditMaskelemeKar.Name = "textEditMaskelemeKar";
             this.textEditMaskelemeKar.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
@@ -1855,7 +1855,7 @@
             // 
             // textEditMontajKar
             // 
-            this.textEditMontajKar.EditValue = "";
+            this.textEditMontajKar.EditValue = "0";
             this.textEditMontajKar.Location = new System.Drawing.Point(56, 143);
             this.textEditMontajKar.Name = "textEditMontajKar";
             this.textEditMontajKar.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
@@ -1958,7 +1958,7 @@
             // 
             // textEditHavsaAcmaKar
             // 
-            this.textEditHavsaAcmaKar.EditValue = "";
+            this.textEditHavsaAcmaKar.EditValue = "0";
             this.textEditHavsaAcmaKar.Location = new System.Drawing.Point(62, 143);
             this.textEditHavsaAcmaKar.Name = "textEditHavsaAcmaKar";
             this.textEditHavsaAcmaKar.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
@@ -2036,7 +2036,7 @@
             // 
             // textEditKaplamaKar
             // 
-            this.textEditKaplamaKar.EditValue = "";
+            this.textEditKaplamaKar.EditValue = "0";
             this.textEditKaplamaKar.Location = new System.Drawing.Point(53, 141);
             this.textEditKaplamaKar.Name = "textEditKaplamaKar";
             this.textEditKaplamaKar.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
@@ -2048,7 +2048,7 @@
             // 
             // textEditKaplamaParcaAgirligi
             // 
-            this.textEditKaplamaParcaAgirligi.EditValue = "kg V m^2";
+            this.textEditKaplamaParcaAgirligi.EditValue = "";
             this.textEditKaplamaParcaAgirligi.Location = new System.Drawing.Point(117, 86);
             this.textEditKaplamaParcaAgirligi.Name = "textEditKaplamaParcaAgirligi";
             this.textEditKaplamaParcaAgirligi.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
@@ -2139,7 +2139,7 @@
             // 
             // textEditKaynakKar
             // 
-            this.textEditKaynakKar.EditValue = "";
+            this.textEditKaynakKar.EditValue = "0";
             this.textEditKaynakKar.Location = new System.Drawing.Point(50, 144);
             this.textEditKaynakKar.Name = "textEditKaynakKar";
             this.textEditKaynakKar.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
@@ -2217,7 +2217,7 @@
             // 
             // textEditBukumKar
             // 
-            this.textEditBukumKar.EditValue = "";
+            this.textEditBukumKar.EditValue = "0";
             this.textEditBukumKar.Location = new System.Drawing.Point(56, 143);
             this.textEditBukumKar.Name = "textEditBukumKar";
             this.textEditBukumKar.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
@@ -2317,7 +2317,7 @@
             // 
             // textEditLazerKar
             // 
-            this.textEditLazerKar.EditValue = "";
+            this.textEditLazerKar.EditValue = "0";
             this.textEditLazerKar.Location = new System.Drawing.Point(52, 144);
             this.textEditLazerKar.Name = "textEditLazerKar";
             this.textEditLazerKar.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
