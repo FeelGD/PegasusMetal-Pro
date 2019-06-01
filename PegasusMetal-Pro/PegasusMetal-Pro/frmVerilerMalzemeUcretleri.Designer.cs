@@ -98,7 +98,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 41);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(403, 409);
+            this.panel2.Size = new System.Drawing.Size(417, 409);
             this.panel2.TabIndex = 3;
             // 
             // listView1
@@ -112,7 +112,7 @@
             this.listView1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(403, 409);
+            this.listView1.Size = new System.Drawing.Size(417, 409);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -146,9 +146,9 @@
             this.panel3.Controls.Add(this.labelControl3);
             this.panel3.Controls.Add(this.labelControl2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(403, 41);
+            this.panel3.Location = new System.Drawing.Point(417, 41);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(323, 409);
+            this.panel3.Size = new System.Drawing.Size(313, 409);
             this.panel3.TabIndex = 4;
             // 
             // simpleButtonGuncelle
@@ -156,7 +156,7 @@
             this.simpleButtonGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.simpleButtonGuncelle.Appearance.Options.UseFont = true;
             this.simpleButtonGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonGuncelle.ImageOptions.Image")));
-            this.simpleButtonGuncelle.Location = new System.Drawing.Point(20, 285);
+            this.simpleButtonGuncelle.Location = new System.Drawing.Point(14, 283);
             this.simpleButtonGuncelle.Name = "simpleButtonGuncelle";
             this.simpleButtonGuncelle.Size = new System.Drawing.Size(287, 53);
             this.simpleButtonGuncelle.TabIndex = 43;
@@ -168,7 +168,7 @@
             this.simpleButtonKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.simpleButtonKaydet.Appearance.Options.UseFont = true;
             this.simpleButtonKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonKaydet.ImageOptions.Image")));
-            this.simpleButtonKaydet.Location = new System.Drawing.Point(20, 225);
+            this.simpleButtonKaydet.Location = new System.Drawing.Point(14, 223);
             this.simpleButtonKaydet.Name = "simpleButtonKaydet";
             this.simpleButtonKaydet.Size = new System.Drawing.Size(287, 54);
             this.simpleButtonKaydet.TabIndex = 42;
@@ -177,7 +177,7 @@
             // textEditId
             // 
             this.textEditId.Enabled = false;
-            this.textEditId.Location = new System.Drawing.Point(160, 41);
+            this.textEditId.Location = new System.Drawing.Point(154, 39);
             this.textEditId.Name = "textEditId";
             this.textEditId.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditId.Properties.Appearance.Options.UseFont = true;
@@ -188,7 +188,7 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(130, 44);
+            this.labelControl6.Location = new System.Drawing.Point(124, 42);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(24, 21);
             this.labelControl6.TabIndex = 40;
@@ -196,7 +196,7 @@
             // 
             // textEditBirimFiyat
             // 
-            this.textEditBirimFiyat.Location = new System.Drawing.Point(160, 130);
+            this.textEditBirimFiyat.Location = new System.Drawing.Point(154, 128);
             this.textEditBirimFiyat.Name = "textEditBirimFiyat";
             this.textEditBirimFiyat.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditBirimFiyat.Properties.Appearance.Options.UseFont = true;
@@ -207,7 +207,7 @@
             // 
             // textEditMalzemeOzelligi
             // 
-            this.textEditMalzemeOzelligi.Location = new System.Drawing.Point(160, 87);
+            this.textEditMalzemeOzelligi.Location = new System.Drawing.Point(154, 85);
             this.textEditMalzemeOzelligi.Name = "textEditMalzemeOzelligi";
             this.textEditMalzemeOzelligi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditMalzemeOzelligi.Properties.Appearance.Options.UseFont = true;
@@ -218,7 +218,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(37, 135);
+            this.labelControl3.Location = new System.Drawing.Point(31, 133);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(117, 21);
             this.labelControl3.TabIndex = 37;
@@ -228,7 +228,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(53, 90);
+            this.labelControl2.Location = new System.Drawing.Point(47, 88);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(101, 21);
             this.labelControl2.TabIndex = 36;
@@ -248,6 +248,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmVerilerMalzemeUcretleri";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVerilerMalzemeUcretleri";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

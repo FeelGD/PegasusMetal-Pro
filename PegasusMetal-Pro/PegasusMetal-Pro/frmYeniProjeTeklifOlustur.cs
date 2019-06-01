@@ -231,5 +231,11 @@ namespace PegasusMetal_Pro
             Piece piece = Lists.pieces.Where(i => i.Code == comboBoxEditParcaKodu.Text).SingleOrDefault();
             textEditParcaAdi.Text = piece.Name;
         }
+
+        private void simpleButtonParcaKoduEkle_Click(object sender, EventArgs e)
+        {
+            frmParcaKoduEkle frmParcaKoduEkle = new frmParcaKoduEkle();
+            frmParcaKoduEkle.ShowDialog();
+        }
     }
 }
