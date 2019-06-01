@@ -27,7 +27,7 @@ namespace PegasusMetal_Pro
         {
             foreach (var item in Lists.pieces.Where(s => !SearchInListView(s.Id.ToString())))
             {
-                string[] array = { item.Id.ToString(), item.Code, item.Name, item.Quality, item.Width.ToString(), item.Height.ToString(), item.Thickness.ToString(), item.Type,item.WasteRate.ToString(), item.PMCode.ToString() };
+                string[] array = { item.Id.ToString(), item.Code, item.Name, item.Quality, item.Width.ToString(), item.Height.ToString(), item.Thickness.ToString(),item.WasteRate.ToString(), item.PMCode.ToString() };
                 ListViewItem listViewItem = new ListViewItem(array);
                 if (item.Id < listView1.Items.Count)
                 {
@@ -151,8 +151,8 @@ namespace PegasusMetal_Pro
                 textEdit4.Text = item.SubItems[4].Text;
                 textEdit3.Text = item.SubItems[5].Text;
                 textEdit6.Text = item.SubItems[6].Text;
-                textEdit7.Text = item.SubItems[8].Text;
-                textEdit8.Text = item.SubItems[9].Text;
+                textEdit7.Text = item.SubItems[7].Text;
+                textEdit8.Text = item.SubItems[8].Text;
             }
         }
     }

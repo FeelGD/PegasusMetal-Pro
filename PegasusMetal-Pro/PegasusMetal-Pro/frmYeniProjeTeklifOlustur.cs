@@ -55,9 +55,9 @@ namespace PegasusMetal_Pro
 
         private bool SearchInListView(string Id)
         {
-            foreach (ComboBoxItem item in comboBoxEditParcaKodu.Properties.Items)
+            foreach (string item in comboBoxEditParcaKodu.Properties.Items)
             {
-                if ((item.Value).ToString().Trim().Equals(Id.Trim()))
+                if (item.Trim().Equals(Id.Trim()))
                 {
                     return true;
                 }
@@ -229,7 +229,18 @@ namespace PegasusMetal_Pro
         private void ComboBoxEditParcaKodu_SelectedIndexChanged(object sender, EventArgs e)
         {
             Piece piece = Lists.pieces.Where(i => i.Code == comboBoxEditParcaKodu.Text).SingleOrDefault();
+            Material material = Lists.materials.Where(i => i.Name.Trim() == piece.Quality.Trim()).SingleOrDefault();
+            decimal weight = ((decimal)(((decimal)piece.Height * (decimal)piece.Width * 0.8m * (decimal)piece.Thickness) / 100000m));
             textEditParcaAdi.Text = piece.Name;
+            labelControlEn.Text = piece.Width.ToString();
+            labelControlKalinlik.Text = piece.Thickness.ToString();
+            labelControlBoy.Text = piece.Height.ToString();
+            labelControlKalite.Text = piece.Quality;
+            labelControlFireOrani.Text = piece.WasteRate.ToString();
+            labelControlAgirligi.Text = weight.ToString(); // Calculation = Width*Height*0.8*Thickness/100000
+            labelControlAlan.Text = ((decimal)((decimal)piece.Width * (decimal)piece.Height / 1000000m)).ToString();
+            labelControlMaliyet.Text = (weight * material.Price).ToString();
+            labelControlBirimMaliyet.Text = (weight * material.Price).ToString();
         }
     }
 }
