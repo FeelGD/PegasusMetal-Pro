@@ -1,5 +1,7 @@
-﻿using System;
+﻿using DevExpress.XtraEditors.Controls;
+using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -12,11 +14,57 @@ namespace PegasusMetal_Pro
 {
     public partial class frmYeniProjeTeklifOlustur : Form
     {
-        public frmYeniProjeTeklifOlustur()
+        private Project project;
+        private Company company;
+        private frmYeniProjeTeklifOlustur()
         {
             InitializeComponent();
         }
 
+        public frmYeniProjeTeklifOlustur(Project project,Company company)
+        {
+            InitializeComponent();
+            this.project = project;
+            this.company = company;
+            textEditProjeAd.Text = project.Name;
+            textEditMusteriAd.Text = company.Name;
+            comboBoxEditTeklifBicim.Text = "Parça";
+            Lists.pieces.Clear();
+            Lists.pieces.CollectionChanged += CollectionChanged;
+            List<string> data = new List<string>();
+            data.Add(OPCodes.GET_PIECES);
+            WebSocketService.getInstance().Send(data);
+        }
+
+        private void CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            foreach (var item in Lists.pieces.Where(s => !SearchInListView(s.Id.ToString())))
+            {
+                //string[] array = { item.Id.ToString(), item.Code, item.Name, item.Quality, item.Width.ToString(), item.Height.ToString(), item.Thickness.ToString(), item.Type, item.WasteRate.ToString(), item.PMCode.ToString() };
+                //ListViewItem listViewItem = new ListViewItem(array);
+                if (item.Id < comboBoxEditParcaKodu.Properties.Items.Count)
+                {
+                    comboBoxEditParcaKodu.Properties.Items.Insert(item.Id, item.Code);
+                }
+                else
+                {
+                    comboBoxEditParcaKodu.Properties.Items.Add(item.Code);
+                }
+            }
+        }
+
+        private bool SearchInListView(string Id)
+        {
+            foreach (ComboBoxItem item in comboBoxEditParcaKodu.Properties.Items)
+            {
+                if ((item.Value).ToString().Trim().Equals(Id.Trim()))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        #region CheckBox Events
         private void checkEditMontaj_CheckedChanged(object sender, EventArgs e)
         {
             if (checkEditMontaj.Checked==true)
@@ -161,6 +209,7 @@ namespace PegasusMetal_Pro
                 groupBoxDis.Visible = false;
             }
         }
+        #endregion
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -175,6 +224,12 @@ namespace PegasusMetal_Pro
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void ComboBoxEditParcaKodu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Piece piece = Lists.pieces.Where(i => i.Code == comboBoxEditParcaKodu.Text).SingleOrDefault();
+            textEditParcaAdi.Text = piece.Name;
         }
     }
 }
