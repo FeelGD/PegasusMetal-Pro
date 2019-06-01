@@ -228,8 +228,19 @@ namespace PegasusMetal_Pro
 
         private void ComboBoxEditParcaKodu_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Calculate();
+        }
+
+        private void simpleButtonParcaKoduEkle_Click(object sender, EventArgs e)
+        {
+            frmParcaKoduEkle frmParcaKoduEkle = new frmParcaKoduEkle();
+            frmParcaKoduEkle.ShowDialog();
+        }
+
+        private void Calculate()
+        {
             Piece piece = Lists.pieces.Where(i => i.Code == comboBoxEditParcaKodu.Text).SingleOrDefault();
-            if(piece != null)
+            if (piece != null)
             {
                 Material material = Lists.materials.Where(i => i.Name.Trim() == piece.Quality.Trim()).SingleOrDefault();
                 decimal weight = ((decimal)(((decimal)piece.Height * (decimal)piece.Width * 0.8m * (decimal)piece.Thickness) / 100000m));
@@ -259,10 +270,19 @@ namespace PegasusMetal_Pro
             }
         }
 
-        private void simpleButtonParcaKoduEkle_Click(object sender, EventArgs e)
+        private void TextEditAdet_EditValueChanged(object sender, EventArgs e)
         {
-            frmParcaKoduEkle frmParcaKoduEkle = new frmParcaKoduEkle();
-            frmParcaKoduEkle.ShowDialog();
+            if(textEditAdet.Text.Trim() != "")
+            {
+                Calculate();
+                labelControlMaliyet.Text = (Convert.ToDecimal(labelControlMaliyet.Text)*Convert.ToDecimal(textEditAdet.Text)).ToString();
+                labelControlAlan.Text = (Convert.ToDecimal(labelControlAlan.Text) * Convert.ToDecimal(textEditAdet.Text)).ToString();
+                labelControlAgirligi.Text = (Convert.ToDecimal(labelControlAgirligi.Text) * Convert.ToDecimal(textEditAdet.Text)).ToString(); // Calculation = Width*Height*0.8*Thickness/100000
+            }
+            else
+            {
+                Calculate();
+            }
         }
     }
 }
