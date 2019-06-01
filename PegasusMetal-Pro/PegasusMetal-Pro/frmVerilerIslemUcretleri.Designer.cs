@@ -293,11 +293,7 @@
             "Havşa Açma",
             "Diş Açma",
             "Maskeleme Bandı",
-            "Boya",
-            "Talaşlı 1",
-            "Talaşlı 2",
-            "Somun Sıkma",
-            "Montaj"});
+            "Boya"});
             this.textEditIslemAdi.Size = new System.Drawing.Size(147, 26);
             this.textEditIslemAdi.TabIndex = 46;
             // 
