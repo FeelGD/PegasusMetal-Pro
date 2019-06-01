@@ -378,7 +378,7 @@ namespace PegasusMetal_Pro
             float calc = (float)(price * (decimal)value);
             if(textEditBukumKar.Text.Trim() != "")
             {
-                labelControlBukumTl.Text = ((float)((calc / 100) * (100 + int.Parse(textEditLazerKar.Text)))).ToString() + " TL";
+                labelControlBukumTl.Text = ((float)((calc / 100) * (100 + int.Parse(textEditBukumKar.Text)))).ToString() + " TL";
             }
             else
             {
@@ -388,7 +388,7 @@ namespace PegasusMetal_Pro
 
         private void textEditBukumSuresi_TextChanged(object sender, EventArgs e)
         {
-            if (textEditBukumSuresi.Text.Trim() == "" && textEditBukumSuresi.Text.Trim() == "0") return;
+            if (textEditBukumSuresi.Text.Trim() == "" || textEditBukumSuresi.Text.Trim() == "") return;
             textEditBukumAdedi.Text = "0";
             decimal? price = GetPrice(true);
             CalculateBukum(price, int.Parse(textEditBukumSuresi.Text));
@@ -396,7 +396,7 @@ namespace PegasusMetal_Pro
 
         private void textEditBukumAdedi_TextChanged(object sender, EventArgs e)
         {
-            if (textEditBukumAdedi.Text.Trim() == "" && textEditBukumAdedi.Text.Trim() == "0") return;
+            if (textEditBukumAdedi.Text.Trim() == "" || textEditBukumAdedi.Text.Trim() == "") return;
             textEditBukumSuresi.Text = "0";
             decimal? price = GetPrice(false);
             CalculateBukum(price, int.Parse(textEditBukumAdedi.Text));
@@ -473,149 +473,371 @@ namespace PegasusMetal_Pro
             }
         }
 
+        private void CalculateKaynak()
+        {
+            if (textEditKaynakSuresi.Text.Trim() == "0" && textEditKaynakSuresi.Text.Trim() == "")
+            {
+                return;
+            }
+            Process process = Lists.processes.Where(i => i.Name.Trim() == "Kaynak" && i.Property.ToLower() == "Kaynak".ToLower()).SingleOrDefault();
+            float price = (float)(Convert.ToDecimal(textEditKaynakSuresi.Text) * process.MinutePrice);
+            if(textEditKaynakKar.Text.Trim() != "")
+            {
+                labelControlKaynakTl.Text = ((float)((price / 100) * (100 + int.Parse(textEditKaynakKar.Text)))).ToString() + " TL";
+            }
+            else
+            {
+                labelControlKaynakTl.Text = price.ToString() + " TL";
+            }
+        }
+
         private void textEditKaynakSuresi_TextChanged(object sender, EventArgs e)
         {
-
+            CalculateKaynak();
         }
 
         private void textEditKaynakKar_TextChanged(object sender, EventArgs e)
         {
+            CalculateKaynak();
+        }
 
+        private void CalculateKaplama()
+        {
+            if(textEditKaplamaParcaAgirligi.Text.Trim() == ""  || textEditKaplanacakMalzeme.Text.Trim() == "")
+            {
+                return;
+            }
+            Process process = Lists.processes.Where(i => i.Name.ToLower().Contains("Kaplama".ToLower()) && i.Property.Trim() == textEditKaplanacakMalzeme.Text.Trim()).SingleOrDefault();
+            float price = (float)(process.UnitPrice*Convert.ToDecimal(textEditKaplamaParcaAgirligi.Text));
+            if(textEditKaplamaKar.Text.Trim() != "")
+            {
+                labelControlKaplamaTl.Text = ((float)((price / 100) * (100 + int.Parse(textEditKaynakKar.Text)))).ToString() + " TL";
+            }
+            else
+            {
+                labelControlKaplamaTl.Text = price.ToString() + " TL";
+            }
         }
 
         private void textEditKaplamaParcaAgirligi_TextChanged(object sender, EventArgs e)
         {
-
+            CalculateKaplama();
         }
 
         private void textEditKaplamaKar_TextChanged(object sender, EventArgs e)
         {
+            CalculateKaplama();
+        }
 
+        private void CalculateHavsa()
+        {
+            if (textEditHavsaAdedi.Text.Trim() == "")
+            {
+                return;
+            }
+            Process process = Lists.processes.Where(i => i.Name.Trim() == "Havşa Açma" && i.Property.ToLower() == "HAVŞA AÇMA".ToLower()).SingleOrDefault();
+            float price = (float)(Convert.ToDecimal(textEditHavsaAdedi.Text) * process.UnitPrice);
+            if (textEditHavsaAcmaKar.Text.Trim() != "")
+            {
+                labelControlHavsaTl.Text = ((float)((price / 100) * (100 + int.Parse(textEditHavsaAcmaKar.Text)))).ToString() + " TL";
+            }
+            else
+            {
+                labelControlHavsaTl.Text = price.ToString() + " TL";
+            }
         }
 
         private void textEditHavsaAdedi_TextChanged(object sender, EventArgs e)
         {
-
+            CalculateHavsa();
         }
 
         private void textEditHavsaAcmaKar_TextChanged(object sender, EventArgs e)
         {
+            CalculateHavsa();
+        }
 
+        private void CalculateMontaj()
+        {
+            if (textEditMontajIscilik.Text.Trim() == "" || textEditMontajToplamSet.Text.Trim() == "")
+            {
+                return;
+            }
+            float price = (float)(Convert.ToDecimal(textEditMontajToplamSet.Text) * Convert.ToDecimal(textEditMontajIscilik.Text));
+            if(textEditMontajKar.Text.Trim() != "")
+            {
+                labelControlMontajTl.Text = ((float)((price / 100) * (100 + int.Parse(textEditMontajKar.Text)))).ToString() + " TL";
+            }
+            else
+            {
+                labelControlMontajTl.Text = price.ToString() + " TL";
+            }
         }
 
         private void textEditMontajKar_TextChanged(object sender, EventArgs e)
         {
-
+            CalculateMontaj();
         }
 
         private void textEditMontajToplamSet_TextChanged(object sender, EventArgs e)
         {
+            CalculateMontaj();
+        }
 
+        private void textEditMontajIscilik_TextChanged(object sender, EventArgs e)
+        {
+            CalculateMontaj();
+        }
+
+        private void CalculateMaskeleme()
+        {
+            if (textEditMaskelemeIscilikSuresi.Text.Trim() == "" && textEditMaskelemeBantAlani.Text.Trim() == "") return;
+            Process process = radioButtonEbatli.Checked ? Lists.processes.Where(i => i.Name.Trim() == "Maskeleme Bandı" && i.Property.Trim() == "EBATLI").SingleOrDefault() : Lists.processes.Where(i => i.Name.Trim() == "Maskeleme Bandı" && i.Property.Trim() == "EBATSIZ").SingleOrDefault();
+            float price = 0f;
+            if (textEditMaskelemeBantAlani.Text.Trim() != "0" && textEditMaskelemeBantAlani.Text.Trim() != "")
+            {
+                price = (float)(Convert.ToDecimal(textEditMaskelemeBantAlani.Text) * process.UnitPrice);
+            }
+            else if (textEditMaskelemeIscilikSuresi.Text.Trim() != "0" && textEditMaskelemeIscilikSuresi.Text.Trim() != "")
+            {
+                price = (float)(Convert.ToDecimal(textEditMaskelemeIscilikSuresi.Text) * process.MinutePrice);
+            }
+
+            if(textEditMaskelemeKar.Text.Trim() != "")
+            {
+                labelControlMaskelemeTl.Text = ((float)((price / 100) * (100 + int.Parse(textEditMaskelemeKar.Text)))).ToString() + " TL";
+            }
+            else
+            {
+                labelControlMaskelemeTl.Text = price.ToString() + " TL";
+            }
         }
 
         private void textEditMaskelemeIscilikSuresi_TextChanged(object sender, EventArgs e)
         {
-
+            CalculateMaskeleme();
         }
 
         private void textEditMaskelemeBantAlani_TextChanged(object sender, EventArgs e)
         {
-
+            CalculateMaskeleme();
         }
 
         private void textEditMaskelemeKar_TextChanged(object sender, EventArgs e)
         {
+            CalculateMaskeleme();
+        }
 
+        private void CalculateBoya()
+        {
+            if(textEditBoyaParcaAlani.Text.Trim() == "") { return; }
+            Process process=null;
+            if(piece.Thickness <2m)
+            {
+                process = Lists.processes.Where(i => i.Name.Trim() == "Boya" && i.Property.Trim() == "0.8").SingleOrDefault();
+            }
+            else
+            {
+                process = Lists.processes.Where(i => i.Name.Trim() == "Boya" && i.Property.Trim() == "2").SingleOrDefault();
+            }
+            float price = (float)(process.UnitPrice * Convert.ToDecimal(textEditBoyaParcaAlani.Text));
+            if (textEditBoyaKar.Text.Trim() != "")
+            {
+                labelControlBoyaTl.Text = ((float)((price / 100) * (100 + int.Parse(textEditBoyaKar.Text)))).ToString() + " TL";
+            }
+            else
+            {
+                labelControlBoyaTl.Text = price.ToString() + " TL";
+            }
         }
 
         private void textEditBoyaParcaAlani_TextChanged(object sender, EventArgs e)
         {
-
+            CalculateBoya();
         }
 
         private void textEditBoyaKar_TextChanged(object sender, EventArgs e)
         {
+            CalculateBoya();
+        }
 
+        private void CalculateTalasli1()
+        {
+            if (textEditTalasli1Adet.Text.Trim() == "" || textEditTalasli1Fiyat.Text.Trim() == "") { return; }
+            float price = (float)(Convert.ToDecimal(textEditTalasli1Fiyat.Text) * Convert.ToDecimal(textEditTalasli1Adet.Text));
+            if (textEditTalasli1Kar.Text.Trim() != "")
+            {
+                labelControlTalasliTl.Text = ((float)((price / 100) * (100 + int.Parse(textEditTalasli1Kar.Text)))).ToString() + " TL";
+            }
+            else
+            {
+                labelControlTalasliTl.Text = price.ToString() + " TL";
+            }
+        }
+
+        private void CalculateTalasli2()
+        {
+            if (textEditTalasli2Adet.Text.Trim() == "" || textEditTalasli2Fiyat.Text.Trim() == "" || textEditTalasli2Boy.Text.Trim() == "") { return; }
+            float price = (float)(Convert.ToDecimal(textEditTalasli2Fiyat.Text) * Convert.ToDecimal(textEditTalasli2Adet.Text)*Convert.ToDecimal(textEditTalasli2Boy.Text));
+            if (textEditTalasli2Kar.Text.Trim() != "")
+            {
+                labelControlTalasliCapTl.Text = ((float)((price / 100) * (100 + int.Parse(textEditTalasli2Kar.Text)))).ToString() + " TL";
+            }
+            else
+            {
+                labelControlTalasliCapTl.Text = price.ToString() + " TL";
+            }
         }
 
         private void textEditTalasli1Adet_TextChanged(object sender, EventArgs e)
         {
-
+            CalculateTalasli1();
         }
 
         private void textEditTalasli1Fiyat_TextChanged(object sender, EventArgs e)
         {
-
+            CalculateTalasli1();
         }
 
         private void textEditTalasli1Kar_TextChanged(object sender, EventArgs e)
         {
-
+            CalculateTalasli1();
         }
 
         private void textEditTalasli2Adet_TextChanged(object sender, EventArgs e)
         {
-
+            CalculateTalasli2();
         }
 
         private void textEditTalasli2Boy_TextChanged(object sender, EventArgs e)
         {
-
+            CalculateTalasli2();
         }
 
         private void textEditTalasli2Fiyat_TextChanged(object sender, EventArgs e)
         {
-
+            CalculateTalasli2();
         }
 
         private void textEditTalasli2Kar_TextChanged(object sender, EventArgs e)
         {
+            CalculateTalasli2();
+        }
 
+        private void CalculateSomunSikma()
+        {
+            if (textEditSomunSikmaIscilik.Text.Trim() == "" || textEditSomunSikmaSetAdedi.Text.Trim() == "" || textEditSomunSikmaToplamSet.Text.Trim() == "") { return; }
+            float price = (float)(Convert.ToDecimal(textEditSomunSikmaToplamSet.Text) * Convert.ToDecimal(textEditSomunSikmaIscilik.Text) * Convert.ToDecimal(textEditSomunSikmaSetAdedi.Text));
+            if (textEditSomunSikmaKar.Text.Trim() != "")
+            {
+                labelControlSomunTl.Text = ((float)((price / 100) * (100 + int.Parse(textEditSomunSikmaKar.Text)))).ToString() + " TL";
+            }
+            else
+            {
+                labelControlSomunTl.Text = price.ToString() + " TL";
+            }
         }
 
         private void textEditSomunSikmaIscilik_TextChanged(object sender, EventArgs e)
         {
-
+            CalculateSomunSikma();
         }
 
         private void textEditSomunSikmaSetAdedi_TextChanged(object sender, EventArgs e)
         {
-
+            CalculateSomunSikma();
         }
 
         private void textEditSomunSikmaToplamSet_TextChanged(object sender, EventArgs e)
         {
-
+            CalculateSomunSikma();
         }
 
         private void textEditSomunSikmaKar_TextChanged(object sender, EventArgs e)
         {
+            CalculateSomunSikma();
+        }
 
+        private float CalculateDisAcma()
+        {
+            if(textEditDisAdedi.Text.Trim() == "" || textEditDisEbadi.Text.Trim() == "")
+            {
+                return 0f;
+            }
+            decimal disEbadi = Convert.ToDecimal(textEditDisEbadi.Text);
+            decimal? price = 0m;
+            if(disEbadi >= 3 && disEbadi < 6)
+            {
+                price = Lists.processes.Where(i => i.Name.Trim() == "Diş Açma" && i.Property.Trim() == "3").SingleOrDefault().UnitPrice;
+                return (float)(price*Convert.ToDecimal(textEditDisAdedi.Text));
+            }
+            else if (disEbadi >= 6 && disEbadi < 8)
+            {
+                price = Lists.processes.Where(i => i.Name.Trim() == "Diş Açma" && i.Property.Trim() == "6").SingleOrDefault().UnitPrice;
+                return (float)(price * Convert.ToDecimal(textEditDisAdedi.Text));
+            }
+            else if (disEbadi >= 8 && disEbadi <= 16)
+            {
+                price = Lists.processes.Where(i => i.Name.Trim() == "Diş Açma" && i.Property.Trim() == "8").SingleOrDefault().UnitPrice;
+                return (float)(price * Convert.ToDecimal(textEditDisAdedi.Text));
+            }
+            else
+            {
+                price = Lists.processes.Where(i => i.Name.Trim() == "Diş Açma" && i.Property.Trim() == "8").SingleOrDefault().UnitPrice;
+                return (float)(price * Convert.ToDecimal(textEditDisAdedi.Text));
+            }
+        }
+
+        private float CalculateHelicoil()
+        {
+            if (textEditHelicoilAdet.Text.Trim() == "" || textEditHelicoilFiyat.Text.Trim() == "")
+            {
+                return 0f;
+            }
+            return (float)(Convert.ToDecimal(textEditHelicoilFiyat.Text)*Convert.ToDecimal(textEditHelicoilAdet.Text));
+        }
+
+        private void CalculateDisAcmaHelicoilTL()
+        {
+            float price = CalculateHelicoil() + CalculateDisAcma();
+            if (textEditDisAcmaKar.Text.Trim() != "")
+            {
+                labelControlSomunTl.Text = ((float)((price / 100) * (100 + int.Parse(textEditDisAcmaKar.Text)))).ToString() + " TL";
+            }
+            else
+            {
+                labelControlSomunTl.Text = price.ToString() + " TL";
+            }
         }
 
         private void textEditDisAdedi_TextChanged(object sender, EventArgs e)
         {
-
+            CalculateDisAcmaHelicoilTL();
         }
 
         private void textEditDisEbadi_TextChanged(object sender, EventArgs e)
         {
-
+            CalculateDisAcmaHelicoilTL();
         }
 
         private void textEditHelicoilAdet_TextChanged(object sender, EventArgs e)
         {
-
+            CalculateDisAcmaHelicoilTL();
         }
 
         private void textEditHelicoilFiyat_TextChanged(object sender, EventArgs e)
         {
-
+            CalculateDisAcmaHelicoilTL();
         }
 
         private void textEditDisAcmaKar_TextChanged(object sender, EventArgs e)
         {
+            CalculateDisAcmaHelicoilTL();
+        }
 
+        private void TextEditKaplanacakMalzeme_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CalculateKaplama();
         }
     }
 }
