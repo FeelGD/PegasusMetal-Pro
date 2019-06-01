@@ -373,19 +373,104 @@ namespace PegasusMetal_Pro
             CalculateLazer();
         }
 
+        private void CalculateBukum(decimal? price,int value)
+        {
+            float calc = (float)(price * (decimal)value);
+            if(textEditBukumKar.Text.Trim() != "")
+            {
+                labelControlBukumTl.Text = ((float)((calc / 100) * (100 + int.Parse(textEditLazerKar.Text)))).ToString() + " TL";
+            }
+            else
+            {
+                labelControlBukumTl.Text = calc.ToString() + " TL";
+            }
+        }
+
         private void textEditBukumSuresi_TextChanged(object sender, EventArgs e)
         {
-
+            if (textEditBukumSuresi.Text.Trim() == "" && textEditBukumSuresi.Text.Trim() == "0") return;
+            textEditBukumAdedi.Text = "0";
+            decimal? price = GetPrice(true);
+            CalculateBukum(price, int.Parse(textEditBukumSuresi.Text));
         }
 
         private void textEditBukumAdedi_TextChanged(object sender, EventArgs e)
         {
+            if (textEditBukumAdedi.Text.Trim() == "" && textEditBukumAdedi.Text.Trim() == "0") return;
+            textEditBukumSuresi.Text = "0";
+            decimal? price = GetPrice(false);
+            CalculateBukum(price, int.Parse(textEditBukumAdedi.Text));
+        }
 
+        private decimal? GetPrice(bool type)
+        {
+            if(type)
+            {
+                if (piece.Thickness >= 0.8m && piece.Thickness < 1.0m)
+                {
+                    return Lists.processes.Where(i => i.Name == "Büküm" && i.Property == "0.8").SingleOrDefault().MinutePrice;
+                }
+                else if (piece.Thickness >= 1.0m && piece.Thickness < 2.0m)
+                {
+                    return Lists.processes.Where(i => i.Name == "Büküm" && i.Property == "1").SingleOrDefault().MinutePrice;
+                }
+                else if (piece.Thickness >= 2.0m && piece.Thickness < 3.0m)
+                {
+                    return Lists.processes.Where(i => i.Name == "Büküm" && i.Property == "2").SingleOrDefault().MinutePrice;
+                }
+                else if (piece.Thickness >= 3.0m && piece.Thickness < 8.0m)
+                {
+                    return Lists.processes.Where(i => i.Name == "Büküm" && i.Property == "5").SingleOrDefault().MinutePrice;
+                }
+                else if (piece.Thickness >= 8.0m && piece.Thickness <= 10m)
+                {
+                    return Lists.processes.Where(i => i.Name == "Büküm" && i.Property == "10").SingleOrDefault().MinutePrice;
+                }
+                else
+                {
+                    return Lists.processes.Where(i => i.Name == "Büküm" && i.Property == "10").SingleOrDefault().MinutePrice;
+                }
+            }
+            else
+            {
+                if (piece.Thickness >= 0.8m && piece.Thickness < 1.0m)
+                {
+                    return Lists.processes.Where(i => i.Name == "Büküm" && i.Property == "0.8").SingleOrDefault().UnitPrice;
+                }
+                else if (piece.Thickness >= 1.0m && piece.Thickness < 2.0m)
+                {
+                    return Lists.processes.Where(i => i.Name == "Büküm" && i.Property == "1").SingleOrDefault().UnitPrice;
+                }
+                else if (piece.Thickness >= 2.0m && piece.Thickness < 3.0m)
+                {
+                    return Lists.processes.Where(i => i.Name == "Büküm" && i.Property == "2").SingleOrDefault().UnitPrice;
+                }
+                else if (piece.Thickness >= 3.0m && piece.Thickness < 8.0m)
+                {
+                    return Lists.processes.Where(i => i.Name == "Büküm" && i.Property == "5").SingleOrDefault().UnitPrice;
+                }
+                else if (piece.Thickness >= 8.0m && piece.Thickness <= 10m)
+                {
+                    return Lists.processes.Where(i => i.Name == "Büküm" && i.Property == "10").SingleOrDefault().UnitPrice;
+                }
+                else
+                {
+                    return Lists.processes.Where(i => i.Name == "Büküm" && i.Property == "10").SingleOrDefault().UnitPrice;
+                }
+            }
         }
 
         private void textEditBukumKar_TextChanged(object sender, EventArgs e)
         {
-
+            if (textEditBukumAdedi.Text.Trim() == "" && textEditBukumAdedi.Text.Trim() == "0" && textEditBukumSuresi.Text.Trim() == "" && textEditBukumSuresi.Text.Trim() == "0") return;
+            if(textEditBukumSuresi.Text.Trim() != "" && textEditBukumSuresi.Text.Trim() != "0")
+            {
+                CalculateBukum(GetPrice(true), int.Parse(textEditBukumSuresi.Text));
+            }
+            else if(textEditBukumAdedi.Text.Trim() != "" && textEditBukumAdedi.Text.Trim() != "0")
+            {
+                CalculateBukum(GetPrice(false), int.Parse(textEditBukumAdedi.Text));
+            }
         }
 
         private void textEditKaynakSuresi_TextChanged(object sender, EventArgs e)
