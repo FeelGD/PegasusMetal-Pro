@@ -38,28 +38,25 @@
             this.labelControl51 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl52 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButtonParcaKoduEkle = new DevExpress.XtraEditors.SimpleButton();
-            this.textEditCins = new DevExpress.XtraEditors.TextEdit();
-            this.textEditKalite = new DevExpress.XtraEditors.TextEdit();
             this.texteditKalinlik = new DevExpress.XtraEditors.TextEdit();
             this.textEditBoy = new DevExpress.XtraEditors.TextEdit();
             this.textEditEn = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.textEditParcaKodu = new DevExpress.XtraEditors.TextEdit();
+            this.textEditKalite = new DevExpress.XtraEditors.ComboBoxEdit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditParcaAdi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditCins.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditKalite.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.texteditKalinlik.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditBoy.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditEn.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditParcaKodu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditKalite.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -100,18 +97,18 @@
             // 
             // textEdit2
             // 
-            this.textEdit2.Location = new System.Drawing.Point(312, 180);
+            this.textEdit2.Location = new System.Drawing.Point(112, 180);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Size = new System.Drawing.Size(88, 28);
+            this.textEdit2.Size = new System.Drawing.Size(75, 28);
             this.textEdit2.TabIndex = 38;
             // 
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(229, 187);
+            this.labelControl3.Location = new System.Drawing.Point(29, 187);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(77, 21);
             this.labelControl3.TabIndex = 37;
@@ -157,24 +154,7 @@
             this.simpleButtonParcaKoduEkle.Size = new System.Drawing.Size(182, 37);
             this.simpleButtonParcaKoduEkle.TabIndex = 32;
             this.simpleButtonParcaKoduEkle.Text = "Parça Kodu Ekle";
-            // 
-            // textEditCins
-            // 
-            this.textEditCins.Location = new System.Drawing.Point(112, 180);
-            this.textEditCins.Name = "textEditCins";
-            this.textEditCins.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textEditCins.Properties.Appearance.Options.UseFont = true;
-            this.textEditCins.Size = new System.Drawing.Size(75, 28);
-            this.textEditCins.TabIndex = 31;
-            // 
-            // textEditKalite
-            // 
-            this.textEditKalite.Location = new System.Drawing.Point(312, 146);
-            this.textEditKalite.Name = "textEditKalite";
-            this.textEditKalite.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textEditKalite.Properties.Appearance.Options.UseFont = true;
-            this.textEditKalite.Size = new System.Drawing.Size(88, 28);
-            this.textEditKalite.TabIndex = 30;
+            this.simpleButtonParcaKoduEkle.Click += new System.EventHandler(this.simpleButtonParcaKoduEkle_Click);
             // 
             // texteditKalinlik
             // 
@@ -212,16 +192,6 @@
             this.labelControl9.Size = new System.Drawing.Size(47, 21);
             this.labelControl9.TabIndex = 26;
             this.labelControl9.Text = "Kalite:";
-            // 
-            // labelControl8
-            // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(70, 187);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(36, 21);
-            this.labelControl8.TabIndex = 25;
-            this.labelControl8.Text = "Cins:";
             // 
             // labelControl7
             // 
@@ -262,6 +232,25 @@
             this.textEditParcaKodu.Size = new System.Drawing.Size(75, 28);
             this.textEditParcaKodu.TabIndex = 35;
             // 
+            // textEditKalite
+            // 
+            this.textEditKalite.EditValue = "";
+            this.textEditKalite.Location = new System.Drawing.Point(312, 151);
+            this.textEditKalite.Name = "textEditKalite";
+            this.textEditKalite.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
+            this.textEditKalite.Properties.Appearance.Options.UseFont = true;
+            this.textEditKalite.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textEditKalite.Properties.DropDownRows = 5;
+            this.textEditKalite.Properties.Items.AddRange(new object[] {
+            "DKP",
+            "HRP",
+            "SYH",
+            "PSL",
+            "ALÜ"});
+            this.textEditKalite.Size = new System.Drawing.Size(88, 26);
+            this.textEditKalite.TabIndex = 77;
+            // 
             // frmParcaKoduEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -270,19 +259,17 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(425, 314);
+            this.Controls.Add(this.textEditKalite);
             this.Controls.Add(this.textEdit2);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.textEditParcaAdi);
             this.Controls.Add(this.labelControl51);
             this.Controls.Add(this.labelControl52);
             this.Controls.Add(this.simpleButtonParcaKoduEkle);
-            this.Controls.Add(this.textEditCins);
-            this.Controls.Add(this.textEditKalite);
             this.Controls.Add(this.texteditKalinlik);
             this.Controls.Add(this.textEditBoy);
             this.Controls.Add(this.textEditEn);
             this.Controls.Add(this.labelControl9);
-            this.Controls.Add(this.labelControl8);
             this.Controls.Add(this.labelControl7);
             this.Controls.Add(this.labelControl6);
             this.Controls.Add(this.labelControl5);
@@ -298,12 +285,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditParcaAdi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditCins.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditKalite.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.texteditKalinlik.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditBoy.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditEn.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditParcaKodu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditKalite.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,16 +306,14 @@
         private DevExpress.XtraEditors.LabelControl labelControl51;
         private DevExpress.XtraEditors.LabelControl labelControl52;
         private DevExpress.XtraEditors.SimpleButton simpleButtonParcaKoduEkle;
-        private DevExpress.XtraEditors.TextEdit textEditCins;
-        private DevExpress.XtraEditors.TextEdit textEditKalite;
         private DevExpress.XtraEditors.TextEdit texteditKalinlik;
         private DevExpress.XtraEditors.TextEdit textEditBoy;
         private DevExpress.XtraEditors.TextEdit textEditEn;
         private DevExpress.XtraEditors.LabelControl labelControl9;
-        private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.TextEdit textEditParcaKodu;
+        private DevExpress.XtraEditors.ComboBoxEdit textEditKalite;
     }
 }

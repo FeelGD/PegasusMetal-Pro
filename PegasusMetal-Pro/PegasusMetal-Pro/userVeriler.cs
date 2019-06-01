@@ -17,6 +17,7 @@ namespace PegasusMetal_Pro
         frmVerilerStok frmVerilerStok;
         frmVerilerMalzemeUcretleri frmVerilerMalzemeUcretleri;
         frmVerilerParcaKodlari frmVerilerParcaKodlari;
+        frmVerilerGelirGider frmVerilerGelirGider;
         public userVeriler()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace PegasusMetal_Pro
             frmVerilerStok = new frmVerilerStok();
             frmVerilerMalzemeUcretleri = new frmVerilerMalzemeUcretleri();
             frmVerilerParcaKodlari = new frmVerilerParcaKodlari();
+            frmVerilerGelirGider = new frmVerilerGelirGider();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -50,6 +52,11 @@ namespace PegasusMetal_Pro
         private void button7_Click(object sender, EventArgs e)
         {
             frmVerilerParcaKodlari.ShowDialog();
+        }
+
+        private void VGiderlerBtn_Click(object sender, EventArgs e)
+        {
+            frmVerilerGelirGider.ShowDialog();
         }
     }
 }

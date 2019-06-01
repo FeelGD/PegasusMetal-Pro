@@ -251,6 +251,18 @@
     <Compile Include="frmVerilerFirmalar.Designer.cs">
       <DependentUpon>frmVerilerFirmalar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVerilerGelirGider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerilerGelirGider.Designer.cs">
+      <DependentUpon>frmVerilerGelirGider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerilerIslemUcretleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerilerIslemUcretleri.Designer.cs">
+      <DependentUpon>frmVerilerIslemUcretleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVerilerMalzemeUcretleri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -438,6 +450,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmVerilerFirmalar.resx">
       <DependentUpon>frmVerilerFirmalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerilerGelirGider.resx">
+      <DependentUpon>frmVerilerGelirGider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerilerIslemUcretleri.resx">
+      <DependentUpon>frmVerilerIslemUcretleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVerilerMalzemeUcretleri.resx">
       <DependentUpon>frmVerilerMalzemeUcretleri.cs</DependentUpon>

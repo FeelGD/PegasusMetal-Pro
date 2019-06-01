@@ -70,7 +70,6 @@ namespace PegasusMetal_Pro
                     Quality = textEdit2.Text,
                     Height = int.Parse(textEdit3.Text),
                     Width = int.Parse(textEdit4.Text),
-                    Type = textEdit5.Text,
                     Thickness = Convert.ToDecimal(textEdit6.Text),
                     WasteRate = Convert.ToDecimal(textEdit7.Text),
                     PMCode = int.Parse(textEdit8.Text)
@@ -82,9 +81,8 @@ namespace PegasusMetal_Pro
                 listView1.Items[listView1.SelectedIndices[0]].SubItems[4].Text = textEdit4.Text;
                 listView1.Items[listView1.SelectedIndices[0]].SubItems[5].Text = textEdit3.Text;
                 listView1.Items[listView1.SelectedIndices[0]].SubItems[6].Text = textEdit6.Text;
-                listView1.Items[listView1.SelectedIndices[0]].SubItems[7].Text = textEdit5.Text;
-                listView1.Items[listView1.SelectedIndices[0]].SubItems[8].Text = textEdit7.Text;
-                listView1.Items[listView1.SelectedIndices[0]].SubItems[9].Text = textEdit8.Text;
+                listView1.Items[listView1.SelectedIndices[0]].SubItems[7].Text = textEdit7.Text;
+                listView1.Items[listView1.SelectedIndices[0]].SubItems[8].Text = textEdit8.Text;
                 foreach (var item in Lists.pieces.ToList())
                 {
                     if (item.Id == int.Parse(textEdit9.Text))
@@ -110,11 +108,9 @@ namespace PegasusMetal_Pro
             textEdit2.Text = "";
             textEdit3.Text = "";
             textEdit4.Text = "";
-            textEdit5.Text = "";
             textEdit6.Text = "";
             textEdit7.Text = "";
             textEdit8.Text = "";
-            textEdit9.Text = "";
             textEditId.Text = "";
         }
 
@@ -128,7 +124,6 @@ namespace PegasusMetal_Pro
                 Quality = textEdit2.Text,
                 Height = int.Parse(textEdit3.Text),
                 Width = int.Parse(textEdit4.Text),
-                Type = textEdit5.Text,
                 Thickness = Convert.ToDecimal(textEdit6.Text),
                 WasteRate = Convert.ToDecimal(textEdit7.Text),
                 PMCode = -1
@@ -156,7 +151,6 @@ namespace PegasusMetal_Pro
                 textEdit4.Text = item.SubItems[4].Text;
                 textEdit3.Text = item.SubItems[5].Text;
                 textEdit6.Text = item.SubItems[6].Text;
-                textEdit5.Text = item.SubItems[7].Text;
                 textEdit7.Text = item.SubItems[8].Text;
                 textEdit8.Text = item.SubItems[9].Text;
             }

@@ -67,6 +67,8 @@
             this.checkEditBukum = new DevExpress.XtraEditors.CheckEdit();
             this.checkEditLazer = new DevExpress.XtraEditors.CheckEdit();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.labelControlAlan = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl34 = new DevExpress.XtraEditors.LabelControl();
             this.labelControlAgirligi = new DevExpress.XtraEditors.LabelControl();
             this.labelControl42 = new DevExpress.XtraEditors.LabelControl();
             this.textEditParcaAdi = new DevExpress.XtraEditors.TextEdit();
@@ -177,8 +179,8 @@
             this.labelControl51 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
             this.labelControlKaplamaTl = new DevExpress.XtraEditors.LabelControl();
-            this.textEditKaplanacakMalzeme = new DevExpress.XtraEditors.TextEdit();
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
+            this.textEditKaplanacakMalzeme = new DevExpress.XtraEditors.ComboBoxEdit();
             this.groupBoxKaynak = new System.Windows.Forms.GroupBox();
             this.textEditKaynakKar = new DevExpress.XtraEditors.TextEdit();
             this.labelControlKaynakTl = new DevExpress.XtraEditors.LabelControl();
@@ -730,6 +732,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.labelControlAlan);
+            this.groupBox2.Controls.Add(this.labelControl34);
             this.groupBox2.Controls.Add(this.labelControlAgirligi);
             this.groupBox2.Controls.Add(this.labelControl42);
             this.groupBox2.Controls.Add(this.textEditParcaAdi);
@@ -762,6 +766,26 @@
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Malzeme Bilgileri";
+            // 
+            // labelControlAlan
+            // 
+            this.labelControlAlan.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControlAlan.Appearance.Options.UseFont = true;
+            this.labelControlAlan.Location = new System.Drawing.Point(314, 168);
+            this.labelControlAlan.Name = "labelControlAlan";
+            this.labelControlAlan.Size = new System.Drawing.Size(30, 17);
+            this.labelControlAlan.TabIndex = 67;
+            this.labelControlAlan.Text = "Alan:";
+            // 
+            // labelControl34
+            // 
+            this.labelControl34.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl34.Appearance.Options.UseFont = true;
+            this.labelControl34.Location = new System.Drawing.Point(273, 167);
+            this.labelControl34.Name = "labelControl34";
+            this.labelControl34.Size = new System.Drawing.Size(30, 17);
+            this.labelControl34.TabIndex = 66;
+            this.labelControl34.Text = "Alan:";
             // 
             // labelControlAgirligi
             // 
@@ -1383,6 +1407,8 @@
             this.textEditSomunSikmaIscilik.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditSomunSikmaIscilik.Properties.Appearance.Options.UseBackColor = true;
             this.textEditSomunSikmaIscilik.Properties.Appearance.Options.UseFont = true;
+            this.textEditSomunSikmaIscilik.Properties.Mask.EditMask = "n2";
+            this.textEditSomunSikmaIscilik.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.textEditSomunSikmaIscilik.Size = new System.Drawing.Size(100, 24);
             this.textEditSomunSikmaIscilik.TabIndex = 35;
             // 
@@ -1404,11 +1430,11 @@
             this.labelControl44.Appearance.ForeColor = System.Drawing.SystemColors.Control;
             this.labelControl44.Appearance.Options.UseFont = true;
             this.labelControl44.Appearance.Options.UseForeColor = true;
-            this.labelControl44.Location = new System.Drawing.Point(72, 57);
+            this.labelControl44.Location = new System.Drawing.Point(32, 57);
             this.labelControl44.Name = "labelControl44";
-            this.labelControl44.Size = new System.Drawing.Size(36, 17);
+            this.labelControl44.Size = new System.Drawing.Size(76, 17);
             this.labelControl44.TabIndex = 33;
-            this.labelControl44.Text = "İşçilik:";
+            this.labelControl44.Text = "İşçilik Ücreti:";
             // 
             // groupBoxT2
             // 
@@ -1941,6 +1967,8 @@
             this.textEditMontajIscilik.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditMontajIscilik.Properties.Appearance.Options.UseBackColor = true;
             this.textEditMontajIscilik.Properties.Appearance.Options.UseFont = true;
+            this.textEditMontajIscilik.Properties.Mask.EditMask = "n2";
+            this.textEditMontajIscilik.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.textEditMontajIscilik.Size = new System.Drawing.Size(100, 24);
             this.textEditMontajIscilik.TabIndex = 37;
             // 
@@ -1950,7 +1978,7 @@
             this.labelControl46.Appearance.ForeColor = System.Drawing.SystemColors.Control;
             this.labelControl46.Appearance.Options.UseFont = true;
             this.labelControl46.Appearance.Options.UseForeColor = true;
-            this.labelControl46.Location = new System.Drawing.Point(9, 74);
+            this.labelControl46.Location = new System.Drawing.Point(10, 74);
             this.labelControl46.Name = "labelControl46";
             this.labelControl46.Size = new System.Drawing.Size(75, 17);
             this.labelControl46.TabIndex = 36;
@@ -1964,9 +1992,9 @@
             this.labelControl47.Appearance.Options.UseForeColor = true;
             this.labelControl47.Location = new System.Drawing.Point(9, 48);
             this.labelControl47.Name = "labelControl47";
-            this.labelControl47.Size = new System.Drawing.Size(36, 17);
+            this.labelControl47.Size = new System.Drawing.Size(76, 17);
             this.labelControl47.TabIndex = 35;
-            this.labelControl47.Text = "İşçilik:";
+            this.labelControl47.Text = "İşçilik Ücreti:";
             // 
             // groupBoxHavsa
             // 
@@ -2052,8 +2080,8 @@
             this.groupBoxKaplama.Controls.Add(this.labelControl51);
             this.groupBoxKaplama.Controls.Add(this.labelControl22);
             this.groupBoxKaplama.Controls.Add(this.labelControlKaplamaTl);
-            this.groupBoxKaplama.Controls.Add(this.textEditKaplanacakMalzeme);
             this.groupBoxKaplama.Controls.Add(this.labelControl23);
+            this.groupBoxKaplama.Controls.Add(this.textEditKaplanacakMalzeme);
             this.groupBoxKaplama.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBoxKaplama.Location = new System.Drawing.Point(720, 0);
             this.groupBoxKaplama.Name = "groupBoxKaplama";
@@ -2123,18 +2151,6 @@
             this.labelControlKaplamaTl.TabIndex = 15;
             this.labelControlKaplamaTl.Text = "..... TL";
             // 
-            // textEditKaplanacakMalzeme
-            // 
-            this.textEditKaplanacakMalzeme.EditValue = "";
-            this.textEditKaplanacakMalzeme.Location = new System.Drawing.Point(117, 43);
-            this.textEditKaplanacakMalzeme.Name = "textEditKaplanacakMalzeme";
-            this.textEditKaplanacakMalzeme.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
-            this.textEditKaplanacakMalzeme.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.textEditKaplanacakMalzeme.Properties.Appearance.Options.UseBackColor = true;
-            this.textEditKaplanacakMalzeme.Properties.Appearance.Options.UseFont = true;
-            this.textEditKaplanacakMalzeme.Size = new System.Drawing.Size(100, 24);
-            this.textEditKaplanacakMalzeme.TabIndex = 14;
-            // 
             // labelControl23
             // 
             this.labelControl23.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2146,6 +2162,20 @@
             this.labelControl23.Size = new System.Drawing.Size(79, 34);
             this.labelControl23.TabIndex = 13;
             this.labelControl23.Text = "Kaplanacak \r\nMalzeme:";
+            // 
+            // textEditKaplanacakMalzeme
+            // 
+            this.textEditKaplanacakMalzeme.EditValue = "dbden çekicez";
+            this.textEditKaplanacakMalzeme.Location = new System.Drawing.Point(117, 43);
+            this.textEditKaplanacakMalzeme.Name = "textEditKaplanacakMalzeme";
+            this.textEditKaplanacakMalzeme.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
+            this.textEditKaplanacakMalzeme.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.textEditKaplanacakMalzeme.Properties.Appearance.Options.UseBackColor = true;
+            this.textEditKaplanacakMalzeme.Properties.Appearance.Options.UseFont = true;
+            this.textEditKaplanacakMalzeme.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textEditKaplanacakMalzeme.Size = new System.Drawing.Size(100, 24);
+            this.textEditKaplanacakMalzeme.TabIndex = 14;
             // 
             // groupBoxKaynak
             // 
@@ -2894,7 +2924,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl51;
         private DevExpress.XtraEditors.LabelControl labelControl22;
         private DevExpress.XtraEditors.LabelControl labelControlKaplamaTl;
-        private DevExpress.XtraEditors.TextEdit textEditKaplanacakMalzeme;
         private DevExpress.XtraEditors.LabelControl labelControl23;
         private DevExpress.XtraEditors.TextEdit textEditKaynakKar;
         private DevExpress.XtraEditors.LabelControl labelControlKaynakTl;
@@ -2932,5 +2961,8 @@
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.TextEdit textEditKarOran;
         private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.ComboBoxEdit textEditKaplanacakMalzeme;
+        private DevExpress.XtraEditors.LabelControl labelControlAlan;
+        private DevExpress.XtraEditors.LabelControl labelControl34;
     }
 }
