@@ -372,5 +372,165 @@ namespace PegasusMetal_Pro
         {
             CalculateLazer();
         }
+
+        private void textEditBukumSuresi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditBukumAdedi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditBukumKar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditKaynakSuresi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditKaynakKar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditKaplamaParcaAgirligi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditKaplamaKar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditHavsaAdedi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditHavsaAcmaKar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditMontajKar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditMontajToplamSet_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditMaskelemeIscilikSuresi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditMaskelemeBantAlani_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditMaskelemeKar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditBoyaParcaAlani_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditBoyaKar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditTalasli1Adet_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditTalasli1Fiyat_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditTalasli1Kar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditTalasli2Adet_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditTalasli2Boy_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditTalasli2Fiyat_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditTalasli2Kar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditSomunSikmaIscilik_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditSomunSikmaSetAdedi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditSomunSikmaToplamSet_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditSomunSikmaKar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditDisAdedi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditDisEbadi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditHelicoilAdet_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditHelicoilFiyat_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEditDisAcmaKar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
