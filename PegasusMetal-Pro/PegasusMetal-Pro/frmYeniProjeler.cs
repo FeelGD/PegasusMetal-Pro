@@ -84,6 +84,10 @@ namespace PegasusMetal_Pro
             Project project = Lists.projects.Where(i => i.Id == int.Parse(listView1.SelectedItems[0].SubItems[0].Text)).SingleOrDefault();
             Company company = Lists.companies.Where(i => i.Id == project.CompanyId).SingleOrDefault();
             frmYeniProjeTeklifOlustur projeyeTeklifOlustur = new frmYeniProjeTeklifOlustur(project,company);
+            while(projeyeTeklifOlustur == null)
+            {
+
+            }
             projeyeTeklifOlustur.ShowDialog();
         }
 

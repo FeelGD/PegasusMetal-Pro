@@ -40,6 +40,7 @@
             this.BirimFiyat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DakikaFiyat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.simpleButtonKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.textEditDakikaFiyati = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.textEditBirimFiyati = new DevExpress.XtraEditors.TextEdit();
@@ -51,7 +52,6 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.textEditIslemAdi = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.simpleButtonKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -126,6 +126,7 @@
             this.listView1.TabIndex = 3;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.ListView1_SelectedIndexChanged);
             // 
             // Id
             // 
@@ -173,10 +174,25 @@
             this.panel3.Size = new System.Drawing.Size(343, 549);
             this.panel3.TabIndex = 5;
             // 
+            // simpleButtonKaydet
+            // 
+            this.simpleButtonKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.simpleButtonKaydet.Appearance.Options.UseFont = true;
+            this.simpleButtonKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonKaydet.ImageOptions.Image")));
+            this.simpleButtonKaydet.Location = new System.Drawing.Point(23, 339);
+            this.simpleButtonKaydet.Name = "simpleButtonKaydet";
+            this.simpleButtonKaydet.Size = new System.Drawing.Size(288, 54);
+            this.simpleButtonKaydet.TabIndex = 65;
+            this.simpleButtonKaydet.Text = "İŞLEMİ KAYDET";
+            this.simpleButtonKaydet.Click += new System.EventHandler(this.simpleButtonKaydet_Click);
+            // 
             // textEditDakikaFiyati
             // 
             this.textEditDakikaFiyati.Location = new System.Drawing.Point(161, 220);
             this.textEditDakikaFiyati.Name = "textEditDakikaFiyati";
+            // 
+            // 
+            // 
             this.textEditDakikaFiyati.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditDakikaFiyati.Properties.Appearance.Options.UseFont = true;
             this.textEditDakikaFiyati.Properties.Mask.EditMask = "n2";
@@ -198,6 +214,9 @@
             // 
             this.textEditBirimFiyati.Location = new System.Drawing.Point(161, 172);
             this.textEditBirimFiyati.Name = "textEditBirimFiyati";
+            // 
+            // 
+            // 
             this.textEditBirimFiyati.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditBirimFiyati.Properties.Appearance.Options.UseFont = true;
             this.textEditBirimFiyati.Properties.Mask.EditMask = "n2";
@@ -225,12 +244,16 @@
             this.simpleButtonGuncelle.Size = new System.Drawing.Size(287, 53);
             this.simpleButtonGuncelle.TabIndex = 51;
             this.simpleButtonGuncelle.Text = "İŞLEMİ GÜNCELLE";
+            this.simpleButtonGuncelle.Click += new System.EventHandler(this.simpleButtonGuncelle_Click);
             // 
             // textEditId
             // 
             this.textEditId.Enabled = false;
             this.textEditId.Location = new System.Drawing.Point(161, 37);
             this.textEditId.Name = "textEditId";
+            // 
+            // 
+            // 
             this.textEditId.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditId.Properties.Appearance.Options.UseFont = true;
             this.textEditId.Size = new System.Drawing.Size(147, 26);
@@ -250,6 +273,9 @@
             // 
             this.textEditMalzemeOzelligi.Location = new System.Drawing.Point(161, 126);
             this.textEditMalzemeOzelligi.Name = "textEditMalzemeOzelligi";
+            // 
+            // 
+            // 
             this.textEditMalzemeOzelligi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditMalzemeOzelligi.Properties.Appearance.Options.UseFont = true;
             this.textEditMalzemeOzelligi.Properties.Mask.EditMask = "n2";
@@ -281,6 +307,9 @@
             // 
             this.textEditIslemAdi.Location = new System.Drawing.Point(161, 83);
             this.textEditIslemAdi.Name = "textEditIslemAdi";
+            // 
+            // 
+            // 
             this.textEditIslemAdi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditIslemAdi.Properties.Appearance.Options.UseFont = true;
             this.textEditIslemAdi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -296,17 +325,6 @@
             "Boya"});
             this.textEditIslemAdi.Size = new System.Drawing.Size(147, 26);
             this.textEditIslemAdi.TabIndex = 46;
-            // 
-            // simpleButtonKaydet
-            // 
-            this.simpleButtonKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.simpleButtonKaydet.Appearance.Options.UseFont = true;
-            this.simpleButtonKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonKaydet.ImageOptions.Image")));
-            this.simpleButtonKaydet.Location = new System.Drawing.Point(23, 339);
-            this.simpleButtonKaydet.Name = "simpleButtonKaydet";
-            this.simpleButtonKaydet.Size = new System.Drawing.Size(288, 54);
-            this.simpleButtonKaydet.TabIndex = 65;
-            this.simpleButtonKaydet.Text = "İŞLEMİ KAYDET";
             // 
             // frmVerilerIslemUcretleri
             // 

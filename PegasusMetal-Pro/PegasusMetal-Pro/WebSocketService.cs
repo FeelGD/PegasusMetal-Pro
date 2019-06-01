@@ -120,6 +120,10 @@ namespace PegasusMetal_Pro
                     var project = JsonConvert.DeserializeObject<Project>(body);
                     Lists.projects.Add(project);
                     break;
+                case OPCodes.PROCESS:
+                    var process = JsonConvert.DeserializeObject<Process>(body);
+                    Lists.processes.Add(process);
+                    break;
                 default:
                     break;
             }

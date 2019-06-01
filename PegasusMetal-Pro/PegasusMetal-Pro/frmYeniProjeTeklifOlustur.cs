@@ -16,6 +16,9 @@ namespace PegasusMetal_Pro
     {
         private Project project;
         private Company company;
+        private Piece piece;
+        private Material material;
+        private object lock_object = new object();
         private frmYeniProjeTeklifOlustur()
         {
             InitializeComponent();
@@ -34,23 +37,80 @@ namespace PegasusMetal_Pro
             List<string> data = new List<string>();
             data.Add(OPCodes.GET_PIECES);
             WebSocketService.getInstance().Send(data);
+            Lists.processes.Clear();
+            Lists.processes.CollectionChanged += KaplamaCollectionChanged;
+            data.Clear();
+            data.Add(OPCodes.GET_PROCESSES);
+            WebSocketService.getInstance().Send(data);
+        }
+
+        private void KaplamaCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            foreach (var item in Lists.processes.Where(s => !SearchKaplama(s.Property.ToString()) && s.Name.Contains("Kaplama")))
+            {
+                if (item.Id < textEditKaplanacakMalzeme.Properties.Items.Count)
+                {
+                    
+                    var t2 = new Task(() =>
+                    {
+                        lock (lock_object)
+                        {
+                            if(!SearchKaplama(item.Property))
+                            {
+                                textEditKaplanacakMalzeme.Properties.Items.Insert(item.Id, item.Property);
+                            }
+                        }
+                    });
+                    t2.Start();
+                }
+                else
+                {
+                    var t2 = new Task(() => 
+                    {
+                        lock (lock_object)
+                        {
+                            if (!SearchKaplama(item.Property))
+                            {
+                                textEditKaplanacakMalzeme.Properties.Items.Add(item.Property);
+                            }
+                        }
+                    });
+                    t2.Start();
+                }
+            }
         }
 
         private void CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
-            foreach (var item in Lists.pieces.Where(s => !SearchInListView(s.Id.ToString())))
+            foreach (var item in Lists.pieces.Where(s => !SearchInListView(s.Code.ToString())))
             {
-                //string[] array = { item.Id.ToString(), item.Code, item.Name, item.Quality, item.Width.ToString(), item.Height.ToString(), item.Thickness.ToString(), item.Type, item.WasteRate.ToString(), item.PMCode.ToString() };
-                //ListViewItem listViewItem = new ListViewItem(array);
                 if (item.Id < comboBoxEditParcaKodu.Properties.Items.Count)
                 {
-                    comboBoxEditParcaKodu.Properties.Items.Insert(item.Id, item.Code);
+                    if(!SearchInListView(item.Code))
+                    {
+                        comboBoxEditParcaKodu.Properties.Items.Insert(item.Id, item.Code);
+                    }
                 }
                 else
                 {
-                    comboBoxEditParcaKodu.Properties.Items.Add(item.Code);
+                    if(!SearchInListView(item.Code))
+                    {
+                        comboBoxEditParcaKodu.Properties.Items.Add(item.Code);
+                    }
                 }
             }
+        }
+
+        private bool SearchKaplama(string Id)
+        {
+            foreach (string item in textEditKaplanacakMalzeme.Properties.Items)
+            {
+                if (item.Trim().Equals(Id.Trim()))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         private bool SearchInListView(string Id)
@@ -239,10 +299,10 @@ namespace PegasusMetal_Pro
 
         private void Calculate()
         {
-            Piece piece = Lists.pieces.Where(i => i.Code == comboBoxEditParcaKodu.Text).SingleOrDefault();
+            piece = Lists.pieces.Where(i => i.Code == comboBoxEditParcaKodu.Text).SingleOrDefault();
             if (piece != null)
             {
-                Material material = Lists.materials.Where(i => i.Name.Trim() == piece.Quality.Trim()).SingleOrDefault();
+                material = Lists.materials.Where(i => i.Name.Trim() == piece.Quality.Trim()).SingleOrDefault();
                 decimal weight = ((decimal)(((decimal)piece.Height * (decimal)piece.Width * 0.8m * (decimal)piece.Thickness) / 100000m));
                 textEditParcaAdi.Text = piece.Name;
                 labelControlEn.Text = piece.Width.ToString();
@@ -283,6 +343,34 @@ namespace PegasusMetal_Pro
             {
                 Calculate();
             }
+        }
+
+        private void CalculateLazer()
+        {
+            if (textEditKesimSuresi.Text.Trim() == "" || textEditKesimSuresi.Text.Trim() == "0")
+            {
+                labelControlLazerTl.Text = "0" + " TL";
+                return;
+            }
+            float price = ((float)(material.Price * Convert.ToDecimal(textEditKesimSuresi.Text)));
+            if (textEditLazerKar.Text.Trim() != "")
+            {
+                labelControlLazerTl.Text = ((float)((price / 100) * (100 + int.Parse(textEditLazerKar.Text)))).ToString() + " TL";
+            }
+            else
+            {
+                labelControlLazerTl.Text = price.ToString() + " TL";
+            }
+        }
+
+        private void TextEditKesimSuresi_TextChanged(object sender, EventArgs e)
+        {
+            CalculateLazer();
+        }
+
+        private void TextEditLazerKar_TextChanged(object sender, EventArgs e)
+        {
+            CalculateLazer();
         }
     }
 }
