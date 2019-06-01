@@ -200,7 +200,7 @@
             this.textEditBirimFiyat.Name = "textEditBirimFiyat";
             this.textEditBirimFiyat.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditBirimFiyat.Properties.Appearance.Options.UseFont = true;
-            this.textEditBirimFiyat.Properties.Mask.EditMask = "n2";
+            this.textEditBirimFiyat.Properties.Mask.EditMask = "f2";
             this.textEditBirimFiyat.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.textEditBirimFiyat.Size = new System.Drawing.Size(147, 26);
             this.textEditBirimFiyat.TabIndex = 39;
