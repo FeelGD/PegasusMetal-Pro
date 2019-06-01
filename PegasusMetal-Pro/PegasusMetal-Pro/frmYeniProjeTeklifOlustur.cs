@@ -372,5 +372,10 @@ namespace PegasusMetal_Pro
         {
             CalculateLazer();
         }
+
+        private void TextEditBoyaKar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1766,6 +1766,7 @@
             this.textEditBoyaKar.Properties.Appearance.Options.UseFont = true;
             this.textEditBoyaKar.Size = new System.Drawing.Size(40, 24);
             this.textEditBoyaKar.TabIndex = 37;
+            this.textEditBoyaKar.TextChanged += new System.EventHandler(this.TextEditBoyaKar_TextChanged);
             // 
             // labelControl61
             // 
