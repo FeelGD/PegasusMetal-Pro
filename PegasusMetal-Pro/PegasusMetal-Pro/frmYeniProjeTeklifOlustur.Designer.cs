@@ -2509,6 +2509,7 @@
             this.textEditLazerKar.Properties.Appearance.Options.UseForeColor = true;
             this.textEditLazerKar.Size = new System.Drawing.Size(40, 24);
             this.textEditLazerKar.TabIndex = 12;
+            this.textEditLazerKar.TextChanged += new System.EventHandler(this.TextEditLazerKar_TextChanged);
             // 
             // labelControl12
             // 
@@ -2550,6 +2551,7 @@
             this.textEditKesimSuresi.Properties.Appearance.Options.UseForeColor = true;
             this.textEditKesimSuresi.Size = new System.Drawing.Size(100, 24);
             this.textEditKesimSuresi.TabIndex = 9;
+            this.textEditKesimSuresi.TextChanged += new System.EventHandler(this.TextEditKesimSuresi_TextChanged);
             // 
             // labelControl11
             // 
