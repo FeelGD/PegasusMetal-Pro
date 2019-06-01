@@ -547,7 +547,7 @@
             // 
             // simpleButtonParcaEkle
             // 
-            this.simpleButtonParcaEkle.Location = new System.Drawing.Point(19, 192);
+            this.simpleButtonParcaEkle.Location = new System.Drawing.Point(42, 195);
             this.simpleButtonParcaEkle.Name = "simpleButtonParcaEkle";
             this.simpleButtonParcaEkle.Size = new System.Drawing.Size(110, 23);
             this.simpleButtonParcaEkle.TabIndex = 24;
@@ -555,7 +555,7 @@
             // 
             // simpleButtonHesapla
             // 
-            this.simpleButtonHesapla.Location = new System.Drawing.Point(19, 163);
+            this.simpleButtonHesapla.Location = new System.Drawing.Point(42, 165);
             this.simpleButtonHesapla.Name = "simpleButtonHesapla";
             this.simpleButtonHesapla.Size = new System.Drawing.Size(110, 23);
             this.simpleButtonHesapla.TabIndex = 23;
@@ -767,9 +767,8 @@
             this.labelControlAlan.Appearance.Options.UseFont = true;
             this.labelControlAlan.Location = new System.Drawing.Point(83, 143);
             this.labelControlAlan.Name = "labelControlAlan";
-            this.labelControlAlan.Size = new System.Drawing.Size(30, 17);
+            this.labelControlAlan.Size = new System.Drawing.Size(0, 17);
             this.labelControlAlan.TabIndex = 67;
-            this.labelControlAlan.Text = "Alan:";
             // 
             // labelControl34
             // 
@@ -787,9 +786,8 @@
             this.labelControlAgirligi.Appearance.Options.UseFont = true;
             this.labelControlAgirligi.Location = new System.Drawing.Point(83, 168);
             this.labelControlAgirligi.Name = "labelControlAgirligi";
-            this.labelControlAgirligi.Size = new System.Drawing.Size(44, 17);
+            this.labelControlAgirligi.Size = new System.Drawing.Size(0, 17);
             this.labelControlAgirligi.TabIndex = 65;
-            this.labelControlAgirligi.Text = "Ağırlığı:";
             // 
             // labelControl42
             // 
@@ -804,6 +802,7 @@
             // textEditParcaAdi
             // 
             this.textEditParcaAdi.EditValue = "";
+            this.textEditParcaAdi.Enabled = false;
             this.textEditParcaAdi.Location = new System.Drawing.Point(113, 59);
             this.textEditParcaAdi.Name = "textEditParcaAdi";
             this.textEditParcaAdi.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
@@ -873,31 +872,28 @@
             // 
             this.labelControlMaliyet.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControlMaliyet.Appearance.Options.UseFont = true;
-            this.labelControlMaliyet.Location = new System.Drawing.Point(201, 167);
+            this.labelControlMaliyet.Location = new System.Drawing.Point(221, 166);
             this.labelControlMaliyet.Name = "labelControlMaliyet";
-            this.labelControlMaliyet.Size = new System.Drawing.Size(53, 17);
+            this.labelControlMaliyet.Size = new System.Drawing.Size(0, 17);
             this.labelControlMaliyet.TabIndex = 57;
-            this.labelControlMaliyet.Text = "Maliyeti: ";
             // 
             // labelControlFireOrani
             // 
             this.labelControlFireOrani.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControlFireOrani.Appearance.Options.UseFont = true;
-            this.labelControlFireOrani.Location = new System.Drawing.Point(208, 138);
+            this.labelControlFireOrani.Location = new System.Drawing.Point(221, 145);
             this.labelControlFireOrani.Name = "labelControlFireOrani";
-            this.labelControlFireOrani.Size = new System.Drawing.Size(59, 17);
+            this.labelControlFireOrani.Size = new System.Drawing.Size(0, 17);
             this.labelControlFireOrani.TabIndex = 56;
-            this.labelControlFireOrani.Text = "Fire Oranı:";
             // 
             // labelControlBoy
             // 
             this.labelControlBoy.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControlBoy.Appearance.Options.UseFont = true;
-            this.labelControlBoy.Location = new System.Drawing.Point(208, 101);
+            this.labelControlBoy.Location = new System.Drawing.Point(221, 102);
             this.labelControlBoy.Name = "labelControlBoy";
-            this.labelControlBoy.Size = new System.Drawing.Size(24, 17);
+            this.labelControlBoy.Size = new System.Drawing.Size(0, 17);
             this.labelControlBoy.TabIndex = 54;
-            this.labelControlBoy.Text = "Boy:";
             // 
             // labelControlKalinlik
             // 
@@ -905,9 +901,8 @@
             this.labelControlKalinlik.Appearance.Options.UseFont = true;
             this.labelControlKalinlik.Location = new System.Drawing.Point(85, 120);
             this.labelControlKalinlik.Name = "labelControlKalinlik";
-            this.labelControlKalinlik.Size = new System.Drawing.Size(43, 17);
+            this.labelControlKalinlik.Size = new System.Drawing.Size(0, 17);
             this.labelControlKalinlik.TabIndex = 52;
-            this.labelControlKalinlik.Text = "Kalınlık:";
             // 
             // labelControlEn
             // 
@@ -915,15 +910,14 @@
             this.labelControlEn.Appearance.Options.UseFont = true;
             this.labelControlEn.Location = new System.Drawing.Point(85, 101);
             this.labelControlEn.Name = "labelControlEn";
-            this.labelControlEn.Size = new System.Drawing.Size(16, 17);
+            this.labelControlEn.Size = new System.Drawing.Size(0, 17);
             this.labelControlEn.TabIndex = 51;
-            this.labelControlEn.Text = "En:";
             // 
             // labelControl9
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(143, 138);
+            this.labelControl9.Location = new System.Drawing.Point(143, 145);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(59, 17);
             this.labelControl9.TabIndex = 50;
@@ -2597,7 +2591,7 @@
             // 
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Location = new System.Drawing.Point(143, 119);
+            this.labelControl10.Location = new System.Drawing.Point(143, 122);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(37, 17);
             this.labelControl10.TabIndex = 49;
@@ -2607,11 +2601,10 @@
             // 
             this.labelControlKalite.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControlKalite.Appearance.Options.UseFont = true;
-            this.labelControlKalite.Location = new System.Drawing.Point(208, 119);
+            this.labelControlKalite.Location = new System.Drawing.Point(221, 122);
             this.labelControlKalite.Name = "labelControlKalite";
-            this.labelControlKalite.Size = new System.Drawing.Size(37, 17);
+            this.labelControlKalite.Size = new System.Drawing.Size(0, 17);
             this.labelControlKalite.TabIndex = 55;
-            this.labelControlKalite.Text = "Kalite:";
             // 
             // frmYeniProjeTeklifOlustur
             // 
