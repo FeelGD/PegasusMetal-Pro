@@ -176,6 +176,7 @@
             this.VIslemUcretleriBtn.Text = "İşlem Ücretleri\r\n\r\n";
             this.VIslemUcretleriBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.VIslemUcretleriBtn.UseVisualStyleBackColor = true;
+            this.VIslemUcretleriBtn.Click += new System.EventHandler(this.VIslemUcretleriBtn_Click);
             // 
             // userVeriler
             // 
