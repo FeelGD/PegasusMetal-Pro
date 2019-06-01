@@ -839,5 +839,40 @@ namespace PegasusMetal_Pro
         {
             CalculateKaplama();
         }
+
+        private void textEditParcaAdi_TextChanged(object sender, EventArgs e)
+        {
+            if (textEditParcaAdi.Text!="")
+            {
+                checkEditLazer.Enabled = true;
+                checkEditBukum.Enabled = true;
+                checkEditKaynak.Enabled = true;
+                checkEditKaplama.Enabled = true;
+                checkEditHavsaAcma.Enabled = true;
+                checkEditMontaj.Enabled = true;
+                checkEditMaskelemeBandi.Enabled = true;
+                checkEditBoya.Enabled = true;
+                checkEditTalasli1.Enabled = true;
+                checkEditTalasli2.Enabled = true;
+                checkEditSomunSikma.Enabled = true;
+                checkEditDisAcmaHelicoil.Enabled = true;
+            
+            }
+            else
+            {
+                checkEditLazer.Enabled = false;
+                checkEditBukum.Enabled = false;
+                checkEditKaynak.Enabled = false;
+                checkEditKaplama.Enabled = false;
+                checkEditHavsaAcma.Enabled = false;
+                checkEditMontaj.Enabled = false;
+                checkEditMaskelemeBandi.Enabled = false;
+                checkEditBoya.Enabled = false;
+                checkEditTalasli1.Enabled = false;
+                checkEditTalasli2.Enabled = false;
+                checkEditSomunSikma.Enabled = false;
+                checkEditDisAcmaHelicoil.Enabled = false;
+            }
+        }
     }
 }
