@@ -33,33 +33,34 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.simpleButtonGuncelle = new DevExpress.XtraEditors.SimpleButton();
-            this.textEditId = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.textEditMalzemeOzelligi = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.textEditBirimFiyati = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textEditDakikaFiyati = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.listView1 = new System.Windows.Forms.ListView();
             this.Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Ad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Ozellik = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.BirimFiyat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DakikaFiyat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.textEditDakikaFiyati = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.textEditBirimFiyati = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.simpleButtonGuncelle = new DevExpress.XtraEditors.SimpleButton();
+            this.textEditId = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.textEditMalzemeOzelligi = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.textEditIslemAdi = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.simpleButtonKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditDakikaFiyati.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditBirimFiyati.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditMalzemeOzelligi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditBirimFiyati.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditDakikaFiyati.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditIslemAdi.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,9 +109,53 @@
             this.panel2.Size = new System.Drawing.Size(674, 549);
             this.panel2.TabIndex = 4;
             // 
+            // listView1
+            // 
+            this.listView1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Id,
+            this.Ad,
+            this.Ozellik,
+            this.BirimFiyat,
+            this.DakikaFiyat});
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.listView1.Location = new System.Drawing.Point(0, 0);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(674, 549);
+            this.listView1.TabIndex = 3;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // Id
+            // 
+            this.Id.Text = "İşlem Numarası";
+            this.Id.Width = 104;
+            // 
+            // Ad
+            // 
+            this.Ad.Text = "İşlemin Adı";
+            this.Ad.Width = 163;
+            // 
+            // Ozellik
+            // 
+            this.Ozellik.Text = "Malzeme Özelliği";
+            this.Ozellik.Width = 129;
+            // 
+            // BirimFiyat
+            // 
+            this.BirimFiyat.Text = "Birim Fiyatı";
+            this.BirimFiyat.Width = 92;
+            // 
+            // DakikaFiyat
+            // 
+            this.DakikaFiyat.Text = "Dakika Fiyatı";
+            this.DakikaFiyat.Width = 116;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.simpleButtonKaydet);
             this.panel3.Controls.Add(this.textEditDakikaFiyati);
             this.panel3.Controls.Add(this.labelControl4);
             this.panel3.Controls.Add(this.textEditBirimFiyati);
@@ -128,12 +173,54 @@
             this.panel3.Size = new System.Drawing.Size(343, 549);
             this.panel3.TabIndex = 5;
             // 
+            // textEditDakikaFiyati
+            // 
+            this.textEditDakikaFiyati.Location = new System.Drawing.Point(161, 220);
+            this.textEditDakikaFiyati.Name = "textEditDakikaFiyati";
+            this.textEditDakikaFiyati.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
+            this.textEditDakikaFiyati.Properties.Appearance.Options.UseFont = true;
+            this.textEditDakikaFiyati.Properties.Mask.EditMask = "n2";
+            this.textEditDakikaFiyati.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.textEditDakikaFiyati.Size = new System.Drawing.Size(147, 26);
+            this.textEditDakikaFiyati.TabIndex = 55;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.labelControl4.Appearance.Options.UseFont = true;
+            this.labelControl4.Location = new System.Drawing.Point(54, 225);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(101, 21);
+            this.labelControl4.TabIndex = 54;
+            this.labelControl4.Text = "Dakika Fiyatı:";
+            // 
+            // textEditBirimFiyati
+            // 
+            this.textEditBirimFiyati.Location = new System.Drawing.Point(161, 172);
+            this.textEditBirimFiyati.Name = "textEditBirimFiyati";
+            this.textEditBirimFiyati.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
+            this.textEditBirimFiyati.Properties.Appearance.Options.UseFont = true;
+            this.textEditBirimFiyati.Properties.Mask.EditMask = "n2";
+            this.textEditBirimFiyati.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.textEditBirimFiyati.Size = new System.Drawing.Size(147, 26);
+            this.textEditBirimFiyati.TabIndex = 53;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(66, 177);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(89, 21);
+            this.labelControl1.TabIndex = 52;
+            this.labelControl1.Text = "Birim Fiyatı:";
+            // 
             // simpleButtonGuncelle
             // 
             this.simpleButtonGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.simpleButtonGuncelle.Appearance.Options.UseFont = true;
             this.simpleButtonGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonGuncelle.ImageOptions.Image")));
-            this.simpleButtonGuncelle.Location = new System.Drawing.Point(24, 367);
+            this.simpleButtonGuncelle.Location = new System.Drawing.Point(24, 399);
             this.simpleButtonGuncelle.Name = "simpleButtonGuncelle";
             this.simpleButtonGuncelle.Size = new System.Drawing.Size(287, 53);
             this.simpleButtonGuncelle.TabIndex = 51;
@@ -190,91 +277,6 @@
             this.labelControl2.TabIndex = 44;
             this.labelControl2.Text = "İşlemin Adı:";
             // 
-            // textEditBirimFiyati
-            // 
-            this.textEditBirimFiyati.Location = new System.Drawing.Point(161, 172);
-            this.textEditBirimFiyati.Name = "textEditBirimFiyati";
-            this.textEditBirimFiyati.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
-            this.textEditBirimFiyati.Properties.Appearance.Options.UseFont = true;
-            this.textEditBirimFiyati.Properties.Mask.EditMask = "n2";
-            this.textEditBirimFiyati.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.textEditBirimFiyati.Size = new System.Drawing.Size(147, 26);
-            this.textEditBirimFiyati.TabIndex = 53;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(66, 177);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(89, 21);
-            this.labelControl1.TabIndex = 52;
-            this.labelControl1.Text = "Birim Fiyatı:";
-            // 
-            // textEditDakikaFiyati
-            // 
-            this.textEditDakikaFiyati.Location = new System.Drawing.Point(161, 220);
-            this.textEditDakikaFiyati.Name = "textEditDakikaFiyati";
-            this.textEditDakikaFiyati.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
-            this.textEditDakikaFiyati.Properties.Appearance.Options.UseFont = true;
-            this.textEditDakikaFiyati.Properties.Mask.EditMask = "n2";
-            this.textEditDakikaFiyati.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.textEditDakikaFiyati.Size = new System.Drawing.Size(147, 26);
-            this.textEditDakikaFiyati.TabIndex = 55;
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
-            this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(54, 225);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(101, 21);
-            this.labelControl4.TabIndex = 54;
-            this.labelControl4.Text = "Dakika Fiyatı:";
-            // 
-            // listView1
-            // 
-            this.listView1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Id,
-            this.Ad,
-            this.Ozellik,
-            this.BirimFiyat,
-            this.DakikaFiyat});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(674, 549);
-            this.listView1.TabIndex = 3;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // Id
-            // 
-            this.Id.Text = "İşlem Numarası";
-            this.Id.Width = 104;
-            // 
-            // Ad
-            // 
-            this.Ad.Text = "İşlemin Adı";
-            this.Ad.Width = 163;
-            // 
-            // Ozellik
-            // 
-            this.Ozellik.Text = "Malzeme Özelliği";
-            this.Ozellik.Width = 129;
-            // 
-            // BirimFiyat
-            // 
-            this.BirimFiyat.Text = "Birim Fiyatı";
-            this.BirimFiyat.Width = 92;
-            // 
-            // DakikaFiyat
-            // 
-            this.DakikaFiyat.Text = "Dakika Fiyatı";
-            this.DakikaFiyat.Width = 116;
-            // 
             // textEditIslemAdi
             // 
             this.textEditIslemAdi.Location = new System.Drawing.Point(161, 83);
@@ -289,9 +291,8 @@
             "Kaynak",
             "Kaplama",
             "Havşa Açma",
-            "Diş Açma / Helicoil",
-            "Maskeleme Bandı Ebatlı",
-            "Maskeleme Bandı Ebatsız",
+            "Diş Açma",
+            "Maskeleme Bandı",
             "Boya",
             "Talaşlı 1",
             "Talaşlı 2",
@@ -299,6 +300,17 @@
             "Montaj"});
             this.textEditIslemAdi.Size = new System.Drawing.Size(147, 26);
             this.textEditIslemAdi.TabIndex = 46;
+            // 
+            // simpleButtonKaydet
+            // 
+            this.simpleButtonKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.simpleButtonKaydet.Appearance.Options.UseFont = true;
+            this.simpleButtonKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonKaydet.ImageOptions.Image")));
+            this.simpleButtonKaydet.Location = new System.Drawing.Point(23, 339);
+            this.simpleButtonKaydet.Name = "simpleButtonKaydet";
+            this.simpleButtonKaydet.Size = new System.Drawing.Size(288, 54);
+            this.simpleButtonKaydet.TabIndex = 65;
+            this.simpleButtonKaydet.Text = "İŞLEMİ KAYDET";
             // 
             // frmVerilerIslemUcretleri
             // 
@@ -321,10 +333,10 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditDakikaFiyati.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditBirimFiyati.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditMalzemeOzelligi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditBirimFiyati.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditDakikaFiyati.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditIslemAdi.Properties)).EndInit();
             this.ResumeLayout(false);
 
@@ -354,5 +366,6 @@
         private System.Windows.Forms.ColumnHeader BirimFiyat;
         private System.Windows.Forms.ColumnHeader DakikaFiyat;
         private DevExpress.XtraEditors.ComboBoxEdit textEditIslemAdi;
+        private DevExpress.XtraEditors.SimpleButton simpleButtonKaydet;
     }
 }
