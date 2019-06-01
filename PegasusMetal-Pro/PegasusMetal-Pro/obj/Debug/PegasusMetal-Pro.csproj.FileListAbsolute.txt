@@ -713,7 +713,6 @@ C:\Users\Monster\Source\Repos\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro
 C:\Users\Monster\Source\Repos\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal_Pro.userVeriler.resources
 C:\Users\Monster\Source\Repos\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal_Pro.XtraReport1.resources
 C:\Users\Monster\Source\Repos\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal-Pro.csproj.GenerateResource.cache
-C:\Users\Monster\Source\Repos\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal-Pro.exe.licenses
 C:\Users\Monster\Source\Repos\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal-Pro.csproj.CoreCompileInputs.cache
 C:\Users\Monster\Source\Repos\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal-Pro.csproj.CopyComplete
 C:\Users\Monster\Source\Repos\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal-Pro.exe
@@ -877,3 +876,4 @@ C:\Users\Monster\Source\Repos\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro
 C:\Users\Monster\Source\Repos\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\bin\Debug\es\DevExpress.Diagram.v17.1.Core.resources.dll
 C:\Users\Monster\Source\Repos\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\bin\Debug\ja\DevExpress.Diagram.v17.1.Core.resources.dll
 C:\Users\Monster\Source\Repos\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\bin\Debug\ru\DevExpress.Diagram.v17.1.Core.resources.dll
+C:\Users\Monster\Source\Repos\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal-Pro.exe.licenses
