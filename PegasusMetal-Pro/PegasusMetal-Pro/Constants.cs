@@ -84,6 +84,7 @@ namespace PegasusMetal_Pro
         public static ObservableCollection<UserRole> userRoles = new ObservableCollection<UserRole>();
         public static ObservableCollection<Material> materials = new ObservableCollection<Material>();
         public static ObservableCollection<Piece> pieces = new ObservableCollection<Piece>();
+        public static ObservableCollection<Process> processes = new ObservableCollection<Process>();
     }
     public static class OPCodes
     {
@@ -118,6 +119,7 @@ namespace PegasusMetal_Pro
         public const string GET_MATERIALS = "GetMaterial";
         public const string GET_PIECES = "GetPiece";
         public const string GET_PROJECTS = "GetProjects";
+        public const string GET_PROCESSES = "GetProcess";
     }
     public class Reason
     {
