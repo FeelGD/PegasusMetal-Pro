@@ -802,11 +802,11 @@ namespace PegasusMetal_Pro
             float price = CalculateHelicoil() + CalculateDisAcma();
             if (textEditDisAcmaKar.Text.Trim() != "")
             {
-                labelControlSomunTl.Text = ((float)((price / 100) * (100 + int.Parse(textEditDisAcmaKar.Text)))).ToString() + " TL";
+                labelControlDisTl.Text = ((float)((price / 100) * (100 + int.Parse(textEditDisAcmaKar.Text)))).ToString() + " TL";
             }
             else
             {
-                labelControlSomunTl.Text = price.ToString() + " TL";
+                labelControlDisTl.Text = price.ToString() + " TL";
             }
         }
 
@@ -873,6 +873,75 @@ namespace PegasusMetal_Pro
                 checkEditSomunSikma.Enabled = false;
                 checkEditDisAcmaHelicoil.Enabled = false;
             }
+        }
+
+        private void SimpleButtonHesapla_Click(object sender,EventArgs e)
+        {
+            decimal totalPrice = 0m;
+            if (labelControlLazerTl.Text.Trim() != "..... TL" && checkEditLazer.Checked)
+            {
+                totalPrice += Convert.ToDecimal(labelControlLazerTl.Text.Substring(0,labelControlLazerTl.Text.Length-2).Trim());
+            }
+            if (labelControlBukumTl.Text.Trim() != "..... TL" && checkEditBukum.Checked)
+            {
+                totalPrice += Convert.ToDecimal(labelControlBukumTl.Text.Substring(0, labelControlBukumTl.Text.Length - 2).Trim());
+            }
+            if (labelControlKaynakTl.Text.Trim() != "..... TL" && checkEditKaynak.Checked)
+            {
+                totalPrice += Convert.ToDecimal(labelControlKaynakTl.Text.Substring(0, labelControlKaynakTl.Text.Length - 2).Trim());
+            }
+            if (labelControlKaplamaTl.Text.Trim() != "..... TL" && checkEditKaplama.Checked)
+            {
+                totalPrice += Convert.ToDecimal(labelControlKaplamaTl.Text.Substring(0, labelControlKaplamaTl.Text.Length - 2).Trim());
+            }
+            if (labelControlHavsaTl.Text.Trim() != "..... TL" && checkEditHavsaAcma.Checked)
+            {
+                totalPrice += Convert.ToDecimal(labelControlHavsaTl.Text.Substring(0, labelControlHavsaTl.Text.Length - 2).Trim());
+            }
+            if (labelControlMontajTl.Text.Trim() != "..... TL" && checkEditMontaj.Checked)
+            {
+                totalPrice += Convert.ToDecimal(labelControlMontajTl.Text.Substring(0, labelControlMontajTl.Text.Length - 2).Trim());
+            }
+            if (labelControlMaskelemeTl.Text.Trim() != "..... TL" && checkEditMaskelemeBandi.Checked)
+            {
+                totalPrice += Convert.ToDecimal(labelControlMaskelemeTl.Text.Substring(0, labelControlMaskelemeTl.Text.Length - 2).Trim());
+            }
+            if (labelControlBoyaTl.Text.Trim() != "..... TL" && checkEditBoya.Checked)
+            {
+                totalPrice += Convert.ToDecimal(labelControlBoyaTl.Text.Substring(0, labelControlBoyaTl.Text.Length - 2).Trim());
+            }
+            if (labelControlTalasliTl.Text.Trim() != "..... TL" && checkEditTalasli1.Checked)
+            {
+                totalPrice += Convert.ToDecimal(labelControlTalasliTl.Text.Substring(0, labelControlTalasliTl.Text.Length - 2).Trim());
+            }
+            if (labelControlTalasliCapTl.Text.Trim() != "..... TL" && checkEditTalasli2.Checked)
+            {
+                totalPrice += Convert.ToDecimal(labelControlTalasliCapTl.Text.Substring(0, labelControlTalasliCapTl.Text.Length - 2).Trim());
+            }
+            if (labelControlSomunTl.Text.Trim() != "..... TL" && checkEditSomunSikma.Checked)
+            {
+                totalPrice += Convert.ToDecimal(labelControlSomunTl.Text.Substring(0, labelControlSomunTl.Text.Length - 2).Trim());
+            }
+            if (labelControlDisTl.Text.Trim() != "..... TL" && checkEditDisAcmaHelicoil.Checked)
+            {
+                totalPrice += Convert.ToDecimal(labelControlDisTl.Text.Substring(0, labelControlDisTl.Text.Length - 2).Trim());
+            }
+            labelControlTotalMaliyet.Text = totalPrice.ToString() + "TL";
+            decimal parcaTeklif = 0m;
+            if (labelControlBirimMaliyet.Text.Trim() != "")
+            {
+                parcaTeklif = (totalPrice + Convert.ToDecimal(labelControlBirimMaliyet.Text.Trim()));
+            }
+            if(textEditAdet.Text.Trim() != "")
+            {
+                parcaTeklif = parcaTeklif * Convert.ToDecimal(textEditAdet.Text.Trim());
+            }
+            labelControlParcaTeklifFiyatı.Text = parcaTeklif.ToString()+" TL";
+        }
+
+        private void SimpleButtonParcaEkle_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
