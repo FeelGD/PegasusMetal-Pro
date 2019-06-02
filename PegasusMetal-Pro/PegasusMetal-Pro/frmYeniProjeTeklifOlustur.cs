@@ -926,7 +926,7 @@ namespace PegasusMetal_Pro
             {
                 totalPrice += Convert.ToDecimal(labelControlDisTl.Text.Substring(0, labelControlDisTl.Text.Length - 2).Trim());
             }
-            labelControlTotalMaliyet.Text = totalPrice.ToString() + "TL";
+            labelControlBirimIslemMaliyet.Text = totalPrice.ToString() + "TL";
             decimal parcaTeklif = 0m;
             if (labelControlBirimMaliyet.Text.Trim() != "")
             {

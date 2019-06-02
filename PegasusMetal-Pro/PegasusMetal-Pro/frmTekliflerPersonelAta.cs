@@ -26,5 +26,11 @@ namespace PegasusMetal_Pro
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmNot frmNot = new frmNot();
+            frmNot.ShowDialog();
+        }
     }
 }
