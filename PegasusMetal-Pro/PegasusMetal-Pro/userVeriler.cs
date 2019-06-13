@@ -12,6 +12,7 @@ namespace PegasusMetal_Pro
 {
     public partial class userVeriler : UserControl
     {
+        private delegate void SafeCall(Form frmName);
         frmVerilerFirmalar frmVerilerFirmalar;
         frmVerilerPersoneller frmVerilerPersoneller;
         frmVerilerStok frmVerilerStok;
@@ -31,39 +32,55 @@ namespace PegasusMetal_Pro
             frmVerilerIslemUcretleri = new frmVerilerIslemUcretleri();
         }
 
+        private void ShowDialog(Form frmName)
+        {
+            if(frmName.InvokeRequired)
+            {
+                var del = new SafeCall(ShowDialog);
+                Invoke(del, new object[] { frmName });
+            }
+            else
+            {
+                if(frmName != null)
+                {
+                    frmName.ShowDialog();
+                }
+            }
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
-            frmVerilerPersoneller.ShowDialog();
+            ShowDialog(frmVerilerPersoneller);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmVerilerFirmalar.ShowDialog();
+            ShowDialog(frmVerilerFirmalar);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            frmVerilerStok.ShowDialog();
+            ShowDialog(frmVerilerStok);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            frmVerilerMalzemeUcretleri.ShowDialog();
+            ShowDialog(frmVerilerMalzemeUcretleri);
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            frmVerilerParcaKodlari.ShowDialog();
+            ShowDialog(frmVerilerParcaKodlari);
         }
 
         private void VGiderlerBtn_Click(object sender, EventArgs e)
         {
-            frmVerilerGelirGider.ShowDialog();
+            ShowDialog(frmVerilerGelirGider);
         }
 
         private void VIslemUcretleriBtn_Click(object sender, EventArgs e)
         {
-            frmVerilerIslemUcretleri.ShowDialog();
+            ShowDialog(frmVerilerIslemUcretleri);
         }
     }
 }

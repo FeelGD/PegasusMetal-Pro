@@ -15,6 +15,7 @@ namespace PegasusMetal_Pro
         static void Main()
         {
             WebSocketService.getInstance();
+            Control.CheckForIllegalCrossThreadCalls = false;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmAnaEkran());

@@ -91,6 +91,7 @@ namespace PegasusMetal_Pro
         public const string LOGIN = "Login";
         public const string LOGIN_SUCCESS = "LoginSuccess";
         public const string LOGIN_FAIL = "LoginFail";
+        public const string END_OF_LOGIN = "EndLogin";
         public const string ACCEPTED_OFFER = "AcceptedOffer";
         public const string COMPANY = "Company";
         public const string INOUTPUT = "InOutput";
