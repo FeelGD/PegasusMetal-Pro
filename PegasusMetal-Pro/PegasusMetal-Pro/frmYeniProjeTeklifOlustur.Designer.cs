@@ -398,9 +398,11 @@
             // 
             this.textEdit1.Location = new System.Drawing.Point(6, 221);
             this.textEdit1.Name = "textEdit1";
+            // 
+            // 
+            // 
             this.textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit1.Size = new System.Drawing.Size(100, 20);
             this.textEdit1.TabIndex = 14;
             // 
             // labelControl32
@@ -590,6 +592,9 @@
             this.checkEditMontaj.Enabled = false;
             this.checkEditMontaj.Location = new System.Drawing.Point(6, 173);
             this.checkEditMontaj.Name = "checkEditMontaj";
+            // 
+            // 
+            // 
             this.checkEditMontaj.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.checkEditMontaj.Properties.Appearance.Options.UseFont = true;
             this.checkEditMontaj.Properties.Caption = "Montaj";
@@ -602,6 +607,9 @@
             this.checkEditSomunSikma.Enabled = false;
             this.checkEditSomunSikma.Location = new System.Drawing.Point(140, 150);
             this.checkEditSomunSikma.Name = "checkEditSomunSikma";
+            // 
+            // 
+            // 
             this.checkEditSomunSikma.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.checkEditSomunSikma.Properties.Appearance.Options.UseFont = true;
             this.checkEditSomunSikma.Properties.Caption = "Somun Sıkma";
@@ -614,6 +622,9 @@
             this.checkEditTalasli2.Enabled = false;
             this.checkEditTalasli2.Location = new System.Drawing.Point(140, 125);
             this.checkEditTalasli2.Name = "checkEditTalasli2";
+            // 
+            // 
+            // 
             this.checkEditTalasli2.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.checkEditTalasli2.Properties.Appearance.Options.UseFont = true;
             this.checkEditTalasli2.Properties.Caption = "Talaşlı 2";
@@ -626,6 +637,9 @@
             this.checkEditTalasli1.Enabled = false;
             this.checkEditTalasli1.Location = new System.Drawing.Point(140, 100);
             this.checkEditTalasli1.Name = "checkEditTalasli1";
+            // 
+            // 
+            // 
             this.checkEditTalasli1.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.checkEditTalasli1.Properties.Appearance.Options.UseFont = true;
             this.checkEditTalasli1.Properties.Caption = "Talaşlı 1";
@@ -638,6 +652,9 @@
             this.checkEditBoya.Enabled = false;
             this.checkEditBoya.Location = new System.Drawing.Point(140, 75);
             this.checkEditBoya.Name = "checkEditBoya";
+            // 
+            // 
+            // 
             this.checkEditBoya.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.checkEditBoya.Properties.Appearance.Options.UseFont = true;
             this.checkEditBoya.Properties.Caption = "Boya";
@@ -650,6 +667,9 @@
             this.checkEditMaskelemeBandi.Enabled = false;
             this.checkEditMaskelemeBandi.Location = new System.Drawing.Point(140, 50);
             this.checkEditMaskelemeBandi.Name = "checkEditMaskelemeBandi";
+            // 
+            // 
+            // 
             this.checkEditMaskelemeBandi.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.checkEditMaskelemeBandi.Properties.Appearance.Options.UseFont = true;
             this.checkEditMaskelemeBandi.Properties.Caption = "Maskeleme Bandı";
@@ -662,6 +682,9 @@
             this.checkEditDisAcmaHelicoil.Enabled = false;
             this.checkEditDisAcmaHelicoil.Location = new System.Drawing.Point(140, 174);
             this.checkEditDisAcmaHelicoil.Name = "checkEditDisAcmaHelicoil";
+            // 
+            // 
+            // 
             this.checkEditDisAcmaHelicoil.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.checkEditDisAcmaHelicoil.Properties.Appearance.Options.UseFont = true;
             this.checkEditDisAcmaHelicoil.Properties.Caption = "Diş Açma / Helicoil";
@@ -674,6 +697,9 @@
             this.checkEditHavsaAcma.Enabled = false;
             this.checkEditHavsaAcma.Location = new System.Drawing.Point(6, 148);
             this.checkEditHavsaAcma.Name = "checkEditHavsaAcma";
+            // 
+            // 
+            // 
             this.checkEditHavsaAcma.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.checkEditHavsaAcma.Properties.Appearance.Options.UseFont = true;
             this.checkEditHavsaAcma.Properties.Caption = "Havşa Açma";
@@ -686,6 +712,9 @@
             this.checkEditKaplama.Enabled = false;
             this.checkEditKaplama.Location = new System.Drawing.Point(6, 124);
             this.checkEditKaplama.Name = "checkEditKaplama";
+            // 
+            // 
+            // 
             this.checkEditKaplama.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.checkEditKaplama.Properties.Appearance.Options.UseFont = true;
             this.checkEditKaplama.Properties.Caption = "Kaplama";
@@ -698,6 +727,9 @@
             this.checkEditKaynak.Enabled = false;
             this.checkEditKaynak.Location = new System.Drawing.Point(6, 99);
             this.checkEditKaynak.Name = "checkEditKaynak";
+            // 
+            // 
+            // 
             this.checkEditKaynak.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.checkEditKaynak.Properties.Appearance.Options.UseFont = true;
             this.checkEditKaynak.Properties.Caption = "Kaynak";
@@ -710,6 +742,9 @@
             this.checkEditBukum.Enabled = false;
             this.checkEditBukum.Location = new System.Drawing.Point(6, 74);
             this.checkEditBukum.Name = "checkEditBukum";
+            // 
+            // 
+            // 
             this.checkEditBukum.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.checkEditBukum.Properties.Appearance.Options.UseFont = true;
             this.checkEditBukum.Properties.Caption = "Büküm";
@@ -722,6 +757,9 @@
             this.checkEditLazer.Enabled = false;
             this.checkEditLazer.Location = new System.Drawing.Point(6, 50);
             this.checkEditLazer.Name = "checkEditLazer";
+            // 
+            // 
+            // 
             this.checkEditLazer.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.checkEditLazer.Properties.Appearance.Options.UseFont = true;
             this.checkEditLazer.Properties.Caption = "Lazer Kesim";
@@ -807,6 +845,9 @@
             this.textEditParcaAdi.EditValue = "";
             this.textEditParcaAdi.Location = new System.Drawing.Point(113, 59);
             this.textEditParcaAdi.Name = "textEditParcaAdi";
+            // 
+            // 
+            // 
             this.textEditParcaAdi.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditParcaAdi.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.textEditParcaAdi.Properties.Appearance.Options.UseBackColor = true;
@@ -841,6 +882,9 @@
             this.textEditAdet.EditValue = "";
             this.textEditAdet.Location = new System.Drawing.Point(314, 59);
             this.textEditAdet.Name = "textEditAdet";
+            // 
+            // 
+            // 
             this.textEditAdet.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditAdet.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.textEditAdet.Properties.Appearance.Options.UseBackColor = true;
@@ -863,6 +907,9 @@
             // 
             this.comboBoxEditParcaKodu.Location = new System.Drawing.Point(113, 31);
             this.comboBoxEditParcaKodu.Name = "comboBoxEditParcaKodu";
+            // 
+            // 
+            // 
             this.comboBoxEditParcaKodu.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.comboBoxEditParcaKodu.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.comboBoxEditParcaKodu.Properties.Appearance.Options.UseBackColor = true;
@@ -1045,6 +1092,9 @@
             this.textEditMusteriAd.EditValue = "1";
             this.textEditMusteriAd.Location = new System.Drawing.Point(114, 110);
             this.textEditMusteriAd.Name = "textEditMusteriAd";
+            // 
+            // 
+            // 
             this.textEditMusteriAd.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditMusteriAd.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEditMusteriAd.Properties.Appearance.Options.UseBackColor = true;
@@ -1070,6 +1120,9 @@
             this.textEditProjeAd.EditValue = "2";
             this.textEditProjeAd.Location = new System.Drawing.Point(114, 50);
             this.textEditProjeAd.Name = "textEditProjeAd";
+            // 
+            // 
+            // 
             this.textEditProjeAd.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditProjeAd.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEditProjeAd.Properties.Appearance.Options.UseBackColor = true;
@@ -1083,6 +1136,9 @@
             this.comboBoxEditTeklifBicim.EditValue = "3";
             this.comboBoxEditTeklifBicim.Location = new System.Drawing.Point(114, 169);
             this.comboBoxEditTeklifBicim.Name = "comboBoxEditTeklifBicim";
+            // 
+            // 
+            // 
             this.comboBoxEditTeklifBicim.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.comboBoxEditTeklifBicim.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEditTeklifBicim.Properties.Appearance.Options.UseBackColor = true;
@@ -1144,6 +1200,9 @@
             this.textEditHelicoilFiyat.EditValue = "";
             this.textEditHelicoilFiyat.Location = new System.Drawing.Point(115, 104);
             this.textEditHelicoilFiyat.Name = "textEditHelicoilFiyat";
+            // 
+            // 
+            // 
             this.textEditHelicoilFiyat.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditHelicoilFiyat.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditHelicoilFiyat.Properties.Appearance.Options.UseBackColor = true;
@@ -1159,6 +1218,9 @@
             this.textEditHelicoilAdet.EditValue = "";
             this.textEditHelicoilAdet.Location = new System.Drawing.Point(115, 77);
             this.textEditHelicoilAdet.Name = "textEditHelicoilAdet";
+            // 
+            // 
+            // 
             this.textEditHelicoilAdet.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditHelicoilAdet.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditHelicoilAdet.Properties.Appearance.Options.UseBackColor = true;
@@ -1196,6 +1258,9 @@
             this.textEditDisEbadi.EditValue = "";
             this.textEditDisEbadi.Location = new System.Drawing.Point(115, 48);
             this.textEditDisEbadi.Name = "textEditDisEbadi";
+            // 
+            // 
+            // 
             this.textEditDisEbadi.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditDisEbadi.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditDisEbadi.Properties.Appearance.Options.UseBackColor = true;
@@ -1209,6 +1274,9 @@
             this.textEditDisAdedi.EditValue = "";
             this.textEditDisAdedi.Location = new System.Drawing.Point(115, 21);
             this.textEditDisAdedi.Name = "textEditDisAdedi";
+            // 
+            // 
+            // 
             this.textEditDisAdedi.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditDisAdedi.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditDisAdedi.Properties.Appearance.Options.UseBackColor = true;
@@ -1246,6 +1314,9 @@
             this.textEditDisAcmaKar.EditValue = "0";
             this.textEditDisAcmaKar.Location = new System.Drawing.Point(56, 148);
             this.textEditDisAcmaKar.Name = "textEditDisAcmaKar";
+            // 
+            // 
+            // 
             this.textEditDisAcmaKar.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditDisAcmaKar.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditDisAcmaKar.Properties.Appearance.Options.UseBackColor = true;
@@ -1305,6 +1376,9 @@
             this.textEditSomunSikmaKar.EditValue = "0";
             this.textEditSomunSikmaKar.Location = new System.Drawing.Point(62, 147);
             this.textEditSomunSikmaKar.Name = "textEditSomunSikmaKar";
+            // 
+            // 
+            // 
             this.textEditSomunSikmaKar.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditSomunSikmaKar.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditSomunSikmaKar.Properties.Appearance.Options.UseBackColor = true;
@@ -1332,6 +1406,9 @@
             this.textEditSomunSikmaToplamSet.EditValue = "";
             this.textEditSomunSikmaToplamSet.Location = new System.Drawing.Point(121, 100);
             this.textEditSomunSikmaToplamSet.Name = "textEditSomunSikmaToplamSet";
+            // 
+            // 
+            // 
             this.textEditSomunSikmaToplamSet.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditSomunSikmaToplamSet.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditSomunSikmaToplamSet.Properties.Appearance.Options.UseBackColor = true;
@@ -1369,6 +1446,9 @@
             this.textEditSomunSikmaSetAdedi.EditValue = "";
             this.textEditSomunSikmaSetAdedi.Location = new System.Drawing.Point(121, 74);
             this.textEditSomunSikmaSetAdedi.Name = "textEditSomunSikmaSetAdedi";
+            // 
+            // 
+            // 
             this.textEditSomunSikmaSetAdedi.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditSomunSikmaSetAdedi.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditSomunSikmaSetAdedi.Properties.Appearance.Options.UseBackColor = true;
@@ -1382,6 +1462,9 @@
             this.textEditSomunSikmaIscilik.EditValue = "";
             this.textEditSomunSikmaIscilik.Location = new System.Drawing.Point(121, 48);
             this.textEditSomunSikmaIscilik.Name = "textEditSomunSikmaIscilik";
+            // 
+            // 
+            // 
             this.textEditSomunSikmaIscilik.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditSomunSikmaIscilik.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditSomunSikmaIscilik.Properties.Appearance.Options.UseBackColor = true;
@@ -1442,6 +1525,9 @@
             this.textEditTalasli2Kar.EditValue = "0";
             this.textEditTalasli2Kar.Location = new System.Drawing.Point(53, 144);
             this.textEditTalasli2Kar.Name = "textEditTalasli2Kar";
+            // 
+            // 
+            // 
             this.textEditTalasli2Kar.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditTalasli2Kar.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditTalasli2Kar.Properties.Appearance.Options.UseBackColor = true;
@@ -1469,6 +1555,9 @@
             this.textEditTalasli2Fiyat.EditValue = "";
             this.textEditTalasli2Fiyat.Location = new System.Drawing.Point(117, 100);
             this.textEditTalasli2Fiyat.Name = "textEditTalasli2Fiyat";
+            // 
+            // 
+            // 
             this.textEditTalasli2Fiyat.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditTalasli2Fiyat.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditTalasli2Fiyat.Properties.Appearance.Options.UseBackColor = true;
@@ -1506,6 +1595,9 @@
             this.textEditTalasli2Boy.EditValue = "";
             this.textEditTalasli2Boy.Location = new System.Drawing.Point(117, 74);
             this.textEditTalasli2Boy.Name = "textEditTalasli2Boy";
+            // 
+            // 
+            // 
             this.textEditTalasli2Boy.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditTalasli2Boy.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditTalasli2Boy.Properties.Appearance.Options.UseBackColor = true;
@@ -1519,6 +1611,9 @@
             this.textEditTalasli2Adet.EditValue = "";
             this.textEditTalasli2Adet.Location = new System.Drawing.Point(117, 48);
             this.textEditTalasli2Adet.Name = "textEditTalasli2Adet";
+            // 
+            // 
+            // 
             this.textEditTalasli2Adet.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditTalasli2Adet.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditTalasli2Adet.Properties.Appearance.Options.UseBackColor = true;
@@ -1575,6 +1670,9 @@
             this.textEditTalasli1Kar.EditValue = "0";
             this.textEditTalasli1Kar.Location = new System.Drawing.Point(50, 144);
             this.textEditTalasli1Kar.Name = "textEditTalasli1Kar";
+            // 
+            // 
+            // 
             this.textEditTalasli1Kar.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditTalasli1Kar.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditTalasli1Kar.Properties.Appearance.Options.UseBackColor = true;
@@ -1614,6 +1712,9 @@
             this.textEditTalasli1Fiyat.EditValue = "";
             this.textEditTalasli1Fiyat.Location = new System.Drawing.Point(109, 74);
             this.textEditTalasli1Fiyat.Name = "textEditTalasli1Fiyat";
+            // 
+            // 
+            // 
             this.textEditTalasli1Fiyat.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditTalasli1Fiyat.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditTalasli1Fiyat.Properties.Appearance.Options.UseBackColor = true;
@@ -1627,6 +1728,9 @@
             this.textEditTalasli1Adet.EditValue = "";
             this.textEditTalasli1Adet.Location = new System.Drawing.Point(109, 48);
             this.textEditTalasli1Adet.Name = "textEditTalasli1Adet";
+            // 
+            // 
+            // 
             this.textEditTalasli1Adet.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditTalasli1Adet.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditTalasli1Adet.Properties.Appearance.Options.UseBackColor = true;
@@ -1681,6 +1785,9 @@
             this.textEditBoyaKar.EditValue = "0";
             this.textEditBoyaKar.Location = new System.Drawing.Point(56, 145);
             this.textEditBoyaKar.Name = "textEditBoyaKar";
+            // 
+            // 
+            // 
             this.textEditBoyaKar.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditBoyaKar.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditBoyaKar.Properties.Appearance.Options.UseBackColor = true;
@@ -1720,6 +1827,9 @@
             this.textEditBoyaParcaAlani.EditValue = "";
             this.textEditBoyaParcaAlani.Location = new System.Drawing.Point(112, 47);
             this.textEditBoyaParcaAlani.Name = "textEditBoyaParcaAlani";
+            // 
+            // 
+            // 
             this.textEditBoyaParcaAlani.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditBoyaParcaAlani.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditBoyaParcaAlani.Properties.Appearance.Options.UseBackColor = true;
@@ -1767,6 +1877,9 @@
             this.textEditMaskelemeKar.EditValue = "0";
             this.textEditMaskelemeKar.Location = new System.Drawing.Point(52, 149);
             this.textEditMaskelemeKar.Name = "textEditMaskelemeKar";
+            // 
+            // 
+            // 
             this.textEditMaskelemeKar.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditMaskelemeKar.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditMaskelemeKar.Properties.Appearance.Options.UseBackColor = true;
@@ -1806,6 +1919,9 @@
             this.textEditMaskelemeBantAlani.EditValue = "";
             this.textEditMaskelemeBantAlani.Location = new System.Drawing.Point(112, 96);
             this.textEditMaskelemeBantAlani.Name = "textEditMaskelemeBantAlani";
+            // 
+            // 
+            // 
             this.textEditMaskelemeBantAlani.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditMaskelemeBantAlani.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditMaskelemeBantAlani.Properties.Appearance.Options.UseBackColor = true;
@@ -1821,6 +1937,9 @@
             this.textEditMaskelemeIscilikSuresi.EditValue = "";
             this.textEditMaskelemeIscilikSuresi.Location = new System.Drawing.Point(112, 70);
             this.textEditMaskelemeIscilikSuresi.Name = "textEditMaskelemeIscilikSuresi";
+            // 
+            // 
+            // 
             this.textEditMaskelemeIscilikSuresi.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditMaskelemeIscilikSuresi.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditMaskelemeIscilikSuresi.Properties.Appearance.Options.UseBackColor = true;
@@ -1917,6 +2036,9 @@
             this.textEditMontajKar.EditValue = "0";
             this.textEditMontajKar.Location = new System.Drawing.Point(56, 143);
             this.textEditMontajKar.Name = "textEditMontajKar";
+            // 
+            // 
+            // 
             this.textEditMontajKar.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditMontajKar.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditMontajKar.Properties.Appearance.Options.UseBackColor = true;
@@ -1956,6 +2078,9 @@
             this.textEditMontajToplamSet.EditValue = "";
             this.textEditMontajToplamSet.Location = new System.Drawing.Point(132, 69);
             this.textEditMontajToplamSet.Name = "textEditMontajToplamSet";
+            // 
+            // 
+            // 
             this.textEditMontajToplamSet.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditMontajToplamSet.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditMontajToplamSet.Properties.Appearance.Options.UseBackColor = true;
@@ -1969,6 +2094,9 @@
             this.textEditMontajIscilik.EditValue = "";
             this.textEditMontajIscilik.Location = new System.Drawing.Point(132, 43);
             this.textEditMontajIscilik.Name = "textEditMontajIscilik";
+            // 
+            // 
+            // 
             this.textEditMontajIscilik.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditMontajIscilik.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditMontajIscilik.Properties.Appearance.Options.UseBackColor = true;
@@ -2025,6 +2153,9 @@
             this.textEditHavsaAcmaKar.EditValue = "0";
             this.textEditHavsaAcmaKar.Location = new System.Drawing.Point(62, 143);
             this.textEditHavsaAcmaKar.Name = "textEditHavsaAcmaKar";
+            // 
+            // 
+            // 
             this.textEditHavsaAcmaKar.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditHavsaAcmaKar.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditHavsaAcmaKar.Properties.Appearance.Options.UseBackColor = true;
@@ -2064,6 +2195,9 @@
             this.textEditHavsaAdedi.EditValue = "";
             this.textEditHavsaAdedi.Location = new System.Drawing.Point(118, 46);
             this.textEditHavsaAdedi.Name = "textEditHavsaAdedi";
+            // 
+            // 
+            // 
             this.textEditHavsaAdedi.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditHavsaAdedi.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditHavsaAdedi.Properties.Appearance.Options.UseBackColor = true;
@@ -2107,6 +2241,9 @@
             this.textEditKaplamaKar.EditValue = "0";
             this.textEditKaplamaKar.Location = new System.Drawing.Point(53, 141);
             this.textEditKaplamaKar.Name = "textEditKaplamaKar";
+            // 
+            // 
+            // 
             this.textEditKaplamaKar.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditKaplamaKar.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditKaplamaKar.Properties.Appearance.Options.UseBackColor = true;
@@ -2122,6 +2259,9 @@
             this.textEditKaplamaParcaAgirligi.EditValue = "";
             this.textEditKaplamaParcaAgirligi.Location = new System.Drawing.Point(117, 86);
             this.textEditKaplamaParcaAgirligi.Name = "textEditKaplamaParcaAgirligi";
+            // 
+            // 
+            // 
             this.textEditKaplamaParcaAgirligi.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditKaplamaParcaAgirligi.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditKaplamaParcaAgirligi.Properties.Appearance.Options.UseBackColor = true;
@@ -2185,6 +2325,9 @@
             this.textEditKaplanacakMalzeme.EditValue = "";
             this.textEditKaplanacakMalzeme.Location = new System.Drawing.Point(117, 43);
             this.textEditKaplanacakMalzeme.Name = "textEditKaplanacakMalzeme";
+            // 
+            // 
+            // 
             this.textEditKaplanacakMalzeme.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditKaplanacakMalzeme.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditKaplanacakMalzeme.Properties.Appearance.Options.UseBackColor = true;
@@ -2217,6 +2360,9 @@
             this.textEditKaynakKar.EditValue = "0";
             this.textEditKaynakKar.Location = new System.Drawing.Point(50, 144);
             this.textEditKaynakKar.Name = "textEditKaynakKar";
+            // 
+            // 
+            // 
             this.textEditKaynakKar.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditKaynakKar.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditKaynakKar.Properties.Appearance.Options.UseBackColor = true;
@@ -2256,6 +2402,9 @@
             this.textEditKaynakSuresi.EditValue = "";
             this.textEditKaynakSuresi.Location = new System.Drawing.Point(109, 45);
             this.textEditKaynakSuresi.Name = "textEditKaynakSuresi";
+            // 
+            // 
+            // 
             this.textEditKaynakSuresi.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditKaynakSuresi.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditKaynakSuresi.Properties.Appearance.Options.UseBackColor = true;
@@ -2299,6 +2448,9 @@
             this.textEditBukumKar.EditValue = "0";
             this.textEditBukumKar.Location = new System.Drawing.Point(56, 143);
             this.textEditBukumKar.Name = "textEditBukumKar";
+            // 
+            // 
+            // 
             this.textEditBukumKar.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditBukumKar.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditBukumKar.Properties.Appearance.Options.UseBackColor = true;
@@ -2338,6 +2490,9 @@
             this.textEditBukumAdedi.EditValue = "";
             this.textEditBukumAdedi.Location = new System.Drawing.Point(112, 71);
             this.textEditBukumAdedi.Name = "textEditBukumAdedi";
+            // 
+            // 
+            // 
             this.textEditBukumAdedi.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditBukumAdedi.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditBukumAdedi.Properties.Appearance.Options.UseBackColor = true;
@@ -2351,6 +2506,9 @@
             this.textEditBukumSuresi.EditValue = "";
             this.textEditBukumSuresi.Location = new System.Drawing.Point(112, 45);
             this.textEditBukumSuresi.Name = "textEditBukumSuresi";
+            // 
+            // 
+            // 
             this.textEditBukumSuresi.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditBukumSuresi.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditBukumSuresi.Properties.Appearance.Options.UseBackColor = true;
@@ -2404,6 +2562,9 @@
             this.textEditLazerKar.EditValue = "0";
             this.textEditLazerKar.Location = new System.Drawing.Point(52, 144);
             this.textEditLazerKar.Name = "textEditLazerKar";
+            // 
+            // 
+            // 
             this.textEditLazerKar.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditLazerKar.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEditLazerKar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -2445,6 +2606,9 @@
             this.textEditKesimSuresi.EditValue = "";
             this.textEditKesimSuresi.Location = new System.Drawing.Point(109, 45);
             this.textEditKesimSuresi.Name = "textEditKesimSuresi";
+            // 
+            // 
+            // 
             this.textEditKesimSuresi.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditKesimSuresi.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEditKesimSuresi.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -2500,6 +2664,9 @@
             this.textEditIndirimOran.EditValue = "0";
             this.textEditIndirimOran.Location = new System.Drawing.Point(85, 59);
             this.textEditIndirimOran.Name = "textEditIndirimOran";
+            // 
+            // 
+            // 
             this.textEditIndirimOran.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditIndirimOran.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditIndirimOran.Properties.Appearance.Options.UseBackColor = true;
@@ -2526,6 +2693,9 @@
             this.textEditKarOran.EditValue = "10";
             this.textEditKarOran.Location = new System.Drawing.Point(85, 29);
             this.textEditKarOran.Name = "textEditKarOran";
+            // 
+            // 
+            // 
             this.textEditKarOran.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditKarOran.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditKarOran.Properties.Appearance.Options.UseBackColor = true;

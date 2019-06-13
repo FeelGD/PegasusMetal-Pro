@@ -21,6 +21,7 @@ namespace PegasusMetal_Pro
         private delegate void AddDelegate(object item);
         private delegate void InsertDelegate(int index, object item);
         private object lock_object = new object();
+        private List<OfferItem> offerItems = new List<OfferItem>();
         private frmYeniProjeTeklifOlustur()
         {
             InitializeComponent();
@@ -966,10 +967,259 @@ namespace PegasusMetal_Pro
             }
             labelControlParcaTeklifFiyatı.Text = parcaTeklif.ToString()+" TL";
         }
-
+        
         private void SimpleButtonParcaEkle_Click(object sender, EventArgs e)
         {
+            OfferItem item = new OfferItem();
+            if(checkEditLazer.Checked && Check(textEditKesimSuresi.Text))
+            {
+                item.LaserCuttingTime = int.Parse(textEditKesimSuresi.Text);
+                item.LaserCuttingPrice = Convert.ToDecimal(labelControlLazerTl.Text.Substring(0, labelControlLazerTl.Text.Length - 2));
+                item.LaserCuttingGain = int.Parse(textEditLazerKar.Text);
+            }
 
+            if(checkEditBukum.Checked && (Check(textEditBukumAdedi.Text) || Check(textEditBukumSuresi.Text)))
+            {
+                item.TwistGain = int.Parse(textEditBukumKar.Text);
+                item.TwistCount = int.Parse(textEditBukumAdedi.Text);
+                item.TwistTime = int.Parse(textEditBukumSuresi.Text);
+                item.TwistPrice = Convert.ToDecimal(labelControlBukumTl.Text.Substring(0, labelControlBukumTl.Text.Length - 2));
+            }
+
+            if(checkEditKaynak.Checked && Check(textEditKaynakSuresi.Text))
+            {
+                item.WeldTime = int.Parse(textEditKaynakSuresi.Text);
+                item.WeldGain = int.Parse(textEditKaynakKar.Text);
+                item.WeldPrice = Convert.ToDecimal(labelControlKaynakTl.Text);
+            }
+
+            if(checkEditKaplama.Checked && Check(textEditKaplamaParcaAgirligi.Text) && Check(textEditKaplanacakMalzeme.Text))
+            {
+                item.CoveringValue = int.Parse(textEditKaplamaParcaAgirligi.Text);
+                item.CoveringMaterialId = Lists.processes.Where(i => i.Name.Trim() == textEditKaplanacakMalzeme.Text.Trim()).SingleOrDefault().Id;
+                item.CoveringGain = int.Parse(textEditKaplamaKar.Text);
+                item.CoveringPrice = Convert.ToDecimal(labelControlKaplamaTl.Text.Substring(0, labelControlKaplamaTl.Text.Length - 2));
+            }
+
+            if(checkEditHavsaAcma.Checked && Check(textEditHavsaAdedi.Text))
+            {
+                item.CountersinkCount = int.Parse(textEditHavsaAdedi.Text);
+                item.CountersinkGain = int.Parse(textEditHavsaAcmaKar.Text);
+                item.CountersinkPrice = Convert.ToDecimal(labelControlHavsaTl.Text.Substring(0, labelControlHavsaTl.Text.Length - 2));
+            }
+            /*
+                checkEditTalasli1.Enabled = true;
+                checkEditTalasli2.Enabled = true;
+                checkEditSomunSikma.Enabled = true;
+                checkEditDisAcmaHelicoil.Enabled = true;*/
+            if (checkEditMontaj.Checked && Check(textEditMontajIscilik.Text) && Check(textEditMontajToplamSet.Text))
+            {
+                item.AssemblyJobPrice = int.Parse(textEditMontajIscilik.Text);
+                item.AssemblyTotalSetCount = int.Parse(textEditMontajToplamSet.Text);
+                item.AssemblyGain = int.Parse(textEditMontajKar.Text);
+                item.AssemblyPrice = Convert.ToDecimal(labelControlMontajTl.Text.Substring(0, labelControlMontajTl.Text.Length - 2));
+            }
+
+            if(checkEditMaskelemeBandi.Checked && Check(textEditMaskelemeIscilikSuresi.Text) && Check(textEditMaskelemeBantAlani.Text))
+            {
+                item.MaskingTapeArea = int.Parse(textEditMaskelemeBantAlani.Text);
+                item.MaskingTapeJobPrice = Convert.ToDecimal(textEditMaskelemeIscilikSuresi.Text);
+                item.MaskingTapeType = radioButtonEbatli.Checked;
+                item.MaskingTapeGain = int.Parse(textEditMaskelemeKar.Text);
+                item.MaskingTapePrice = Convert.ToDecimal(labelControlMaskelemeTl.Text.Substring(0, labelControlMaskelemeTl.Text.Length - 2));
+            }
+
+            if(checkEditBoya.Checked && Check(textEditBoyaParcaAlani.Text))
+            {
+                item.PaintArea = int.Parse(textEditBoyaParcaAlani.Text);
+                item.PaintGain = int.Parse(textEditBoyaKar.Text);
+                item.PaintPrice = Convert.ToDecimal(labelControlBoyaTl.Text.Substring(0, labelControlBoyaTl.Text.Length - 2));
+            }
+
+            if(checkEditTalasli1.Checked && Check(textEditTalasli1Adet.Text) && Check(textEditTalasli1Fiyat.Text))
+            {
+                item.MachiningOneCount = int.Parse(textEditTalasli1Adet.Text);
+                item.MachiningOneJobPrice = Convert.ToDecimal(textEditTalasli1Fiyat.Text);
+                item.MachiningOneGain = int.Parse(textEditTalasli1Kar.Text);
+                item.MachiningOnePrice = Convert.ToDecimal(labelControlTalasliTl.Text.Substring(0, labelControlTalasliTl.Text.Length - 2));
+            }
+
+            if (checkEditTalasli2.Checked && Check(textEditTalasli2Adet.Text) && Check(textEditTalasli2Fiyat.Text) && Check(textEditTalasli2Boy.Text))
+            {
+                item.MachiningTwoCount = int.Parse(textEditTalasli2Adet.Text);
+                item.MachiningTwoJobPrice = Convert.ToDecimal(textEditTalasli2Fiyat.Text);
+                item.MachiningTwoGain = int.Parse(textEditTalasli2Kar.Text);
+                item.MachiningTwoPrice = Convert.ToDecimal(labelControlTalasliCapTl.Text.Substring(0, labelControlTalasliCapTl.Text.Length - 2));
+                item.MachiningTwoDiameter = int.Parse(textEditTalasli2Boy.Text);
+            }
+
+            if(checkEditSomunSikma.Checked && Check(textEditSomunSikmaIscilik.Text) && Check(textEditSomunSikmaSetAdedi.Text) && Check(textEditSomunSikmaToplamSet.Text))
+            {
+                item.TighteningJobPrice = Convert.ToDecimal(textEditSomunSikmaIscilik.Text);
+                item.TighteningSetCount = int.Parse(textEditSomunSikmaSetAdedi.Text);
+                item.TighteningTotalSet = int.Parse(textEditSomunSikmaToplamSet.Text);
+                item.TighteningGain = int.Parse(textEditSomunSikmaKar.Text);
+                item.TighteningPrice = Convert.ToDecimal(labelControlSomunTl.Text.Substring(0, labelControlSomunTl.Text.Length - 2));
+            }
+
+            if(checkEditDisAcmaHelicoil.Checked)
+            {
+                item.IndentionCount = int.Parse(textEditDisAdedi.Text);
+                item.IndentionDimensions = int.Parse(textEditDisEbadi.Text);
+                item.HelicoilCount = int.Parse(textEditHelicoilAdet.Text);
+                item.HelicoilJobPrice = Convert.ToDecimal(textEditHelicoilFiyat.Text);
+                item.IndentionHelicoilGain = int.Parse(textEditDisAcmaKar.Text);
+                item.IndentionHelicoilPrice = Convert.ToDecimal(labelControlDisTl.Text.Substring(0, labelControlDisTl.Text.Length - 2));
+            }
+
+            item.PieceId = Lists.pieces.Where(i => i.Code.Trim() == comboBoxEditParcaKodu.Text.Trim()).SingleOrDefault().Id;
+            item.OfferId = -1;
+            item.TotalCount = int.Parse(textEditAdet.Text);
+            item.TotalPrice = Convert.ToDecimal(labelControlParcaTeklifFiyatı.Text.Substring(0, labelControlParcaTeklifFiyatı.Text.Length - 2));
+            item.UnitPrice = Convert.ToDecimal(labelControlBirimIslemMaliyet.Text.Substring(0, labelControlBirimIslemMaliyet.Text.Length - 2)) + Convert.ToDecimal(labelControlBirimMaliyet.Text.Substring(0, labelControlBirimMaliyet.Text.Length - 2));
+
+            ListViewItem lvItem = new ListViewItem();
+            lvItem.Text = offerItems.Count.ToString();
+            lvItem.SubItems.Add(item.PieceId.ToString());
+            lvItem.SubItems.Add(GetItem(item.LaserCuttingPrice));
+            lvItem.SubItems.Add(GetItem(item.TwistPrice));
+            lvItem.SubItems.Add(GetItem(item.WeldPrice));
+            lvItem.SubItems.Add(GetItem(item.CoveringPrice));
+            lvItem.SubItems.Add(GetItem(item.CountersinkPrice));
+            lvItem.SubItems.Add(GetItem(item.IndentionHelicoilPrice));
+            lvItem.SubItems.Add(GetItem(item.MaskingTapePrice));
+            lvItem.SubItems.Add(GetItem(item.MachiningOnePrice));
+            lvItem.SubItems.Add(GetItem(item.MachiningTwoPrice));
+            lvItem.SubItems.Add(GetItem(item.TighteningPrice));
+            lvItem.SubItems.Add(GetItem(item.AssemblyPrice));
+            lvItem.SubItems.Add(GetItem(item.TotalPrice));
+            lvItem.SubItems.Add(GetItem(item.UnitPrice));
+            listView2.Items.Add(lvItem);
+            offerItems.Add(item);
+            ResetAll();
+        }
+
+        private string GetItem(object item)
+        {
+            if (item != null)
+            {
+                return item.ToString() + " TL";
+            }
+            return "";
+        }
+
+        private void ResetAll()
+        {
+            //malzeme bilgileri
+            comboBoxEditParcaKodu.Text = "";
+            textEditParcaAdi.Text = "";
+            textEditAdet.Text = "";
+            labelControlEn.Text = "";
+            labelControlBoy.Text = "";
+            labelControlKalinlik.Text = "";
+            labelControlKalite.Text = "";
+            labelControlFireOrani.Text = "";
+            labelControlAlan.Text = "";
+            labelControlAgirligi.Text = "";
+            labelControlMaliyet.Text = "";
+
+            //Yapılacak İşlemler
+            checkEditLazer.Checked = false;
+            checkEditBukum.Checked = false;
+            checkEditKaynak.Checked = false;
+            checkEditKaplama.Checked = false;
+            checkEditHavsaAcma.Checked = false;
+            checkEditMontaj.Checked = false;
+            checkEditMaskelemeBandi.Checked = false;
+            checkEditBoya.Checked = false;
+            checkEditTalasli1.Checked = false;
+            checkEditTalasli2.Checked = false;
+            checkEditSomunSikma.Checked = false;
+            checkEditDisAcmaHelicoil.Checked = false;
+
+
+            //Parça Teklifi
+            labelControlBirimMaliyet.Text = "";
+            labelControlBirimIslemMaliyet.Text = "";
+            labelControlParcaTeklifFiyatı.Text = "";
+
+            //İslemler
+            groupBoxLazer.Visible = false;
+            groupBoxBukum.Visible = false;
+            groupBoxKaynak.Visible = false;
+            groupBoxKaplama.Visible = false;
+            groupBoxHavsa.Visible = false;
+            groupBoxMontaj.Visible = false;
+            groupBoxMaske.Visible = false;
+            groupBoxBoya.Visible = false;
+            groupBoxT1.Visible = false;
+            groupBoxT2.Visible = false;
+            groupBoxSomun.Visible = false;
+            groupBoxDis.Visible = false;
+            textEditKesimSuresi.Text = "";
+            textEditLazerKar.Text = "";
+            labelControlLazerTl.Text = "..... TL";
+            textEditBukumSuresi.Text = "";
+            textEditBukumAdedi.Text = "";
+            textEditBukumKar.Text = "0";
+            labelControlBukumTl.Text = "..... TL";
+            textEditKaynakSuresi.Text = "";
+            textEditKaynakKar.Text = "0";
+            labelControlKaynakTl.Text = "..... TL";
+            textEditKaplanacakMalzeme.Text = "";
+            textEditKaplamaParcaAgirligi.Text = "";
+            textEditKaplamaKar.Text = "0";
+            labelControlKaplamaTl.Text = "..... TL";
+            radioButtonEbatli.Checked = true;
+            textEditMaskelemeIscilikSuresi.Text = "";
+            textEditMaskelemeBantAlani.Text = "";
+            textEditMaskelemeKar.Text = "0";
+            labelControlMaskelemeTl.Text = "..... TL";
+            textEditBoyaParcaAlani.Text = "";
+            textEditBoyaKar.Text = "0";
+            labelControlBoyaTl.Text = "..... TL";
+            textEditTalasli1Adet.Text = "";
+            textEditTalasli1Fiyat.Text = "";
+            textEditTalasli1Kar.Text = "0";
+            labelControlTalasliTl.Text = "..... TL";
+            textEditTalasli2Adet.Text = "";
+            textEditTalasli2Boy.Text = "";
+            textEditTalasli2Fiyat.Text = "";
+            textEditTalasli2Kar.Text = "0";
+            labelControlTalasliCapTl.Text = "..... TL";
+            textEditHavsaAdedi.Text = "";
+            textEditHavsaAcmaKar.Text = "0";
+            labelControlHavsaTl.Text = "..... TL";
+            textEditMontajIscilik.Text = "";
+            textEditMontajToplamSet.Text = "";
+            textEditMontajKar.Text = "0";
+            labelControlMontajTl.Text = "..... TL";
+            textEditSomunSikmaIscilik.Text = "";
+            textEditSomunSikmaSetAdedi.Text = "";
+            textEditSomunSikmaToplamSet.Text = "";
+            textEditSomunSikmaKar.Text = "0";
+            labelControlSomunTl.Text = "..... TL";
+            textEditDisAdedi.Text = "";
+            textEditDisEbadi.Text = "";
+            textEditHelicoilAdet.Text = "";
+            textEditHelicoilFiyat.Text = "";
+            textEditDisAcmaKar.Text = "0";
+            labelControlDisTl.Text = "..... TL";
+        }
+
+        private bool Check(string value)
+        {
+            int result = 0;
+            if(!int.TryParse(value,out result))
+            {
+                return false;
+            }
+            if(value != null || value.Trim() != "" || value.Trim() != "0")
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }
