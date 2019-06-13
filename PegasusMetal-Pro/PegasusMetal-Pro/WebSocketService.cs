@@ -8,6 +8,7 @@ using SuperSocket.ClientEngine;
 using WebSocket4Net;
 using System.Windows.Forms;
 using DevExpress.Entity.Model;
+using System.Threading;
 
 namespace PegasusMetal_Pro
 {
@@ -18,6 +19,11 @@ namespace PegasusMetal_Pro
         public bool isLogin = false;
         static WebSocketService service;
         private WebSocketService()
+        {
+            new Thread(new ThreadStart(StartSocket)).Start();
+        }
+
+        private void StartSocket()
         {
             websocket = new WebSocket("ws://" + Constants.IP_ADDRESS + ":" + Constants.PORT.ToString() + "/");
             websocket.Opened += new EventHandler(websocket_Opened);
@@ -123,6 +129,9 @@ namespace PegasusMetal_Pro
                 case OPCodes.PROCESS:
                     var process = JsonConvert.DeserializeObject<Process>(body);
                     Lists.processes.Add(process);
+                    break;
+                case OPCodes.END_OF_LOGIN:
+                    GetForm<frmLoading>().Close();
                     break;
                 default:
                     break;

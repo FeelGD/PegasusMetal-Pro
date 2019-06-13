@@ -18,6 +18,8 @@ namespace PegasusMetal_Pro
         private Company company;
         private Piece piece;
         private Material material;
+        private delegate void AddDelegate(object item);
+        private delegate void InsertDelegate(int index, object item);
         private object lock_object = new object();
         private frmYeniProjeTeklifOlustur()
         {
@@ -88,16 +90,42 @@ namespace PegasusMetal_Pro
                 {
                     if(!SearchInListView(item.Code))
                     {
-                        comboBoxEditParcaKodu.Properties.Items.Insert(item.Id, item.Code);
+                        Insert(item.Id, item.Code);
                     }
                 }
                 else
                 {
                     if(!SearchInListView(item.Code))
                     {
-                        comboBoxEditParcaKodu.Properties.Items.Add(item.Code);
+                        Add(item.Code);
                     }
                 }
+            }
+        }
+
+        private void Add(object item)
+        {
+            if(comboBoxEditParcaKodu.InvokeRequired)
+            {
+                var d = new AddDelegate(Add);
+                Invoke(d, new object[] { item });
+            }
+            else
+            {
+                comboBoxEditParcaKodu.Properties.Items.Add(item);
+            }
+        }
+
+        private void Insert(int index,object item)
+        {
+            if (comboBoxEditParcaKodu.InvokeRequired)
+            {
+                var d = new InsertDelegate(Insert);
+                Invoke(d, new object[] { index,item });
+            }
+            else
+            {
+                comboBoxEditParcaKodu.Properties.Items.Insert(index,item);
             }
         }
 
