@@ -22,6 +22,9 @@ namespace PegasusMetal_Pro
         private delegate void InsertDelegate(int index, object item);
         private object lock_object = new object();
         private List<OfferItem> offerItems = new List<OfferItem>();
+        decimal? totalPieceCost = 0m;
+        decimal generalPrice = 0m;
+        decimal totalPrice = 0m;
         private frmYeniProjeTeklifOlustur()
         {
             InitializeComponent();
@@ -992,7 +995,7 @@ namespace PegasusMetal_Pro
             {
                 item.WeldTime = int.Parse(textEditKaynakSuresi.Text);
                 item.WeldGain = int.Parse(textEditKaynakKar.Text);
-                item.WeldPrice = Convert.ToDecimal(labelControlKaynakTl.Text);
+                item.WeldPrice = Convert.ToDecimal(labelControlKaynakTl.Text.Substring(0, labelControlKaynakTl.Text.Length - 2));
             }
 
             if(checkEditKaplama.Checked && Check(textEditKaplamaParcaAgirligi.Text) && Check(textEditKaplanacakMalzeme.Text))
@@ -1099,6 +1102,25 @@ namespace PegasusMetal_Pro
             listView2.Items.Add(lvItem);
             offerItems.Add(item);
             ResetAll();
+            CalculateProject();
+        }
+
+        private void CalculateProject()
+        {
+            foreach(var item in offerItems)
+            {
+                generalPrice = generalPrice + item.TotalPrice;
+                var pieceTemp = Lists.pieces.Where(i => i.Id == item.PieceId).SingleOrDefault();
+                var material = Lists.materials.Where(i => i.Name.Trim() == pieceTemp.Quality.Trim()).SingleOrDefault();
+                decimal weight = ((decimal)(((decimal)pieceTemp.Height * (decimal)pieceTemp.Width * 0.8m * (decimal)pieceTemp.Thickness) / 100000m));
+                totalPieceCost = totalPieceCost + (pieceTemp.WasteRate*weight*material.Price*item.TotalCount);
+            }
+            labelControl26.Text = totalPieceCost.ToString() + " TL";
+            labelControl29.Text = generalPrice.ToString() + " TL";
+            totalPrice = generalPrice;
+            totalPrice =  (totalPrice*(100 +int.Parse(textEditKarOran.Text)))/100;
+            totalPrice = totalPrice - ((totalPrice * int.Parse(textEditIndirimOran.Text)) / 100);
+            labelControl32.Text = totalPrice.ToString() + " TL";
         }
 
         private string GetItem(object item)
@@ -1222,6 +1244,28 @@ namespace PegasusMetal_Pro
             }
 
             return false;
+        }
+
+        private void TextEditKarOran_TextChanged(object sender, EventArgs e)
+        {
+            if(textEditKarOran.Text.Trim() == "")
+            {
+                return;
+            }
+            totalPrice = generalPrice*((100+int.Parse(textEditKarOran.Text))/100);
+            totalPrice = generalPrice - generalPrice * ((int.Parse(textEditIndirimOran.Text)) / 100);
+            labelControl32.Text = totalPrice.ToString() + "TL";
+        }
+
+        private void TextEditIndirimOran_TextChanged(object sender, EventArgs e)
+        {
+            if (textEditIndirimOran.Text.Trim() == "")
+            {
+                return;
+            }
+            totalPrice = generalPrice * ((100 + int.Parse(textEditKarOran.Text)) / 100);
+            totalPrice = generalPrice - generalPrice * ((int.Parse(textEditIndirimOran.Text)) / 100);
+            labelControl32.Text = totalPrice.ToString() + "TL";
         }
     }
 }

@@ -34,7 +34,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabGelirler = new System.Windows.Forms.TabPage();
-            this.tabGiderler = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -42,6 +41,7 @@
             this.SiparisNo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GelirMiktarı = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GelirTarih = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tabGiderler = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.listView2 = new System.Windows.Forms.ListView();
@@ -65,17 +65,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabGelirler.SuspendLayout();
-            this.tabGiderler.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.tabGiderler.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEditMiktar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditBukumSuresi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditAçıklama.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditTarih.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditTarih.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditTarih.Properties.CalendarTimeProperties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -100,6 +100,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(35, 41);
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.PictureBox3_Click);
             // 
             // pictureBox2
             // 
@@ -111,6 +112,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(35, 41);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
             // 
             // tabControl1
             // 
@@ -133,18 +135,6 @@
             this.tabGelirler.Size = new System.Drawing.Size(758, 416);
             this.tabGelirler.TabIndex = 0;
             this.tabGelirler.Text = "GELİRLER";
-            // 
-            // tabGiderler
-            // 
-            this.tabGiderler.BackColor = System.Drawing.Color.Black;
-            this.tabGiderler.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabGiderler.Controls.Add(this.panel2);
-            this.tabGiderler.Location = new System.Drawing.Point(4, 22);
-            this.tabGiderler.Name = "tabGiderler";
-            this.tabGiderler.Padding = new System.Windows.Forms.Padding(3);
-            this.tabGiderler.Size = new System.Drawing.Size(758, 416);
-            this.tabGiderler.TabIndex = 1;
-            this.tabGiderler.Text = "GİDERLER";
             // 
             // panel1
             // 
@@ -200,6 +190,18 @@
             // 
             this.GelirTarih.Text = "Tarih";
             this.GelirTarih.Width = 208;
+            // 
+            // tabGiderler
+            // 
+            this.tabGiderler.BackColor = System.Drawing.Color.Black;
+            this.tabGiderler.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabGiderler.Controls.Add(this.panel2);
+            this.tabGiderler.Location = new System.Drawing.Point(4, 22);
+            this.tabGiderler.Name = "tabGiderler";
+            this.tabGiderler.Padding = new System.Windows.Forms.Padding(3);
+            this.tabGiderler.Size = new System.Drawing.Size(758, 416);
+            this.tabGiderler.TabIndex = 1;
+            this.tabGiderler.Text = "GİDERLER";
             // 
             // panel2
             // 
@@ -330,6 +332,9 @@
             this.textEditMiktar.EditValue = "";
             this.textEditMiktar.Location = new System.Drawing.Point(85, 64);
             this.textEditMiktar.Name = "textEditMiktar";
+            // 
+            // 
+            // 
             this.textEditMiktar.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditMiktar.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditMiktar.Properties.Appearance.Options.UseBackColor = true;
@@ -343,6 +348,9 @@
             this.textEditBukumSuresi.Enabled = false;
             this.textEditBukumSuresi.Location = new System.Drawing.Point(85, 21);
             this.textEditBukumSuresi.Name = "textEditBukumSuresi";
+            // 
+            // 
+            // 
             this.textEditBukumSuresi.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditBukumSuresi.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditBukumSuresi.Properties.Appearance.Options.UseBackColor = true;
@@ -379,6 +387,9 @@
             this.textEditAçıklama.EditValue = "";
             this.textEditAçıklama.Location = new System.Drawing.Point(85, 145);
             this.textEditAçıklama.Name = "textEditAçıklama";
+            // 
+            // 
+            // 
             this.textEditAçıklama.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditAçıklama.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditAçıklama.Properties.Appearance.Options.UseBackColor = true;
@@ -391,12 +402,18 @@
             this.textEditTarih.EditValue = "";
             this.textEditTarih.Location = new System.Drawing.Point(85, 105);
             this.textEditTarih.Name = "textEditTarih";
+            // 
+            // 
+            // 
             this.textEditTarih.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
             this.textEditTarih.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textEditTarih.Properties.Appearance.Options.UseBackColor = true;
             this.textEditTarih.Properties.Appearance.Options.UseFont = true;
             this.textEditTarih.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            // 
+            // 
+            // 
             this.textEditTarih.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.textEditTarih.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
@@ -428,9 +445,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabGelirler.ResumeLayout(false);
-            this.tabGiderler.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.tabGiderler.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
