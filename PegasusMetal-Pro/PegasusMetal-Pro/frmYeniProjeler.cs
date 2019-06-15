@@ -21,6 +21,9 @@ namespace PegasusMetal_Pro
             Lists.projects.CollectionChanged += CollectionChanged;
             Lists.companies.CollectionChanged += CompanyCollectionChanged;
             List<string> data = new List<string>();
+            data.Add(OPCodes.GET_OFFERS);
+            WebSocketService.getInstance().Send(data);
+            data.Clear();
             data.Add(OPCodes.GET_COMPANIES);
             WebSocketService.getInstance().Send(data);
             data.Clear();
@@ -37,6 +40,10 @@ namespace PegasusMetal_Pro
         {
             foreach (var item in Lists.projects.Where(s => !SearchInListView(s.Id.ToString())))
             {
+                if(Lists.offers.Where(i=>i.ProjectId==item.Id).ToList().Count>0)
+                {
+                    continue;
+                }
                 string[] array = { item.Id.ToString(), item.Name, Lists.companies.Where(i=>i.Id==item.CompanyId).SingleOrDefault().Name, "Testing", "Testing" };
                 ListViewItem listViewItem = new ListViewItem(array);
                 if (item.Id < listView1.Items.Count)

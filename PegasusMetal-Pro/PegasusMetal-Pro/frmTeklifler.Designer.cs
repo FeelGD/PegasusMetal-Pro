@@ -36,7 +36,6 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ProjeAdi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Termin = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Ucret = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Veren = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Durum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -103,7 +102,6 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Id,
             this.ProjeAdi,
-            this.Termin,
             this.Ucret,
             this.Veren,
             this.Durum});
@@ -124,11 +122,6 @@
             // 
             this.ProjeAdi.Text = "Projenin Adı";
             this.ProjeAdi.Width = 178;
-            // 
-            // Termin
-            // 
-            this.Termin.Text = "Projenin Termin Tarihi";
-            this.Termin.Width = 149;
             // 
             // Ucret
             // 
@@ -256,7 +249,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ColumnHeader Id;
         private System.Windows.Forms.ColumnHeader ProjeAdi;
-        private System.Windows.Forms.ColumnHeader Termin;
         private System.Windows.Forms.ColumnHeader Ucret;
         private System.Windows.Forms.ColumnHeader Veren;
         private System.Windows.Forms.ColumnHeader Durum;

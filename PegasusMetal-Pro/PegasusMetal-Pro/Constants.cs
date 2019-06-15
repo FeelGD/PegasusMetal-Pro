@@ -125,6 +125,8 @@ namespace PegasusMetal_Pro
         public const string GET_PIECES = "GetPiece";
         public const string GET_PROJECTS = "GetProjects";
         public const string GET_PROCESSES = "GetProcess";
+        public const string GET_OFFERS = "GetOffers";
+        public const string GET_OFFER_ITEMS = "GetOfferItems";
     }
     public class Reason
     {

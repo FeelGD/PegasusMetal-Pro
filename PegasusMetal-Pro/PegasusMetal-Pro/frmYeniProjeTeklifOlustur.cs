@@ -20,6 +20,7 @@ namespace PegasusMetal_Pro
         private Company company;
         private Piece piece;
         private Material material;
+        private Offer generalOffer;
         private delegate void AddDelegate(object item);
         private delegate void InsertDelegate(int index, object item);
         private object lock_object = new object();
@@ -50,6 +51,46 @@ namespace PegasusMetal_Pro
             data.Clear();
             data.Add(OPCodes.GET_PROCESSES);
             WebSocketService.getInstance().Send(data);
+        }
+
+        private void Initialize(Project project, Company company)
+        {
+            this.project = project;
+            this.company = company;
+            textEditProjeAd.Text = project.Name;
+            textEditMusteriAd.Text = company.Name;
+            comboBoxEditTeklifBicim.Text = "Parça";
+            Lists.pieces.Clear();
+            Lists.pieces.CollectionChanged += CollectionChanged;
+            List<string> data = new List<string>();
+            data.Add(OPCodes.GET_PIECES);
+            WebSocketService.getInstance().Send(data);
+            Lists.processes.Clear();
+            Lists.processes.CollectionChanged += KaplamaCollectionChanged;
+            data.Clear();
+            data.Add(OPCodes.GET_PROCESSES);
+            WebSocketService.getInstance().Send(data);
+        }
+
+        public frmYeniProjeTeklifOlustur(Project project, Company company,Offer generalOffer)
+        {
+            InitializeComponent();
+            Initialize(project,company);
+            List<string> data = new List<string>();
+            Lists.offerItems.CollectionChanged += OfferItemsCollectionChanged;
+            data.Add(OPCodes.GET_OFFER_ITEMS);
+            WebSocketService.getInstance().Send(data);
+            totalPieceCost = generalOffer.UnitPrice;
+            generalPrice = generalOffer.OfferPrice;
+            labelControl26.Text = totalPieceCost.ToString();
+            labelControl29.Text = generalPrice.ToString();
+            totalPrice = generalPrice;
+            textEdit1.Text = generalOffer.LastPrice.ToString();
+            textEditKarOran.Text = generalOffer.ProfitPercentage.ToString();
+            textEditIndirimOran.Text = generalOffer.DiscountPercentage.ToString();
+            totalPrice = generalPrice * ((100 + int.Parse(textEditKarOran.Text)) / 100);
+            totalPrice = generalPrice - generalPrice * ((int.Parse(textEditIndirimOran.Text)) / 100);
+            labelControl32.Text = totalPrice.ToString() + "TL";
         }
 
         private void KaplamaCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
@@ -109,6 +150,49 @@ namespace PegasusMetal_Pro
             }
         }
 
+        private void OfferItemsCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            foreach (var item in Lists.offerItems.Where(s => !SearchInListView2(s.Id.ToString())))
+            {
+                if (item.Id < comboBoxEditParcaKodu.Properties.Items.Count)
+                {
+                    offerItems.Add(item);
+                    AddListView(GetListViewItem(item));
+                }
+                else
+                {
+                    offerItems.Insert(item.Id,item);
+                    InsertListView(item.Id, GetListViewItem(item));
+                }
+            }
+        }
+
+        private void AddListView(object item)
+        {
+            if (listView2.InvokeRequired)
+            {
+                var d = new AddDelegate(AddListView);
+                Invoke(d, new object[] { item });
+            }
+            else
+            {
+                listView2.Items.Add((ListViewItem)item);
+            }
+        }
+
+        private void InsertListView(int index, object item)
+        {
+            if (listView2.InvokeRequired)
+            {
+                var d = new InsertDelegate(InsertListView);
+                Invoke(d, new object[] { index, item });
+            }
+            else
+            {
+                listView2.Items.Insert(index, (ListViewItem)item);
+            }
+        }
+
         private void Add(object item)
         {
             if(comboBoxEditParcaKodu.InvokeRequired)
@@ -152,6 +236,18 @@ namespace PegasusMetal_Pro
             foreach (string item in comboBoxEditParcaKodu.Properties.Items)
             {
                 if (item.Trim().Equals(Id.Trim()))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private bool SearchInListView2(string Id)
+        {
+            foreach (ListViewItem item in listView2.Items)
+            {
+                if (item.Text.Trim().Equals(Id.Trim()))
                 {
                     return true;
                 }
@@ -1085,6 +1181,14 @@ namespace PegasusMetal_Pro
             item.TotalPrice = Convert.ToDecimal(labelControlParcaTeklifFiyatı.Text.Substring(0, labelControlParcaTeklifFiyatı.Text.Length - 2));
             item.UnitPrice = Convert.ToDecimal(labelControlBirimIslemMaliyet.Text.Substring(0, labelControlBirimIslemMaliyet.Text.Length - 2)) + Convert.ToDecimal(labelControlBirimMaliyet.Text.Substring(0, labelControlBirimMaliyet.Text.Length - 2));
 
+            listView2.Items.Add(GetListViewItem(item));
+            offerItems.Add(item);
+            ResetAll();
+            CalculateProject();
+        }
+
+        private ListViewItem GetListViewItem(OfferItem item)
+        {
             ListViewItem lvItem = new ListViewItem();
             lvItem.Text = offerItems.Count.ToString();
             lvItem.SubItems.Add(item.PieceId.ToString());
@@ -1101,10 +1205,7 @@ namespace PegasusMetal_Pro
             lvItem.SubItems.Add(GetItem(item.AssemblyPrice));
             lvItem.SubItems.Add(GetItem(item.TotalPrice));
             lvItem.SubItems.Add(GetItem(item.UnitPrice));
-            listView2.Items.Add(lvItem);
-            offerItems.Add(item);
-            ResetAll();
-            CalculateProject();
+            return lvItem;
         }
 
         private void CalculateProject()
@@ -1287,7 +1388,7 @@ namespace PegasusMetal_Pro
                 ProfitPercentage = Convert.ToSingle(textEditKarOran.Text),
                 ProjectId = project.Id,
                 ProjectPreparation = "",
-                UnitPrice = 0,
+                UnitPrice = Convert.ToDecimal(labelControl26.Text.Substring(0,labelControl26.Text.Length-2)),
             };
 
             TotalOffer totalOffer = new TotalOffer() { Offer = offer, OfferItems = offerItems };
