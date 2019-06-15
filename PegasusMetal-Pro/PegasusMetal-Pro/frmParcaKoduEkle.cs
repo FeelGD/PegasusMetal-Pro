@@ -36,7 +36,7 @@ namespace PegasusMetal_Pro
             textEditEn.Text = "";
             texteditKalinlik.Text = "";
             textEdit2.Text = "";
-  
+
         }
 
         private void simpleButtonParcaKoduEkle_Click(object sender, EventArgs e)
@@ -58,8 +58,9 @@ namespace PegasusMetal_Pro
             data.Add(JsonConvert.SerializeObject(piece));
             WebSocketService.getInstance().Send(data);
             RefreshBoxes();
-                   }
-            
+            this.Close();
+        }
+
     }
 }
 

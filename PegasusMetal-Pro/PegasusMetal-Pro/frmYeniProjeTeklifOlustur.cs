@@ -341,7 +341,7 @@ namespace PegasusMetal_Pro
                 labelControlFireOrani.Text = piece.WasteRate.ToString();
                 labelControlAgirligi.Text = weight.ToString(); // Calculation = Width*Height*0.8*Thickness/100000
                 labelControlAlan.Text = ((decimal)((decimal)piece.Width * (decimal)piece.Height / 1000000m)).ToString();
-                labelControlMaliyet.Text = (weight * material.Price).ToString();
+                labelControlMaliyet.Text = (piece.WasteRate*weight * material.Price).ToString();
                 labelControlBirimMaliyet.Text = (weight * material.Price).ToString();
             }
             else
@@ -504,8 +504,9 @@ namespace PegasusMetal_Pro
 
         private void CalculateKaynak()
         {
-            if (textEditKaynakSuresi.Text.Trim() == "0" && textEditKaynakSuresi.Text.Trim() == "")
+            if (textEditKaynakSuresi.Text.Trim() == "0" || textEditKaynakSuresi.Text.Trim() == "")
             {
+                labelControlKaynakTl.Text = "..... TL";
                 return;
             }
             Process process = Lists.processes.Where(i => i.Name.Trim() == "Kaynak" && i.Property.ToLower() == "Kaynak".ToLower()).SingleOrDefault();
@@ -562,6 +563,7 @@ namespace PegasusMetal_Pro
         {
             if (textEditHavsaAdedi.Text.Trim() == "")
             {
+                labelControlHavsaTl.Text = "..... TL";
                 return;
             }
             Process process = Lists.processes.Where(i => i.Name.Trim() == "Havşa Açma" && i.Property.ToLower() == "HAVŞA AÇMA".ToLower()).SingleOrDefault();
@@ -659,7 +661,7 @@ namespace PegasusMetal_Pro
 
         private void CalculateBoya()
         {
-            if(textEditBoyaParcaAlani.Text.Trim() == "") { return; }
+            if(textEditBoyaParcaAlani.Text.Trim() == "") { labelControlBoyaTl.Text = "..... TL"; return; }
             Process process=null;
             if(piece.Thickness <2m)
             {
@@ -692,7 +694,7 @@ namespace PegasusMetal_Pro
 
         private void CalculateTalasli1()
         {
-            if (textEditTalasli1Adet.Text.Trim() == "" || textEditTalasli1Fiyat.Text.Trim() == "") { return; }
+            if (textEditTalasli1Adet.Text.Trim() == "" || textEditTalasli1Fiyat.Text.Trim() == "") { labelControlTalasliTl.Text = "..... TL"; return; }
             float price = (float)(Convert.ToDecimal(textEditTalasli1Fiyat.Text) * Convert.ToDecimal(textEditTalasli1Adet.Text));
             if (textEditTalasli1Kar.Text.Trim() != "")
             {
@@ -706,7 +708,7 @@ namespace PegasusMetal_Pro
 
         private void CalculateTalasli2()
         {
-            if (textEditTalasli2Adet.Text.Trim() == "" || textEditTalasli2Fiyat.Text.Trim() == "" || textEditTalasli2Boy.Text.Trim() == "") { return; }
+            if (textEditTalasli2Adet.Text.Trim() == "" || textEditTalasli2Fiyat.Text.Trim() == "" || textEditTalasli2Boy.Text.Trim() == "") { labelControlTalasliCapTl.Text = "..... TL"; return; }
             float price = (float)(Convert.ToDecimal(textEditTalasli2Fiyat.Text) * Convert.ToDecimal(textEditTalasli2Adet.Text)*Convert.ToDecimal(textEditTalasli2Boy.Text));
             if (textEditTalasli2Kar.Text.Trim() != "")
             {
@@ -755,7 +757,7 @@ namespace PegasusMetal_Pro
 
         private void CalculateSomunSikma()
         {
-            if (textEditSomunSikmaIscilik.Text.Trim() == "" || textEditSomunSikmaSetAdedi.Text.Trim() == "" || textEditSomunSikmaToplamSet.Text.Trim() == "") { return; }
+            if (textEditSomunSikmaIscilik.Text.Trim() == "" || textEditSomunSikmaSetAdedi.Text.Trim() == "" || textEditSomunSikmaToplamSet.Text.Trim() == "") { labelControlSomunTl.Text = "..... TL"; return; }
             float price = (float)(Convert.ToDecimal(textEditSomunSikmaToplamSet.Text) * Convert.ToDecimal(textEditSomunSikmaIscilik.Text) * Convert.ToDecimal(textEditSomunSikmaSetAdedi.Text));
             if (textEditSomunSikmaKar.Text.Trim() != "")
             {

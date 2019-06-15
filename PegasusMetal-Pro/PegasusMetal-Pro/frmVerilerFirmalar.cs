@@ -85,6 +85,7 @@ namespace PegasusMetal_Pro
                     TaxOffice = textEditVergiDairesi.Text
                 };
                 var item = listView1.SelectedItems[0];
+
                 item.SubItems[0].Text= textEditId.Text;
                 item.SubItems[1].Text= textEditFirmaIsmi.Text;
                 item.SubItems[2].Text= textEditFirmaKodu.Text;
