@@ -33,5 +33,11 @@ namespace PegasusMetal_Pro
             frmYeniProjeler yeniProjeler = new frmYeniProjeler();
             yeniProjeler.ShowDialog();
         }
+
+        private void PTamamlananProjelerBtn_Click(object sender, EventArgs e)
+        {
+            frmProjelerTamamlanmisProjeler tamamlanmisProjeler = new frmProjelerTamamlanmisProjeler();
+            tamamlanmisProjeler.ShowDialog();
+        }
     }
 }

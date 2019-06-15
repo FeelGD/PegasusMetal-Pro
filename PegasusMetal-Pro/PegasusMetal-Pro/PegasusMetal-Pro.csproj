@@ -227,6 +227,12 @@
     <Compile Include="frmParcaKoduEkle.Designer.cs">
       <DependentUpon>frmParcaKoduEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmProjelerTamamlanmisProjeler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProjelerTamamlanmisProjeler.Designer.cs">
+      <DependentUpon>frmProjelerTamamlanmisProjeler.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRoller.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +244,12 @@
     </Compile>
     <Compile Include="frmSipariseBasla.Designer.cs">
       <DependentUpon>frmSipariseBasla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTeklifArsiv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeklifArsiv.Designer.cs">
+      <DependentUpon>frmTeklifArsiv.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTeklifler.cs">
       <SubType>Form</SubType>
@@ -453,11 +465,17 @@
     <EmbeddedResource Include="frmParcaKoduEkle.resx">
       <DependentUpon>frmParcaKoduEkle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmProjelerTamamlanmisProjeler.resx">
+      <DependentUpon>frmProjelerTamamlanmisProjeler.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRoller.resx">
       <DependentUpon>frmRoller.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSipariseBasla.resx">
       <DependentUpon>frmSipariseBasla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeklifArsiv.resx">
+      <DependentUpon>frmTeklifArsiv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTeklifler.resx">
       <DependentUpon>frmTeklifler.cs</DependentUpon>
