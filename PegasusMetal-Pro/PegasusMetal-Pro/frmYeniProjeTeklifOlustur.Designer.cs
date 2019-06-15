@@ -409,9 +409,8 @@
             this.labelControl32.Appearance.Options.UseFont = true;
             this.labelControl32.Location = new System.Drawing.Point(16, 166);
             this.labelControl32.Name = "labelControl32";
-            this.labelControl32.Size = new System.Drawing.Size(62, 20);
+            this.labelControl32.Size = new System.Drawing.Size(0, 20);
             this.labelControl32.TabIndex = 13;
-            this.labelControl32.Text = "deneme";
             // 
             // labelControl29
             // 
@@ -419,9 +418,8 @@
             this.labelControl29.Appearance.Options.UseFont = true;
             this.labelControl29.Location = new System.Drawing.Point(16, 98);
             this.labelControl29.Name = "labelControl29";
-            this.labelControl29.Size = new System.Drawing.Size(62, 20);
+            this.labelControl29.Size = new System.Drawing.Size(0, 20);
             this.labelControl29.TabIndex = 12;
-            this.labelControl29.Text = "deneme";
             // 
             // labelControl26
             // 
@@ -429,9 +427,8 @@
             this.labelControl26.Appearance.Options.UseFont = true;
             this.labelControl26.Location = new System.Drawing.Point(16, 32);
             this.labelControl26.Name = "labelControl26";
-            this.labelControl26.Size = new System.Drawing.Size(62, 20);
+            this.labelControl26.Size = new System.Drawing.Size(0, 20);
             this.labelControl26.TabIndex = 11;
-            this.labelControl26.Text = "deneme";
             // 
             // labelControl18
             // 
@@ -489,9 +486,8 @@
             this.labelControlParcaTeklifFiyatı.Appearance.Options.UseFont = true;
             this.labelControlParcaTeklifFiyatı.Location = new System.Drawing.Point(68, 132);
             this.labelControlParcaTeklifFiyatı.Name = "labelControlParcaTeklifFiyatı";
-            this.labelControlParcaTeklifFiyatı.Size = new System.Drawing.Size(107, 15);
+            this.labelControlParcaTeklifFiyatı.Size = new System.Drawing.Size(0, 15);
             this.labelControlParcaTeklifFiyatı.TabIndex = 30;
-            this.labelControlParcaTeklifFiyatı.Text = "Parça Teklif Fiyatı:";
             // 
             // labelControl64
             // 
@@ -509,9 +505,8 @@
             this.labelControlBirimIslemMaliyet.Appearance.Options.UseFont = true;
             this.labelControlBirimIslemMaliyet.Location = new System.Drawing.Point(50, 93);
             this.labelControlBirimIslemMaliyet.Name = "labelControlBirimIslemMaliyet";
-            this.labelControlBirimIslemMaliyet.Size = new System.Drawing.Size(114, 15);
+            this.labelControlBirimIslemMaliyet.Size = new System.Drawing.Size(0, 15);
             this.labelControlBirimIslemMaliyet.TabIndex = 28;
-            this.labelControlBirimIslemMaliyet.Text = "Birim İşlem Maliyeti:";
             // 
             // labelControlBirimMaliyet
             // 
@@ -519,9 +514,8 @@
             this.labelControlBirimMaliyet.Appearance.Options.UseFont = true;
             this.labelControlBirimMaliyet.Location = new System.Drawing.Point(50, 53);
             this.labelControlBirimMaliyet.Name = "labelControlBirimMaliyet";
-            this.labelControlBirimMaliyet.Size = new System.Drawing.Size(76, 15);
+            this.labelControlBirimMaliyet.Size = new System.Drawing.Size(0, 15);
             this.labelControlBirimMaliyet.TabIndex = 27;
-            this.labelControlBirimMaliyet.Text = "Birim Maliyet";
             // 
             // labelControl49
             // 
