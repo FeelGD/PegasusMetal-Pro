@@ -50,13 +50,6 @@ namespace PegasusMetal_Pro
             Console.ForegroundColor = color;
             Console.WriteLine("[{0}][{1}] : {2}", DateTime.Now.ToString("HH:mm:ss"), LogType, Log);
         }
-        public static void Minimize()
-        {
-            foreach (var item in Application.OpenForms)
-            {
-                ((Form)item).WindowState = FormWindowState.Minimized;
-            }
-        }
 
     }
 }

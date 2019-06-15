@@ -16,5 +16,15 @@ namespace PegasusMetal_Pro
         {
             InitializeComponent();
         }
+
+        private void PictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void PictureBox3_Click(object sender, EventArgs e)
+        {
+            Utilities.Minimize();
+        }
     }
 }
