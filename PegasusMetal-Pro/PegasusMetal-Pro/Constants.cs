@@ -85,6 +85,8 @@ namespace PegasusMetal_Pro
         public static ObservableCollection<Material> materials = new ObservableCollection<Material>();
         public static ObservableCollection<Piece> pieces = new ObservableCollection<Piece>();
         public static ObservableCollection<Process> processes = new ObservableCollection<Process>();
+        public static ObservableCollection<Offer> offers = new ObservableCollection<Offer>();
+        public static ObservableCollection<OfferItem> offerItems = new ObservableCollection<OfferItem>();
     }
     public static class OPCodes
     {
@@ -97,6 +99,7 @@ namespace PegasusMetal_Pro
         public const string INOUTPUT = "InOutput";
         public const string MATERIAL = "Material";
         public const string OFFER = "Offer";
+        public const string OFFER_ITEM = "OfferItem";
         public const string PIECE = "Piece";
         public const string PROCESS = "Process";
         public const string PROJECT = "Project";
@@ -109,6 +112,7 @@ namespace PegasusMetal_Pro
         public const string STOCK_CATEGORY = "StockCategory";
         public const string USER = "User";
         public const string USER_ROLE = "UserRole";
+        public const string TOTAL_OFFER = "TotalOffer";
         public const string GET_PERSONAL_LIST = "GetPersonalList";
         public const string GET_ROLE_LIST = "GetRoleList";
         public const string GET_USER_ROLE_LIST = "GetUserRoleList";

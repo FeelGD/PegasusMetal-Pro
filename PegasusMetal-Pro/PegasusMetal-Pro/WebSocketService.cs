@@ -134,6 +134,14 @@ namespace PegasusMetal_Pro
                 case OPCodes.END_OF_LOGIN:
                     GetForm<frmLoading>().Close();
                     break;
+                case OPCodes.OFFER:
+                    var offer = JsonConvert.DeserializeObject<Offer>(body);
+                    Lists.offers.Add(offer);
+                    break;
+                case OPCodes.OFFER_ITEM:
+                    var offerItem = JsonConvert.DeserializeObject<OfferItem>(body);
+                    Lists.offerItems.Add(offerItem);
+                    break;
                 default:
                     break;
             }

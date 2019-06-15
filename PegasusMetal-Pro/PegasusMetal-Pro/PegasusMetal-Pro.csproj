@@ -337,6 +337,7 @@
       <DependentUpon>PegasusEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\OfferItem.cs" />
+    <Compile Include="Models\TotalOffer.cs" />
     <Compile Include="Offer.cs">
       <DependentUpon>PegasusEntities.tt</DependentUpon>
     </Compile>

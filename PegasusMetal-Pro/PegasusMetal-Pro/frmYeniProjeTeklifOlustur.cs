@@ -1,4 +1,6 @@
 ﻿using DevExpress.XtraEditors.Controls;
+using Newtonsoft.Json;
+using PegasusMetal_Pro.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -1266,6 +1268,34 @@ namespace PegasusMetal_Pro
             totalPrice = generalPrice * ((100 + int.Parse(textEditKarOran.Text)) / 100);
             totalPrice = generalPrice - generalPrice * ((int.Parse(textEditIndirimOran.Text)) / 100);
             labelControl32.Text = totalPrice.ToString() + "TL";
+        }
+
+        private void SimpleButtonSonTeklifVer_Click(object sender, EventArgs e)
+        {
+            if(Convert.ToDecimal(textEdit1.Text) < generalPrice)
+            {
+                MessageBox.Show("Minimum değerden daha aşağı teklif veremezsiniz.");
+                return;
+            }
+
+            Offer offer = new Offer()
+            {
+                Id = -1,
+                DiscountPercentage = Convert.ToSingle(textEditIndirimOran.Text),
+                LastPrice = Convert.ToDecimal(textEdit1.Text),
+                OfferPrice = generalPrice,
+                ProfitPercentage = Convert.ToSingle(textEditKarOran.Text),
+                ProjectId = project.Id,
+                ProjectPreparation = "",
+                UnitPrice = 0,
+            };
+
+            TotalOffer totalOffer = new TotalOffer() { Offer = offer, OfferItems = offerItems };
+            List<string> data = new List<string>();
+            data.Add(OPCodes.TOTAL_OFFER);
+            data.Add(JsonConvert.SerializeObject(totalOffer));
+            WebSocketService.getInstance().Send(data);
+            this.Close();
         }
     }
 }

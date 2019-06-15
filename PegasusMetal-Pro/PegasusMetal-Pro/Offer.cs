@@ -18,8 +18,8 @@ namespace PegasusMetal_Pro
         public int ProjectId { get; set; }
         public decimal UnitPrice { get; set; }
         public decimal OfferPrice { get; set; }
-        public decimal ProfitPercentage { get; set; }
-        public decimal DiscountPercentage { get; set; }
+        public float ProfitPercentage { get; set; }
+        public float DiscountPercentage { get; set; }
         public decimal LastPrice { get; set; }
         public string ProjectPreparation { get; set; }
     }

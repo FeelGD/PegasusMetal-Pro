@@ -383,6 +383,7 @@
             this.simpleButtonSonTeklifVer.Size = new System.Drawing.Size(82, 36);
             this.simpleButtonSonTeklifVer.TabIndex = 16;
             this.simpleButtonSonTeklifVer.Text = "Teklifi Tamamla";
+            this.simpleButtonSonTeklifVer.Click += new System.EventHandler(this.SimpleButtonSonTeklifVer_Click);
             // 
             // labelControl37
             // 
