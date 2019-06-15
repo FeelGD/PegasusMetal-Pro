@@ -93,6 +93,7 @@
             this.PTamamlananProjelerBtn.Text = "Tamamlanan Projeler\r\n\r\n";
             this.PTamamlananProjelerBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.PTamamlananProjelerBtn.UseVisualStyleBackColor = true;
+            this.PTamamlananProjelerBtn.Click += new System.EventHandler(this.PTamamlananProjelerBtn_Click);
             // 
             // PYeniProjelerBtn
             // 
