@@ -882,3 +882,4 @@ D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro
 C:\Users\Monster\Source\Repos\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal_Pro.frmNot.resources
 C:\Users\Monster\source\repos\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal_Pro.frmLoading.resources
 C:\Users\Monster\Source\Repos\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal-Pro.exe.licenses
+D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal_Pro.frmLoading.resources
