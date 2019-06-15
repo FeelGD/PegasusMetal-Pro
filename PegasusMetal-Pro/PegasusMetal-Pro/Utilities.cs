@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PegasusMetal_Pro
 {
@@ -33,6 +34,14 @@ namespace PegasusMetal_Pro
             if (e.InnerException != null)
             {
                 WriteErrorMessages(e.InnerException);
+            }
+        }
+
+        public static void Minimize()
+        {
+            foreach(var item in Application.OpenForms)
+            {
+                ((Form)item).WindowState = FormWindowState.Minimized;
             }
         }
 

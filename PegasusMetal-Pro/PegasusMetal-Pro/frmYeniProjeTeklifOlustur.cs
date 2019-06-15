@@ -504,7 +504,7 @@ namespace PegasusMetal_Pro
 
         private void CalculateKaynak()
         {
-            if (textEditKaynakSuresi.Text.Trim() == "0" && textEditKaynakSuresi.Text.Trim() == "")
+            if (textEditKaynakSuresi.Text.Trim() == "0" || textEditKaynakSuresi.Text.Trim() == "")
             {
                 return;
             }
