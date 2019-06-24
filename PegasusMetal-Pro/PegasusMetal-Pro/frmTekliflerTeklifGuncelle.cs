@@ -165,5 +165,68 @@ namespace PegasusMetal_Pro
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (ListViewItem item in listView2.SelectedItems)
+            {
+                if (listView2.SelectedItems[0] != null)
+                {
+                    if (listView2.SelectedItems[0].SubItems[2].Text !="")
+                    {
+                        checkEditLazer.Checked = true;
+                    }
+                    if (listView2.SelectedItems[0].SubItems[3].Text != "")
+                    {
+                        checkEditBukum.Checked = true;
+                    }
+                    if (listView2.SelectedItems[0].SubItems[4].Text != "")
+                    {
+                        checkEditKaynak.Checked = true;
+                    }
+                    if (listView2.SelectedItems[0].SubItems[5].Text != "")
+                    {
+                        checkEditKaplama.Checked = true;
+                    }
+                    if (listView2.SelectedItems[0].SubItems[6].Text != "")
+                    {
+                        checkEditHavsaAcma.Checked = true;
+                    }
+                    if (listView2.SelectedItems[0].SubItems[7].Text != "")
+                    {
+                        checkEditDisAcmaHelicoil.Checked = true;
+                    }
+                    if (listView2.SelectedItems[0].SubItems[8].Text != "")
+                    {
+                        checkEditMaskelemeBandi.Checked = true;
+                    }
+                    if (listView2.SelectedItems[0].SubItems[9].Text != "")
+                    {
+                        checkEditBoya.Checked = true;
+                    }
+                    if (listView2.SelectedItems[0].SubItems[10].Text != "")
+                    {
+                        checkEditTalasli1.Checked = true;
+                    }
+                    if (listView2.SelectedItems[0].SubItems[11].Text != "")
+                    {
+                        checkEditTalasli2.Checked = true;
+                    }
+                    if (listView2.SelectedItems[0].SubItems[12].Text != "")
+                    {
+                        checkEditSomunSikma.Checked = true;
+                    }
+                    if (listView2.SelectedItems[0].SubItems[13].Text != "")
+                    {
+                        checkEditMontaj.Checked = true;
+                    }
+                }
+                else
+                {
+                    Refresh();
+                }
+
+            }
+        }
     }
 }

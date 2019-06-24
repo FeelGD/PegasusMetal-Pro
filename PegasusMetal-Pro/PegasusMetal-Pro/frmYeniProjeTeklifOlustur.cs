@@ -33,7 +33,7 @@ namespace PegasusMetal_Pro
             InitializeComponent();
         }
 
-        public frmYeniProjeTeklifOlustur(Project project,Company company)
+        public frmYeniProjeTeklifOlustur(Project project, Company company)
         {
             InitializeComponent();
             this.project = project;
@@ -72,10 +72,10 @@ namespace PegasusMetal_Pro
             WebSocketService.getInstance().Send(data);
         }
 
-        public frmYeniProjeTeklifOlustur(Project project, Company company,Offer generalOffer)
+        public frmYeniProjeTeklifOlustur(Project project, Company company, Offer generalOffer)
         {
             InitializeComponent();
-            Initialize(project,company);
+            Initialize(project, company);
             List<string> data = new List<string>();
             Lists.offerItems.CollectionChanged += OfferItemsCollectionChanged;
             data.Add(OPCodes.GET_OFFER_ITEMS);
@@ -99,12 +99,12 @@ namespace PegasusMetal_Pro
             {
                 if (item.Id < textEditKaplanacakMalzeme.Properties.Items.Count)
                 {
-                    
+
                     var t2 = new Task(() =>
                     {
                         lock (lock_object)
                         {
-                            if(!SearchKaplama(item.Property))
+                            if (!SearchKaplama(item.Property))
                             {
                                 textEditKaplanacakMalzeme.Properties.Items.Insert(item.Id, item.Property);
                             }
@@ -114,7 +114,7 @@ namespace PegasusMetal_Pro
                 }
                 else
                 {
-                    var t2 = new Task(() => 
+                    var t2 = new Task(() =>
                     {
                         lock (lock_object)
                         {
@@ -135,14 +135,14 @@ namespace PegasusMetal_Pro
             {
                 if (item.Id < comboBoxEditParcaKodu.Properties.Items.Count)
                 {
-                    if(!SearchInListView(item.Code))
+                    if (!SearchInListView(item.Code))
                     {
                         Insert(item.Id, item.Code);
                     }
                 }
                 else
                 {
-                    if(!SearchInListView(item.Code))
+                    if (!SearchInListView(item.Code))
                     {
                         Add(item.Code);
                     }
@@ -161,7 +161,7 @@ namespace PegasusMetal_Pro
                 }
                 else
                 {
-                    offerItems.Insert(item.Id,item);
+                    offerItems.Insert(item.Id, item);
                     InsertListView(item.Id, GetListViewItem(item));
                 }
             }
@@ -195,7 +195,7 @@ namespace PegasusMetal_Pro
 
         private void Add(object item)
         {
-            if(comboBoxEditParcaKodu.InvokeRequired)
+            if (comboBoxEditParcaKodu.InvokeRequired)
             {
                 var d = new AddDelegate(Add);
                 Invoke(d, new object[] { item });
@@ -206,16 +206,16 @@ namespace PegasusMetal_Pro
             }
         }
 
-        private void Insert(int index,object item)
+        private void Insert(int index, object item)
         {
             if (comboBoxEditParcaKodu.InvokeRequired)
             {
                 var d = new InsertDelegate(Insert);
-                Invoke(d, new object[] { index,item });
+                Invoke(d, new object[] { index, item });
             }
             else
             {
-                comboBoxEditParcaKodu.Properties.Items.Insert(index,item);
+                comboBoxEditParcaKodu.Properties.Items.Insert(index, item);
             }
         }
 
@@ -257,7 +257,7 @@ namespace PegasusMetal_Pro
         #region CheckBox Events
         private void checkEditMontaj_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkEditMontaj.Checked==true)
+            if (checkEditMontaj.Checked == true)
             {
                 groupBoxMontaj.Visible = true;
             }
@@ -265,7 +265,7 @@ namespace PegasusMetal_Pro
             {
                 groupBoxMontaj.Visible = false;
             }
-           
+
         }
 
         private void checkEditLazer_CheckedChanged(object sender, EventArgs e)
@@ -408,7 +408,7 @@ namespace PegasusMetal_Pro
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -442,8 +442,8 @@ namespace PegasusMetal_Pro
                 labelControlFireOrani.Text = piece.WasteRate.ToString();
                 labelControlAgirligi.Text = weight.ToString(); // Calculation = Width*Height*0.8*Thickness/100000
                 labelControlAlan.Text = ((decimal)((decimal)piece.Width * (decimal)piece.Height / 1000000m)).ToString();
-                labelControlMaliyet.Text = (piece.WasteRate*weight * material.Price).ToString();
-                labelControlBirimMaliyet.Text = (weight * material.Price).ToString();
+                labelControlMaliyet.Text = (piece.WasteRate * weight * material.Price).ToString();
+                labelControlBirimMaliyet.Text = (weight * material.Price*int.Parse(textEditAdet.Text)).ToString();
             }
             else
             {
@@ -462,12 +462,12 @@ namespace PegasusMetal_Pro
 
         private void TextEditAdet_EditValueChanged(object sender, EventArgs e)
         {
-            if(textEditAdet.Text.Trim() != "")
+            if (textEditAdet.Text.Trim() != "")
             {
                 Calculate();
-                labelControlMaliyet.Text = (Convert.ToDecimal(labelControlMaliyet.Text)*Convert.ToDecimal(textEditAdet.Text)).ToString();
-                labelControlAlan.Text = (Convert.ToDecimal(labelControlAlan.Text) * Convert.ToDecimal(textEditAdet.Text)).ToString();
-                labelControlAgirligi.Text = (Convert.ToDecimal(labelControlAgirligi.Text) * Convert.ToDecimal(textEditAdet.Text)).ToString(); // Calculation = Width*Height*0.8*Thickness/100000
+                labelControlMaliyet.Text = (Convert.ToDecimal(labelControlMaliyet.Text)/* * Convert.ToDecimal(textEditAdet.Text)*/).ToString();
+                labelControlAlan.Text = (Convert.ToDecimal(labelControlAlan.Text) /** Convert.ToDecimal(textEditAdet.Text)*/).ToString();
+                labelControlAgirligi.Text = (Convert.ToDecimal(labelControlAgirligi.Text) /** Convert.ToDecimal(textEditAdet.Text)*/).ToString(); // Calculation = Width*Height*0.8*Thickness/100000
             }
             else
             {
@@ -503,10 +503,10 @@ namespace PegasusMetal_Pro
             CalculateLazer();
         }
 
-        private void CalculateBukum(decimal? price,int value)
+        private void CalculateBukum(decimal? price, float value) //float int
         {
             float calc = (float)(price * (decimal)value);
-            if(textEditBukumKar.Text.Trim() != "")
+            if (textEditBukumKar.Text.Trim() != "")
             {
                 labelControlBukumTl.Text = ((float)((calc / 100) * (100 + int.Parse(textEditBukumKar.Text)))).ToString() + " TL";
             }
@@ -521,7 +521,7 @@ namespace PegasusMetal_Pro
             if (textEditBukumSuresi.Text.Trim() == "" || textEditBukumSuresi.Text.Trim() == "") return;
             textEditBukumAdedi.Text = "0";
             decimal? price = GetPrice(true);
-            CalculateBukum(price, int.Parse(textEditBukumSuresi.Text));
+            CalculateBukum(price, float.Parse(textEditBukumSuresi.Text));
         }
 
         private void textEditBukumAdedi_TextChanged(object sender, EventArgs e)
@@ -529,12 +529,12 @@ namespace PegasusMetal_Pro
             if (textEditBukumAdedi.Text.Trim() == "" || textEditBukumAdedi.Text.Trim() == "") return;
             textEditBukumSuresi.Text = "0";
             decimal? price = GetPrice(false);
-            CalculateBukum(price, int.Parse(textEditBukumAdedi.Text));
+            CalculateBukum(price, float.Parse(textEditBukumAdedi.Text));
         }
 
         private decimal? GetPrice(bool type)
         {
-            if(type)
+            if (type)
             {
                 if (piece.Thickness >= 0.8m && piece.Thickness < 1.0m)
                 {
@@ -593,11 +593,11 @@ namespace PegasusMetal_Pro
         private void textEditBukumKar_TextChanged(object sender, EventArgs e)
         {
             if (textEditBukumAdedi.Text.Trim() == "" && textEditBukumAdedi.Text.Trim() == "0" && textEditBukumSuresi.Text.Trim() == "" && textEditBukumSuresi.Text.Trim() == "0") return;
-            if(textEditBukumSuresi.Text.Trim() != "" && textEditBukumSuresi.Text.Trim() != "0")
+            if (textEditBukumSuresi.Text.Trim() != "" && textEditBukumSuresi.Text.Trim() != "0")
             {
                 CalculateBukum(GetPrice(true), int.Parse(textEditBukumSuresi.Text));
             }
-            else if(textEditBukumAdedi.Text.Trim() != "" && textEditBukumAdedi.Text.Trim() != "0")
+            else if (textEditBukumAdedi.Text.Trim() != "" && textEditBukumAdedi.Text.Trim() != "0")
             {
                 CalculateBukum(GetPrice(false), int.Parse(textEditBukumAdedi.Text));
             }
@@ -612,7 +612,7 @@ namespace PegasusMetal_Pro
             }
             Process process = Lists.processes.Where(i => i.Name.Trim() == "Kaynak" && i.Property.ToLower() == "Kaynak".ToLower()).SingleOrDefault();
             float price = (float)(Convert.ToDecimal(textEditKaynakSuresi.Text) * process.MinutePrice);
-            if(textEditKaynakKar.Text.Trim() != "")
+            if (textEditKaynakKar.Text.Trim() != "")
             {
                 labelControlKaynakTl.Text = ((float)((price / 100) * (100 + int.Parse(textEditKaynakKar.Text)))).ToString() + " TL";
             }
@@ -634,13 +634,13 @@ namespace PegasusMetal_Pro
 
         private void CalculateKaplama()
         {
-            if(textEditKaplamaParcaAgirligi.Text.Trim() == ""  || textEditKaplanacakMalzeme.Text.Trim() == "")
+            if (textEditKaplamaParcaAgirligi.Text.Trim() == "" || textEditKaplanacakMalzeme.Text.Trim() == "")
             {
                 return;
             }
             Process process = Lists.processes.Where(i => i.Name.ToLower().Contains("Kaplama".ToLower()) && i.Property.Trim() == textEditKaplanacakMalzeme.Text.Trim()).SingleOrDefault();
-            float price = (float)(process.UnitPrice*Convert.ToDecimal(textEditKaplamaParcaAgirligi.Text));
-            if(textEditKaplamaKar.Text.Trim() != "")
+            float price = (float)(process.UnitPrice * Convert.ToDecimal(textEditKaplamaParcaAgirligi.Text));
+            if (textEditKaplamaKar.Text.Trim() != "")
             {
                 labelControlKaplamaTl.Text = ((float)((price / 100) * (100 + int.Parse(textEditKaynakKar.Text)))).ToString() + " TL";
             }
@@ -696,7 +696,7 @@ namespace PegasusMetal_Pro
                 return;
             }
             float price = (float)(Convert.ToDecimal(textEditMontajToplamSet.Text) * Convert.ToDecimal(textEditMontajIscilik.Text));
-            if(textEditMontajKar.Text.Trim() != "")
+            if (textEditMontajKar.Text.Trim() != "")
             {
                 labelControlMontajTl.Text = ((float)((price / 100) * (100 + int.Parse(textEditMontajKar.Text)))).ToString() + " TL";
             }
@@ -735,7 +735,7 @@ namespace PegasusMetal_Pro
                 price = (float)(Convert.ToDecimal(textEditMaskelemeIscilikSuresi.Text) * process.MinutePrice);
             }
 
-            if(textEditMaskelemeKar.Text.Trim() != "")
+            if (textEditMaskelemeKar.Text.Trim() != "")
             {
                 labelControlMaskelemeTl.Text = ((float)((price / 100) * (100 + int.Parse(textEditMaskelemeKar.Text)))).ToString() + " TL";
             }
@@ -762,9 +762,9 @@ namespace PegasusMetal_Pro
 
         private void CalculateBoya()
         {
-            if(textEditBoyaParcaAlani.Text.Trim() == "") { labelControlBoyaTl.Text = "..... TL"; return; }
-            Process process=null;
-            if(piece.Thickness <2m)
+            if (textEditBoyaParcaAlani.Text.Trim() == "") { labelControlBoyaTl.Text = "..... TL"; return; }
+            Process process = null;
+            if (piece.Thickness < 2m)
             {
                 process = Lists.processes.Where(i => i.Name.Trim() == "Boya" && i.Property.Trim() == "0.8").SingleOrDefault();
             }
@@ -775,7 +775,7 @@ namespace PegasusMetal_Pro
             float price = (float)(process.UnitPrice * Convert.ToDecimal(textEditBoyaParcaAlani.Text));
             if (textEditBoyaKar.Text.Trim() != "")
             {
-                labelControlBoyaTl.Text = ((float)((price / 100) * (100 + int.Parse(textEditBoyaKar.Text)))).ToString() + " TL";
+                labelControlBoyaTl.Text = ((float)((price / 100) * 2 * (100 + int.Parse(textEditBoyaKar.Text)))).ToString() + " TL";
             }
             else
             {
@@ -810,7 +810,7 @@ namespace PegasusMetal_Pro
         private void CalculateTalasli2()
         {
             if (textEditTalasli2Adet.Text.Trim() == "" || textEditTalasli2Fiyat.Text.Trim() == "" || textEditTalasli2Boy.Text.Trim() == "") { labelControlTalasliCapTl.Text = "..... TL"; return; }
-            float price = (float)(Convert.ToDecimal(textEditTalasli2Fiyat.Text) * Convert.ToDecimal(textEditTalasli2Adet.Text)*Convert.ToDecimal(textEditTalasli2Boy.Text));
+            float price = (float)(Convert.ToDecimal(textEditTalasli2Fiyat.Text) * Convert.ToDecimal(textEditTalasli2Adet.Text) * Convert.ToDecimal(textEditTalasli2Boy.Text));
             if (textEditTalasli2Kar.Text.Trim() != "")
             {
                 labelControlTalasliCapTl.Text = ((float)((price / 100) * (100 + int.Parse(textEditTalasli2Kar.Text)))).ToString() + " TL";
@@ -892,16 +892,16 @@ namespace PegasusMetal_Pro
 
         private float CalculateDisAcma()
         {
-            if(textEditDisAdedi.Text.Trim() == "" || textEditDisEbadi.Text.Trim() == "")
+            if (textEditDisAdedi.Text.Trim() == "" || textEditDisEbadi.Text.Trim() == "")
             {
                 return 0f;
             }
             decimal disEbadi = Convert.ToDecimal(textEditDisEbadi.Text);
             decimal? price = 0m;
-            if(disEbadi >= 3 && disEbadi < 6)
+            if (disEbadi >= 3 && disEbadi < 6)
             {
                 price = Lists.processes.Where(i => i.Name.Trim() == "Diş Açma" && i.Property.Trim() == "3").SingleOrDefault().UnitPrice;
-                return (float)(price*Convert.ToDecimal(textEditDisAdedi.Text));
+                return (float)(price * Convert.ToDecimal(textEditDisAdedi.Text));
             }
             else if (disEbadi >= 6 && disEbadi < 8)
             {
@@ -926,7 +926,7 @@ namespace PegasusMetal_Pro
             {
                 return 0f;
             }
-            return (float)(Convert.ToDecimal(textEditHelicoilFiyat.Text)*Convert.ToDecimal(textEditHelicoilAdet.Text));
+            return (float)(Convert.ToDecimal(textEditHelicoilFiyat.Text) * Convert.ToDecimal(textEditHelicoilAdet.Text));
         }
 
         private void CalculateDisAcmaHelicoilTL()
@@ -974,7 +974,7 @@ namespace PegasusMetal_Pro
 
         private void textEditParcaAdi_TextChanged(object sender, EventArgs e)
         {
-            if (textEditParcaAdi.Text!="")
+            if (textEditParcaAdi.Text != "")
             {
                 checkEditLazer.Enabled = true;
                 checkEditBukum.Enabled = true;
@@ -988,7 +988,7 @@ namespace PegasusMetal_Pro
                 checkEditTalasli2.Enabled = true;
                 checkEditSomunSikma.Enabled = true;
                 checkEditDisAcmaHelicoil.Enabled = true;
-            
+
             }
             else
             {
@@ -1007,12 +1007,12 @@ namespace PegasusMetal_Pro
             }
         }
 
-        private void SimpleButtonHesapla_Click(object sender,EventArgs e)
+        private void SimpleButtonHesapla_Click(object sender, EventArgs e)
         {
             decimal totalPrice = 0m;
             if (labelControlLazerTl.Text.Trim() != "..... TL" && checkEditLazer.Checked)
             {
-                totalPrice += Convert.ToDecimal(labelControlLazerTl.Text.Substring(0,labelControlLazerTl.Text.Length-2).Trim());
+                totalPrice += Convert.ToDecimal(labelControlLazerTl.Text.Substring(0, labelControlLazerTl.Text.Length - 2).Trim());
             }
             if (labelControlBukumTl.Text.Trim() != "..... TL" && checkEditBukum.Checked)
             {
@@ -1064,24 +1064,25 @@ namespace PegasusMetal_Pro
             {
                 parcaTeklif = (totalPrice + Convert.ToDecimal(labelControlBirimMaliyet.Text.Trim()));
             }
-            if(textEditAdet.Text.Trim() != "")
-            {
-                parcaTeklif = parcaTeklif * Convert.ToDecimal(textEditAdet.Text.Trim());
-            }
-            labelControlParcaTeklifFiyatı.Text = parcaTeklif.ToString()+" TL";
+            //if (textEditAdet.Text.Trim() != "")
+            //{
+            //    parcaTeklif = parcaTeklif * Convert.ToDecimal(textEditAdet.Text.Trim());
+            //}
+
+            labelControlParcaTeklifFiyatı.Text = parcaTeklif.ToString() + " TL"; //ali
         }
-        
+
         private void SimpleButtonParcaEkle_Click(object sender, EventArgs e)
         {
             OfferItem item = new OfferItem();
-            if(checkEditLazer.Checked && Check(textEditKesimSuresi.Text))
+            if (checkEditLazer.Checked && Check(textEditKesimSuresi.Text))
             {
                 item.LaserCuttingTime = int.Parse(textEditKesimSuresi.Text);
                 item.LaserCuttingPrice = Convert.ToDecimal(labelControlLazerTl.Text.Substring(0, labelControlLazerTl.Text.Length - 2));
                 item.LaserCuttingGain = int.Parse(textEditLazerKar.Text);
             }
 
-            if(checkEditBukum.Checked && (Check(textEditBukumAdedi.Text) || Check(textEditBukumSuresi.Text)))
+            if (checkEditBukum.Checked && (Check(textEditBukumAdedi.Text) || Check(textEditBukumSuresi.Text)))
             {
                 item.TwistGain = int.Parse(textEditBukumKar.Text);
                 item.TwistCount = int.Parse(textEditBukumAdedi.Text);
@@ -1089,14 +1090,14 @@ namespace PegasusMetal_Pro
                 item.TwistPrice = Convert.ToDecimal(labelControlBukumTl.Text.Substring(0, labelControlBukumTl.Text.Length - 2));
             }
 
-            if(checkEditKaynak.Checked && Check(textEditKaynakSuresi.Text))
+            if (checkEditKaynak.Checked && Check(textEditKaynakSuresi.Text))
             {
                 item.WeldTime = int.Parse(textEditKaynakSuresi.Text);
                 item.WeldGain = int.Parse(textEditKaynakKar.Text);
                 item.WeldPrice = Convert.ToDecimal(labelControlKaynakTl.Text.Substring(0, labelControlKaynakTl.Text.Length - 2));
             }
 
-            if(checkEditKaplama.Checked && Check(textEditKaplamaParcaAgirligi.Text) && Check(textEditKaplanacakMalzeme.Text))
+            if (checkEditKaplama.Checked && Check(textEditKaplamaParcaAgirligi.Text) && Check(textEditKaplanacakMalzeme.Text))
             {
                 item.CoveringValue = int.Parse(textEditKaplamaParcaAgirligi.Text);
                 item.CoveringMaterialId = Lists.processes.Where(i => i.Name.Trim() == textEditKaplanacakMalzeme.Text.Trim()).SingleOrDefault().Id;
@@ -1104,7 +1105,7 @@ namespace PegasusMetal_Pro
                 item.CoveringPrice = Convert.ToDecimal(labelControlKaplamaTl.Text.Substring(0, labelControlKaplamaTl.Text.Length - 2));
             }
 
-            if(checkEditHavsaAcma.Checked && Check(textEditHavsaAdedi.Text))
+            if (checkEditHavsaAcma.Checked && Check(textEditHavsaAdedi.Text))
             {
                 item.CountersinkCount = int.Parse(textEditHavsaAdedi.Text);
                 item.CountersinkGain = int.Parse(textEditHavsaAcmaKar.Text);
@@ -1123,7 +1124,7 @@ namespace PegasusMetal_Pro
                 item.AssemblyPrice = Convert.ToDecimal(labelControlMontajTl.Text.Substring(0, labelControlMontajTl.Text.Length - 2));
             }
 
-            if(checkEditMaskelemeBandi.Checked && Check(textEditMaskelemeIscilikSuresi.Text) && Check(textEditMaskelemeBantAlani.Text))
+            if (checkEditMaskelemeBandi.Checked && Check(textEditMaskelemeIscilikSuresi.Text) && Check(textEditMaskelemeBantAlani.Text))
             {
                 item.MaskingTapeArea = int.Parse(textEditMaskelemeBantAlani.Text);
                 item.MaskingTapeJobPrice = Convert.ToDecimal(textEditMaskelemeIscilikSuresi.Text);
@@ -1132,14 +1133,14 @@ namespace PegasusMetal_Pro
                 item.MaskingTapePrice = Convert.ToDecimal(labelControlMaskelemeTl.Text.Substring(0, labelControlMaskelemeTl.Text.Length - 2));
             }
 
-            if(checkEditBoya.Checked && Check(textEditBoyaParcaAlani.Text))
+            if (checkEditBoya.Checked && Check(textEditBoyaParcaAlani.Text))
             {
                 item.PaintArea = int.Parse(textEditBoyaParcaAlani.Text);
                 item.PaintGain = int.Parse(textEditBoyaKar.Text);
                 item.PaintPrice = Convert.ToDecimal(labelControlBoyaTl.Text.Substring(0, labelControlBoyaTl.Text.Length - 2));
             }
 
-            if(checkEditTalasli1.Checked && Check(textEditTalasli1Adet.Text) && Check(textEditTalasli1Fiyat.Text))
+            if (checkEditTalasli1.Checked && Check(textEditTalasli1Adet.Text) && Check(textEditTalasli1Fiyat.Text))
             {
                 item.MachiningOneCount = int.Parse(textEditTalasli1Adet.Text);
                 item.MachiningOneJobPrice = Convert.ToDecimal(textEditTalasli1Fiyat.Text);
@@ -1156,7 +1157,7 @@ namespace PegasusMetal_Pro
                 item.MachiningTwoDiameter = int.Parse(textEditTalasli2Boy.Text);
             }
 
-            if(checkEditSomunSikma.Checked && Check(textEditSomunSikmaIscilik.Text) && Check(textEditSomunSikmaSetAdedi.Text) && Check(textEditSomunSikmaToplamSet.Text))
+            if (checkEditSomunSikma.Checked && Check(textEditSomunSikmaIscilik.Text) && Check(textEditSomunSikmaSetAdedi.Text) && Check(textEditSomunSikmaToplamSet.Text))
             {
                 item.TighteningJobPrice = Convert.ToDecimal(textEditSomunSikmaIscilik.Text);
                 item.TighteningSetCount = int.Parse(textEditSomunSikmaSetAdedi.Text);
@@ -1165,7 +1166,7 @@ namespace PegasusMetal_Pro
                 item.TighteningPrice = Convert.ToDecimal(labelControlSomunTl.Text.Substring(0, labelControlSomunTl.Text.Length - 2));
             }
 
-            if(checkEditDisAcmaHelicoil.Checked)
+            if (checkEditDisAcmaHelicoil.Checked)
             {
                 item.IndentionCount = int.Parse(textEditDisAdedi.Text);
                 item.IndentionDimensions = int.Parse(textEditDisEbadi.Text);
@@ -1199,6 +1200,7 @@ namespace PegasusMetal_Pro
             lvItem.SubItems.Add(GetItem(item.CountersinkPrice));
             lvItem.SubItems.Add(GetItem(item.IndentionHelicoilPrice));
             lvItem.SubItems.Add(GetItem(item.MaskingTapePrice));
+            lvItem.SubItems.Add(GetItem(item.PaintPrice));
             lvItem.SubItems.Add(GetItem(item.MachiningOnePrice));
             lvItem.SubItems.Add(GetItem(item.MachiningTwoPrice));
             lvItem.SubItems.Add(GetItem(item.TighteningPrice));
@@ -1210,18 +1212,18 @@ namespace PegasusMetal_Pro
 
         private void CalculateProject()
         {
-            foreach(var item in offerItems)
+            foreach (var item in offerItems)
             {
                 generalPrice = generalPrice + item.TotalPrice;
                 var pieceTemp = Lists.pieces.Where(i => i.Id == item.PieceId).SingleOrDefault();
                 var material = Lists.materials.Where(i => i.Name.Trim() == pieceTemp.Quality.Trim()).SingleOrDefault();
                 decimal weight = ((decimal)(((decimal)pieceTemp.Height * (decimal)pieceTemp.Width * 0.8m * (decimal)pieceTemp.Thickness) / 100000m));
-                totalPieceCost = totalPieceCost + (pieceTemp.WasteRate*weight*material.Price*item.TotalCount);
+                totalPieceCost = totalPieceCost + (pieceTemp.WasteRate * weight * material.Price * item.TotalCount);
             }
             labelControl26.Text = totalPieceCost.ToString() + " TL";
             labelControl29.Text = generalPrice.ToString() + " TL";
             totalPrice = generalPrice;
-            totalPrice =  (totalPrice*(100 +int.Parse(textEditKarOran.Text)))/100;
+            totalPrice = (totalPrice * (100 + int.Parse(textEditKarOran.Text))) / 100;
             totalPrice = totalPrice - ((totalPrice * int.Parse(textEditIndirimOran.Text)) / 100);
             labelControl32.Text = totalPrice.ToString() + " TL";
         }
@@ -1269,6 +1271,7 @@ namespace PegasusMetal_Pro
             labelControlBirimMaliyet.Text = "";
             labelControlBirimIslemMaliyet.Text = "";
             labelControlParcaTeklifFiyatı.Text = "";
+           
 
             //İslemler
             groupBoxLazer.Visible = false;
@@ -1337,11 +1340,11 @@ namespace PegasusMetal_Pro
         private bool Check(string value)
         {
             int result = 0;
-            if(!int.TryParse(value,out result))
+            if (!int.TryParse(value, out result))
             {
                 return false;
             }
-            if(value != null || value.Trim() != "" || value.Trim() != "0")
+            if (value != null || value.Trim() != "" || value.Trim() != "0")
             {
                 return true;
             }
@@ -1351,11 +1354,11 @@ namespace PegasusMetal_Pro
 
         private void TextEditKarOran_TextChanged(object sender, EventArgs e)
         {
-            if(textEditKarOran.Text.Trim() == "")
+            if (textEditKarOran.Text.Trim() == "")
             {
                 return;
             }
-            totalPrice = generalPrice*((100+int.Parse(textEditKarOran.Text))/100);
+            totalPrice = generalPrice * ((100 + int.Parse(textEditKarOran.Text)) / 100);
             totalPrice = generalPrice - generalPrice * ((int.Parse(textEditIndirimOran.Text)) / 100);
             labelControl32.Text = totalPrice.ToString() + "TL";
         }
@@ -1373,7 +1376,8 @@ namespace PegasusMetal_Pro
 
         private void SimpleButtonSonTeklifVer_Click(object sender, EventArgs e)
         {
-            if(Convert.ToDecimal(textEdit1.Text) < generalPrice)
+
+            if (Convert.ToDecimal(textEdit1.Text) < generalPrice)
             {
                 MessageBox.Show("Minimum değerden daha aşağı teklif veremezsiniz.");
                 return;
@@ -1388,7 +1392,7 @@ namespace PegasusMetal_Pro
                 ProfitPercentage = Convert.ToSingle(textEditKarOran.Text),
                 ProjectId = project.Id,
                 ProjectPreparation = "",
-                UnitPrice = Convert.ToDecimal(labelControl26.Text.Substring(0,labelControl26.Text.Length-2)),
+                UnitPrice = Convert.ToDecimal(labelControl26.Text.Substring(0, labelControl26.Text.Length - 2)),
             };
 
             TotalOffer totalOffer = new TotalOffer() { Offer = offer, OfferItems = offerItems };
@@ -1397,6 +1401,68 @@ namespace PegasusMetal_Pro
             data.Add(JsonConvert.SerializeObject(totalOffer));
             WebSocketService.getInstance().Send(data);
             this.Close();
+        }
+
+        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //foreach (ListViewItem item in listView2.SelectedItems)
+            //{
+            //    if (listView2.SelectedItems[0] != null)
+            //    {
+            //        if (listView2.SelectedItems[0].SubItems[2].Text != "")
+            //        {
+            //            checkEditLazer.Checked = true;
+            //        }
+            //        if (listView2.SelectedItems[0].SubItems[3].Text != "")
+            //        {
+            //            checkEditBukum.Checked = true;
+            //        }
+            //        if (listView2.SelectedItems[0].SubItems[4].Text != "")
+            //        {
+            //            checkEditKaynak.Checked = true;
+            //        }
+            //        if (listView2.SelectedItems[0].SubItems[5].Text != "")
+            //        {
+            //            checkEditKaplama.Checked = true;
+            //        }
+            //        if (listView2.SelectedItems[0].SubItems[6].Text != "")
+            //        {
+            //            checkEditHavsaAcma.Checked = true;
+            //        }
+            //        if (listView2.SelectedItems[0].SubItems[7].Text != "")
+            //        {
+            //            checkEditDisAcmaHelicoil.Checked = true;
+            //        }
+            //        if (listView2.SelectedItems[0].SubItems[8].Text != "")
+            //        {
+            //            checkEditMaskelemeBandi.Checked = true;
+            //        }
+            //        if (listView2.SelectedItems[0].SubItems[9].Text != "")
+            //        {
+            //            checkEditBoya.Checked = true;
+            //        }
+            //        if (listView2.SelectedItems[0].SubItems[10].Text != "")
+            //        {
+            //            checkEditTalasli1.Checked = true;
+            //        }
+            //        if (listView2.SelectedItems[0].SubItems[11].Text != "")
+            //        {
+            //            checkEditTalasli2.Checked = true;
+            //        }
+            //        if (listView2.SelectedItems[0].SubItems[12].Text != "")
+            //        {
+            //            checkEditSomunSikma.Checked = true;
+            //        }
+            //        if (listView2.SelectedItems[0].SubItems[13].Text != "")
+            //        {
+            //            checkEditMontaj.Checked = true;
+            //        }
+            //    }
+            //    else
+            //    {
+            //        ResetAll();
+            //    }
+            //}
         }
     }
 }

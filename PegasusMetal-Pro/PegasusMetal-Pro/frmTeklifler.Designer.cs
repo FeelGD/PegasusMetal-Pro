@@ -162,9 +162,9 @@
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(281, 0);
+            this.button3.Location = new System.Drawing.Point(335, 0);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(314, 119);
+            this.button3.Size = new System.Drawing.Size(296, 119);
             this.button3.TabIndex = 8;
             this.button3.Text = "Teklifin Miktarlarını Değiştir\r\n\r\n";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -183,9 +183,9 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(595, 0);
+            this.button1.Location = new System.Drawing.Point(631, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(314, 119);
+            this.button1.Size = new System.Drawing.Size(296, 119);
             this.button1.TabIndex = 7;
             this.button1.Text = "Teklifi Personele Ata\r\n\r\n";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -204,9 +204,9 @@
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(909, 0);
+            this.button2.Location = new System.Drawing.Point(927, 0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(314, 119);
+            this.button2.Size = new System.Drawing.Size(296, 119);
             this.button2.TabIndex = 6;
             this.button2.Text = "Teklifin Durumunu Değiştir\r\n\r\n";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
