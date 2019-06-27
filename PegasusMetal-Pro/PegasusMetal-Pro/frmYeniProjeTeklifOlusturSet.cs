@@ -16,5 +16,10 @@ namespace PegasusMetal_Pro
         {
             InitializeComponent();
         }
+
+        private void frmYeniProjeTeklifOlusturSet_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -166,7 +166,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(296, 119);
             this.button3.TabIndex = 8;
-            this.button3.Text = "Teklifin Miktarlarını Değiştir\r\n\r\n";
+            this.button3.Text = "Teklifi Düzenle ve Görüntüle\r\n\r\n";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);

@@ -465,9 +465,9 @@ namespace PegasusMetal_Pro
             if (textEditAdet.Text.Trim() != "")
             {
                 Calculate();
-                labelControlMaliyet.Text = (Convert.ToDecimal(labelControlMaliyet.Text)/* * Convert.ToDecimal(textEditAdet.Text)*/).ToString();
-                labelControlAlan.Text = (Convert.ToDecimal(labelControlAlan.Text) /** Convert.ToDecimal(textEditAdet.Text)*/).ToString();
-                labelControlAgirligi.Text = (Convert.ToDecimal(labelControlAgirligi.Text) /** Convert.ToDecimal(textEditAdet.Text)*/).ToString(); // Calculation = Width*Height*0.8*Thickness/100000
+                labelControlMaliyet.Text = (Convert.ToDecimal(labelControlMaliyet.Text) * Convert.ToDecimal(textEditAdet.Text)).ToString();
+                labelControlAlan.Text = (Convert.ToDecimal(labelControlAlan.Text) * Convert.ToDecimal(textEditAdet.Text)).ToString();
+                labelControlAgirligi.Text = (Convert.ToDecimal(labelControlAgirligi.Text) * Convert.ToDecimal(textEditAdet.Text)).ToString(); // Calculation = Width*Height*0.8*Thickness/100000
             }
             else
             {
