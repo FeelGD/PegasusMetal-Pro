@@ -33,6 +33,13 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.MalzemeId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.EnBoy = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Kalinlik = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Cins = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Adet = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Agirlik = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtEnBoy = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,13 +54,6 @@
             this.TotalPrice = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.simpleButtonEkle = new DevExpress.XtraEditors.SimpleButton();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.MalzemeId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.EnBoy = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Kalinlik = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Cins = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Adet = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Agirlik = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -107,6 +107,54 @@
             this.panel2.Size = new System.Drawing.Size(728, 251);
             this.panel2.TabIndex = 4;
             // 
+            // listView1
+            // 
+            this.listView1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.MalzemeId,
+            this.EnBoy,
+            this.Kalinlik,
+            this.Cins,
+            this.Adet,
+            this.Agirlik});
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.Location = new System.Drawing.Point(0, 0);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(728, 251);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // MalzemeId
+            // 
+            this.MalzemeId.Text = "No:";
+            this.MalzemeId.Width = 66;
+            // 
+            // EnBoy
+            // 
+            this.EnBoy.Text = "En,Boy";
+            this.EnBoy.Width = 127;
+            // 
+            // Kalinlik
+            // 
+            this.Kalinlik.Text = "Kalınlık";
+            this.Kalinlik.Width = 89;
+            // 
+            // Cins
+            // 
+            this.Cins.Text = "Cins";
+            this.Cins.Width = 105;
+            // 
+            // Adet
+            // 
+            this.Adet.Text = "Adet";
+            this.Adet.Width = 92;
+            // 
+            // Agirlik
+            // 
+            this.Agirlik.Text = "Toplam Ağırlık";
+            this.Agirlik.Width = 149;
+            // 
             // txtEnBoy
             // 
             this.txtEnBoy.EditValue = "";
@@ -118,6 +166,10 @@
             this.txtEnBoy.Properties.Appearance.Options.UseFont = true;
             this.txtEnBoy.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtEnBoy.Properties.Items.AddRange(new object[] {
+            "2x1",
+            "2.5x1.25",
+            "3x1.5"});
             this.txtEnBoy.Size = new System.Drawing.Size(146, 24);
             this.txtEnBoy.TabIndex = 15;
             // 
@@ -153,6 +205,18 @@
             this.txtKalinlik.Properties.Appearance.Options.UseFont = true;
             this.txtKalinlik.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtKalinlik.Properties.Items.AddRange(new object[] {
+            "0.8",
+            "1",
+            "1.2",
+            "1.5",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "8",
+            "10"});
             this.txtKalinlik.Size = new System.Drawing.Size(120, 24);
             this.txtKalinlik.TabIndex = 18;
             // 
@@ -167,6 +231,12 @@
             this.txtCins.Properties.Appearance.Options.UseFont = true;
             this.txtCins.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtCins.Properties.Items.AddRange(new object[] {
+            "DKP",
+            "HRP",
+            "PSL",
+            "SYH",
+            "ALÜ"});
             this.txtCins.Size = new System.Drawing.Size(89, 24);
             this.txtCins.TabIndex = 19;
             // 
@@ -267,54 +337,6 @@
             this.simpleButtonEkle.Size = new System.Drawing.Size(141, 23);
             this.simpleButtonEkle.TabIndex = 44;
             this.simpleButtonEkle.Text = "Plaka Ekle:";
-            // 
-            // listView1
-            // 
-            this.listView1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.MalzemeId,
-            this.EnBoy,
-            this.Kalinlik,
-            this.Cins,
-            this.Adet,
-            this.Agirlik});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(728, 251);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // MalzemeId
-            // 
-            this.MalzemeId.Text = "No:";
-            this.MalzemeId.Width = 66;
-            // 
-            // EnBoy
-            // 
-            this.EnBoy.Text = "En,Boy";
-            this.EnBoy.Width = 127;
-            // 
-            // Kalinlik
-            // 
-            this.Kalinlik.Text = "Kalınlık";
-            this.Kalinlik.Width = 89;
-            // 
-            // Cins
-            // 
-            this.Cins.Text = "Cins";
-            this.Cins.Width = 105;
-            // 
-            // Adet
-            // 
-            this.Adet.Text = "Adet";
-            this.Adet.Width = 92;
-            // 
-            // Agirlik
-            // 
-            this.Agirlik.Text = "Toplam Ağırlık";
-            this.Agirlik.Width = 149;
             // 
             // frmYeniProjeTeklifOlusturSet
             // 
