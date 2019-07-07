@@ -1413,64 +1413,250 @@ namespace PegasusMetal_Pro
 
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //foreach (ListViewItem item in listView2.SelectedItems)
-            //{
-            //    if (listView2.SelectedItems[0] != null)
-            //    {
-            //        if (listView2.SelectedItems[0].SubItems[2].Text != "")
-            //        {
-            //            checkEditLazer.Checked = true;
-            //        }
-            //        if (listView2.SelectedItems[0].SubItems[3].Text != "")
-            //        {
-            //            checkEditBukum.Checked = true;
-            //        }
-            //        if (listView2.SelectedItems[0].SubItems[4].Text != "")
-            //        {
-            //            checkEditKaynak.Checked = true;
-            //        }
-            //        if (listView2.SelectedItems[0].SubItems[5].Text != "")
-            //        {
-            //            checkEditKaplama.Checked = true;
-            //        }
-            //        if (listView2.SelectedItems[0].SubItems[6].Text != "")
-            //        {
-            //            checkEditHavsaAcma.Checked = true;
-            //        }
-            //        if (listView2.SelectedItems[0].SubItems[7].Text != "")
-            //        {
-            //            checkEditDisAcmaHelicoil.Checked = true;
-            //        }
-            //        if (listView2.SelectedItems[0].SubItems[8].Text != "")
-            //        {
-            //            checkEditMaskelemeBandi.Checked = true;
-            //        }
-            //        if (listView2.SelectedItems[0].SubItems[9].Text != "")
-            //        {
-            //            checkEditBoya.Checked = true;
-            //        }
-            //        if (listView2.SelectedItems[0].SubItems[10].Text != "")
-            //        {
-            //            checkEditTalasli1.Checked = true;
-            //        }
-            //        if (listView2.SelectedItems[0].SubItems[11].Text != "")
-            //        {
-            //            checkEditTalasli2.Checked = true;
-            //        }
-            //        if (listView2.SelectedItems[0].SubItems[12].Text != "")
-            //        {
-            //            checkEditSomunSikma.Checked = true;
-            //        }
-            //        if (listView2.SelectedItems[0].SubItems[13].Text != "")
-            //        {
-            //            checkEditMontaj.Checked = true;
-            //        }
-            //    }
-            //    else
-            //    {
-            //        ResetAll();
-            //    }
-            //}
+            foreach (ListViewItem item in listView2.SelectedItems)
+            {
+                if (listView2.SelectedItems[0] != null)
+                {
+                    if (listView2.SelectedItems[0].SubItems[2].Text != "")
+                    {
+                        checkEditLazer.Checked = true;
+                    }
+                    else
+                    {
+                        checkEditLazer.Checked = false;
+                    }
+
+                    if (listView2.SelectedItems[0].SubItems[3].Text != "")
+                    {
+                        checkEditBukum.Checked = true;
+                    }
+                    else
+                    {
+                        checkEditBukum.Checked = false;
+                    }
+
+                    if (listView2.SelectedItems[0].SubItems[4].Text != "")
+                    {
+                        checkEditKaynak.Checked = true;
+                    }
+                    else
+                    {
+                        checkEditKaynak.Checked = false;
+                    }
+
+                    if (listView2.SelectedItems[0].SubItems[5].Text != "")
+                    {
+                        checkEditKaplama.Checked = true;
+                    }
+                    else
+                    {
+                        checkEditKaplama.Checked = false;
+                    }
+
+                    if (listView2.SelectedItems[0].SubItems[6].Text != "")
+                    {
+                        checkEditHavsaAcma.Checked = true;
+                    }
+                    else
+                    {
+                        checkEditHavsaAcma.Checked = false;
+                    }
+
+                    if (listView2.SelectedItems[0].SubItems[7].Text != "")
+                    {
+                        checkEditDisAcmaHelicoil.Checked = true;
+                    }
+                    else
+                    {
+                        checkEditDisAcmaHelicoil.Checked = false;
+                    }
+
+                    if (listView2.SelectedItems[0].SubItems[8].Text != "")
+                    {
+                        checkEditMaskelemeBandi.Checked = true;
+                    }
+                    else
+                    {
+                        checkEditMaskelemeBandi.Checked = false;
+                    }
+
+                    if (listView2.SelectedItems[0].SubItems[9].Text != "")
+                    {
+                        checkEditBoya.Checked = true;
+                    }
+                    else
+                    {
+                        checkEditBoya.Checked = false;
+                    }
+
+                    if (listView2.SelectedItems[0].SubItems[10].Text != "")
+                    {
+                        checkEditTalasli1.Checked = true;
+                    }
+                    else
+                    {
+                        checkEditTalasli1.Checked = false;
+                    }
+
+                    if (listView2.SelectedItems[0].SubItems[11].Text != "")
+                    {
+                        checkEditTalasli2.Checked = true;
+                    }
+                    else
+                    {
+                        checkEditTalasli2.Checked = false;
+                    }
+
+                    if (listView2.SelectedItems[0].SubItems[12].Text != "")
+                    {
+                        checkEditSomunSikma.Checked = true;
+                    }
+                    else
+                    {
+                        checkEditSomunSikma.Checked = false;
+                    }
+
+                    if (listView2.SelectedItems[0].SubItems[13].Text != "")
+                    {
+                        checkEditMontaj.Checked = true;
+                    }
+                    else
+                    {
+                        checkEditMontaj.Checked = false;
+                    }
+                }
+                else
+                {
+                    ResetAll();
+                }
+
+
+                foreach (ListViewItem items in listView2.SelectedItems)
+                {
+                    //her işlem için tekrar if else oluşturdum
+                    comboBoxEditParcaKodu.SelectedText = items.SubItems[1].Text;
+                    
+                    if (items.SubItems[2].Text != "")
+                    {
+                        labelControlLazerTl.Text = items.SubItems[2].Text;
+                    }
+                    else
+                    {
+                        labelControlLazerTl.Text = "..... TL";
+                    }
+
+                    if (items.SubItems[3].Text != "")
+                    {
+                        labelControlBukumTl.Text = items.SubItems[3].Text;
+                    }
+                    else
+                    {
+                        labelControlBukumTl.Text = "..... TL";
+                    }
+
+                    if (items.SubItems[4].Text != "")
+                    {
+                        labelControlKaynakTl.Text = items.SubItems[4].Text;
+                    }
+                    else
+                    {
+                        labelControlKaynakTl.Text = "..... TL";
+                    }
+
+                    if (items.SubItems[5].Text != "")
+                    {
+                        labelControlKaplamaTl.Text = items.SubItems[5].Text;
+                    }
+                    else
+                    {
+                        labelControlKaplamaTl.Text = "..... TL";
+                    }
+
+                    if (items.SubItems[6].Text != "")
+                    {
+                        labelControlHavsaTl.Text = items.SubItems[6].Text;
+                    }
+                    else
+                    {
+                        labelControlHavsaTl.Text = "..... TL";
+                    }
+
+                    if (items.SubItems[7].Text != "")
+                    {
+                        labelControlDisTl.Text = items.SubItems[7].Text;
+                    }
+                    else
+                    {
+                        labelControlDisTl.Text = "..... TL";
+                    }
+
+                    if (items.SubItems[8].Text != "")
+                    {
+                        labelControlMaskelemeTl.Text = items.SubItems[8].Text;
+                    }
+                    else
+                    {
+                        labelControlMaskelemeTl.Text = "..... TL";
+                    }
+
+                    if (items.SubItems[9].Text != "")
+                    {
+                        labelControlBoyaTl.Text = items.SubItems[9].Text;
+                    }
+                    else
+                    {
+                        labelControlBoyaTl.Text = "..... TL";
+                    }
+
+                    if (items.SubItems[10].Text != "")
+                    {
+                        labelControlTalasliTl.Text = items.SubItems[10].Text;
+                    }
+                    else
+                    {
+                        labelControlTalasliTl.Text = "..... TL";
+                    }
+
+                    if (items.SubItems[11].Text != "")
+                    {
+                        labelControlTalasliCapTl.Text = items.SubItems[1].Text;
+                    }
+                    else
+                    {
+                        labelControlTalasliCapTl.Text = "..... TL";
+                    }
+
+                    if (items.SubItems[12].Text != "")
+                    {
+                        labelControlSomunTl.Text = items.SubItems[12].Text;
+                    }
+                    else
+                    {
+                        labelControlSomunTl.Text = "..... TL";
+                    }
+
+                    if (items.SubItems[13].Text != "")
+                    {
+                        labelControlMontajTl.Text = items.SubItems[13].Text;
+                    }
+                    else
+                    {
+                        labelControlMontajTl.Text = "..... TL";
+                    }
+
+                    if (items.SubItems[14].Text != "")
+                    {
+                        labelControlLazerTl.Text = items.SubItems[14].Text;
+                    }
+                    else
+                    {
+                        labelControlLazerTl.Text = "..... TL";
+                    }
+
+
+
+                }
+            }
         }
     }
 }
