@@ -82,7 +82,7 @@
             this.btnNotEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnNotEkle.FlatAppearance.BorderSize = 0;
             this.btnNotEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotEkle.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNotEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotEkle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnNotEkle.Image = ((System.Drawing.Image)(resources.GetObject("btnNotEkle.Image")));
             this.btnNotEkle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -93,12 +93,13 @@
             this.btnNotEkle.Text = "NOTU TAMAMLA\r\n\r\n";
             this.btnNotEkle.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNotEkle.UseVisualStyleBackColor = true;
+            this.btnNotEkle.Click += new System.EventHandler(this.BtnNotEkle_Click);
             // 
             // richTextBox1
             // 
             this.richTextBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(0, 41);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(864, 680);

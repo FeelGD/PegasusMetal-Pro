@@ -22,6 +22,9 @@ namespace PegasusMetal_Pro
             Lists.offers.CollectionChanged += CollectionChanged;
             Lists.companies.CollectionChanged += CompanyCollectionChanged;
             List<string> data = new List<string>();
+            data.Add(OPCodes.GET_ACCEPTED_OFFERS);
+            WebSocketService.getInstance().Send(data);
+            data.Clear();
             data.Add(OPCodes.GET_PROJECTS);
             WebSocketService.getInstance().Send(data);
             data.Clear();
@@ -39,7 +42,7 @@ namespace PegasusMetal_Pro
 
         private void CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
-            foreach (var item in Lists.offers.Where(s => !SearchInListView(s.Id.ToString())))
+            foreach (var item in Lists.offers.Where(s => !SearchInListView(s.Id.ToString()) && !SearchInAcceptedOffers(s.Id)))
             {
                 var project = Lists.projects.Where(i => i.Id == item.ProjectId).SingleOrDefault();
                 string[] array = { item.Id.ToString(), project.Name, item.LastPrice.ToString(), "Testing", project.Status };
@@ -53,6 +56,18 @@ namespace PegasusMetal_Pro
                     listView1.Items.Add(listViewItem);
                 }
             }
+        }
+
+        private bool SearchInAcceptedOffers(int Id)
+        {
+            foreach (AcceptedOffer item in Lists.acceptedOffers.ToList())
+            {
+                if (item.OfferId == Id)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         private bool SearchInListView(string Id)
@@ -74,8 +89,14 @@ namespace PegasusMetal_Pro
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmTekliflerPersonelAta frmTekliflerPersonelAta = new frmTekliflerPersonelAta();
-            frmTekliflerPersonelAta.Show();
+            if (listView1.SelectedItems[0] != null)
+            {
+                int id = int.Parse(listView1.SelectedItems[0].Text.Trim());
+                var offer = Lists.offers.Where(i => i.Id == id).FirstOrDefault();
+                frmTekliflerPersonelAta frmTekliflerPersonelAta = new frmTekliflerPersonelAta(offer);
+                Open(frmTekliflerPersonelAta);
+            }
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -83,7 +104,7 @@ namespace PegasusMetal_Pro
             if(listView1.SelectedItems[0] != null)
             {
                 int id = int.Parse(listView1.SelectedItems[0].Text.Trim());
-                var offer = Lists.offers.Where(i => i.Id == id).SingleOrDefault();
+                var offer = Lists.offers.Where(i => i.Id == id).FirstOrDefault();
                 var project = Lists.projects.Where(i => i.Id == offer.ProjectId).SingleOrDefault();
                 var company = Lists.companies.Where(i => i.Id == project.CompanyId).SingleOrDefault();
                 frmYeniProjeTeklifOlustur teklifOlustur = new frmYeniProjeTeklifOlustur(project, company, offer);

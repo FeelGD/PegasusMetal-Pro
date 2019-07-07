@@ -41,8 +41,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditPersonelAdi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditTermin.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditTermin.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditTermin.Properties.CalendarTimeProperties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -85,51 +85,60 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(42, 129);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 21);
+            this.label1.Size = new System.Drawing.Size(103, 20);
             this.label1.TabIndex = 12;
             this.label1.Text = "Termin Tarihi:";
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.SystemColors.Control;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
             this.labelControl1.Location = new System.Drawing.Point(12, 53);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(139, 42);
+            this.labelControl1.Size = new System.Drawing.Size(133, 40);
             this.labelControl1.TabIndex = 9;
             this.labelControl1.Text = "Sipariş Atanacak\r\n       Personelin Adı:";
             // 
             // textEditPersonelAdi
             // 
+            this.textEditPersonelAdi.EditValue = "";
             this.textEditPersonelAdi.Location = new System.Drawing.Point(194, 67);
             this.textEditPersonelAdi.Name = "textEditPersonelAdi";
+            // 
+            // 
+            // 
             this.textEditPersonelAdi.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
-            this.textEditPersonelAdi.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textEditPersonelAdi.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textEditPersonelAdi.Properties.Appearance.Options.UseBackColor = true;
             this.textEditPersonelAdi.Properties.Appearance.Options.UseFont = true;
             this.textEditPersonelAdi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.textEditPersonelAdi.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.textEditPersonelAdi.Size = new System.Drawing.Size(296, 28);
+            this.textEditPersonelAdi.Size = new System.Drawing.Size(296, 26);
             this.textEditPersonelAdi.TabIndex = 7;
             // 
             // textEditTermin
             // 
-            this.textEditTermin.EditValue = null;
             this.textEditTermin.Location = new System.Drawing.Point(194, 126);
             this.textEditTermin.Name = "textEditTermin";
+            // 
+            // 
+            // 
             this.textEditTermin.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
-            this.textEditTermin.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textEditTermin.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textEditTermin.Properties.Appearance.Options.UseBackColor = true;
             this.textEditTermin.Properties.Appearance.Options.UseFont = true;
             this.textEditTermin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            // 
+            // 
+            // 
             this.textEditTermin.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.textEditTermin.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
@@ -138,7 +147,7 @@
             this.textEditTermin.Properties.EditFormat.FormatString = "";
             this.textEditTermin.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.textEditTermin.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.textEditTermin.Size = new System.Drawing.Size(296, 28);
+            this.textEditTermin.Size = new System.Drawing.Size(296, 26);
             this.textEditTermin.TabIndex = 13;
             // 
             // button3
@@ -148,7 +157,7 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;

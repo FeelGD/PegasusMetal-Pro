@@ -28,6 +28,21 @@ namespace PegasusMetal_Pro
     }
     public static class Constants
     {
+        public enum Processes
+        {
+            LaserCutting,
+            Twist,
+            Welding,
+            Covering,
+            CounterSink,
+            ThreadingHelicoil,
+            MaskingTape,
+            Paint,
+            MachiningOne,
+            MachiningTwo,
+            ImpactWrench,
+            Assembly
+        }
         public const string SPLITTER = "%&(SPLIT)";
         public const int PORT = 5661;
         public const string IP_ADDRESS = "185.207.38.178";
@@ -87,6 +102,7 @@ namespace PegasusMetal_Pro
         public static ObservableCollection<Process> processes = new ObservableCollection<Process>();
         public static ObservableCollection<Offer> offers = new ObservableCollection<Offer>();
         public static ObservableCollection<OfferItem> offerItems = new ObservableCollection<OfferItem>();
+        public static ObservableCollection<AcceptedOffer> acceptedOffers = new ObservableCollection<AcceptedOffer>();
     }
     public static class OPCodes
     {
@@ -127,6 +143,8 @@ namespace PegasusMetal_Pro
         public const string GET_PROCESSES = "GetProcess";
         public const string GET_OFFERS = "GetOffers";
         public const string GET_OFFER_ITEMS = "GetOfferItems";
+        public const string GET_ACCEPTED_OFFERS = "GetAcceptedOffers";
+        public const string GET_PROJECT_CONTINUING = "GetProjectContinuings";
     }
     public class Reason
     {

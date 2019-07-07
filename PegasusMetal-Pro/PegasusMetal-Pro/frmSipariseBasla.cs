@@ -12,9 +12,19 @@ namespace PegasusMetal_Pro
 {
     public partial class frmSipariseBasla : Form
     {
+        private Offer offer;
+        private AcceptedOffer acceptedOffer;
         public frmSipariseBasla()
         {
             InitializeComponent();
+        }
+
+        public frmSipariseBasla(Offer offer,AcceptedOffer acceptedOffer)
+        {
+            InitializeComponent();
+            this.offer = offer;
+            this.acceptedOffer = acceptedOffer;
+            richTextBox13.Text = acceptedOffer.Note;
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)

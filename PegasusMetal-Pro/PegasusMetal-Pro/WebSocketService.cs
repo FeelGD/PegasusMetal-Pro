@@ -142,6 +142,14 @@ namespace PegasusMetal_Pro
                     var offerItem = JsonConvert.DeserializeObject<OfferItem>(body);
                     Lists.offerItems.Add(offerItem);
                     break;
+                case OPCodes.ACCEPTED_OFFER:
+                    var acceptedOffer = JsonConvert.DeserializeObject<AcceptedOffer>(body);
+                    Lists.acceptedOffers.Add(acceptedOffer);
+                    break;
+                case OPCodes.PROJECT_CONTINUING:
+                    var projectContinuing = JsonConvert.DeserializeObject<ProjectContinuing>(body);
+                    Lists.projectContinuings.Add(projectContinuing);
+                    break;
                 default:
                     break;
             }

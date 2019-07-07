@@ -76,10 +76,13 @@ namespace PegasusMetal_Pro
         {
             InitializeComponent();
             Initialize(project, company);
+            this.generalOffer = generalOffer;
             List<string> data = new List<string>();
+            Lists.offerItems.Clear();
             Lists.offerItems.CollectionChanged += OfferItemsCollectionChanged;
             data.Add(OPCodes.GET_OFFER_ITEMS);
             WebSocketService.getInstance().Send(data);
+            
             totalPieceCost = generalOffer.UnitPrice;
             generalPrice = generalOffer.OfferPrice;
             labelControl26.Text = totalPieceCost.ToString();
@@ -99,33 +102,38 @@ namespace PegasusMetal_Pro
             {
                 if (item.Id < textEditKaplanacakMalzeme.Properties.Items.Count)
                 {
-
-                    var t2 = new Task(() =>
-                    {
-                        lock (lock_object)
-                        {
-                            if (!SearchKaplama(item.Property))
-                            {
-                                textEditKaplanacakMalzeme.Properties.Items.Insert(item.Id, item.Property);
-                            }
-                        }
-                    });
-                    t2.Start();
+                    InsertMaterial(item.Id, item.Property);
                 }
                 else
                 {
-                    var t2 = new Task(() =>
-                    {
-                        lock (lock_object)
-                        {
-                            if (!SearchKaplama(item.Property))
-                            {
-                                textEditKaplanacakMalzeme.Properties.Items.Add(item.Property);
-                            }
-                        }
-                    });
-                    t2.Start();
+                    AddMaterial(item.Property);
                 }
+            }
+        }
+
+        private void AddMaterial(object item)
+        {
+            if (comboBoxEditParcaKodu.InvokeRequired)
+            {
+                var d = new AddDelegate(AddMaterial);
+                Invoke(d, new object[] { item });
+            }
+            else
+            {
+                textEditKaplanacakMalzeme.Properties.Items.Add(item);
+            }
+        }
+
+        private void InsertMaterial(int index, object item)
+        {
+            if (comboBoxEditParcaKodu.InvokeRequired)
+            {
+                var d = new InsertDelegate(InsertMaterial);
+                Invoke(d, new object[] { index, item });
+            }
+            else
+            {
+                textEditKaplanacakMalzeme.Properties.Items.Insert(index, item);
             }
         }
 
@@ -152,9 +160,9 @@ namespace PegasusMetal_Pro
 
         private void OfferItemsCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
-            foreach (var item in Lists.offerItems.Where(s => !SearchInListView2(s.Id.ToString())))
+            foreach (var item in Lists.offerItems.Where(s => !SearchInListView2(s.Id.ToString()) && s.OfferId == generalOffer.Id))
             {
-                if (item.Id < comboBoxEditParcaKodu.Properties.Items.Count)
+                if (item.Id < listView2.Items.Count)
                 {
                     offerItems.Add(item);
                     AddListView(GetListViewItem(item));
