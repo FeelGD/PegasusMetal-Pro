@@ -1538,8 +1538,9 @@ namespace PegasusMetal_Pro
                 foreach (ListViewItem items in listView2.SelectedItems)
                 {
                     //her işlem için tekrar if else oluşturdum
-                    comboBoxEditParcaKodu.SelectedText = items.SubItems[1].Text;
-
+                    comboBoxEditParcaKodu.Text = Lists.pieces.Where(p=>p.Id==int.Parse(items.SubItems[1].Text)).FirstOrDefault().Code;
+                    ComboBoxEditParcaKodu_SelectedIndexChanged(comboBoxEditParcaKodu, null);
+                    Calculate();
                     if (items.SubItems[2].Text != "")
                     {
                         labelControlLazerTl.Text = items.SubItems[2].Text;
