@@ -17,14 +17,14 @@ namespace PegasusMetal_Pro
         public int TotalCount { get; set; }
         public decimal UnitPrice { get; set; }
         public decimal TotalPrice { get; set; }
-        public Nullable<int> LaserCuttingTime { get; set; }
+        public Nullable<decimal> LaserCuttingTime { get; set; }
         public Nullable<int> LaserCuttingGain { get; set; }
         public Nullable<decimal> LaserCuttingPrice { get; set; }
-        public Nullable<int> TwistTime { get; set; }
+        public Nullable<decimal> TwistTime { get; set; }
         public Nullable<int> TwistCount { get; set; }
         public Nullable<int> TwistGain { get; set; }
         public Nullable<decimal> TwistPrice { get; set; }
-        public Nullable<int> WeldTime { get; set; }
+        public Nullable<decimal> WeldTime { get; set; }
         public Nullable<int> WeldGain { get; set; }
         public Nullable<decimal> WeldPrice { get; set; }
         public Nullable<int> CoveringMaterialId { get; set; }
