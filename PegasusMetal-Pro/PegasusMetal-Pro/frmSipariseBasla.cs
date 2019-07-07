@@ -14,6 +14,7 @@ namespace PegasusMetal_Pro
     {
         private Offer offer;
         private AcceptedOffer acceptedOffer;
+        private List<OfferItem> offerItems;
         public frmSipariseBasla()
         {
             InitializeComponent();
@@ -25,6 +26,59 @@ namespace PegasusMetal_Pro
             this.offer = offer;
             this.acceptedOffer = acceptedOffer;
             richTextBox13.Text = acceptedOffer.Note;
+            offerItems = Lists.offerItems.Where(o => o.OfferId == offer.Id).ToList();
+            ProjeTermin.Text = acceptedOffer.Deadline.ToShortDateString();
+            foreach(var item in offerItems)
+            {
+                if(item.AssemblyPrice!=null)
+                {
+                    groupBox11.Visible = true;
+                }
+                if(item.CountersinkPrice!=null)
+                {
+                    groupBox6.Visible = true;
+                }
+                if(item.CoveringPrice!=null)
+                {
+                    groupBox5.Visible = true;
+                }
+                if(item.IndentionHelicoilPrice!=null)
+                {
+                    groupBox7.Visible = true;
+                }
+                if (item.LaserCuttingPrice != null)
+                {
+                    groupBox2.Visible = true;
+                }
+                if (item.MachiningOnePrice != null)
+                {
+                    groupBox10.Visible = true;
+                }
+                if (item.MachiningTwoPrice != null)
+                {
+                    groupBox13.Visible = true;
+                }
+                if (item.MaskingTapePrice != null)
+                {
+                    groupBox8.Visible = true;
+                }
+                if (item.PaintPrice != null)
+                {
+                    groupBox9.Visible = true;
+                }
+                if (item.TighteningPrice != null)
+                {
+                    groupBox12.Visible = true;
+                }
+                if (item.TwistPrice != null)
+                {
+                    groupBox3.Visible = true;
+                }
+                if (item.WeldPrice != null)
+                {
+                    groupBox4.Visible = true;
+                }
+            }
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)

@@ -25,6 +25,9 @@ namespace PegasusMetal_Pro
             data.Add(OPCodes.GET_OFFERS);
             WebSocketService.getInstance().Send(data);
             data.Clear();
+            data.Add(OPCodes.GET_OFFER_ITEMS);
+            WebSocketService.getInstance().Send(data);
+            data.Clear();
             data.Add(OPCodes.GET_PROJECTS);
             WebSocketService.getInstance().Send(data);
             data.Clear();

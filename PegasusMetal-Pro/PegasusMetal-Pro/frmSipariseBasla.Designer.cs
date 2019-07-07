@@ -110,41 +110,41 @@
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditMontaj.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditMontaj.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditMontaj.Properties.CalendarTimeProperties)).BeginInit();
             this.groupBox12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditSomunSikma.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditSomunSikma.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditSomunSikma.Properties.CalendarTimeProperties)).BeginInit();
             this.groupBox13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditTalasli2.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditTalasli2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditTalasli2.Properties.CalendarTimeProperties)).BeginInit();
             this.groupBox10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditTalasli1.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditTalasli1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditTalasli1.Properties.CalendarTimeProperties)).BeginInit();
             this.groupBox9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditBoya.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditBoya.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditBoya.Properties.CalendarTimeProperties)).BeginInit();
             this.groupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditMaskeleme.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditMaskeleme.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditMaskeleme.Properties.CalendarTimeProperties)).BeginInit();
             this.groupBox7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditDisAcma.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditDisAcma.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditDisAcma.Properties.CalendarTimeProperties)).BeginInit();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditHavsaAcma.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditHavsaAcma.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditHavsaAcma.Properties.CalendarTimeProperties)).BeginInit();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditKaplama.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditKaplama.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditKaplama.Properties.CalendarTimeProperties)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditKaynak.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditKaynak.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditKaynak.Properties.CalendarTimeProperties)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditBukum.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditBukum.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditBukum.Properties.CalendarTimeProperties)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditLazeer.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditLazeer.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditLazeer.Properties.CalendarTimeProperties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -234,7 +234,7 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Right;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -250,6 +250,9 @@
             // 
             this.checkEdit1.Location = new System.Drawing.Point(6, 23);
             this.checkEdit1.Name = "checkEdit1";
+            // 
+            // 
+            // 
             this.checkEdit1.Properties.Appearance.ForeColor = System.Drawing.SystemColors.Control;
             this.checkEdit1.Properties.Appearance.Options.UseForeColor = true;
             this.checkEdit1.Properties.Caption = "Okudum Anladım Kabul Ediyorum.";
@@ -317,14 +320,20 @@
             this.groupBox11.TabIndex = 11;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Montaj";
+            this.groupBox11.Visible = false;
             // 
             // dateEditMontaj
             // 
-            this.dateEditMontaj.EditValue = null;
             this.dateEditMontaj.Location = new System.Drawing.Point(84, 26);
             this.dateEditMontaj.Name = "dateEditMontaj";
+            // 
+            // 
+            // 
             this.dateEditMontaj.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            // 
+            // 
+            // 
             this.dateEditMontaj.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditMontaj.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
@@ -373,6 +382,7 @@
             this.groupBox12.TabIndex = 10;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Somun Sıkma";
+            this.groupBox12.Visible = false;
             // 
             // richTextBoxSomunSikma
             // 
@@ -400,11 +410,16 @@
             // 
             // dateEditSomunSikma
             // 
-            this.dateEditSomunSikma.EditValue = null;
             this.dateEditSomunSikma.Location = new System.Drawing.Point(84, 25);
             this.dateEditSomunSikma.Name = "dateEditSomunSikma";
+            // 
+            // 
+            // 
             this.dateEditSomunSikma.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            // 
+            // 
+            // 
             this.dateEditSomunSikma.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditSomunSikma.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
@@ -430,14 +445,20 @@
             this.groupBox13.TabIndex = 9;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Talaşlı 2";
+            this.groupBox13.Visible = false;
             // 
             // dateEditTalasli2
             // 
-            this.dateEditTalasli2.EditValue = null;
             this.dateEditTalasli2.Location = new System.Drawing.Point(84, 26);
             this.dateEditTalasli2.Name = "dateEditTalasli2";
+            // 
+            // 
+            // 
             this.dateEditTalasli2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            // 
+            // 
+            // 
             this.dateEditTalasli2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditTalasli2.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
@@ -486,14 +507,20 @@
             this.groupBox10.TabIndex = 8;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Talaşlı 1";
+            this.groupBox10.Visible = false;
             // 
             // dateEditTalasli1
             // 
-            this.dateEditTalasli1.EditValue = null;
             this.dateEditTalasli1.Location = new System.Drawing.Point(84, 26);
             this.dateEditTalasli1.Name = "dateEditTalasli1";
+            // 
+            // 
+            // 
             this.dateEditTalasli1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            // 
+            // 
+            // 
             this.dateEditTalasli1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditTalasli1.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
@@ -542,14 +569,20 @@
             this.groupBox9.TabIndex = 7;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Boya";
+            this.groupBox9.Visible = false;
             // 
             // dateEditBoya
             // 
-            this.dateEditBoya.EditValue = null;
             this.dateEditBoya.Location = new System.Drawing.Point(84, 26);
             this.dateEditBoya.Name = "dateEditBoya";
+            // 
+            // 
+            // 
             this.dateEditBoya.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            // 
+            // 
+            // 
             this.dateEditBoya.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditBoya.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
@@ -598,14 +631,20 @@
             this.groupBox8.TabIndex = 6;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Maskeleme Bandı";
+            this.groupBox8.Visible = false;
             // 
             // dateEditMaskeleme
             // 
-            this.dateEditMaskeleme.EditValue = null;
             this.dateEditMaskeleme.Location = new System.Drawing.Point(84, 26);
             this.dateEditMaskeleme.Name = "dateEditMaskeleme";
+            // 
+            // 
+            // 
             this.dateEditMaskeleme.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            // 
+            // 
+            // 
             this.dateEditMaskeleme.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditMaskeleme.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
@@ -654,14 +693,20 @@
             this.groupBox7.TabIndex = 5;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Diş Açma / Helicoil";
+            this.groupBox7.Visible = false;
             // 
             // dateEditDisAcma
             // 
-            this.dateEditDisAcma.EditValue = null;
             this.dateEditDisAcma.Location = new System.Drawing.Point(84, 26);
             this.dateEditDisAcma.Name = "dateEditDisAcma";
+            // 
+            // 
+            // 
             this.dateEditDisAcma.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            // 
+            // 
+            // 
             this.dateEditDisAcma.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditDisAcma.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
@@ -710,14 +755,20 @@
             this.groupBox6.TabIndex = 4;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Havşa Açma";
+            this.groupBox6.Visible = false;
             // 
             // dateEditHavsaAcma
             // 
-            this.dateEditHavsaAcma.EditValue = null;
             this.dateEditHavsaAcma.Location = new System.Drawing.Point(84, 26);
             this.dateEditHavsaAcma.Name = "dateEditHavsaAcma";
+            // 
+            // 
+            // 
             this.dateEditHavsaAcma.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            // 
+            // 
+            // 
             this.dateEditHavsaAcma.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditHavsaAcma.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
@@ -766,14 +817,20 @@
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Kaplama";
+            this.groupBox5.Visible = false;
             // 
             // dateEditKaplama
             // 
-            this.dateEditKaplama.EditValue = null;
             this.dateEditKaplama.Location = new System.Drawing.Point(84, 25);
             this.dateEditKaplama.Name = "dateEditKaplama";
+            // 
+            // 
+            // 
             this.dateEditKaplama.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            // 
+            // 
+            // 
             this.dateEditKaplama.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditKaplama.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
@@ -822,14 +879,20 @@
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Kaynak";
+            this.groupBox4.Visible = false;
             // 
             // dateEditKaynak
             // 
-            this.dateEditKaynak.EditValue = null;
             this.dateEditKaynak.Location = new System.Drawing.Point(84, 25);
             this.dateEditKaynak.Name = "dateEditKaynak";
+            // 
+            // 
+            // 
             this.dateEditKaynak.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            // 
+            // 
+            // 
             this.dateEditKaynak.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditKaynak.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
@@ -878,14 +941,20 @@
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Büküm";
+            this.groupBox3.Visible = false;
             // 
             // dateEditBukum
             // 
-            this.dateEditBukum.EditValue = null;
             this.dateEditBukum.Location = new System.Drawing.Point(84, 26);
             this.dateEditBukum.Name = "dateEditBukum";
+            // 
+            // 
+            // 
             this.dateEditBukum.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            // 
+            // 
+            // 
             this.dateEditBukum.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditBukum.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
@@ -934,15 +1003,21 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Lazer Kesim";
+            this.groupBox2.Visible = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // dateEditLazeer
             // 
-            this.dateEditLazeer.EditValue = null;
             this.dateEditLazeer.Location = new System.Drawing.Point(84, 26);
             this.dateEditLazeer.Name = "dateEditLazeer";
+            // 
+            // 
+            // 
             this.dateEditLazeer.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            // 
+            // 
+            // 
             this.dateEditLazeer.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditLazeer.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;

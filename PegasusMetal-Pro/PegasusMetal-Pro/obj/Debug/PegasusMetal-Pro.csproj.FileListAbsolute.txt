@@ -1231,4 +1231,7 @@ C:\Users\Ahmet\Source\Repos\PegasusMetal-ProLast\PegasusMetal-Pro\PegasusMetal-P
 C:\Users\Ahmet\Source\Repos\PegasusMetal-ProLast\PegasusMetal-Pro\PegasusMetal-Pro\bin\Debug\ru\DevExpress.Diagram.v17.1.Core.resources.dll
 C:\Users\Ahmet\Source\Repos\PegasusMetal-ProLast\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal-Pro.csproj.CoreCompileInputs.cache
 C:\Users\Ahmet\Source\Repos\PegasusMetal-ProLast\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal-Pro.csproj.CopyComplete
-C:\Users\Ahmet\Source\Repos\PegasusMetal-ProLast\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal-Pro.exe.licenses
+C:\Users\Ahmet\Source\Repos\PegasusMetal-ProLast\PegasusMetal-Pro\PegasusMetal-Pro\bin\Debug\PegasusMetal-Pro.exe.manifest
+C:\Users\Ahmet\Source\Repos\PegasusMetal-ProLast\PegasusMetal-Pro\PegasusMetal-Pro\bin\Debug\PegasusMetal-Pro.application
+C:\Users\Ahmet\Source\Repos\PegasusMetal-ProLast\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal-Pro.exe.manifest
+C:\Users\Ahmet\Source\Repos\PegasusMetal-ProLast\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal-Pro.application
