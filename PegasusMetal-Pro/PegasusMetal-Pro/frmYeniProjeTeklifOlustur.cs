@@ -1254,7 +1254,7 @@ namespace PegasusMetal_Pro
             //malzeme bilgileri
             comboBoxEditParcaKodu.Text = "";
             textEditParcaAdi.Text = "";
-            textEditAdet.Text = "";
+            textEditAdet.Text = "0";
             labelControlEn.Text = "";
             labelControlBoy.Text = "";
             labelControlKalinlik.Text = "";
@@ -1544,6 +1544,7 @@ namespace PegasusMetal_Pro
                     if (items.SubItems[2].Text != "")
                     {
                         labelControlLazerTl.Text = items.SubItems[2].Text;
+                        
                     }
                     else
                     {
@@ -1624,7 +1625,7 @@ namespace PegasusMetal_Pro
 
                     if (items.SubItems[11].Text != "")
                     {
-                        labelControlTalasliCapTl.Text = items.SubItems[1].Text;
+                        labelControlTalasliCapTl.Text = items.SubItems[11].Text;
                     }
                     else
                     {
@@ -1649,14 +1650,14 @@ namespace PegasusMetal_Pro
                         labelControlMontajTl.Text = "..... TL";
                     }
 
-                    if (items.SubItems[14].Text != "")
-                    {
-                        labelControlLazerTl.Text = items.SubItems[14].Text;
-                    }
-                    else
-                    {
-                        labelControlLazerTl.Text = "..... TL";
-                    }
+                    //if (items.SubItems[14].Text != "")
+                    //{
+                    //    labelControlLazerTl.Text = items.SubItems[14].Text;
+                    //}
+                    //else
+                    //{
+                    //    labelControlLazerTl.Text = "..... TL";
+                    //}
 
 
 
