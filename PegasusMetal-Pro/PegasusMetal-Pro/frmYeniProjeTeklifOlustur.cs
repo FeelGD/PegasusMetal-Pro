@@ -438,6 +438,10 @@ namespace PegasusMetal_Pro
         private void Calculate()
         {
             piece = Lists.pieces.Where(i => i.Code == comboBoxEditParcaKodu.Text).SingleOrDefault();
+            if(String.IsNullOrEmpty(textEditAdet.Text.Trim()))
+            {
+                textEditAdet.Text = "0";
+            }
             if (piece != null)
             {
                 material = Lists.materials.Where(i => i.Name.Trim() == piece.Quality.Trim()).SingleOrDefault();
@@ -1535,7 +1539,7 @@ namespace PegasusMetal_Pro
                 {
                     //her işlem için tekrar if else oluşturdum
                     comboBoxEditParcaKodu.SelectedText = items.SubItems[1].Text;
-                    
+
                     if (items.SubItems[2].Text != "")
                     {
                         labelControlLazerTl.Text = items.SubItems[2].Text;
