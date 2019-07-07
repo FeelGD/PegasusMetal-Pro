@@ -162,16 +162,8 @@ namespace PegasusMetal_Pro
         {
             foreach (var item in Lists.offerItems.Where(s => !SearchInListView2(s.Id.ToString()) && s.OfferId == generalOffer.Id))
             {
-                if (item.Id < listView2.Items.Count)
-                {
-                    offerItems.Add(item);
-                    AddListView(GetListViewItem(item));
-                }
-                else
-                {
-                    offerItems.Insert(item.Id, item);
-                    InsertListView(item.Id, GetListViewItem(item));
-                }
+                offerItems.Add(item);
+                AddListView(GetListViewItem(item));
             }
         }
 
@@ -262,6 +254,7 @@ namespace PegasusMetal_Pro
             }
             return false;
         }
+
         #region CheckBox Events
         private void checkEditMontaj_CheckedChanged(object sender, EventArgs e)
         {
@@ -440,7 +433,7 @@ namespace PegasusMetal_Pro
             piece = Lists.pieces.Where(i => i.Code == comboBoxEditParcaKodu.Text).SingleOrDefault();
             if(String.IsNullOrEmpty(textEditAdet.Text.Trim()))
             {
-                textEditAdet.Text = "0";
+                textEditAdet.Text = "1";
             }
             if (piece != null)
             {
@@ -474,6 +467,14 @@ namespace PegasusMetal_Pro
 
         private void TextEditAdet_EditValueChanged(object sender, EventArgs e)
         {
+            if(String.IsNullOrEmpty(comboBoxEditParcaKodu.Text.Trim()) || String.IsNullOrEmpty(textEditAdet.Text.Trim()))
+            {
+                return;
+            }
+            if(String.IsNullOrEmpty(labelControlMaliyet.Text))
+            {
+                labelControlMaliyet.Text = "0";
+            }
             if (textEditAdet.Text.Trim() != "")
             {
                 Calculate();
@@ -1089,7 +1090,7 @@ namespace PegasusMetal_Pro
             OfferItem item = new OfferItem();
             if (checkEditLazer.Checked && Check(textEditKesimSuresi.Text))
             {
-                item.LaserCuttingTime = int.Parse(textEditKesimSuresi.Text);
+                item.LaserCuttingTime = Convert.ToDecimal(textEditKesimSuresi.Text);
                 item.LaserCuttingPrice = Convert.ToDecimal(labelControlLazerTl.Text.Substring(0, labelControlLazerTl.Text.Length - 2));
                 item.LaserCuttingGain = int.Parse(textEditLazerKar.Text);
             }
@@ -1098,13 +1099,13 @@ namespace PegasusMetal_Pro
             {
                 item.TwistGain = int.Parse(textEditBukumKar.Text);
                 item.TwistCount = int.Parse(textEditBukumAdedi.Text);
-                item.TwistTime = int.Parse(textEditBukumSuresi.Text);
+                item.TwistTime = Convert.ToDecimal(textEditBukumSuresi.Text);
                 item.TwistPrice = Convert.ToDecimal(labelControlBukumTl.Text.Substring(0, labelControlBukumTl.Text.Length - 2));
             }
 
             if (checkEditKaynak.Checked && Check(textEditKaynakSuresi.Text))
             {
-                item.WeldTime = int.Parse(textEditKaynakSuresi.Text);
+                item.WeldTime = Convert.ToDecimal(textEditKaynakSuresi.Text);
                 item.WeldGain = int.Parse(textEditKaynakKar.Text);
                 item.WeldPrice = Convert.ToDecimal(labelControlKaynakTl.Text.Substring(0, labelControlKaynakTl.Text.Length - 2));
             }
@@ -1299,7 +1300,7 @@ namespace PegasusMetal_Pro
             groupBoxSomun.Visible = false;
             groupBoxDis.Visible = false;
             textEditKesimSuresi.Text = "";
-            textEditLazerKar.Text = "";
+            textEditLazerKar.Text = "0";
             labelControlLazerTl.Text = "..... TL";
             textEditBukumSuresi.Text = "";
             textEditBukumAdedi.Text = "";
