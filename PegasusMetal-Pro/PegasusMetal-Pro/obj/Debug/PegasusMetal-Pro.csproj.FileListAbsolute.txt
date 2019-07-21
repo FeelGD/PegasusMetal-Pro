@@ -1235,3 +1235,7 @@ C:\Users\Ahmet\Source\Repos\PegasusMetal-ProLast\PegasusMetal-Pro\PegasusMetal-P
 C:\Users\Ahmet\Source\Repos\PegasusMetal-ProLast\PegasusMetal-Pro\PegasusMetal-Pro\bin\Debug\PegasusMetal-Pro.application
 C:\Users\Ahmet\Source\Repos\PegasusMetal-ProLast\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal-Pro.exe.manifest
 C:\Users\Ahmet\Source\Repos\PegasusMetal-ProLast\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal-Pro.application
+D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\bin\Debug\PegasusMetal-Pro.exe.manifest
+D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\bin\Debug\PegasusMetal-Pro.application
+D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal-Pro.exe.manifest
+D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal-Pro.application
