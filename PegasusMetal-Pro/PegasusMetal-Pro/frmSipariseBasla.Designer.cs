@@ -245,6 +245,7 @@
             this.button1.Text = "\r\n\r\nProjeye Başla";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // checkEdit1
             // 
@@ -324,6 +325,7 @@
             // 
             // dateEditMontaj
             // 
+            this.dateEditMontaj.EditValue = new System.DateTime(2019, 7, 30, 0, 0, 0, 0);
             this.dateEditMontaj.Location = new System.Drawing.Point(84, 26);
             this.dateEditMontaj.Name = "dateEditMontaj";
             // 
@@ -410,6 +412,7 @@
             // 
             // dateEditSomunSikma
             // 
+            this.dateEditSomunSikma.EditValue = new System.DateTime(2019, 7, 30, 0, 0, 0, 0);
             this.dateEditSomunSikma.Location = new System.Drawing.Point(84, 25);
             this.dateEditSomunSikma.Name = "dateEditSomunSikma";
             // 
@@ -449,6 +452,7 @@
             // 
             // dateEditTalasli2
             // 
+            this.dateEditTalasli2.EditValue = new System.DateTime(2019, 7, 30, 0, 0, 0, 0);
             this.dateEditTalasli2.Location = new System.Drawing.Point(84, 26);
             this.dateEditTalasli2.Name = "dateEditTalasli2";
             // 
@@ -511,6 +515,7 @@
             // 
             // dateEditTalasli1
             // 
+            this.dateEditTalasli1.EditValue = new System.DateTime(2019, 7, 30, 0, 0, 0, 0);
             this.dateEditTalasli1.Location = new System.Drawing.Point(84, 26);
             this.dateEditTalasli1.Name = "dateEditTalasli1";
             // 
@@ -573,6 +578,7 @@
             // 
             // dateEditBoya
             // 
+            this.dateEditBoya.EditValue = new System.DateTime(2019, 7, 30, 0, 0, 0, 0);
             this.dateEditBoya.Location = new System.Drawing.Point(84, 26);
             this.dateEditBoya.Name = "dateEditBoya";
             // 
@@ -635,6 +641,7 @@
             // 
             // dateEditMaskeleme
             // 
+            this.dateEditMaskeleme.EditValue = new System.DateTime(2019, 7, 30, 0, 0, 0, 0);
             this.dateEditMaskeleme.Location = new System.Drawing.Point(84, 26);
             this.dateEditMaskeleme.Name = "dateEditMaskeleme";
             // 
@@ -697,6 +704,7 @@
             // 
             // dateEditDisAcma
             // 
+            this.dateEditDisAcma.EditValue = new System.DateTime(2019, 7, 30, 0, 0, 0, 0);
             this.dateEditDisAcma.Location = new System.Drawing.Point(84, 26);
             this.dateEditDisAcma.Name = "dateEditDisAcma";
             // 
@@ -759,6 +767,7 @@
             // 
             // dateEditHavsaAcma
             // 
+            this.dateEditHavsaAcma.EditValue = new System.DateTime(2019, 7, 30, 0, 0, 0, 0);
             this.dateEditHavsaAcma.Location = new System.Drawing.Point(84, 26);
             this.dateEditHavsaAcma.Name = "dateEditHavsaAcma";
             // 
@@ -821,6 +830,7 @@
             // 
             // dateEditKaplama
             // 
+            this.dateEditKaplama.EditValue = new System.DateTime(2019, 7, 30, 0, 0, 0, 0);
             this.dateEditKaplama.Location = new System.Drawing.Point(84, 25);
             this.dateEditKaplama.Name = "dateEditKaplama";
             // 
@@ -883,6 +893,7 @@
             // 
             // dateEditKaynak
             // 
+            this.dateEditKaynak.EditValue = new System.DateTime(2019, 7, 30, 0, 0, 0, 0);
             this.dateEditKaynak.Location = new System.Drawing.Point(84, 25);
             this.dateEditKaynak.Name = "dateEditKaynak";
             // 
@@ -945,6 +956,7 @@
             // 
             // dateEditBukum
             // 
+            this.dateEditBukum.EditValue = new System.DateTime(2019, 7, 30, 0, 0, 0, 0);
             this.dateEditBukum.Location = new System.Drawing.Point(84, 26);
             this.dateEditBukum.Name = "dateEditBukum";
             // 
@@ -1008,6 +1020,7 @@
             // 
             // dateEditLazeer
             // 
+            this.dateEditLazeer.EditValue = new System.DateTime(2019, 7, 30, 0, 0, 0, 0);
             this.dateEditLazeer.Location = new System.Drawing.Point(84, 26);
             this.dateEditLazeer.Name = "dateEditLazeer";
             // 

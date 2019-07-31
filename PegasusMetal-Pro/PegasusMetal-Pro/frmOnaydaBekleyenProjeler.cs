@@ -43,7 +43,7 @@ namespace PegasusMetal_Pro
 
         private void CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
-            foreach (var item in Lists.acceptedOffers.Where(s => !SearchInListView2(GetProject(s.OfferId).Id.ToString())))
+            foreach (var item in Lists.acceptedOffers.Where(s => !SearchInListView2(GetProject(s.OfferId).Id.ToString()) && Lists.projectContinuings.Where(p=>p.ProjectId == GetProject(s.OfferId).Id).ToList().Count == 0))
             {
                 AddListView(GetListViewItem(item));
             }
