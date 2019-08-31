@@ -426,14 +426,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PegasusMetal-Pro.exe" size="2681824">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PegasusMetal-Pro.exe" size="2688480">
       <assemblyIdentity name="PegasusMetal-Pro" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>HkgzIVRha04UbKRQ11LgzSz+/0s82qMcGxqJjR4/wYg=</dsig:DigestValue>
+        <dsig:DigestValue>2KwI4Q46aJS/41+S3gYdqMBFrJenHicRTA/lXccsALQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

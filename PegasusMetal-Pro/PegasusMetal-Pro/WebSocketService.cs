@@ -9,6 +9,7 @@ using WebSocket4Net;
 using System.Windows.Forms;
 using DevExpress.Entity.Model;
 using System.Threading;
+using System.Net;
 
 namespace PegasusMetal_Pro
 {
@@ -25,7 +26,8 @@ namespace PegasusMetal_Pro
 
         private void StartSocket()
         {
-            websocket = new WebSocket("ws://" + Constants.IP_ADDRESS + ":" + Constants.PORT.ToString() + "/");
+            var ip = Dns.GetHostEntry(Constants.IP_ADDRESS).AddressList.Last(addr => addr.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork).ToString();
+            websocket = new WebSocket("ws://" + ip + ":" + Constants.PORT.ToString() + "/");
             websocket.Opened += new EventHandler(websocket_Opened);
             websocket.Error += new EventHandler<ErrorEventArgs>(websocket_Error);
             websocket.Closed += new EventHandler(websocket_Closed);

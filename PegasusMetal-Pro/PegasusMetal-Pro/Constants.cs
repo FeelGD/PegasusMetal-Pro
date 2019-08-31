@@ -45,7 +45,7 @@ namespace PegasusMetal_Pro
         }
         public const string SPLITTER = "%&(SPLIT)";
         public const int PORT = 5661;
-        public const string IP_ADDRESS = "127.0.0.1";
+        public const string IP_ADDRESS = "server.binote.net";//2.59.116.103
         public static class BarButtonNames
         {
             public const string BAR_BUTTON_ITEM_ROLES = "barButtonItemRoller";
