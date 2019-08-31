@@ -1079,3 +1079,8 @@ C:\Users\Ahmet\Source\Repos\PegasusMetal-ProLast\PegasusMetal-Pro\PegasusMetal-P
 C:\Users\Ahmet\Source\Repos\PegasusMetal-ProLast\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal-Pro.csproj.CopyComplete
 C:\Users\Ahmet\Source\Repos\PegasusMetal-ProLast\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal-Pro.exe
 C:\Users\Ahmet\Source\Repos\PegasusMetal-ProLast\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal-Pro.pdb
+D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\bin\Debug\PegasusMetal-Pro.exe.manifest
+D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\bin\Debug\PegasusMetal-Pro.application
+D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal_Pro.frmGelirRapor.resources
+D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal-Pro.exe.manifest
+D:\Users\Ali\Documents\GitHub\PegasusMetal-Pro\PegasusMetal-Pro\PegasusMetal-Pro\obj\Debug\PegasusMetal-Pro.application

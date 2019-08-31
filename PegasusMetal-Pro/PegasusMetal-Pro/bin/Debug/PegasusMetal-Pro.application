@@ -14,14 +14,14 @@
     <framework targetVersion="4.6.1" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="PegasusMetal-Pro.exe.manifest" size="100868">
+    <dependentAssembly dependencyType="install" codebase="PegasusMetal-Pro.exe.manifest" size="193735">
       <assemblyIdentity name="PegasusMetal-Pro.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>tdl/4u8Xtd90glLsaDDM4TTp6uzCz5cFh/ILfDX8YLg=</dsig:DigestValue>
+        <dsig:DigestValue>z1STiXQmxdPg7VYn89CkEm5SpAA5FvJCmD6kMOqu98Y=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

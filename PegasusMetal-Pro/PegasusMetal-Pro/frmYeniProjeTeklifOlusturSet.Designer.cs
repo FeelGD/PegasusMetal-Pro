@@ -40,6 +40,7 @@
             this.Cins = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Adet = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Agirlik = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Maliyet = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtEnBoy = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,7 +55,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.simpleButtonEkle = new DevExpress.XtraEditors.SimpleButton();
             this.txtAdet = new DevExpress.XtraEditors.TextEdit();
-            this.Maliyet = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DKPCost = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.DKPWeight = new System.Windows.Forms.Label();
@@ -181,6 +181,11 @@
             // 
             this.Agirlik.Text = "Ağırlık";
             this.Agirlik.Width = 92;
+            // 
+            // Maliyet
+            // 
+            this.Maliyet.Text = "Maliyet";
+            this.Maliyet.Width = 105;
             // 
             // txtEnBoy
             // 
@@ -368,11 +373,6 @@
             this.txtAdet.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtAdet.Size = new System.Drawing.Size(70, 24);
             this.txtAdet.TabIndex = 24;
-            // 
-            // Maliyet
-            // 
-            this.Maliyet.Text = "Maliyet";
-            this.Maliyet.Width = 105;
             // 
             // DKPCost
             // 
