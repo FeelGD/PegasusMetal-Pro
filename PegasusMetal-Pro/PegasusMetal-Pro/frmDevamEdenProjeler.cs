@@ -17,30 +17,31 @@ namespace PegasusMetal_Pro
         public frmDevamEdenProjeler()
         {
             InitializeComponent();
-            Lists.projectContinuings.Clear();
+            //Lists.projectContinuings.Clear();
             Lists.projectContinuings.CollectionChanged += CollectionChanged;
-            List<string> data = new List<string>();
-            data.Clear();
-            data.Add(OPCodes.GET_OFFERS);
-            WebSocketService.getInstance().Send(data);
-            data.Clear();
-            data.Add(OPCodes.GET_OFFER_ITEMS);
-            WebSocketService.getInstance().Send(data);
-            data.Clear();
-            data.Add(OPCodes.GET_PROJECTS);
-            WebSocketService.getInstance().Send(data);
-            data.Clear();
-            data.Add(OPCodes.GET_COMPANIES);
-            WebSocketService.getInstance().Send(data);
-            data.Clear();
-            data.Add(OPCodes.GET_PERSONAL_LIST);
-            WebSocketService.getInstance().Send(data);
-            data.Clear();
-            data.Add(OPCodes.GET_ACCEPTED_OFFERS);
-            WebSocketService.getInstance().Send(data);
-            data.Clear();
-            data.Add(OPCodes.GET_PROJECT_CONTINUING);
-            WebSocketService.getInstance().Send(data);
+            //List<string> data = new List<string>();
+            //data.Clear();
+            //data.Add(OPCodes.GET_OFFERS);
+            //WebSocketService.getInstance().Send(data);
+            //data.Clear();
+            //data.Add(OPCodes.GET_OFFER_ITEMS);
+            //WebSocketService.getInstance().Send(data);
+            //data.Clear();
+            //data.Add(OPCodes.GET_PROJECTS);
+            //WebSocketService.getInstance().Send(data);
+            //data.Clear();
+            //data.Add(OPCodes.GET_COMPANIES);
+            //WebSocketService.getInstance().Send(data);
+            //data.Clear();
+            //data.Add(OPCodes.GET_PERSONAL_LIST);
+            //WebSocketService.getInstance().Send(data);
+            //data.Clear();
+            //data.Add(OPCodes.GET_ACCEPTED_OFFERS);
+            //WebSocketService.getInstance().Send(data);
+            //data.Clear();
+            //data.Add(OPCodes.GET_PROJECT_CONTINUING);
+            //WebSocketService.getInstance().Send(data);
+            CollectionChanged(null,null);
         }
 
         private void CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)

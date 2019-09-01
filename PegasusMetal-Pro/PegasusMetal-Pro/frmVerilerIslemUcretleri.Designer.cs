@@ -341,6 +341,7 @@
             this.Name = "frmVerilerIslemUcretleri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVerilerIslemUcretleri";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmVerilerIslemUcretleri_FormClosing);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

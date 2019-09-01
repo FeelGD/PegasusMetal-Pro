@@ -17,11 +17,12 @@ namespace PegasusMetal_Pro
         public frmVerilerFirmalar()
         {
             InitializeComponent();
-            Lists.companies.Clear();
+            //Lists.companies.Clear();
             Lists.companies.CollectionChanged += CollectionChanged;
-            List<string> data = new List<string>();
-            data.Add(OPCodes.GET_COMPANIES);
-            WebSocketService.getInstance().Send(data);
+            //List<string> data = new List<string>();
+            //data.Add(OPCodes.GET_COMPANIES);
+            //WebSocketService.getInstance().Send(data);
+            CollectionChanged(null,null);
         }
 
         private bool SearchInListView(string Id)
@@ -142,6 +143,11 @@ namespace PegasusMetal_Pro
                 textEditMail.Text = item.SubItems[5].Text;
                 textEditAdres.Text = item.SubItems[6].Text;
             }
+        }
+
+        private void FrmVerilerFirmalar_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Lists.companies.CollectionChanged -= CollectionChanged;
         }
     }
 }

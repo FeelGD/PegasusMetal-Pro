@@ -17,11 +17,12 @@ namespace PegasusMetal_Pro
         public frmVerilerIslemUcretleri()
         {
             InitializeComponent();
-            Lists.processes.Clear();
+            //Lists.processes.Clear();
             Lists.processes.CollectionChanged += CollectionChanged;
-            List<string> data = new List<string>();
-            data.Add(OPCodes.GET_PROCESSES);
-            WebSocketService.getInstance().Send(data);
+            //List<string> data = new List<string>();
+            //data.Add(OPCodes.GET_PROCESSES);
+            //WebSocketService.getInstance().Send(data);
+            CollectionChanged(null,null);
         }
 
         private void CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
@@ -131,6 +132,11 @@ namespace PegasusMetal_Pro
             data.Add(JsonConvert.SerializeObject(process));
             WebSocketService.getInstance().Send(data);
             RefreshBoxes();
+        }
+
+        private void FrmVerilerIslemUcretleri_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Lists.processes.CollectionChanged -= CollectionChanged;
         }
     }
 }

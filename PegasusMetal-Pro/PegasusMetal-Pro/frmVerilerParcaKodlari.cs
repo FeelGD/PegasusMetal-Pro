@@ -17,11 +17,12 @@ namespace PegasusMetal_Pro
         public frmVerilerParcaKodlari()
         {
             InitializeComponent();
-            Lists.pieces.Clear();
+            //Lists.pieces.Clear();
             Lists.pieces.CollectionChanged += CollectionChanged;
-            List<string> data = new List<string>();
-            data.Add(OPCodes.GET_PIECES);
-            WebSocketService.getInstance().Send(data);
+            //List<string> data = new List<string>();
+            //data.Add(OPCodes.GET_PIECES);
+            //WebSocketService.getInstance().Send(data);
+            CollectionChanged(null,null);
         }
         private void CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
@@ -154,6 +155,11 @@ namespace PegasusMetal_Pro
                 textEdit7.Text = item.SubItems[7].Text;
                 textEdit8.Text = item.SubItems[8].Text;
             }
+        }
+
+        private void FrmVerilerParcaKodlari_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Lists.pieces.CollectionChanged -= CollectionChanged;
         }
     }
 }

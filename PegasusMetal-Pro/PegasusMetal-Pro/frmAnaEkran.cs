@@ -16,7 +16,10 @@ namespace PegasusMetal_Pro
         {
             frmLogin login = new frmLogin();
             login.ShowDialog();
-
+            if (!Constants.AllDataIsReceived)
+            {
+                new frmLoading().ShowDialog();
+            }
             InitializeComponent();
         }
 

@@ -26,15 +26,16 @@ namespace PegasusMetal_Pro
         {
             InitializeComponent();
             this.offer = offer;
-            Lists.users.Clear();
+            //Lists.users.Clear();
             Lists.users.CollectionChanged += UsersCollectionChanged;
-            List<string> data = new List<string>();
-            Lists.staffs.Clear();
-            data.Add(OPCodes.GET_PERSONAL_LIST);
-            WebSocketService.getInstance().Send(data);
-            data.Clear();
-            data.Add(OPCodes.GET_USER_LIST);
-            WebSocketService.getInstance().Send(data);
+            //List<string> data = new List<string>();
+            //Lists.staffs.Clear();
+            //data.Add(OPCodes.GET_PERSONAL_LIST);
+            //WebSocketService.getInstance().Send(data);
+            //data.Clear();
+            //data.Add(OPCodes.GET_USER_LIST);
+            //WebSocketService.getInstance().Send(data);
+            UsersCollectionChanged(null, null);
             
         }
 

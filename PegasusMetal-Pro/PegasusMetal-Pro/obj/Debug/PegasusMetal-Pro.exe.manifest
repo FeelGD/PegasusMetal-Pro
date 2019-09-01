@@ -14,16 +14,16 @@
       </applicationRequestMinimum>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
         <!--
-          UAC Manifest Options
-          If you want to change the Windows User Account Control level replace the 
-          requestedExecutionLevel node with one of the following.
+          UAC Bildirim Seçenekleri
+          Windows Kullanıcı Hesabı Denetim düzeyini değiştirmek istiyorsanız
+          requestedExecutionLevel düğümünü aşağıdakilerden biriyle değiştirin.
 
         <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
-        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
-        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
 
-         If you want to utilize File and Registry Virtualization for backward 
-         compatibility then delete the requestedExecutionLevel node.
+         Geriye dönük uyumluluk için Dosya ve Kayıt Defteri Sanallaştırması’nı
+         kullanmak istiyorsanız requestedExecutionLevel düğümünü silin.
     -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
@@ -1969,7 +1969,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pCoDI8WCs7P4PfP0ACQSmS8LCufytDg7wWCaj2g9FN0=</dsig:DigestValue>
+        <dsig:DigestValue>rNM7IkeOPbIKFF+s1RFA91sajV+NfTKVRxvVCZZTh2M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

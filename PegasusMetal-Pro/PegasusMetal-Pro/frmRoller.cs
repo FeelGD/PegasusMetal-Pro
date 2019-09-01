@@ -18,22 +18,25 @@ namespace PegasusMetal_Pro
         public frmRoller()
         {
             InitializeComponent();
-            Lists.staffs.Clear();
+            //Lists.staffs.Clear();
             Lists.staffs.CollectionChanged += CollectionChanged;
             Lists.roles.CollectionChanged += RolesCollectionChanged;
             Lists.users.CollectionChanged += UsersCollectionChanged;
-            List<string> data = new List<string>();
-            data.Add(OPCodes.GET_PERSONAL_LIST);
-            WebSocketService.getInstance().Send(data);
-            data.Clear();
-            data.Add(OPCodes.GET_ROLE_LIST);
-            WebSocketService.getInstance().Send(data);
-            data.Clear();
-            data.Add(OPCodes.GET_USER_LIST);
-            WebSocketService.getInstance().Send(data);
-            data.Clear();
-            data.Add(OPCodes.GET_USER_ROLE_LIST);
-            WebSocketService.getInstance().Send(data);
+            //List<string> data = new List<string>();
+            //data.Add(OPCodes.GET_PERSONAL_LIST);
+            //WebSocketService.getInstance().Send(data);
+            //data.Clear();
+            //data.Add(OPCodes.GET_ROLE_LIST);
+            //WebSocketService.getInstance().Send(data);
+            //data.Clear();
+            //data.Add(OPCodes.GET_USER_LIST);
+            //WebSocketService.getInstance().Send(data);
+            //data.Clear();
+            //data.Add(OPCodes.GET_USER_ROLE_LIST);
+            //WebSocketService.getInstance().Send(data);
+            CollectionChanged(null,null);
+            RolesCollectionChanged(null,null);
+            UsersCollectionChanged(null, null);
         }
 
         private void CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)

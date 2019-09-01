@@ -229,6 +229,9 @@
             this.textEdit9.Enabled = false;
             this.textEdit9.Location = new System.Drawing.Point(115, 33);
             this.textEdit9.Name = "textEdit9";
+            // 
+            // 
+            // 
             this.textEdit9.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEdit9.Properties.Appearance.Options.UseFont = true;
             this.textEdit9.Size = new System.Drawing.Size(203, 26);
@@ -260,6 +263,9 @@
             this.textEdit8.Enabled = false;
             this.textEdit8.Location = new System.Drawing.Point(115, 260);
             this.textEdit8.Name = "textEdit8";
+            // 
+            // 
+            // 
             this.textEdit8.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEdit8.Properties.Appearance.Options.UseFont = true;
             this.textEdit8.Size = new System.Drawing.Size(203, 26);
@@ -270,6 +276,9 @@
             this.textEdit7.EditValue = "";
             this.textEdit7.Location = new System.Drawing.Point(268, 201);
             this.textEdit7.Name = "textEdit7";
+            // 
+            // 
+            // 
             this.textEdit7.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEdit7.Properties.Appearance.Options.UseFont = true;
             this.textEdit7.Size = new System.Drawing.Size(50, 26);
@@ -280,6 +289,9 @@
             this.textEdit6.EditValue = "";
             this.textEdit6.Location = new System.Drawing.Point(268, 164);
             this.textEdit6.Name = "textEdit6";
+            // 
+            // 
+            // 
             this.textEdit6.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEdit6.Properties.Appearance.Options.UseFont = true;
             this.textEdit6.Size = new System.Drawing.Size(50, 26);
@@ -290,6 +302,9 @@
             this.textEdit4.EditValue = "";
             this.textEdit4.Location = new System.Drawing.Point(115, 164);
             this.textEdit4.Name = "textEdit4";
+            // 
+            // 
+            // 
             this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEdit4.Properties.Appearance.Options.UseFont = true;
             this.textEdit4.Size = new System.Drawing.Size(62, 26);
@@ -300,6 +315,9 @@
             this.textEdit3.EditValue = "";
             this.textEdit3.Location = new System.Drawing.Point(115, 201);
             this.textEdit3.Name = "textEdit3";
+            // 
+            // 
+            // 
             this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEdit3.Properties.Appearance.Options.UseFont = true;
             this.textEdit3.Size = new System.Drawing.Size(62, 26);
@@ -310,6 +328,9 @@
             this.textEdit1.EditValue = "";
             this.textEdit1.Location = new System.Drawing.Point(115, 97);
             this.textEdit1.Name = "textEdit1";
+            // 
+            // 
+            // 
             this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEdit1.Properties.Appearance.Options.UseFont = true;
             this.textEdit1.Size = new System.Drawing.Size(203, 26);
@@ -320,6 +341,9 @@
             this.textEditId.EditValue = "";
             this.textEditId.Location = new System.Drawing.Point(115, 65);
             this.textEditId.Name = "textEditId";
+            // 
+            // 
+            // 
             this.textEditId.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditId.Properties.Appearance.Options.UseFont = true;
             this.textEditId.Size = new System.Drawing.Size(203, 26);
@@ -424,6 +448,9 @@
             this.textEdit2.EditValue = "";
             this.textEdit2.Location = new System.Drawing.Point(115, 129);
             this.textEdit2.Name = "textEdit2";
+            // 
+            // 
+            // 
             this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEdit2.Properties.Appearance.Options.UseFont = true;
             this.textEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -454,6 +481,7 @@
             this.Name = "frmVerilerParcaKodlari";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVerilerParcaKodlari";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmVerilerParcaKodlari_FormClosing);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

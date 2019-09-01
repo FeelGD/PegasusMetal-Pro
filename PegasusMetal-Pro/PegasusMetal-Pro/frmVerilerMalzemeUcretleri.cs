@@ -17,11 +17,12 @@ namespace PegasusMetal_Pro
         public frmVerilerMalzemeUcretleri()
         {
             InitializeComponent();
-            Lists.materials.Clear();
+            //Lists.materials.Clear();
             Lists.materials.CollectionChanged += CollectionChanged;
-            List<string> data = new List<string>();
-            data.Add(OPCodes.GET_MATERIALS);
-            WebSocketService.getInstance().Send(data);
+            //List<string> data = new List<string>();
+            //data.Add(OPCodes.GET_MATERIALS);
+            //WebSocketService.getInstance().Send(data);
+            CollectionChanged(null,null);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -105,6 +106,11 @@ namespace PegasusMetal_Pro
                 textEditMalzemeOzelligi.Text = item.SubItems[1].Text;
                 textEditBirimFiyat.Text = item.SubItems[2].Text;
             }
+        }
+
+        private void FrmVerilerMalzemeUcretleri_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Lists.materials.CollectionChanged -= CollectionChanged;
         }
     }
 }

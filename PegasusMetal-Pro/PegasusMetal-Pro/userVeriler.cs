@@ -30,7 +30,7 @@ namespace PegasusMetal_Pro
             if (frmName.InvokeRequired)
             {
                 var del = new SafeCall(ShowDialog);
-                Invoke(del, new object[] { frmName });
+                Invoke(del, new Form[] { frmName });
             }
             else
             {

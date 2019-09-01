@@ -78,7 +78,11 @@ namespace PegasusMetal_Pro
             Utilities.WriteLog(LOG_TYPE, e.Message + " received from server.", ConsoleColor.Gray);
             string[] packets = e.Message.Split(new string[] { Constants.SPLITTER }, StringSplitOptions.None);
             string opCode = packets[0];
-            string body = packets[1];
+            string body = "";
+            if(packets.Length>1)
+            {
+                body = packets[1];
+            }
             switch (opCode)
             {
                 case OPCodes.LOGIN_SUCCESS:
@@ -134,7 +138,11 @@ namespace PegasusMetal_Pro
                     Lists.processes.Add(process);
                     break;
                 case OPCodes.END_OF_LOGIN:
-                    GetForm<frmLoading>().Close();
+                    Constants.AllDataIsReceived = true;
+                    if(GetForm<frmLoading>()!=null)
+                    {
+                        GetForm<frmLoading>().CloseForm();
+                    }
                     break;
                 case OPCodes.OFFER:
                     var offer = JsonConvert.DeserializeObject<Offer>(body);

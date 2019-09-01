@@ -394,6 +394,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmVerilerStok";
             this.Text = "frmVerilerStok";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmVerilerStok_FormClosing);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

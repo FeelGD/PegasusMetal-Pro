@@ -18,16 +18,18 @@ namespace PegasusMetal_Pro
         public frmVerilerStok()
         {
             InitializeComponent();
-            Lists.stocks.Clear();
+            //Lists.stocks.Clear();
             Lists.stocks.CollectionChanged += StockCollectionChanged;
-            List<string> data = new List<string>();
-            data.Add(OPCodes.GET_STOCK_CATEGORIES);
-            WebSocketService.getInstance().Send(data);
-            Lists.stockCategories.Clear();
+            //List<string> data = new List<string>();
+            //data.Add(OPCodes.GET_STOCK_CATEGORIES);
+            //WebSocketService.getInstance().Send(data);
+            //Lists.stockCategories.Clear();
             Lists.stockCategories.CollectionChanged += StockCategoryCollectionChanged;
-            data.Clear();
-            data.Add(OPCodes.GET_STOCKS);
-            WebSocketService.getInstance().Send(data);
+            //data.Clear();
+            //data.Add(OPCodes.GET_STOCKS);
+            //WebSocketService.getInstance().Send(data);
+            StockCollectionChanged(null,null);
+            StockCategoryCollectionChanged(null,null);
         }
 
         private void StockCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
@@ -161,6 +163,12 @@ namespace PegasusMetal_Pro
                 textEditFiyat.Text = item.SubItems[4].Text;
             }
             
+        }
+
+        private void FrmVerilerStok_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Lists.stocks.CollectionChanged -= StockCollectionChanged;
+            Lists.stockCategories.CollectionChanged -= StockCategoryCollectionChanged;
         }
     }
 }

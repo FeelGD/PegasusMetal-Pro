@@ -17,11 +17,12 @@ namespace PegasusMetal_Pro
         public frmVerilerPersoneller()
         {
             InitializeComponent();
-            Lists.staffs.Clear();
+            //Lists.staffs.Clear();
             Lists.staffs.CollectionChanged += CollectionChanged;
-            List<string> data = new List<string>();
-            data.Add(OPCodes.GET_PERSONAL_LIST);
-            WebSocketService.getInstance().Send(data);
+            //List<string> data = new List<string>();
+            //data.Add(OPCodes.GET_PERSONAL_LIST);
+            //WebSocketService.getInstance().Send(data);
+            CollectionChanged(null, null);
         }
 
         private void CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
@@ -173,6 +174,11 @@ namespace PegasusMetal_Pro
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void FrmVerilerPersoneller_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Lists.staffs.CollectionChanged -= CollectionChanged;
         }
     }
 }

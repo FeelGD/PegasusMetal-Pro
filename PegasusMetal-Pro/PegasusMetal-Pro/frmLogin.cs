@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
@@ -38,8 +39,7 @@ namespace PegasusMetal_Pro
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {  //login check 
-
+        {
             Login();
         }
 
@@ -53,8 +53,14 @@ namespace PegasusMetal_Pro
         }
         public void LoginSuccess(string Name, string Surname)
         {
-            MessageBox.Show(Name + " " + Surname + " Pegasus Metal Yazılımına Hoşgeldiniz.", "Giriş Başarılı!");
-            this.Close();
+            //MessageBox.Show(Name + " " + Surname + " Pegasus Metal Yazılımına Hoşgeldiniz.", "Giriş Başarılı!");
+            //this.Close();
+            ThreadPool.QueueUserWorkItem(delegate
+            {
+                //MessageBox.Show(Name + " " + Surname + " Pegasus Metal Yazılımına Hoşgeldiniz.", "Giriş Başarılı!");
+                this.Close();
+            });
+
         }
 
         public void LoginFail(string message)

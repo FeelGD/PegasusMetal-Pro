@@ -17,22 +17,23 @@ namespace PegasusMetal_Pro
         public frmTeklifler()
         {
             InitializeComponent();
-            Lists.projects.Clear();
-            Lists.companies.Clear();
+            //Lists.projects.Clear();
+            //Lists.companies.Clear();
             Lists.offers.CollectionChanged += CollectionChanged;
             Lists.companies.CollectionChanged += CompanyCollectionChanged;
-            List<string> data = new List<string>();
-            data.Add(OPCodes.GET_ACCEPTED_OFFERS);
-            WebSocketService.getInstance().Send(data);
-            data.Clear();
-            data.Add(OPCodes.GET_PROJECTS);
-            WebSocketService.getInstance().Send(data);
-            data.Clear();
-            data.Add(OPCodes.GET_COMPANIES);
-            WebSocketService.getInstance().Send(data);
-            data.Clear();
-            data.Add(OPCodes.GET_OFFERS);
-            WebSocketService.getInstance().Send(data);
+            //List<string> data = new List<string>();
+            //data.Add(OPCodes.GET_ACCEPTED_OFFERS);
+            //WebSocketService.getInstance().Send(data);
+            //data.Clear();
+            //data.Add(OPCodes.GET_PROJECTS);
+            //WebSocketService.getInstance().Send(data);
+            //data.Clear();
+            //data.Add(OPCodes.GET_COMPANIES);
+            //WebSocketService.getInstance().Send(data);
+            //data.Clear();
+            //data.Add(OPCodes.GET_OFFERS);
+            //WebSocketService.getInstance().Send(data);
+            CollectionChanged(null,null);
         }
 
         private void CompanyCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
@@ -44,7 +45,7 @@ namespace PegasusMetal_Pro
         {
             foreach (var item in Lists.offers.Where(s => !SearchInListView(s.Id.ToString()) && !SearchInAcceptedOffers(s.Id)))
             {
-                var project = Lists.projects.Where(i => i.Id == item.ProjectId).SingleOrDefault();
+                var project = Lists.projects.Where(i => i.Id == item.ProjectId).FirstOrDefault();
                 string[] array = { item.Id.ToString(), project.Name, item.LastPrice.ToString(), "Testing", project.Status };
                 ListViewItem listViewItem = new ListViewItem(array);
                 if (item.Id < listView1.Items.Count)
@@ -105,8 +106,8 @@ namespace PegasusMetal_Pro
             {
                 int id = int.Parse(listView1.SelectedItems[0].Text.Trim());
                 var offer = Lists.offers.Where(i => i.Id == id).FirstOrDefault();
-                var project = Lists.projects.Where(i => i.Id == offer.ProjectId).SingleOrDefault();
-                var company = Lists.companies.Where(i => i.Id == project.CompanyId).SingleOrDefault();
+                var project = Lists.projects.Where(i => i.Id == offer.ProjectId).FirstOrDefault();
+                var company = Lists.companies.Where(i => i.Id == project.CompanyId).FirstOrDefault();
                 frmYeniProjeTeklifOlustur teklifOlustur = new frmYeniProjeTeklifOlustur(project, company, offer);
                 Open(teklifOlustur);
             }

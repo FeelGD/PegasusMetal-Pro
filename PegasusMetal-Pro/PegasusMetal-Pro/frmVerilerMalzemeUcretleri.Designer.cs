@@ -179,6 +179,9 @@
             this.textEditId.Enabled = false;
             this.textEditId.Location = new System.Drawing.Point(154, 39);
             this.textEditId.Name = "textEditId";
+            // 
+            // 
+            // 
             this.textEditId.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditId.Properties.Appearance.Options.UseFont = true;
             this.textEditId.Size = new System.Drawing.Size(147, 26);
@@ -198,6 +201,9 @@
             // 
             this.textEditBirimFiyat.Location = new System.Drawing.Point(154, 128);
             this.textEditBirimFiyat.Name = "textEditBirimFiyat";
+            // 
+            // 
+            // 
             this.textEditBirimFiyat.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditBirimFiyat.Properties.Appearance.Options.UseFont = true;
             this.textEditBirimFiyat.Properties.Mask.EditMask = "f2";
@@ -209,6 +215,9 @@
             // 
             this.textEditMalzemeOzelligi.Location = new System.Drawing.Point(154, 85);
             this.textEditMalzemeOzelligi.Name = "textEditMalzemeOzelligi";
+            // 
+            // 
+            // 
             this.textEditMalzemeOzelligi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditMalzemeOzelligi.Properties.Appearance.Options.UseFont = true;
             this.textEditMalzemeOzelligi.Size = new System.Drawing.Size(147, 26);
@@ -250,6 +259,7 @@
             this.Name = "frmVerilerMalzemeUcretleri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVerilerMalzemeUcretleri";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmVerilerMalzemeUcretleri_FormClosing);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
