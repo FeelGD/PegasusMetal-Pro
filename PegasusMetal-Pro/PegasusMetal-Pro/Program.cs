@@ -18,7 +18,7 @@ namespace PegasusMetal_Pro
             Control.CheckForIllegalCrossThreadCalls = false;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAnaEkran());
+            Application.Run(new frmYeniProjeTeklifOlusturSet());
         }
     }
 }

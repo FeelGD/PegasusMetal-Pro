@@ -17,6 +17,9 @@ namespace PegasusMetal_Pro
         {
             InitializeComponent();
         }
+        int sayac = 0;
+        double agirlik;
+        double weight;
 
         private void frmYeniProjeTeklifOlusturSet_Load(object sender, EventArgs e)
         {
@@ -35,18 +38,18 @@ namespace PegasusMetal_Pro
         private void Calculate()
         {
             //weight
-           int TTotalWeight = Convert.ToInt32(DKPWeight.Text) + Convert.ToInt32(HRPWeight.Text) + Convert.ToInt32(PSLWeight.Text) + Convert.ToInt32(SYHWeight.Text) + Convert.ToInt32(ALUWeight.Text);
+            int TTotalWeight = Convert.ToInt32(DKPWeight.Text) + Convert.ToInt32(HRPWeight.Text) + Convert.ToInt32(PSLWeight.Text) + Convert.ToInt32(SYHWeight.Text) + Convert.ToInt32(ALUWeight.Text);
             TotalWeight.Text = TTotalWeight.ToString();
 
             //cost
             int TTotalCost = Convert.ToInt32(DKPWeight.Text) + Convert.ToInt32(HRPCost.Text) + Convert.ToInt32(PSLCost.Text) + Convert.ToInt32(SYHCost.Text) + Convert.ToInt32(ALUCost.Text);
             TotalCost.Text = TTotalCost.ToString();
         }
-        private void WeightCalculate()
+        public void WeightCalculate()
         {
-            int weight;
+
             int alan = 0;
-            int agirlik;
+
             if (txtEnBoy.Text == "2x1")
             {
                 alan = 16;
@@ -63,11 +66,22 @@ namespace PegasusMetal_Pro
             {
                 MessageBox.Show("Lütfen En Boy Seçiniz!!!");
             }
-            agirlik = Convert.ToInt16(txtKalinlik.Text) * alan * Convert.ToInt16(txtAdet.Text);
+
+
+            //if (txtKalinlik.Text!=""&&txtCins.Text!=""&&txtEnBoy.Text!=""&&txtAdet.Text!="")
+            //{
+                agirlik = Convert.ToDouble(txtKalinlik.Text) * alan * Convert.ToInt16(txtAdet.Text);
+            //}
+            //else
+            //{
+            //    MessageBox.Show("lütfen boş bırakmayınız");
+               
+            //}
+
             switch (txtCins.Text)
             {
                 case "DKP":
-                     weight = Convert.ToInt16(DKPWeight.Text) + agirlik;
+                    weight = Convert.ToInt16(DKPWeight.Text) + agirlik;
                     DKPWeight.Text = weight.ToString();
                     break;
                 case "HRP":
@@ -91,16 +105,47 @@ namespace PegasusMetal_Pro
                     break;
             }
         }
-
+        private void AddItem()
+        {
+            ListViewItem lvi = new ListViewItem();
+            lvi.Text = sayac.ToString();
+            lvi.SubItems.Add(txtEnBoy.Text);
+            lvi.SubItems.Add(txtKalinlik.Text);
+            lvi.SubItems.Add(txtAdet.Text);
+            lvi.SubItems.Add(txtCins.Text);
+            lvi.SubItems.Add(agirlik.ToString());
+            listView1.Items.Add(lvi);
+        }
+        private void refresh()
+        {
+            txtAdet.Text = "0";
+            txtCins.Text = "";
+            txtEnBoy.Text = "";
+            txtKalinlik.Text = "";
+        }
         private void simpleButtonEkle_Click(object sender, EventArgs e)
         {
-            WeightCalculate();
+            if (txtKalinlik.Text != "" && txtCins.Text != "" && txtEnBoy.Text != "" && txtAdet.Text == "0")
+            {
+                WeightCalculate();
+                AddItem();
+                sayac++;
+                refresh();
+            }
+            else
+            {
+                MessageBox.Show("lütfen boş bırakmayınız");
+
+            }
             
+
         }
 
         private void simpleButtonEkle_DoubleClick(object sender, EventArgs e)
         {
             MessageBox.Show("LÜTFEN 1 KERE TIKLAYINIZ");
         }
+
+
     }
 }
