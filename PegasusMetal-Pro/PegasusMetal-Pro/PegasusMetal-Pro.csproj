@@ -229,6 +229,12 @@
     <Compile Include="frmDevamEdenProjelerProjeDetay.Designer.cs">
       <DependentUpon>frmDevamEdenProjelerProjeDetay.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFirmaPersonelleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFirmaPersonelleri.Designer.cs">
+      <DependentUpon>frmFirmaPersonelleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmReportGelir.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -493,6 +499,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDevamEdenProjelerProjeDetay.resx">
       <DependentUpon>frmDevamEdenProjelerProjeDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFirmaPersonelleri.resx">
+      <DependentUpon>frmFirmaPersonelleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportGelir.resx">
       <DependentUpon>frmReportGelir.cs</DependentUpon>
