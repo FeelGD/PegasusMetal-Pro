@@ -36,6 +36,7 @@
             this.VParcaKodlarıBtn = new System.Windows.Forms.Button();
             this.VStokBtn = new System.Windows.Forms.Button();
             this.VIslemUcretleriBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // VGiderlerBtn
@@ -49,7 +50,7 @@
             this.VGiderlerBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.VGiderlerBtn.Image = ((System.Drawing.Image)(resources.GetObject("VGiderlerBtn.Image")));
             this.VGiderlerBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.VGiderlerBtn.Location = new System.Drawing.Point(21, 247);
+            this.VGiderlerBtn.Location = new System.Drawing.Point(306, 444);
             this.VGiderlerBtn.Name = "VGiderlerBtn";
             this.VGiderlerBtn.Size = new System.Drawing.Size(264, 147);
             this.VGiderlerBtn.TabIndex = 11;
@@ -149,7 +150,7 @@
             this.VStokBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.VStokBtn.Image = ((System.Drawing.Image)(resources.GetObject("VStokBtn.Image")));
             this.VStokBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.VStokBtn.Location = new System.Drawing.Point(595, 31);
+            this.VStokBtn.Location = new System.Drawing.Point(21, 444);
             this.VStokBtn.Name = "VStokBtn";
             this.VStokBtn.Size = new System.Drawing.Size(264, 147);
             this.VStokBtn.TabIndex = 15;
@@ -169,7 +170,7 @@
             this.VIslemUcretleriBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.VIslemUcretleriBtn.Image = ((System.Drawing.Image)(resources.GetObject("VIslemUcretleriBtn.Image")));
             this.VIslemUcretleriBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.VIslemUcretleriBtn.Location = new System.Drawing.Point(306, 452);
+            this.VIslemUcretleriBtn.Location = new System.Drawing.Point(21, 247);
             this.VIslemUcretleriBtn.Name = "VIslemUcretleriBtn";
             this.VIslemUcretleriBtn.Size = new System.Drawing.Size(264, 147);
             this.VIslemUcretleriBtn.TabIndex = 17;
@@ -178,11 +179,31 @@
             this.VIslemUcretleriBtn.UseVisualStyleBackColor = true;
             this.VIslemUcretleriBtn.Click += new System.EventHandler(this.VIslemUcretleriBtn_Click);
             // 
+            // button1
+            // 
+            this.button1.AutoEllipsis = true;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(595, 31);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(264, 147);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Firma Personelleri\r\n\r\n";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // userVeriler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.VIslemUcretleriBtn);
             this.Controls.Add(this.VParcaKodlarıBtn);
             this.Controls.Add(this.VStokBtn);
@@ -204,5 +225,6 @@
         private System.Windows.Forms.Button VParcaKodlarıBtn;
         private System.Windows.Forms.Button VStokBtn;
         private System.Windows.Forms.Button VIslemUcretleriBtn;
+        private System.Windows.Forms.Button button1;
     }
 }

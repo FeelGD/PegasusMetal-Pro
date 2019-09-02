@@ -36,9 +36,10 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.cmbboxCompanyName = new DevExpress.XtraEditors.ComboBoxEdit();
             this.btnSendMail = new System.Windows.Forms.Button();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.cmboxCompanyStaff = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -46,7 +47,7 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbboxCompanyName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmboxCompanyStaff.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -123,33 +124,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1287, 578);
             this.dataGridView1.TabIndex = 0;
             // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(108, 747);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(261, 20);
-            this.labelControl1.TabIndex = 11;
-            this.labelControl1.Text = "Teklifin Gönderileceği Müşteri firması:";
-            // 
-            // cmbboxCompanyName
-            // 
-            this.cmbboxCompanyName.EditValue = "";
-            this.cmbboxCompanyName.Location = new System.Drawing.Point(393, 741);
-            this.cmbboxCompanyName.Name = "cmbboxCompanyName";
-            this.cmbboxCompanyName.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
-            this.cmbboxCompanyName.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cmbboxCompanyName.Properties.Appearance.Options.UseBackColor = true;
-            this.cmbboxCompanyName.Properties.Appearance.Options.UseFont = true;
-            this.cmbboxCompanyName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbboxCompanyName.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cmbboxCompanyName.Size = new System.Drawing.Size(296, 26);
-            this.cmbboxCompanyName.TabIndex = 10;
-            // 
             // btnSendMail
             // 
             this.btnSendMail.AutoEllipsis = true;
@@ -161,13 +135,59 @@
             this.btnSendMail.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSendMail.Image = ((System.Drawing.Image)(resources.GetObject("btnSendMail.Image")));
             this.btnSendMail.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSendMail.Location = new System.Drawing.Point(877, 697);
+            this.btnSendMail.Location = new System.Drawing.Point(983, 697);
             this.btnSendMail.Name = "btnSendMail";
             this.btnSendMail.Size = new System.Drawing.Size(314, 119);
             this.btnSendMail.TabIndex = 15;
             this.btnSendMail.Text = "Teklifin Raporunu Müşteri Firmaya Yolla\r\n";
             this.btnSendMail.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSendMail.UseVisualStyleBackColor = true;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Appearance.Options.UseForeColor = true;
+            this.labelControl2.Location = new System.Drawing.Point(179, 752);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(113, 20);
+            this.labelControl2.TabIndex = 17;
+            this.labelControl2.Text = "Firma Personeli:";
+            // 
+            // cmboxCompanyStaff
+            // 
+            this.cmboxCompanyStaff.EditValue = "";
+            this.cmboxCompanyStaff.Location = new System.Drawing.Point(316, 749);
+            this.cmboxCompanyStaff.Name = "cmboxCompanyStaff";
+            this.cmboxCompanyStaff.Properties.Appearance.BackColor = System.Drawing.Color.DarkGray;
+            this.cmboxCompanyStaff.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmboxCompanyStaff.Properties.Appearance.Options.UseBackColor = true;
+            this.cmboxCompanyStaff.Properties.Appearance.Options.UseFont = true;
+            this.cmboxCompanyStaff.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmboxCompanyStaff.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cmboxCompanyStaff.Size = new System.Drawing.Size(296, 26);
+            this.cmboxCompanyStaff.TabIndex = 16;
+            // 
+            // button1
+            // 
+            this.button1.AutoEllipsis = true;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(709, 697);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(267, 119);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "\r\nÖn izleme Oluştur\r\n\r\n";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // frmReportTeklif
             // 
@@ -177,9 +197,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1301, 848);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.labelControl2);
+            this.Controls.Add(this.cmboxCompanyStaff);
             this.Controls.Add(this.btnSendMail);
-            this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.cmbboxCompanyName);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
@@ -194,7 +215,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbboxCompanyName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmboxCompanyStaff.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,8 +230,9 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbboxCompanyName;
         private System.Windows.Forms.Button btnSendMail;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.ComboBoxEdit cmboxCompanyStaff;
+        private System.Windows.Forms.Button button1;
     }
 }
