@@ -229,11 +229,11 @@
     <Compile Include="frmDevamEdenProjelerProjeDetay.Designer.cs">
       <DependentUpon>frmDevamEdenProjelerProjeDetay.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGelirRapor.cs">
+    <Compile Include="frmReportGelir.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGelirRapor.Designer.cs">
-      <DependentUpon>frmGelirRapor.cs</DependentUpon>
+    <Compile Include="frmReportGelir.Designer.cs">
+      <DependentUpon>frmReportGelir.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLoading.cs">
       <SubType>Form</SubType>
@@ -270,6 +270,12 @@
     </Compile>
     <Compile Include="frmProjelerTamamlanmisProjeler.Designer.cs">
       <DependentUpon>frmProjelerTamamlanmisProjeler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportTeklif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportTeklif.Designer.cs">
+      <DependentUpon>frmReportTeklif.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRoller.cs">
       <SubType>Form</SubType>
@@ -488,8 +494,8 @@
     <EmbeddedResource Include="frmDevamEdenProjelerProjeDetay.resx">
       <DependentUpon>frmDevamEdenProjelerProjeDetay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGelirRapor.resx">
-      <DependentUpon>frmGelirRapor.cs</DependentUpon>
+    <EmbeddedResource Include="frmReportGelir.resx">
+      <DependentUpon>frmReportGelir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLoading.resx">
       <DependentUpon>frmLoading.cs</DependentUpon>
@@ -508,6 +514,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmProjelerTamamlanmisProjeler.resx">
       <DependentUpon>frmProjelerTamamlanmisProjeler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportTeklif.resx">
+      <DependentUpon>frmReportTeklif.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRoller.resx">
       <DependentUpon>frmRoller.cs</DependentUpon>
