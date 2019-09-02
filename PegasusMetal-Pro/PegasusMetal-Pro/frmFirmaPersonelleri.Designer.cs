@@ -40,32 +40,29 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtAddress = new DevExpress.XtraEditors.MemoEdit();
             this.CompanyPhone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.StaffDepartment = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.CompanyName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.StaffSurname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.StaffName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView1 = new System.Windows.Forms.ListView();
+            this.Intercom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MailAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Notes = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.cmbboxCompanyName = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txtIntercom = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.txtNotes = new DevExpress.XtraEditors.MemoEdit();
             this.txtStaffName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.txtStaffSurname = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.txtNotes = new DevExpress.XtraEditors.MemoEdit();
-            this.txtIntercom = new DevExpress.XtraEditors.TextEdit();
-            this.Intercom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MailAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Notes = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.txtStaffDepartment.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCompanyPhone.Properties)).BeginInit();
@@ -75,12 +72,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbboxCompanyName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIntercom.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNotes.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStaffName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStaffSurname.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNotes.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIntercom.Properties)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // simpleButtonGuncelle
@@ -107,7 +103,7 @@
             // 
             // txtStaffDepartment
             // 
-            this.txtStaffDepartment.Location = new System.Drawing.Point(154, 115);
+            this.txtStaffDepartment.Location = new System.Drawing.Point(153, 83);
             this.txtStaffDepartment.Name = "txtStaffDepartment";
             this.txtStaffDepartment.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.txtStaffDepartment.Properties.Appearance.Options.UseFont = true;
@@ -118,7 +114,7 @@
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(58, 120);
+            this.labelControl8.Location = new System.Drawing.Point(57, 88);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(93, 21);
             this.labelControl8.TabIndex = 41;
@@ -127,7 +123,7 @@
             // txtMail
             // 
             this.txtMail.EditValue = "";
-            this.txtMail.Location = new System.Drawing.Point(154, 211);
+            this.txtMail.Location = new System.Drawing.Point(153, 179);
             this.txtMail.Name = "txtMail";
             this.txtMail.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.txtMail.Properties.Appearance.Options.UseFont = true;
@@ -136,7 +132,7 @@
             // 
             // txtCompanyPhone
             // 
-            this.txtCompanyPhone.Location = new System.Drawing.Point(154, 179);
+            this.txtCompanyPhone.Location = new System.Drawing.Point(153, 147);
             this.txtCompanyPhone.Name = "txtCompanyPhone";
             this.txtCompanyPhone.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.txtCompanyPhone.Properties.Appearance.Options.UseFont = true;
@@ -145,7 +141,7 @@
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(154, 147);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(153, 115);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.txtPhoneNumber.Properties.Appearance.Options.UseFont = true;
@@ -156,7 +152,7 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(95, 243);
+            this.labelControl5.Location = new System.Drawing.Point(94, 211);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(53, 21);
             this.labelControl5.TabIndex = 33;
@@ -166,7 +162,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(61, 216);
+            this.labelControl4.Location = new System.Drawing.Point(60, 184);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(88, 21);
             this.labelControl4.TabIndex = 32;
@@ -176,7 +172,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(3, 184);
+            this.labelControl3.Location = new System.Drawing.Point(2, 152);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(148, 21);
             this.labelControl3.TabIndex = 31;
@@ -186,25 +182,15 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(48, 152);
+            this.labelControl2.Location = new System.Drawing.Point(47, 120);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(103, 21);
             this.labelControl2.TabIndex = 30;
             this.labelControl2.Text = "Cep Telefonu:";
             // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(66, 88);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(85, 21);
-            this.labelControl1.TabIndex = 29;
-            this.labelControl1.Text = "Firma İsmi:";
-            // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(154, 243);
+            this.txtAddress.Location = new System.Drawing.Point(153, 211);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.txtAddress.Properties.Appearance.Options.UseFont = true;
@@ -225,11 +211,6 @@
             // 
             this.StaffDepartment.Text = "Departmanı";
             this.StaffDepartment.Width = 80;
-            // 
-            // CompanyName
-            // 
-            this.CompanyName.Text = "Firması";
-            this.CompanyName.Width = 130;
             // 
             // StaffSurname
             // 
@@ -253,7 +234,6 @@
             this.Id,
             this.StaffName,
             this.StaffSurname,
-            this.CompanyName,
             this.StaffDepartment,
             this.PhoneNumber,
             this.CompanyPhone,
@@ -264,10 +244,25 @@
             this.listView1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(940, 592);
+            this.listView1.Size = new System.Drawing.Size(839, 592);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // Intercom
+            // 
+            this.Intercom.Text = "Dahili";
+            this.Intercom.Width = 69;
+            // 
+            // MailAddress
+            // 
+            this.MailAddress.Text = "E-Posta";
+            this.MailAddress.Width = 134;
+            // 
+            // Notes
+            // 
+            this.Notes.Text = "Notlar";
+            this.Notes.Width = 65;
             // 
             // panel2
             // 
@@ -276,7 +271,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 41);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(943, 592);
+            this.panel2.Size = new System.Drawing.Size(841, 592);
             this.panel2.TabIndex = 6;
             // 
             // pictureBox3
@@ -284,7 +279,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1224, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(1120, 0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(35, 41);
             this.pictureBox3.TabIndex = 3;
@@ -295,7 +290,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1259, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(1155, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(35, 41);
             this.pictureBox2.TabIndex = 2;
@@ -322,37 +317,40 @@
             this.panel3.Controls.Add(this.labelControl4);
             this.panel3.Controls.Add(this.labelControl3);
             this.panel3.Controls.Add(this.labelControl2);
-            this.panel3.Controls.Add(this.labelControl1);
             this.panel3.Controls.Add(this.txtAddress);
-            this.panel3.Controls.Add(this.cmbboxCompanyName);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(949, 41);
+            this.panel3.Location = new System.Drawing.Point(845, 41);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(345, 592);
             this.panel3.TabIndex = 7;
             // 
-            // panel1
+            // txtIntercom
             // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1294, 41);
-            this.panel1.TabIndex = 5;
+            this.txtIntercom.Location = new System.Drawing.Point(254, 147);
+            this.txtIntercom.Name = "txtIntercom";
+            this.txtIntercom.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
+            this.txtIntercom.Properties.Appearance.Options.UseFont = true;
+            this.txtIntercom.Size = new System.Drawing.Size(87, 26);
+            this.txtIntercom.TabIndex = 6;
             // 
-            // cmbboxCompanyName
+            // labelControl6
             // 
-            this.cmbboxCompanyName.Location = new System.Drawing.Point(154, 83);
-            this.cmbboxCompanyName.Name = "cmbboxCompanyName";
-            this.cmbboxCompanyName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
-            this.cmbboxCompanyName.Properties.Appearance.Options.UseFont = true;
-            this.cmbboxCompanyName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbboxCompanyName.Size = new System.Drawing.Size(187, 26);
-            this.cmbboxCompanyName.TabIndex = 2;
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.labelControl6.Appearance.Options.UseFont = true;
+            this.labelControl6.Location = new System.Drawing.Point(94, 311);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(51, 21);
+            this.labelControl6.TabIndex = 49;
+            this.labelControl6.Text = "Notlar:";
+            // 
+            // txtNotes
+            // 
+            this.txtNotes.Location = new System.Drawing.Point(153, 311);
+            this.txtNotes.Name = "txtNotes";
+            this.txtNotes.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
+            this.txtNotes.Properties.Appearance.Options.UseFont = true;
+            this.txtNotes.Size = new System.Drawing.Size(186, 94);
+            this.txtNotes.TabIndex = 9;
             // 
             // txtStaffName
             // 
@@ -392,48 +390,17 @@
             this.labelControl9.TabIndex = 45;
             this.labelControl9.Text = "Soyadı:";
             // 
-            // labelControl6
+            // panel1
             // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
-            this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(95, 343);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(51, 21);
-            this.labelControl6.TabIndex = 49;
-            this.labelControl6.Text = "Notlar:";
-            // 
-            // txtNotes
-            // 
-            this.txtNotes.Location = new System.Drawing.Point(154, 343);
-            this.txtNotes.Name = "txtNotes";
-            this.txtNotes.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
-            this.txtNotes.Properties.Appearance.Options.UseFont = true;
-            this.txtNotes.Size = new System.Drawing.Size(186, 94);
-            this.txtNotes.TabIndex = 9;
-            // 
-            // txtIntercom
-            // 
-            this.txtIntercom.Location = new System.Drawing.Point(255, 179);
-            this.txtIntercom.Name = "txtIntercom";
-            this.txtIntercom.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
-            this.txtIntercom.Properties.Appearance.Options.UseFont = true;
-            this.txtIntercom.Size = new System.Drawing.Size(87, 26);
-            this.txtIntercom.TabIndex = 6;
-            // 
-            // Intercom
-            // 
-            this.Intercom.Text = "Dahili";
-            this.Intercom.Width = 69;
-            // 
-            // MailAddress
-            // 
-            this.MailAddress.Text = "E-Posta";
-            this.MailAddress.Width = 134;
-            // 
-            // Notes
-            // 
-            this.Notes.Text = "Notlar";
-            this.Notes.Width = 65;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1190, 41);
+            this.panel1.TabIndex = 5;
             // 
             // frmFirmaPersonelleri
             // 
@@ -442,7 +409,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1294, 633);
+            this.ClientSize = new System.Drawing.Size(1190, 633);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -460,12 +427,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cmbboxCompanyName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIntercom.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNotes.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStaffName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStaffSurname.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNotes.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIntercom.Properties)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -483,12 +449,10 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.MemoEdit txtAddress;
         private System.Windows.Forms.ColumnHeader CompanyPhone;
         private System.Windows.Forms.ColumnHeader PhoneNumber;
         private System.Windows.Forms.ColumnHeader StaffDepartment;
-        private System.Windows.Forms.ColumnHeader CompanyName;
         private System.Windows.Forms.ColumnHeader StaffSurname;
         private System.Windows.Forms.ColumnHeader StaffName;
         private System.Windows.Forms.ColumnHeader Id;
@@ -498,7 +462,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbboxCompanyName;
         private DevExpress.XtraEditors.TextEdit txtIntercom;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.MemoEdit txtNotes;

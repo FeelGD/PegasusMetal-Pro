@@ -58,6 +58,18 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.textEditAdres = new DevExpress.XtraEditors.MemoEdit();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.StaffName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.StaffSurname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.StaffDepartment = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.PhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CompanyPhone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Intercom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MailAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Notes = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -70,6 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEditVergiNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditFirmaIsmi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditAdres.Properties)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -112,10 +125,9 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.listView1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 41);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(796, 540);
+            this.panel2.Size = new System.Drawing.Size(782, 540);
             this.panel2.TabIndex = 3;
             // 
             // listView1
@@ -133,7 +145,7 @@
             this.listView1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(796, 540);
+            this.listView1.Size = new System.Drawing.Size(782, 540);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -177,6 +189,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.simpleButton1);
             this.panel3.Controls.Add(this.simpleButtonGuncelle);
             this.panel3.Controls.Add(this.simpleButtonKaydet);
             this.panel3.Controls.Add(this.textEditFirmaKodu);
@@ -193,10 +206,9 @@
             this.panel3.Controls.Add(this.labelControl2);
             this.panel3.Controls.Add(this.labelControl1);
             this.panel3.Controls.Add(this.textEditAdres);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(805, 41);
+            this.panel3.Location = new System.Drawing.Point(788, 41);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(333, 540);
+            this.panel3.Size = new System.Drawing.Size(338, 540);
             this.panel3.TabIndex = 4;
             // 
             // simpleButtonGuncelle
@@ -204,7 +216,7 @@
             this.simpleButtonGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.simpleButtonGuncelle.Appearance.Options.UseFont = true;
             this.simpleButtonGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonGuncelle.ImageOptions.Image")));
-            this.simpleButtonGuncelle.Location = new System.Drawing.Point(3, 475);
+            this.simpleButtonGuncelle.Location = new System.Drawing.Point(6, 484);
             this.simpleButtonGuncelle.Name = "simpleButtonGuncelle";
             this.simpleButtonGuncelle.Size = new System.Drawing.Size(327, 53);
             this.simpleButtonGuncelle.TabIndex = 44;
@@ -216,7 +228,7 @@
             this.simpleButtonKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.simpleButtonKaydet.Appearance.Options.UseFont = true;
             this.simpleButtonKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonKaydet.ImageOptions.Image")));
-            this.simpleButtonKaydet.Location = new System.Drawing.Point(3, 415);
+            this.simpleButtonKaydet.Location = new System.Drawing.Point(6, 424);
             this.simpleButtonKaydet.Name = "simpleButtonKaydet";
             this.simpleButtonKaydet.Size = new System.Drawing.Size(327, 54);
             this.simpleButtonKaydet.TabIndex = 43;
@@ -227,9 +239,6 @@
             // 
             this.textEditFirmaKodu.Location = new System.Drawing.Point(143, 102);
             this.textEditFirmaKodu.Name = "textEditFirmaKodu";
-            // 
-            // 
-            // 
             this.textEditFirmaKodu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditFirmaKodu.Properties.Appearance.Options.UseFont = true;
             this.textEditFirmaKodu.Size = new System.Drawing.Size(187, 26);
@@ -250,9 +259,6 @@
             this.textEditId.Enabled = false;
             this.textEditId.Location = new System.Drawing.Point(143, 15);
             this.textEditId.Name = "textEditId";
-            // 
-            // 
-            // 
             this.textEditId.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditId.Properties.Appearance.Options.UseFont = true;
             this.textEditId.Size = new System.Drawing.Size(187, 26);
@@ -273,9 +279,6 @@
             this.textEditMail.EditValue = "";
             this.textEditMail.Location = new System.Drawing.Point(143, 235);
             this.textEditMail.Name = "textEditMail";
-            // 
-            // 
-            // 
             this.textEditMail.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditMail.Properties.Appearance.Options.UseFont = true;
             this.textEditMail.Size = new System.Drawing.Size(187, 26);
@@ -285,9 +288,6 @@
             // 
             this.textEditVergiDairesi.Location = new System.Drawing.Point(143, 187);
             this.textEditVergiDairesi.Name = "textEditVergiDairesi";
-            // 
-            // 
-            // 
             this.textEditVergiDairesi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditVergiDairesi.Properties.Appearance.Options.UseFont = true;
             this.textEditVergiDairesi.Size = new System.Drawing.Size(187, 26);
@@ -297,9 +297,6 @@
             // 
             this.textEditVergiNo.Location = new System.Drawing.Point(143, 144);
             this.textEditVergiNo.Name = "textEditVergiNo";
-            // 
-            // 
-            // 
             this.textEditVergiNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditVergiNo.Properties.Appearance.Options.UseFont = true;
             this.textEditVergiNo.Size = new System.Drawing.Size(187, 26);
@@ -309,9 +306,6 @@
             // 
             this.textEditFirmaIsmi.Location = new System.Drawing.Point(143, 58);
             this.textEditFirmaIsmi.Name = "textEditFirmaIsmi";
-            // 
-            // 
-            // 
             this.textEditFirmaIsmi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditFirmaIsmi.Properties.Appearance.Options.UseFont = true;
             this.textEditFirmaIsmi.Size = new System.Drawing.Size(187, 26);
@@ -371,13 +365,98 @@
             // 
             this.textEditAdres.Location = new System.Drawing.Point(144, 284);
             this.textEditAdres.Name = "textEditAdres";
-            // 
-            // 
-            // 
             this.textEditAdres.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.textEditAdres.Properties.Appearance.Options.UseFont = true;
             this.textEditAdres.Size = new System.Drawing.Size(186, 94);
             this.textEditAdres.TabIndex = 37;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(144, 388);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(186, 30);
+            this.simpleButton1.TabIndex = 45;
+            this.simpleButton1.Text = "Yetkili Kişi Ekle";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.Controls.Add(this.listView2);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 587);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1138, 295);
+            this.panel4.TabIndex = 5;
+            // 
+            // listView2
+            // 
+            this.listView2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.StaffName,
+            this.StaffSurname,
+            this.StaffDepartment,
+            this.PhoneNumber,
+            this.CompanyPhone,
+            this.Intercom,
+            this.MailAddress,
+            this.Notes});
+            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView2.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.listView2.Location = new System.Drawing.Point(0, 0);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(1138, 295);
+            this.listView2.TabIndex = 3;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "id";
+            this.columnHeader1.Width = 54;
+            // 
+            // StaffName
+            // 
+            this.StaffName.Text = "Adı";
+            this.StaffName.Width = 81;
+            // 
+            // StaffSurname
+            // 
+            this.StaffSurname.Text = "Soyadı";
+            this.StaffSurname.Width = 108;
+            // 
+            // StaffDepartment
+            // 
+            this.StaffDepartment.Text = "Departmanı";
+            this.StaffDepartment.Width = 80;
+            // 
+            // PhoneNumber
+            // 
+            this.PhoneNumber.Text = "GSM";
+            this.PhoneNumber.Width = 117;
+            // 
+            // CompanyPhone
+            // 
+            this.CompanyPhone.Text = "İş telefonu";
+            this.CompanyPhone.Width = 105;
+            // 
+            // Intercom
+            // 
+            this.Intercom.Text = "Dahili";
+            this.Intercom.Width = 69;
+            // 
+            // MailAddress
+            // 
+            this.MailAddress.Text = "E-Posta";
+            this.MailAddress.Width = 134;
+            // 
+            // Notes
+            // 
+            this.Notes.Text = "Notlar";
+            this.Notes.Width = 385;
             // 
             // frmVerilerFirmalar
             // 
@@ -386,7 +465,8 @@
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1138, 581);
+            this.ClientSize = new System.Drawing.Size(1138, 882);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -409,6 +489,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEditVergiNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditFirmaIsmi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditAdres.Properties)).EndInit();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -444,5 +525,17 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.MemoEdit textEditAdres;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader StaffName;
+        private System.Windows.Forms.ColumnHeader StaffSurname;
+        private System.Windows.Forms.ColumnHeader StaffDepartment;
+        private System.Windows.Forms.ColumnHeader PhoneNumber;
+        private System.Windows.Forms.ColumnHeader CompanyPhone;
+        private System.Windows.Forms.ColumnHeader Intercom;
+        private System.Windows.Forms.ColumnHeader MailAddress;
+        private System.Windows.Forms.ColumnHeader Notes;
     }
 }
